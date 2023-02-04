@@ -87,7 +87,8 @@
 ::                               BEGIN
 ::-----------------------------------------------------------------------------
 :BEGIN
-
+  :: @salva VS%vsver%COMNTOOLS envvar not exists
+  call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
   :: Initialize the variables we'll be passing back to the caller.
   :: We do this BEFORE our "setlocal" to update THEIR variable pool.
 

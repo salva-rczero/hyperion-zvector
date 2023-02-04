@@ -106,6 +106,7 @@
 #undef SSF
 #undef VS
 #undef S_NW
+#undef VRX
 
 /*-------------------------------------------------------------------*/
 /*            E - implied operands and extended op code              */
@@ -1768,3 +1769,48 @@
 }
 
 #endif /* defined( FEATURE_S370_S390_VECTOR_FACILITY ) */
+/*********************************************************************/
+/*********************************************************************/
+/**                                                                 **/
+/**                 zVector Facility                                **/
+/**                                                                 **/
+/*********************************************************************/
+/*********************************************************************/
+
+#if defined( FEATURE_129_ZVECTOR_FACILITY )
+/*-------------------------------------------------------------------*/
+/*       VRX - vector register-and-index-storage operation           */
+/*             and an extended op-code field.                        */
+/*-------------------------------------------------------------------*/
+
+#define VRX( _inst, _regs, _v1, _effective_addr2, _m3 )  VRX_DECODER( _inst, _regs, _v1, _effective_addr2, _m3, 6, 6 )
+
+//  0           1           2           3           4           5           6
+//  +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+//  |     OP    | v1  | x2  | b2  |       d2        | m3  | rxb |    XOP    |    VRX
+//  +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+//  0     4     8     12    16    20    24    28    32    36    40    44   47
+
+#define VRX_DECODER( _inst, _regs, _v1, _effective_addr2, _m3, _len, _ilc ) \
+{                                                                   \
+    U32 temp = fetch_fw( (_inst) + 1);                              \
+                                                                    \
+    U32 _rxb = (temp >> 0) & 0xf;                                   \
+    (_v1) = ((temp >> 28) & 0xf) + ((_rxb << 1) & 0x10);            \
+    U32 _x2 = (temp >> 24) & 0xf;                                   \
+    U32 _b2 = (temp >> 20) & 0xf;                                   \
+    (_effective_addr2) = (temp >>  8) & 0xfff;                      \
+    (_m3) = (temp >>  4) & 0xf;                                     \
+                                                                    \
+    if (( _x2 ))                                                    \
+        (_effective_addr2) += (_regs)->GR((_x2));                   \
+                                                                    \
+    if (( _b2 ))                                                    \
+        (_effective_addr2) += (_regs)->GR(( _b2 ));                 \
+                                                                    \
+    (_effective_addr2) &= ADDRESS_MAXWRAP((_regs));                 \
+                                                                    \
+    INST_UPDATE_PSW( (_regs), (_len), (_ilc) );                     \
+}
+
+#endif /* defined( FEATURE_129_ZVECTOR_FACILITY ) */

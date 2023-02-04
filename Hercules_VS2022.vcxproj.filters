@@ -807,6 +807,9 @@
     <ClCompile Include="xstore.c">
       <Filter>Source Files\Hercules\Emulation\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="zvector.c">
+      <Filter>Source Files\Hercules\Emulation\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="crypto\lib\crypto32.pdb">
@@ -2909,6 +2912,7 @@
     <None Include="util\cckddump-cckdload.zip">
       <Filter>Other Files\Utilities</Filter>
     </None>
+    <None Include="tests\cpu0off.core" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="crypto\include\crypto.h">

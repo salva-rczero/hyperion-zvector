@@ -674,6 +674,11 @@ DISABLE_GCC_UNUSED_FUNCTION_WARNING;
  UNDEF_INST(convert_dfp_ext_to_packed)
 #endif
 
+#if !defined( FEATURE_129_ZVECTOR_FACILITY )
+     UNDEF_INST(vector_load)
+     UNDEF_INST(vector_store)
+#endif
+
 #if !defined( FEATURE_145_INS_REF_BITS_MULT_FACILITY )
  UNDEF_INST( insert_reference_bits_multiple )
 #endif
@@ -1383,6 +1388,14 @@ DEF_INST( E3_0 )
 #endif
 
 /*-------------------------------------------------------------------*/
+/* E7xx ???? - "instruction" to jump to actual instruction    [????] */
+/*-------------------------------------------------------------------*/
+DEF_INST(execute_opcode_e7________xx)
+{
+    regs->ARCH_DEP(runtime_opcode_e7________xx)[inst[5]](inst, regs);
+}
+
+/*-------------------------------------------------------------------*/
 /* EBxx ???? - "instruction" to jump to actual instruction    [????] */
 /*-------------------------------------------------------------------*/
 DEF_INST( execute_opcode_eb________xx )
@@ -1494,6 +1507,7 @@ FWD_REF_IPRINT_FUNC( ASMFMT_SSE );
 FWD_REF_IPRINT_FUNC( ASMFMT_SSF );
 FWD_REF_IPRINT_FUNC( ASMFMT_SSF_RSS );
 FWD_REF_IPRINT_FUNC( ASMFMT_VS );
+FWD_REF_IPRINT_FUNC( ASMFMT_VRX );
 
 #endif // COMPILE_THIS_ONLY_ONCE
 
@@ -1830,6 +1844,7 @@ static INSTR_FUNC gen_opcode_c6_x[16][NUM_INSTR_TAB_PTRS];
 static INSTR_FUNC gen_opcode_c8_x[16][NUM_INSTR_TAB_PTRS];
 static INSTR_FUNC gen_opcode_cc_x[16][NUM_INSTR_TAB_PTRS];
 static INSTR_FUNC gen_opcode_e3xx[256][NUM_INSTR_TAB_PTRS];
+static INSTR_FUNC gen_opcode_e7xx[256][NUM_INSTR_TAB_PTRS];
 static INSTR_FUNC gen_opcode_e5xx[256][NUM_INSTR_TAB_PTRS];
 static INSTR_FUNC gen_opcode_e6xx[256][NUM_INSTR_TAB_PTRS];
 static INSTR_FUNC gen_opcode_ebxx[256][NUM_INSTR_TAB_PTRS];
@@ -1999,6 +2014,7 @@ IPRINT_ROUT2( c8_x, [1] & 0x0F )
 IPRINT_ROUT2( cc_x, [1] & 0x0F )
 IPRINT_ROUT2( e3xx, [5] )
 IPRINT_ROUT2( e5xx, [1] )
+IPRINT_ROUT2( e7xx, [5] )
 IPRINT_ROUT2( e6xx, [1] )
 IPRINT_ROUT2( ebxx, [5] )
 IPRINT_ROUT2( ecxx, [5] )
@@ -2555,6 +2571,15 @@ IPRINT_FUNC( ASMFMT_VS );
     rs2 = inst[3] & 0x0F;
     IPRINT_PRINT("%d",rs2)
 
+IPRINT_FUNC(ASMFMT_VRX);
+    int v1, d2, x2, b2, m3;
+    UNREFERENCED(regs);
+    v1 = ((inst[1] >> 4) & 0x0F) | ((inst[4] & 0x0F) << 1);
+    d2 = (inst[2] & 0x0F) << 8 | inst[3];
+    x2 = inst[1] & 0x0F;
+    b2 = inst[2] >> 4;
+    m3 = inst[4] >> 4;
+    IPRINT_PRINT("%d,%d(%d,%d),%d", v1, d2, x2, b2, m3)
 /*----------------------------------------------------------------------------*/
 /*          'GENx___x___x900' instruction opcode jump tables                  */
 /*----------------------------------------------------------------------------*/
@@ -2796,7 +2821,7 @@ static INSTR_FUNC gen_opcode_table[256][NUM_INSTR_TAB_PTRS] =
  /*E4*/   GENx370x390x900 ( ""          , e4xx , ASMFMT_e4xx     , execute_opcode_e4xx                                 ),
  /*E5*/   GENx370x390x900 ( ""          , e5xx , ASMFMT_e5xx     , execute_opcode_e5xx                                 ),
  /*E6*/   GENx370x390x900 ( ""          , e6xx , ASMFMT_e6xx     , execute_opcode_e6xx                                 ),
- /*E7*/   GENx___x___x___ ,
+ /*E7*/   GENx370x390x900( ""           , e7xx , ASMFMT_e7xx     , execute_opcode_e7________xx                         ),
  /*E8*/   GENx370x390x900 ( "MVCIN"     , SS_a , ASMFMT_SS_L     , move_inverse                                        ),
  /*E9*/   GENx37Xx390x900 ( "PKA"       , SS_f , ASMFMT_SS_L2    , pack_ascii                                          ),
  /*EA*/   GENx37Xx390x900 ( "UNPKA"     , SS_a , ASMFMT_SS_L     , unpack_ascii                                        ),
@@ -4569,6 +4594,266 @@ static INSTR_FUNC gen_opcode_e6xx[256][NUM_INSTR_TAB_PTRS] =
  /*E6FD*/ GENx___x___x___ ,
  /*E6FE*/ GENx___x___x___ ,
  /*E6FF*/ GENx___x___x___
+};
+
+static INSTR_FUNC gen_opcode_e7xx[256][NUM_INSTR_TAB_PTRS] =
+{
+    /*E700*/ GENx___x___x___ ,
+    /*E701*/ GENx___x___x___ ,
+    /*E702*/ GENx___x___x___ ,
+    /*E703*/ GENx___x___x___ ,
+    /*E704*/ GENx___x___x___ ,
+    /*E705*/ GENx___x___x___ ,
+    /*E706*/ GENx370x390x900("VL"        , VRX  , ASMFMT_VRX      , vector_load),
+    /*E707*/ GENx___x___x___ ,
+    /*E708*/ GENx___x___x___ ,
+    /*E709*/ GENx___x___x___ ,
+    /*E70A*/ GENx___x___x___ ,
+    /*E70B*/ GENx___x___x___ ,
+    /*E70C*/ GENx___x___x___ ,
+    /*E70D*/ GENx___x___x___ ,
+    /*E70E*/ GENx370x390x900("VST"       , VRX  , ASMFMT_VRX      , vector_store),
+    /*E70F*/ GENx___x___x___ ,
+    /*E710*/ GENx___x___x___ ,
+    /*E711*/ GENx___x___x___ ,
+    /*E712*/ GENx___x___x___ ,
+    /*E713*/ GENx___x___x___ ,
+    /*E714*/ GENx___x___x___ ,
+    /*E715*/ GENx___x___x___ ,
+    /*E716*/ GENx___x___x___ ,
+    /*E717*/ GENx___x___x___ ,
+    /*E718*/ GENx___x___x___ ,
+    /*E719*/ GENx___x___x___ ,
+    /*E71A*/ GENx___x___x___ ,
+    /*E71B*/ GENx___x___x___ ,
+    /*E71C*/ GENx___x___x___ ,
+    /*E71D*/ GENx___x___x___ ,
+    /*E71E*/ GENx___x___x___ ,
+    /*E71F*/ GENx___x___x___ ,
+    /*E720*/ GENx___x___x___ ,
+    /*E721*/ GENx___x___x___ ,
+    /*E722*/ GENx___x___x___ ,
+    /*E723*/ GENx___x___x___ ,
+    /*E724*/ GENx___x___x___ ,
+    /*E725*/ GENx___x___x___ ,
+    /*E726*/ GENx___x___x___ ,
+    /*E727*/ GENx___x___x___ ,
+    /*E728*/ GENx___x___x___ ,
+    /*E729*/ GENx___x___x___ ,
+    /*E72A*/ GENx___x___x___ ,
+    /*E72B*/ GENx___x___x___ ,
+    /*E72C*/ GENx___x___x___ ,
+    /*E72D*/ GENx___x___x___ ,
+    /*E72E*/ GENx___x___x___ ,
+    /*E72F*/ GENx___x___x___ ,
+    /*E730*/ GENx___x___x___ ,
+    /*E731*/ GENx___x___x___ ,
+    /*E732*/ GENx___x___x___ ,
+    /*E733*/ GENx___x___x___ ,
+    /*E734*/ GENx___x___x___ ,
+    /*E735*/ GENx___x___x___ ,
+    /*E736*/ GENx___x___x___ ,
+    /*E737*/ GENx___x___x___ ,
+    /*E738*/ GENx___x___x___ ,
+    /*E739*/ GENx___x___x___ ,
+    /*E73A*/ GENx___x___x___ ,
+    /*E73B*/ GENx___x___x___ ,
+    /*E73C*/ GENx___x___x___ ,
+    /*E73D*/ GENx___x___x___ ,
+    /*E73E*/ GENx___x___x___ ,
+    /*E73F*/ GENx___x___x___ ,
+    /*E740*/ GENx___x___x___ ,
+    /*E741*/ GENx___x___x___ ,
+    /*E742*/ GENx___x___x___ ,
+    /*E743*/ GENx___x___x___ ,
+    /*E744*/ GENx___x___x___ ,
+    /*E745*/ GENx___x___x___ ,
+    /*E746*/ GENx___x___x___ ,
+    /*E747*/ GENx___x___x___ ,
+    /*E748*/ GENx___x___x___ ,
+    /*E749*/ GENx___x___x___ ,
+    /*E74A*/ GENx___x___x___ ,
+    /*E74B*/ GENx___x___x___ ,
+    /*E74C*/ GENx___x___x___ ,
+    /*E74D*/ GENx___x___x___ ,
+    /*E74E*/ GENx___x___x___ ,
+    /*E74F*/ GENx___x___x___ ,
+    /*E750*/ GENx___x___x___ ,
+    /*E751*/ GENx___x___x___ ,
+    /*E752*/ GENx___x___x___ ,
+    /*E753*/ GENx___x___x___ ,
+    /*E754*/ GENx___x___x___ ,
+    /*E755*/ GENx___x___x___ ,
+    /*E756*/ GENx___x___x___ ,
+    /*E757*/ GENx___x___x___ ,
+    /*E758*/ GENx___x___x___ ,
+    /*E759*/ GENx___x___x___ ,
+    /*E75A*/ GENx___x___x___ ,
+    /*E75B*/ GENx___x___x___ ,
+    /*E75C*/ GENx___x___x___ ,
+    /*E75D*/ GENx___x___x___ ,
+    /*E75E*/ GENx___x___x___ ,
+    /*E75F*/ GENx___x___x___ ,
+    /*E760*/ GENx___x___x___ ,
+    /*E761*/ GENx___x___x___ ,
+    /*E762*/ GENx___x___x___ ,
+    /*E763*/ GENx___x___x___ ,
+    /*E764*/ GENx___x___x___ ,
+    /*E765*/ GENx___x___x___ ,
+    /*E766*/ GENx___x___x___ ,
+    /*E767*/ GENx___x___x___ ,
+    /*E768*/ GENx___x___x___ ,
+    /*E769*/ GENx___x___x___ ,
+    /*E76A*/ GENx___x___x___ ,
+    /*E76B*/ GENx___x___x___ ,
+    /*E76C*/ GENx___x___x___ ,
+    /*E76D*/ GENx___x___x___ ,
+    /*E76E*/ GENx___x___x___ ,
+    /*E76F*/ GENx___x___x___ ,
+    /*E770*/ GENx___x___x___ ,
+    /*E771*/ GENx___x___x___ ,
+    /*E772*/ GENx___x___x___ ,
+    /*E773*/ GENx___x___x___ ,
+    /*E774*/ GENx___x___x___ ,
+    /*E775*/ GENx___x___x___ ,
+    /*E776*/ GENx___x___x___ ,
+    /*E777*/ GENx___x___x___ ,
+    /*E778*/ GENx___x___x___ ,
+    /*E779*/ GENx___x___x___ ,
+    /*E77A*/ GENx___x___x___ ,
+    /*E77B*/ GENx___x___x___ ,
+    /*E77C*/ GENx___x___x___ ,
+    /*E77D*/ GENx___x___x___ ,
+    /*E77E*/ GENx___x___x___ ,
+    /*E77F*/ GENx___x___x___ ,
+    /*E780*/ GENx___x___x___ ,
+    /*E781*/ GENx___x___x___ ,
+    /*E782*/ GENx___x___x___ ,
+    /*E783*/ GENx___x___x___ ,
+    /*E784*/ GENx___x___x___ ,
+    /*E785*/ GENx___x___x___ ,
+    /*E786*/ GENx___x___x___ ,
+    /*E787*/ GENx___x___x___ ,
+    /*E788*/ GENx___x___x___ ,
+    /*E789*/ GENx___x___x___ ,
+    /*E78A*/ GENx___x___x___ ,
+    /*E78B*/ GENx___x___x___ ,
+    /*E78C*/ GENx___x___x___ ,
+    /*E78D*/ GENx___x___x___ ,
+    /*E78E*/ GENx___x___x___ ,
+    /*E78F*/ GENx___x___x___ ,
+    /*E790*/ GENx___x___x___ ,
+    /*E791*/ GENx___x___x___ ,
+    /*E792*/ GENx___x___x___ ,
+    /*E793*/ GENx___x___x___ ,
+    /*E794*/ GENx___x___x___ ,
+    /*E795*/ GENx___x___x___ ,
+    /*E796*/ GENx___x___x___ ,
+    /*E797*/ GENx___x___x___ ,
+    /*E798*/ GENx___x___x___ ,
+    /*E799*/ GENx___x___x___ ,
+    /*E79A*/ GENx___x___x___ ,
+    /*E79B*/ GENx___x___x___ ,
+    /*E79C*/ GENx___x___x___ ,
+    /*E79D*/ GENx___x___x___ ,
+    /*E79E*/ GENx___x___x___ ,
+    /*E79F*/ GENx___x___x___ ,
+    /*E7A0*/ GENx___x___x___ ,
+    /*E7A1*/ GENx___x___x___ ,
+    /*E7A2*/ GENx___x___x___ ,
+    /*E7A3*/ GENx___x___x___ ,
+    /*E7A4*/ GENx___x___x___ ,
+    /*E7A5*/ GENx___x___x___ ,
+    /*E7A6*/ GENx___x___x___ ,
+    /*E7A7*/ GENx___x___x___ ,
+    /*E7A8*/ GENx___x___x___ ,
+    /*E7A9*/ GENx___x___x___ ,
+    /*E7AA*/ GENx___x___x___ ,
+    /*E7AB*/ GENx___x___x___ ,
+    /*E7AC*/ GENx___x___x___ ,
+    /*E7AD*/ GENx___x___x___ ,
+    /*E7AE*/ GENx___x___x___ ,
+    /*E7AF*/ GENx___x___x___ ,
+    /*E7B0*/ GENx___x___x___ ,
+    /*E7B1*/ GENx___x___x___ ,
+    /*E7B2*/ GENx___x___x___ ,
+    /*E7B3*/ GENx___x___x___ ,
+    /*E7B4*/ GENx___x___x___ ,
+    /*E7B5*/ GENx___x___x___ ,
+    /*E7B6*/ GENx___x___x___ ,
+    /*E7B7*/ GENx___x___x___ ,
+    /*E7B8*/ GENx___x___x___ ,
+    /*E7B9*/ GENx___x___x___ ,
+    /*E7BA*/ GENx___x___x___ ,
+    /*E7BB*/ GENx___x___x___ ,
+    /*E7BC*/ GENx___x___x___ ,
+    /*E7BD*/ GENx___x___x___ ,
+    /*E7BE*/ GENx___x___x___ ,
+    /*E7BF*/ GENx___x___x___ ,
+    /*E7C0*/ GENx___x___x___ ,
+    /*E7C1*/ GENx___x___x___ ,
+    /*E7C2*/ GENx___x___x___ ,
+    /*E7C3*/ GENx___x___x___ ,
+    /*E7C4*/ GENx___x___x___ ,
+    /*E7C5*/ GENx___x___x___ ,
+    /*E7C6*/ GENx___x___x___ ,
+    /*E7C7*/ GENx___x___x___ ,
+    /*E7C8*/ GENx___x___x___ ,
+    /*E7C9*/ GENx___x___x___ ,
+    /*E7CA*/ GENx___x___x___ ,
+    /*E7CB*/ GENx___x___x___ ,
+    /*E7CC*/ GENx___x___x___ ,
+    /*E7CD*/ GENx___x___x___ ,
+    /*E7CE*/ GENx___x___x___ ,
+    /*E7CF*/ GENx___x___x___ ,
+    /*E7D0*/ GENx___x___x___ ,
+    /*E7D1*/ GENx___x___x___ ,
+    /*E7D2*/ GENx___x___x___ ,
+    /*E7D3*/ GENx___x___x___ ,
+    /*E7D4*/ GENx___x___x___ ,
+    /*E7D5*/ GENx___x___x___ ,
+    /*E7D6*/ GENx___x___x___ ,
+    /*E7D7*/ GENx___x___x___ ,
+    /*E7D8*/ GENx___x___x___ ,
+    /*E7D9*/ GENx___x___x___ ,
+    /*E7DA*/ GENx___x___x___ ,
+    /*E7DB*/ GENx___x___x___ ,
+    /*E7DC*/ GENx___x___x___ ,
+    /*E7DD*/ GENx___x___x___ ,
+    /*E7DE*/ GENx___x___x___ ,
+    /*E7DF*/ GENx___x___x___ ,
+    /*E7E0*/ GENx___x___x___ ,
+    /*E7E1*/ GENx___x___x___ ,
+    /*E7E2*/ GENx___x___x___ ,
+    /*E7E3*/ GENx___x___x___ ,
+    /*E7E4*/ GENx___x___x___ ,
+    /*E7E5*/ GENx___x___x___ ,
+    /*E7E6*/ GENx___x___x___ ,
+    /*E7E7*/ GENx___x___x___ ,
+    /*E7E8*/ GENx___x___x___ ,
+    /*E7E9*/ GENx___x___x___ ,
+    /*E7EA*/ GENx___x___x___ ,
+    /*E7EB*/ GENx___x___x___ ,
+    /*E7EC*/ GENx___x___x___ ,
+    /*E7ED*/ GENx___x___x___ ,
+    /*E7EE*/ GENx___x___x___ ,
+    /*E7EF*/ GENx___x___x___ ,
+    /*E7F0*/ GENx___x___x___ ,
+    /*E7F1*/ GENx___x___x___ ,
+    /*E7F2*/ GENx___x___x___ ,
+    /*E7F3*/ GENx___x___x___ ,
+    /*E7F4*/ GENx___x___x___ ,
+    /*E7F5*/ GENx___x___x___ ,
+    /*E7F6*/ GENx___x___x___ ,
+    /*E7F7*/ GENx___x___x___ ,
+    /*E7F8*/ GENx___x___x___ ,
+    /*E7F9*/ GENx___x___x___ ,
+    /*E7FA*/ GENx___x___x___ ,
+    /*E7FB*/ GENx___x___x___ ,
+    /*E7FC*/ GENx___x___x___ ,
+    /*E7FD*/ GENx___x___x___ ,
+    /*E7FE*/ GENx___x___x___ ,
+    /*E7FF*/ GENx___x___x___
 };
 
 static INSTR_FUNC gen_opcode_ebxx[256][NUM_INSTR_TAB_PTRS] =
@@ -6753,6 +7038,7 @@ static INSTR_FUNC gen_opcode_E3_0______24[1][NUM_INSTR_TAB_PTRS] =
 static INSTR_FUNC runtime_opcode_xxxx[NUM_GEN_ARCHS][256 * 256];
 
 static INSTR_FUNC runtime_opcode_e3________xx[NUM_GEN_ARCHS][256];
+static INSTR_FUNC runtime_opcode_e7________xx[NUM_GEN_ARCHS][256];
 static INSTR_FUNC runtime_opcode_eb________xx[NUM_GEN_ARCHS][256];
 static INSTR_FUNC runtime_opcode_ec________xx[NUM_GEN_ARCHS][256];
 static INSTR_FUNC runtime_opcode_ed________xx[NUM_GEN_ARCHS][256];
@@ -6864,6 +7150,12 @@ static INSTR_FUNC replace_opcode_xx________xx( int arch, INSTR_FUNC inst, int op
                       runtime_opcode_e3________xx[arch][opcode2] = inst;
             break;
         }
+        case 0xe7:
+        {
+            oldinst = runtime_opcode_e7________xx[arch][opcode2];
+            runtime_opcode_e7________xx[arch][opcode2] = inst;
+            break;
+        }
         case 0xeb:
         {
             oldinst = runtime_opcode_eb________xx[arch][opcode2];
@@ -6940,6 +7232,7 @@ DLL_EXPORT void* the_real_replace_opcode( int arch, INSTR_FUNC inst, int opcode1
     }
 
     case 0xe3:
+    case 0xe7:
     case 0xeb:
     case 0xec:
     case 0xed:
@@ -7034,6 +7327,7 @@ void init_runtime_opcode_tables()
 
       replace_opcode_xxxx(arch, gen_opcode_e5xx[i][arch], 0xe5, i);
       replace_opcode_xxxx(arch, gen_opcode_e6xx[i][arch], 0xe6, i);
+      replace_opcode_xx________xx(arch, gen_opcode_e7xx[i][arch], 0xe7, i);
       replace_opcode_xx________xx(arch, gen_opcode_ebxx[i][arch], 0xeb, i);
       replace_opcode_xx________xx(arch, gen_opcode_ecxx[i][arch], 0xec, i);
       replace_opcode_xx________xx(arch, gen_opcode_edxx[i][arch], 0xed, i);
@@ -7145,18 +7439,21 @@ void init_regs_runtime_opcode_pointers( REGS* regs )
 
   regs->s370_runtime_opcode_xxxx         = runtime_opcode_xxxx        [ARCH_370_IDX];
   regs->s370_runtime_opcode_e3________xx = runtime_opcode_e3________xx[ARCH_370_IDX];
+  regs->s370_runtime_opcode_e7________xx = runtime_opcode_e7________xx[ARCH_370_IDX];
   regs->s370_runtime_opcode_eb________xx = runtime_opcode_eb________xx[ARCH_370_IDX];
   regs->s370_runtime_opcode_ec________xx = runtime_opcode_ec________xx[ARCH_370_IDX];
   regs->s370_runtime_opcode_ed________xx = runtime_opcode_ed________xx[ARCH_370_IDX];
 
   regs->s390_runtime_opcode_xxxx         = runtime_opcode_xxxx        [ARCH_390_IDX];
   regs->s390_runtime_opcode_e3________xx = runtime_opcode_e3________xx[ARCH_390_IDX];
+  regs->s390_runtime_opcode_e7________xx = runtime_opcode_e7________xx[ARCH_390_IDX];
   regs->s390_runtime_opcode_eb________xx = runtime_opcode_eb________xx[ARCH_390_IDX];
   regs->s390_runtime_opcode_ec________xx = runtime_opcode_ec________xx[ARCH_390_IDX];
   regs->s390_runtime_opcode_ed________xx = runtime_opcode_ed________xx[ARCH_390_IDX];
 
   regs->z900_runtime_opcode_xxxx         = runtime_opcode_xxxx        [ARCH_900_IDX];
   regs->z900_runtime_opcode_e3________xx = runtime_opcode_e3________xx[ARCH_900_IDX];
+  regs->z900_runtime_opcode_e7________xx = runtime_opcode_e7________xx[ARCH_900_IDX];
   regs->z900_runtime_opcode_eb________xx = runtime_opcode_eb________xx[ARCH_900_IDX];
   regs->z900_runtime_opcode_ec________xx = runtime_opcode_ec________xx[ARCH_900_IDX];
   regs->z900_runtime_opcode_ed________xx = runtime_opcode_ed________xx[ARCH_900_IDX];

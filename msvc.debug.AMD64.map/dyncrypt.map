@@ -1,0 +1,1279 @@
+ dyncrypt
+
+ Timestamp is 63de2790 (Sat Feb  4 10:38:24 2023)
+
+ Preferred load address is 0000000100400000
+
+ Start         Length     Name                   Class
+ 0001:00000000 0000a440H .text                   CODE
+ 0001:0000a440 00027ea0H .text$mn                CODE
+ 0001:000322e0 00000040H .text$mn$00             CODE
+ 0001:00032320 00000100H .text$x                 CODE
+ 0002:00000000 00000288H .idata$5                DATA
+ 0002:00000288 00000038H .00cfg                  DATA
+ 0002:000002c0 00000008H .CRT$XCA                DATA
+ 0002:000002c8 00000008H .CRT$XCZ                DATA
+ 0002:000002d0 00000008H .CRT$XIA                DATA
+ 0002:000002d8 00000008H .CRT$XIZ                DATA
+ 0002:000002e0 00000008H .CRT$XPA                DATA
+ 0002:000002e8 00000008H .CRT$XPZ                DATA
+ 0002:000002f0 00000008H .CRT$XTA                DATA
+ 0002:000002f8 00000008H .CRT$XTZ                DATA
+ 0002:00000300 00000000H .gehcont$y              DATA
+ 0002:00000300 00000000H .gfids$y                DATA
+ 0002:00000300 00004600H .rdata                  DATA
+ 0002:00004900 00000080H .rdata$CastGuardVftablesA DATA
+ 0002:00004980 00000080H .rdata$CastGuardVftablesC DATA
+ 0002:00004a00 00000310H .rdata$voltmd           DATA
+ 0002:00004d10 00000348H .rdata$zzzdbg           DATA
+ 0002:00005058 00000008H .rtc$IAA                DATA
+ 0002:00005060 00000020H .rtc$IMZ                DATA
+ 0002:00005080 00000008H .rtc$IZZ                DATA
+ 0002:00005088 00000008H .rtc$TAA                DATA
+ 0002:00005090 00000020H .rtc$TMZ                DATA
+ 0002:000050b0 00000008H .rtc$TZZ                DATA
+ 0002:000050b8 00000d38H .xdata                  DATA
+ 0002:00005df0 00000098H .edata                  DATA
+ 0002:00005e88 00000078H .idata$2                DATA
+ 0002:00005f00 00000018H .idata$3                DATA
+ 0002:00005f18 00000288H .idata$4                DATA
+ 0002:000061a0 0000064aH .idata$6                DATA
+ 0003:00000000 00000f30H .data                   DATA
+ 0003:00000f30 00000630H .bss                    DATA
+ 0004:00000000 00000c60H .pdata                  DATA
+ 0005:00000000 000002d0H .rsrc$01                DATA
+ 0005:000002d0 00013998H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base               Lib:Object
+
+ 0000:00000000       __AbsoluteZero             0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_count   0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   0000000000000000     <absolute>
+ 0000:00000000       __arm64x_extra_rfe_table   0000000000000000     <absolute>
+ 0000:00000000       __arm64x_extra_rfe_table_size 0000000000000000     <absolute>
+ 0000:00000000       __arm64x_native_entrypoint 0000000000000000     <absolute>
+ 0000:00000000       __arm64x_redirection_metadata 0000000000000000     <absolute>
+ 0000:00000000       __arm64x_redirection_metadata_count 0000000000000000     <absolute>
+ 0000:00000000       __dynamic_value_reloc_table 0000000000000000     <absolute>
+ 0000:00000000       __enclave_config           0000000000000000     <absolute>
+ 0000:00000000       __guard_check_icall_a64n_fptr 0000000000000000     <absolute>
+ 0000:00000000       __guard_eh_cont_count      0000000000000000     <absolute>
+ 0000:00000000       __guard_eh_cont_table      0000000000000000     <absolute>
+ 0000:00000000       __guard_fids_count         0000000000000000     <absolute>
+ 0000:00000000       __guard_fids_table         0000000000000000     <absolute>
+ 0000:00000000       __guard_iat_count          0000000000000000     <absolute>
+ 0000:00000000       __guard_iat_table          0000000000000000     <absolute>
+ 0000:00000000       __guard_longjmp_count      0000000000000000     <absolute>
+ 0000:00000000       __guard_longjmp_table      0000000000000000     <absolute>
+ 0000:00000000       __hybrid_auxiliary_iat     0000000000000000     <absolute>
+ 0000:00000000       __hybrid_auxiliary_iat_copy 0000000000000000     <absolute>
+ 0000:00000000       __hybrid_code_map          0000000000000000     <absolute>
+ 0000:00000000       __hybrid_code_map_count    0000000000000000     <absolute>
+ 0000:00000000       __x64_code_ranges_to_entry_points 0000000000000000     <absolute>
+ 0000:00000000       __x64_code_ranges_to_entry_points_count 0000000000000000     <absolute>
+ 0000:00000100       __guard_flags              0000000000000100     <absolute>
+ 0000:00000000       __ImageBase                0000000100400000     <linker-defined>
+ 0001:00000000       rijndaelKeySetupEnc        0000000100401000 f   crypto64d:rijndael.c.obj
+ 0001:000005b0       rijndaelKeySetupDec        00000001004015b0 f   crypto64d:rijndael.c.obj
+ 0001:00000aa0       rijndaelEncrypt            0000000100401aa0 f   crypto64d:rijndael.c.obj
+ 0001:00001130       rijndael_set_key_enc_only  0000000100402130 f   crypto64d:rijndael.c.obj
+ 0001:000011b0       rijndael_set_key           00000001004021b0 f   crypto64d:rijndael.c.obj
+ 0001:00001260       rijndael_decrypt           0000000100402260 f   crypto64d:rijndael.c.obj
+ 0001:00001930       rijndael_encrypt           0000000100402930 f   crypto64d:rijndael.c.obj
+ 0001:00001990       SHA1Transform              0000000100402990 f   crypto64d:sha1.c.obj
+ 0001:00005d20       SHA1Init                   0000000100406d20 f   crypto64d:sha1.c.obj
+ 0001:00005d80       SHA1Update                 0000000100406d80 f   crypto64d:sha1.c.obj
+ 0001:00005eb0       SHA1Final                  0000000100406eb0 f   crypto64d:sha1.c.obj
+ 0001:00006030       SHA256Init                 0000000100407030 f   crypto64d:sha2.c.obj
+ 0001:000060a0       SHA256Transform            00000001004070a0 f   crypto64d:sha2.c.obj
+ 0001:000067f0       SHA256Update               00000001004077f0 f   crypto64d:sha2.c.obj
+ 0001:000069f0       SHA256Final                00000001004079f0 f   crypto64d:sha2.c.obj
+ 0001:00006bd0       SHA512Init                 0000000100407bd0 f   crypto64d:sha2.c.obj
+ 0001:00006c50       SHA512Transform            0000000100407c50 f   crypto64d:sha2.c.obj
+ 0001:000074d0       SHA512Update               00000001004084d0 f   crypto64d:sha2.c.obj
+ 0001:00007770       SHA512Last                 0000000100408770 f   crypto64d:sha2.c.obj
+ 0001:000078f0       SHA512Final                00000001004088f0 f   crypto64d:sha2.c.obj
+ 0001:000079a0       SHA384Init                 00000001004089a0 f   crypto64d:sha2.c.obj
+ 0001:00007a20       SHA384Update               0000000100408a20 f   crypto64d:sha2.c.obj
+ 0001:00007a70       SHA384Final                0000000100408a70 f   crypto64d:sha2.c.obj
+ 0001:00007b10       des_key_setup              0000000100408b10 f   crypto64d:sshdes.c.obj
+ 0001:00007d90       des_encipher               0000000100408d90 f   crypto64d:sshdes.c.obj
+ 0001:000090f0       des_decipher               000000010040a0f0 f   crypto64d:sshdes.c.obj
+ 0001:0000a440       crypto_fetch32             000000010040b440 f   dyncrypt.obj
+ 0001:0000a470       crypto_store32             000000010040b470 f   dyncrypt.obj
+ 0001:0000a4a0       crypto_cswap32             000000010040b4a0 f   dyncrypt.obj
+ 0001:0000a4c0       crypto_cswap64             000000010040b4c0 f   dyncrypt.obj
+ 0001:0000a4e0       crypto_secure0             000000010040b4e0 f   dyncrypt.obj
+ 0001:0000a5a0       gcm_gf_mult                000000010040b5a0 f   dyncrypt.obj
+ 0001:0000a700       xts_mult_x                 000000010040b700 f   dyncrypt.obj
+ 0001:0000a7b0       xts_gf_mult                000000010040b7b0 f   dyncrypt.obj
+ 0001:0000b130       shift_left                 000000010040c130 f   dyncrypt.obj
+ 0001:0000b240       des_set_key                000000010040c240 f   dyncrypt.obj
+ 0001:0000b2c0       des_encrypt                000000010040c2c0 f   dyncrypt.obj
+ 0001:0000b380       des_decrypt                000000010040c380 f   dyncrypt.obj
+ 0001:0000b440       des3_set_2keys             000000010040c440 f   dyncrypt.obj
+ 0001:0000b540       des3_set_3keys             000000010040c540 f   dyncrypt.obj
+ 0001:0000b670       des3_encrypt               000000010040c670 f   dyncrypt.obj
+ 0001:0000b7b0       des3_decrypt               000000010040c7b0 f   dyncrypt.obj
+ 0001:00014050       s370_dyn_compute_intermediate_message_digest 0000000100415050 f   dyncrypt.obj
+ 0001:00014510       s370_dyn_compute_last_message_digest 0000000100415510 f   dyncrypt.obj
+ 0001:00014980       s370_dyn_cipher_message    0000000100415980 f   dyncrypt.obj
+ 0001:00014ef0       s370_dyn_compute_message_authentication_code 0000000100415ef0 f   dyncrypt.obj
+ 0001:000153d0       s370_dyn_cipher_message_with_chaining 00000001004163d0 f   dyncrypt.obj
+ 0001:00015940       s370_dyn_cipher_message_with_counter 0000000100416940 f   dyncrypt.obj
+ 0001:00015e10       s370_dyn_cipher_message_with_cipher_feedback 0000000100416e10 f   dyncrypt.obj
+ 0001:000162b0       s370_dyn_cipher_message_with_output_feedback 00000001004172b0 f   dyncrypt.obj
+ 0001:00016750       s370_dyn_perform_cryptographic_computation 0000000100417750 f   dyncrypt.obj
+ 0001:00016930       s370_dyn_perform_cryptographic_key_management_operation 0000000100417930 f   dyncrypt.obj
+ 0001:00019ee0       s390_dyn_compute_intermediate_message_digest 000000010041aee0 f   dyncrypt.obj
+ 0001:0001a370       s390_dyn_compute_last_message_digest 000000010041b370 f   dyncrypt.obj
+ 0001:0001a7f0       s390_dyn_cipher_message    000000010041b7f0 f   dyncrypt.obj
+ 0001:0001aca0       s390_dyn_compute_message_authentication_code 000000010041bca0 f   dyncrypt.obj
+ 0001:0001b0b0       s390_dyn_cipher_message_with_chaining 000000010041c0b0 f   dyncrypt.obj
+ 0001:0001b5b0       s390_dyn_perform_cryptographic_key_management_operation 000000010041c5b0 f   dyncrypt.obj
+ 0001:0001b720       s390_dyn_perform_cryptographic_computation 000000010041c720 f   dyncrypt.obj
+ 0001:0001b890       s390_dyn_cipher_message_with_cipher_feedback 000000010041c890 f   dyncrypt.obj
+ 0001:0001ba00       s390_dyn_cipher_message_with_output_feedback 000000010041ca00 f   dyncrypt.obj
+ 0001:0001bb70       s390_dyn_cipher_message_with_counter 000000010041cb70 f   dyncrypt.obj
+ 0001:00029450       z900_dyn_compute_intermediate_message_digest 000000010042a450 f   dyncrypt.obj
+ 0001:000299b0       z900_dyn_compute_last_message_digest 000000010042a9b0 f   dyncrypt.obj
+ 0001:00029ff0       z900_dyn_cipher_message    000000010042aff0 f   dyncrypt.obj
+ 0001:0002a730       z900_dyn_compute_message_authentication_code 000000010042b730 f   dyncrypt.obj
+ 0001:0002acb0       z900_dyn_cipher_message_with_chaining 000000010042bcb0 f   dyncrypt.obj
+ 0001:0002b3f0       z900_dyn_cipher_message_with_counter 000000010042c3f0 f   dyncrypt.obj
+ 0001:0002b980       z900_dyn_cipher_message_with_cipher_feedback 000000010042c980 f   dyncrypt.obj
+ 0001:0002bff0       z900_dyn_cipher_message_with_output_feedback 000000010042cff0 f   dyncrypt.obj
+ 0001:0002c660       z900_dyn_perform_cryptographic_computation 000000010042d660 f   dyncrypt.obj
+ 0001:0002c8a0       z900_dyn_perform_cryptographic_key_management_operation 000000010042d8a0 f   dyncrypt.obj
+ 0001:0002ce40       hdl_check_depends_ep       000000010042de40 f   dyncrypt.obj
+ 0001:0002cee0       hdl_define_instructs_ep    000000010042dee0 f   dyncrypt.obj
+ 0001:0002d400       hdl_register_symbols_ep    000000010042e400 f   dyncrypt.obj
+ 0001:0002d520       RtlSecureZeroMemory        000000010042e520 f i dyncrypt.obj
+ 0001:0002d550       fetch_fw_noswap            000000010042e550 f i dyncrypt.obj
+ 0001:0002d570       s370_maddr_l               000000010042e570 f i dyncrypt.obj
+ 0001:0002d750       s370_validate_operand      000000010042e750 f i dyncrypt.obj
+ 0001:0002d860       s370_vfetchc               000000010042e860 f i dyncrypt.obj
+ 0001:0002da80       s370_vstorec               000000010042ea80 f i dyncrypt.obj
+ 0001:0002dce0       s390_maddr_l               000000010042ece0 f i dyncrypt.obj
+ 0001:0002dec0       s390_validate_operand      000000010042eec0 f i dyncrypt.obj
+ 0001:0002df80       s390_vfetchc               000000010042ef80 f i dyncrypt.obj
+ 0001:0002e130       s390_vstorec               000000010042f130 f i dyncrypt.obj
+ 0001:0002e330       store_fw_noswap            000000010042f330 f i dyncrypt.obj
+ 0001:0002e350       z900_is_per3_event_suppressed 000000010042f350 f i dyncrypt.obj
+ 0001:0002e400       z900_maddr_l               000000010042f400 f i dyncrypt.obj
+ 0001:0002e6a0       z900_per3_zero             000000010042f6a0 f i dyncrypt.obj
+ 0001:0002e780       z900_per3_zero_check       000000010042f780 f i dyncrypt.obj
+ 0001:0002e7f0       z900_per3_zero_check2      000000010042f7f0 f i dyncrypt.obj
+ 0001:0002e8b0       z900_per3_zero_lcheck      000000010042f8b0 f i dyncrypt.obj
+ 0001:0002e970       z900_validate_operand      000000010042f970 f i dyncrypt.obj
+ 0001:0002ea40       z900_vfetchc               000000010042fa40 f i dyncrypt.obj
+ 0001:0002ec00       z900_vstorec               000000010042fc00 f i dyncrypt.obj
+ 0001:0002edff       s370_fetch_int_timer       000000010042fdff f   hengine:hengine.dll
+ 0001:0002ee05       s370_store_int_timer       000000010042fe05 f   hengine:hengine.dll
+ 0001:0002ee0b       txf_maddr_l                000000010042fe0b f   hengine:hengine.dll
+ 0001:0002ee11       z900_abort_transaction     000000010042fe11 f   hengine:hengine.dll
+ 0001:0002ee17       s370_program_interrupt     000000010042fe17 f   hengine:hengine.dll
+ 0001:0002ee1d       s390_program_interrupt     000000010042fe1d f   hengine:hengine.dll
+ 0001:0002ee23       z900_program_interrupt     000000010042fe23 f   hengine:hengine.dll
+ 0001:0002ee29       s370_logical_to_main_l     000000010042fe29 f   hengine:hengine.dll
+ 0001:0002ee2f       s390_logical_to_main_l     000000010042fe2f f   hengine:hengine.dll
+ 0001:0002ee35       z900_logical_to_main_l     000000010042fe35 f   hengine:hengine.dll
+ 0001:0002ee3b       reverse_bits               000000010042fe3b f   hutil:hutil.dll
+ 0001:0002ee41       fwritemsg                  000000010042fe41 f   hutil:hutil.dll
+ 0001:0002f260       _CRT_INIT                  0000000100430260 f   MSVCRTD:dll_dllmain.obj
+ 0001:0002f290       _DllMainCRTStartup         0000000100430290 f   MSVCRTD:dll_dllmain.obj
+ 0001:0002f2d0       __raise_securityfailure    00000001004302d0 f   MSVCRTD:gs_report.obj
+ 0001:0002f310       __report_gsfailure         0000000100430310 f   MSVCRTD:gs_report.obj
+ 0001:0002f3f0       __report_rangecheckfailure 00000001004303f0 f   MSVCRTD:gs_report.obj
+ 0001:0002f410       __report_securityfailure   0000000100430410 f   MSVCRTD:gs_report.obj
+ 0001:0002f4b0       __report_securityfailureEx 00000001004304b0 f   MSVCRTD:gs_report.obj
+ 0001:0002f720       __GSHandlerCheck           0000000100430720 f   MSVCRTD:gshandler.obj
+ 0001:0002f760       __GSHandlerCheckCommon     0000000100430760 f   MSVCRTD:gshandler.obj
+ 0001:0002f870       __security_check_cookie    0000000100430870 f   MSVCRTD:amdsecgs.obj
+ 0001:0002f890       _CRT_RTC_INIT              0000000100430890 f   MSVCRTD:init.obj
+ 0001:0002f8a0       _CRT_RTC_INITW             00000001004308a0 f   MSVCRTD:init.obj
+ 0001:0002f8b0       _RTC_InitBase              00000001004308b0 f   MSVCRTD:init.obj
+ 0001:0002f8f0       _RTC_Shutdown              00000001004308f0 f   MSVCRTD:init.obj
+ 0001:0002f920       _RTC_AllocaHelper          0000000100430920 f   MSVCRTD:stack.obj
+ 0001:0002f960       _RTC_CheckStackVars        0000000100430960 f   MSVCRTD:stack.obj
+ 0001:0002f9f0       _RTC_CheckStackVars2       00000001004309f0 f   MSVCRTD:stack.obj
+ 0001:0002fbc0       __security_init_cookie     0000000100430bc0 f   MSVCRTD:gs_support.obj
+ 0001:0002fc40       DllMain                    0000000100430c40 f   MSVCRTD:dll_dllmain_stub.obj
+ 0001:0002fc80       ?__scrt_initialize_type_info@@YAXXZ 0000000100430c80 f   MSVCRTD:tncleanup.obj
+ 0001:0002fca0       ?__scrt_uninitialize_type_info@@YAXXZ 0000000100430ca0 f   MSVCRTD:tncleanup.obj
+ 0001:0002fcc0       __local_stdio_printf_options 0000000100430cc0 f i MSVCRTD:default_local_stdio_options.obj
+ 0001:0002fcd0       __local_stdio_scanf_options 0000000100430cd0 f i MSVCRTD:default_local_stdio_options.obj
+ 0001:0002fce0       __scrt_initialize_default_local_stdio_options 0000000100430ce0 f   MSVCRTD:default_local_stdio_options.obj
+ 0001:0002fd30       ?configure_argv@__scrt_narrow_argv_policy@@SAHXZ 0000000100430d30 f i MSVCRTD:utility.obj
+ 0001:0002fe20       ?initialize_environment@__scrt_narrow_environment_policy@@SAHXZ 0000000100430e20 f i MSVCRTD:utility.obj
+ 0001:0002fec0       NtCurrentTeb               0000000100430ec0 f i MSVCRTD:utility.obj
+ 0001:0002fed0       __scrt_acquire_startup_lock 0000000100430ed0 f   MSVCRTD:utility.obj
+ 0001:0002ff40       __scrt_dllmain_after_initialize_c 0000000100430f40 f   MSVCRTD:utility.obj
+ 0001:0002ff70       __scrt_dllmain_before_initialize_c 0000000100430f70 f   MSVCRTD:utility.obj
+ 0001:0002ff90       __scrt_dllmain_crt_thread_attach 0000000100430f90 f   MSVCRTD:utility.obj
+ 0001:0002ffc0       __scrt_dllmain_crt_thread_detach 0000000100430fc0 f   MSVCRTD:utility.obj
+ 0001:0002ffe0       __scrt_dllmain_exception_filter 0000000100430fe0 f   MSVCRTD:utility.obj
+ 0001:00030050       __scrt_dllmain_uninitialize_c 0000000100431050 f   MSVCRTD:utility.obj
+ 0001:00030080       __scrt_dllmain_uninitialize_critical 0000000100431080 f   MSVCRTD:utility.obj
+ 0001:000300a0       __scrt_initialize_crt      00000001004310a0 f   MSVCRTD:utility.obj
+ 0001:000300f0       __scrt_initialize_onexit_tables 00000001004310f0 f   MSVCRTD:utility.obj
+ 0001:00030200       __scrt_is_nonwritable_in_current_image 0000000100431200 f   MSVCRTD:utility.obj
+ 0001:00030290       __scrt_release_startup_lock 0000000100431290 f   MSVCRTD:utility.obj
+ 0001:000302c0       __scrt_uninitialize_crt    00000001004312c0 f   MSVCRTD:utility.obj
+ 0001:00030300       _onexit                    0000000100431300 f   MSVCRTD:utility.obj
+ 0001:00030380       at_quick_exit              0000000100431380 f   MSVCRTD:utility.obj
+ 0001:000303d0       atexit                     00000001004313d0 f   MSVCRTD:utility.obj
+ 0001:00030410       __scrt_get_dyn_tls_init_callback 0000000100431410 f   MSVCRTD:dyn_tls_init.obj
+ 0001:00030420       __crt_debugger_hook        0000000100431420 f   MSVCRTD:utility_desktop.obj
+ 0001:00030430       __scrt_fastfail            0000000100431430 f   MSVCRTD:utility_desktop.obj
+ 0001:000305d0       __scrt_get_show_window_mode 00000001004315d0 f   MSVCRTD:utility_desktop.obj
+ 0001:00030630       __scrt_initialize_mta      0000000100431630 f   MSVCRTD:utility_desktop.obj
+ 0001:00030640       __scrt_initialize_winrt    0000000100431640 f   MSVCRTD:utility_desktop.obj
+ 0001:00030650       __scrt_is_managed_app      0000000100431650 f   MSVCRTD:utility_desktop.obj
+ 0001:00030700       __scrt_set_unhandled_exception_filter 0000000100431700 f   MSVCRTD:utility_desktop.obj
+ 0001:00030720       __scrt_exe_initialize_mta  0000000100431720 f   MSVCRTD:utility_desktop.obj
+ 0001:00030720       __scrt_stub_for_initialize_mta 0000000100431720 f   MSVCRTD:utility_desktop.obj
+ 0001:00030730       __scrt_unhandled_exception_filter 0000000100431730 f   MSVCRTD:utility_desktop.obj
+ 0001:000307d0       _RTC_Initialize            00000001004317d0 f   MSVCRTD:initsect.obj
+ 0001:00030820       _RTC_Terminate             0000000100431820 f   MSVCRTD:initsect.obj
+ 0001:00030870       _guard_check_icall_nop     0000000100431870 f i MSVCRTD:guard_support.obj
+ 0001:00030880       ReadNoFence64              0000000100431880 f i MSVCRTD:guard_support.obj
+ 0001:000308a0       ReadPointerNoFence         00000001004318a0 f i MSVCRTD:guard_support.obj
+ 0001:000308c0       __castguard_check_failure_debugbreak 00000001004318c0 f i MSVCRTD:guard_support.obj
+ 0001:000308e0       __castguard_check_failure_fastfail 00000001004318e0 f i MSVCRTD:guard_support.obj
+ 0001:00030910       __castguard_check_failure_nop 0000000100431910 f i MSVCRTD:guard_support.obj
+ 0001:00030920       __castguard_check_failure_os_handled 0000000100431920 f i MSVCRTD:guard_support.obj
+ 0001:000309f0       __castguard_slow_path_check_debugbreak 00000001004319f0 f i MSVCRTD:guard_support.obj
+ 0001:00030a30       __castguard_slow_path_check_fastfail 0000000100431a30 f i MSVCRTD:guard_support.obj
+ 0001:00030a80       __castguard_slow_path_check_nop 0000000100431a80 f i MSVCRTD:guard_support.obj
+ 0001:00030a90       __castguard_slow_path_check_os_handled 0000000100431a90 f i MSVCRTD:guard_support.obj
+ 0001:00030b50       _guard_icall_checks_enforced 0000000100431b50 f i MSVCRTD:guard_support.obj
+ 0001:00030b90       _guard_rf_checks_enforced  0000000100431b90 f i MSVCRTD:guard_support.obj
+ 0001:00030ba0       ?_RTC_GetErrorFunc@@YAP6AHHPEBDH00ZZPEBX@Z 0000000100431ba0 f   MSVCRTD:userapi.obj
+ 0001:00030bb0       ?_RTC_GetErrorFuncW@@YAP6AHHPEB_WH00ZZPEBX@Z 0000000100431bb0 f   MSVCRTD:userapi.obj
+ 0001:00030bc0       _RTC_GetErrDesc            0000000100431bc0 f   MSVCRTD:userapi.obj
+ 0001:00030be0       _RTC_NumErrors             0000000100431be0 f   MSVCRTD:userapi.obj
+ 0001:00030bf0       _RTC_SetErrorFunc          0000000100431bf0 f   MSVCRTD:userapi.obj
+ 0001:00030c10       _RTC_SetErrorFuncW         0000000100431c10 f   MSVCRTD:userapi.obj
+ 0001:00030c30       _RTC_SetErrorType          0000000100431c30 f   MSVCRTD:userapi.obj
+ 0001:00030ce0       ?_RTC_AllocaFailure@@YAXPEAXPEAU_RTC_ALLOCA_NODE@@H@Z 0000000100431ce0 f   MSVCRTD:error.obj
+ 0001:00030e40       ?_RTC_Failure@@YAXPEAXH@Z  0000000100431e40 f   MSVCRTD:error.obj
+ 0001:00030e90       ?_RTC_StackFailure@@YAXPEAXPEBD@Z 0000000100431e90 f   MSVCRTD:error.obj
+ 0001:000312c0       _RTC_UninitUse             00000001004322c0 f   MSVCRTD:error.obj
+ 0001:00031390       _vsprintf_s_l              0000000100432390 f i MSVCRTD:error.obj
+ 0001:00031400       sprintf_s                  0000000100432400 f i MSVCRTD:error.obj
+ 0001:00031430       __isa_available_init       0000000100432430 f   MSVCRTD:cpu_disp.obj
+ 0001:000317e0       _get_startup_argv_mode     00000001004327e0 f   MSVCRTD:argv_mode.obj
+ 0001:000317f0       __scrt_is_ucrt_dll_in_use  00000001004327f0 f   MSVCRTD:ucrt_detection.obj
+ 0001:00031d40       ?_RTC_GetSrcLine@@YAHPEAEPEA_WKPEAH1K@Z 0000000100432d40 f   MSVCRTD:pdblkup.obj
+ 0001:00032106       longjmp                    0000000100433106 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:0003210c       memcmp                     000000010043310c f   vcruntimed:VCRUNTIME140D.dll
+ 0001:00032112       memcpy                     0000000100433112 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:00032118       memset                     0000000100433118 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:0003211e       __C_specific_handler       000000010043311e f   vcruntimed:VCRUNTIME140D.dll
+ 0001:00032124       __std_type_info_destroy_list 0000000100433124 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:0003212a       __current_exception        000000010043312a f   vcruntimed:VCRUNTIME140D.dll
+ 0001:00032130       __current_exception_context 0000000100433130 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:00032136       __C_specific_handler_noexcept 0000000100433136 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:0003213c       __vcrt_GetModuleFileNameW  000000010043313c f   vcruntimed:VCRUNTIME140D.dll
+ 0001:00032142       __vcrt_GetModuleHandleW    0000000100433142 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:00032148       __vcrt_LoadLibraryExW      0000000100433148 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:0003214e       _byteswap_ulong            000000010043314e f   ucrtd:ucrtbased.dll
+ 0001:00032154       _byteswap_uint64           0000000100433154 f   ucrtd:ucrtbased.dll
+ 0001:0003215a       __acrt_iob_func            000000010043315a f   ucrtd:ucrtbased.dll
+ 0001:00032160       _initterm                  0000000100433160 f   ucrtd:ucrtbased.dll
+ 0001:00032166       _initterm_e                0000000100433166 f   ucrtd:ucrtbased.dll
+ 0001:0003216c       _CrtDbgReport              000000010043316c f   ucrtd:ucrtbased.dll
+ 0001:00032172       _CrtDbgReportW             0000000100433172 f   ucrtd:ucrtbased.dll
+ 0001:00032178       _seh_filter_dll            0000000100433178 f   ucrtd:ucrtbased.dll
+ 0001:0003217e       _configure_narrow_argv     000000010043317e f   ucrtd:ucrtbased.dll
+ 0001:00032184       _initialize_narrow_environment 0000000100433184 f   ucrtd:ucrtbased.dll
+ 0001:0003218a       _initialize_onexit_table   000000010043318a f   ucrtd:ucrtbased.dll
+ 0001:00032190       _register_onexit_function  0000000100433190 f   ucrtd:ucrtbased.dll
+ 0001:00032196       _execute_onexit_table      0000000100433196 f   ucrtd:ucrtbased.dll
+ 0001:0003219c       _crt_atexit                000000010043319c f   ucrtd:ucrtbased.dll
+ 0001:000321a2       _crt_at_quick_exit         00000001004331a2 f   ucrtd:ucrtbased.dll
+ 0001:000321a8       _cexit                     00000001004331a8 f   ucrtd:ucrtbased.dll
+ 0001:000321ae       terminate                  00000001004331ae f   ucrtd:ucrtbased.dll
+ 0001:000321b4       strcpy_s                   00000001004331b4 f   ucrtd:ucrtbased.dll
+ 0001:000321ba       strcat_s                   00000001004331ba f   ucrtd:ucrtbased.dll
+ 0001:000321c0       __stdio_common_vsprintf_s  00000001004331c0 f   ucrtd:ucrtbased.dll
+ 0001:000321c6       _wmakepath_s               00000001004331c6 f   ucrtd:ucrtbased.dll
+ 0001:000321cc       _wsplitpath_s              00000001004331cc f   ucrtd:ucrtbased.dll
+ 0001:000321d2       wcscpy_s                   00000001004331d2 f   ucrtd:ucrtbased.dll
+ 0001:000321d8       RtlCaptureContext          00000001004331d8 f   kernel32:KERNEL32.dll
+ 0001:000321de       RtlLookupFunctionEntry     00000001004331de f   kernel32:KERNEL32.dll
+ 0001:000321e4       RtlVirtualUnwind           00000001004331e4 f   kernel32:KERNEL32.dll
+ 0001:000321ea       UnhandledExceptionFilter   00000001004331ea f   kernel32:KERNEL32.dll
+ 0001:000321f0       SetUnhandledExceptionFilter 00000001004331f0 f   kernel32:KERNEL32.dll
+ 0001:000321f6       GetCurrentProcess          00000001004331f6 f   kernel32:KERNEL32.dll
+ 0001:000321fc       TerminateProcess           00000001004331fc f   kernel32:KERNEL32.dll
+ 0001:00032202       IsProcessorFeaturePresent  0000000100433202 f   kernel32:KERNEL32.dll
+ 0001:00032208       QueryPerformanceCounter    0000000100433208 f   kernel32:KERNEL32.dll
+ 0001:0003220e       GetCurrentProcessId        000000010043320e f   kernel32:KERNEL32.dll
+ 0001:00032214       GetCurrentThreadId         0000000100433214 f   kernel32:KERNEL32.dll
+ 0001:0003221a       GetSystemTimeAsFileTime    000000010043321a f   kernel32:KERNEL32.dll
+ 0001:00032220       DisableThreadLibraryCalls  0000000100433220 f   kernel32:KERNEL32.dll
+ 0001:00032226       InitializeSListHead        0000000100433226 f   kernel32:KERNEL32.dll
+ 0001:0003222c       IsDebuggerPresent          000000010043322c f   kernel32:KERNEL32.dll
+ 0001:00032232       GetStartupInfoW            0000000100433232 f   kernel32:KERNEL32.dll
+ 0001:00032238       GetModuleHandleW           0000000100433238 f   kernel32:KERNEL32.dll
+ 0001:0003223e       RaiseException             000000010043323e f   kernel32:KERNEL32.dll
+ 0001:00032244       MultiByteToWideChar        0000000100433244 f   kernel32:KERNEL32.dll
+ 0001:0003224a       WideCharToMultiByte        000000010043324a f   kernel32:KERNEL32.dll
+ 0001:00032250       GetLastError               0000000100433250 f   kernel32:KERNEL32.dll
+ 0001:00032256       HeapAlloc                  0000000100433256 f   kernel32:KERNEL32.dll
+ 0001:0003225c       HeapFree                   000000010043325c f   kernel32:KERNEL32.dll
+ 0001:00032262       GetProcessHeap             0000000100433262 f   kernel32:KERNEL32.dll
+ 0001:00032268       VirtualQuery               0000000100433268 f   kernel32:KERNEL32.dll
+ 0001:0003226e       FreeLibrary                000000010043326e f   kernel32:KERNEL32.dll
+ 0001:00032274       GetProcAddress             0000000100433274 f   kernel32:KERNEL32.dll
+ 0001:00032280       __acrt_initialize          0000000100433280 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00032280       __scrt_stub_for_acrt_initialize 0000000100433280 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00032280       __vcrt_initialize          0000000100433280 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00032290       __acrt_thread_attach       0000000100433290 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00032290       __scrt_stub_for_acrt_thread_attach 0000000100433290 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00032290       __vcrt_thread_attach       0000000100433290 f   MSVCRTD:ucrt_stubs.obj
+ 0001:000322a0       __acrt_thread_detach       00000001004332a0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:000322a0       __scrt_stub_for_acrt_thread_detach 00000001004332a0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:000322a0       __vcrt_thread_detach       00000001004332a0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:000322b0       __acrt_uninitialize        00000001004332b0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:000322b0       __scrt_stub_for_acrt_uninitialize 00000001004332b0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:000322b0       __vcrt_uninitialize        00000001004332b0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:000322c0       __acrt_uninitialize_critical 00000001004332c0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:000322c0       __scrt_stub_for_acrt_uninitialize_critical 00000001004332c0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:000322c0       __vcrt_uninitialize_critical 00000001004332c0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:000322d0       __scrt_stub_for_is_c_termination_complete 00000001004332d0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:000322d0       _is_c_termination_complete 00000001004332d0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:000322f0       _guard_dispatch_icall_nop  00000001004332f0 f   MSVCRTD:guard_dispatch.obj
+ 0001:00032310       _guard_xfg_dispatch_icall_nop 0000000100433310 f   MSVCRTD:guard_xfg_dispatch.obj
+ 0002:00000000       __imp_RtlCaptureContext    0000000100434000     kernel32:KERNEL32.dll
+ 0002:00000008       __imp_RtlLookupFunctionEntry 0000000100434008     kernel32:KERNEL32.dll
+ 0002:00000010       __imp_RtlVirtualUnwind     0000000100434010     kernel32:KERNEL32.dll
+ 0002:00000018       __imp_UnhandledExceptionFilter 0000000100434018     kernel32:KERNEL32.dll
+ 0002:00000020       __imp_SetUnhandledExceptionFilter 0000000100434020     kernel32:KERNEL32.dll
+ 0002:00000028       __imp_GetCurrentProcess    0000000100434028     kernel32:KERNEL32.dll
+ 0002:00000030       __imp_TerminateProcess     0000000100434030     kernel32:KERNEL32.dll
+ 0002:00000038       __imp_IsProcessorFeaturePresent 0000000100434038     kernel32:KERNEL32.dll
+ 0002:00000040       __imp_QueryPerformanceCounter 0000000100434040     kernel32:KERNEL32.dll
+ 0002:00000048       __imp_GetCurrentProcessId  0000000100434048     kernel32:KERNEL32.dll
+ 0002:00000050       __imp_GetProcAddress       0000000100434050     kernel32:KERNEL32.dll
+ 0002:00000058       __imp_FreeLibrary          0000000100434058     kernel32:KERNEL32.dll
+ 0002:00000060       __imp_VirtualQuery         0000000100434060     kernel32:KERNEL32.dll
+ 0002:00000068       __imp_GetProcessHeap       0000000100434068     kernel32:KERNEL32.dll
+ 0002:00000070       __imp_HeapFree             0000000100434070     kernel32:KERNEL32.dll
+ 0002:00000078       __imp_HeapAlloc            0000000100434078     kernel32:KERNEL32.dll
+ 0002:00000080       __imp_GetCurrentThreadId   0000000100434080     kernel32:KERNEL32.dll
+ 0002:00000088       __imp_GetSystemTimeAsFileTime 0000000100434088     kernel32:KERNEL32.dll
+ 0002:00000090       __imp_DisableThreadLibraryCalls 0000000100434090     kernel32:KERNEL32.dll
+ 0002:00000098       __imp_InitializeSListHead  0000000100434098     kernel32:KERNEL32.dll
+ 0002:000000a0       __imp_IsDebuggerPresent    00000001004340a0     kernel32:KERNEL32.dll
+ 0002:000000a8       __imp_GetStartupInfoW      00000001004340a8     kernel32:KERNEL32.dll
+ 0002:000000b0       __imp_GetModuleHandleW     00000001004340b0     kernel32:KERNEL32.dll
+ 0002:000000b8       __imp_RaiseException       00000001004340b8     kernel32:KERNEL32.dll
+ 0002:000000c0       __imp_MultiByteToWideChar  00000001004340c0     kernel32:KERNEL32.dll
+ 0002:000000c8       __imp_WideCharToMultiByte  00000001004340c8     kernel32:KERNEL32.dll
+ 0002:000000d0       __imp_GetLastError         00000001004340d0     kernel32:KERNEL32.dll
+ 0002:000000d8       \177KERNEL32_NULL_THUNK_DATA 00000001004340d8     kernel32:KERNEL32.dll
+ 0002:000000e0       __imp_longjmp              00000001004340e0     vcruntimed:VCRUNTIME140D.dll
+ 0002:000000e8       __imp___vcrt_LoadLibraryExW 00000001004340e8     vcruntimed:VCRUNTIME140D.dll
+ 0002:000000f0       __imp___vcrt_GetModuleHandleW 00000001004340f0     vcruntimed:VCRUNTIME140D.dll
+ 0002:000000f8       __imp___C_specific_handler_noexcept 00000001004340f8     vcruntimed:VCRUNTIME140D.dll
+ 0002:00000100       __imp___current_exception_context 0000000100434100     vcruntimed:VCRUNTIME140D.dll
+ 0002:00000108       __imp___current_exception  0000000100434108     vcruntimed:VCRUNTIME140D.dll
+ 0002:00000110       __imp___std_type_info_destroy_list 0000000100434110     vcruntimed:VCRUNTIME140D.dll
+ 0002:00000118       __imp___C_specific_handler 0000000100434118     vcruntimed:VCRUNTIME140D.dll
+ 0002:00000120       __imp_memset               0000000100434120     vcruntimed:VCRUNTIME140D.dll
+ 0002:00000128       __imp_memcpy               0000000100434128     vcruntimed:VCRUNTIME140D.dll
+ 0002:00000130       __imp_memcmp               0000000100434130     vcruntimed:VCRUNTIME140D.dll
+ 0002:00000138       __imp___vcrt_GetModuleFileNameW 0000000100434138     vcruntimed:VCRUNTIME140D.dll
+ 0002:00000140       \177VCRUNTIME140D_NULL_THUNK_DATA 0000000100434140     vcruntimed:VCRUNTIME140D.dll
+ 0002:00000148       __imp_z900_logical_to_main_l 0000000100434148     hengine:hengine.dll
+ 0002:00000150       __imp_s390_logical_to_main_l 0000000100434150     hengine:hengine.dll
+ 0002:00000158       __imp_s370_logical_to_main_l 0000000100434158     hengine:hengine.dll
+ 0002:00000160       __imp_z900_program_interrupt 0000000100434160     hengine:hengine.dll
+ 0002:00000168       __imp_s390_program_interrupt 0000000100434168     hengine:hengine.dll
+ 0002:00000170       __imp_s370_program_interrupt 0000000100434170     hengine:hengine.dll
+ 0002:00000178       __imp_z900_abort_transaction 0000000100434178     hengine:hengine.dll
+ 0002:00000180       __imp_txf_maddr_l          0000000100434180     hengine:hengine.dll
+ 0002:00000188       __imp_s370_store_int_timer 0000000100434188     hengine:hengine.dll
+ 0002:00000190       __imp_s370_fetch_int_timer 0000000100434190     hengine:hengine.dll
+ 0002:00000198       \177hengine_NULL_THUNK_DATA 0000000100434198     hengine:hengine.dll
+ 0002:000001a0       __imp_sysblk               00000001004341a0     hsys:hsys.dll
+ 0002:000001a8       \177hsys_NULL_THUNK_DATA   00000001004341a8     hsys:hsys.dll
+ 0002:000001b0       __imp_reverse_bits         00000001004341b0     hutil:hutil.dll
+ 0002:000001b8       __imp_fwritemsg            00000001004341b8     hutil:hutil.dll
+ 0002:000001c0       \177hutil_NULL_THUNK_DATA  00000001004341c0     hutil:hutil.dll
+ 0002:000001c8       __imp_strcpy_s             00000001004341c8     ucrtd:ucrtbased.dll
+ 0002:000001d0       __imp_terminate            00000001004341d0     ucrtd:ucrtbased.dll
+ 0002:000001d8       __imp__cexit               00000001004341d8     ucrtd:ucrtbased.dll
+ 0002:000001e0       __imp__crt_at_quick_exit   00000001004341e0     ucrtd:ucrtbased.dll
+ 0002:000001e8       __imp__crt_atexit          00000001004341e8     ucrtd:ucrtbased.dll
+ 0002:000001f0       __imp__execute_onexit_table 00000001004341f0     ucrtd:ucrtbased.dll
+ 0002:000001f8       __imp__initialize_onexit_table 00000001004341f8     ucrtd:ucrtbased.dll
+ 0002:00000200       __imp___stdio_common_vsprintf_s 0000000100434200     ucrtd:ucrtbased.dll
+ 0002:00000208       __imp__configure_narrow_argv 0000000100434208     ucrtd:ucrtbased.dll
+ 0002:00000210       __imp__seh_filter_dll      0000000100434210     ucrtd:ucrtbased.dll
+ 0002:00000218       __imp__CrtDbgReportW       0000000100434218     ucrtd:ucrtbased.dll
+ 0002:00000220       __imp__CrtDbgReport        0000000100434220     ucrtd:ucrtbased.dll
+ 0002:00000228       __imp__initterm_e          0000000100434228     ucrtd:ucrtbased.dll
+ 0002:00000230       __imp__initterm            0000000100434230     ucrtd:ucrtbased.dll
+ 0002:00000238       __imp___acrt_iob_func      0000000100434238     ucrtd:ucrtbased.dll
+ 0002:00000240       __imp__byteswap_uint64     0000000100434240     ucrtd:ucrtbased.dll
+ 0002:00000248       __imp__byteswap_ulong      0000000100434248     ucrtd:ucrtbased.dll
+ 0002:00000250       __imp__wmakepath_s         0000000100434250     ucrtd:ucrtbased.dll
+ 0002:00000258       __imp__wsplitpath_s        0000000100434258     ucrtd:ucrtbased.dll
+ 0002:00000260       __imp_strcat_s             0000000100434260     ucrtd:ucrtbased.dll
+ 0002:00000268       __imp__initialize_narrow_environment 0000000100434268     ucrtd:ucrtbased.dll
+ 0002:00000270       __imp_wcscpy_s             0000000100434270     ucrtd:ucrtbased.dll
+ 0002:00000278       __imp__register_onexit_function 0000000100434278     ucrtd:ucrtbased.dll
+ 0002:00000280       \177ucrtbased_NULL_THUNK_DATA 0000000100434280     ucrtd:ucrtbased.dll
+ 0002:00000288       __guard_check_icall_fptr   0000000100434288     MSVCRTD:guard_support.obj
+ 0002:00000290       __guard_xfg_check_icall_fptr 0000000100434290     MSVCRTD:guard_support.obj
+ 0002:00000298       __guard_dispatch_icall_fptr 0000000100434298     MSVCRTD:guard_support.obj
+ 0002:000002a0       __guard_xfg_dispatch_icall_fptr 00000001004342a0     MSVCRTD:guard_support.obj
+ 0002:000002a8       __guard_xfg_table_dispatch_icall_fptr 00000001004342a8     MSVCRTD:guard_support.obj
+ 0002:000002b0       __castguard_check_failure_os_handled_fptr 00000001004342b0     MSVCRTD:guard_support.obj
+ 0002:000002b8       __guard_memcpy_fptr        00000001004342b8     vcruntimed:softmemtag.obj
+ 0002:000002c0       __xc_a                     00000001004342c0     MSVCRTD:initializers.obj
+ 0002:000002c8       __xc_z                     00000001004342c8     MSVCRTD:initializers.obj
+ 0002:000002d0       __xi_a                     00000001004342d0     MSVCRTD:initializers.obj
+ 0002:000002d8       __xi_z                     00000001004342d8     MSVCRTD:initializers.obj
+ 0002:000002e0       __xp_a                     00000001004342e0     MSVCRTD:initializers.obj
+ 0002:000002e8       __xp_z                     00000001004342e8     MSVCRTD:initializers.obj
+ 0002:000002f0       __xt_a                     00000001004342f0     MSVCRTD:initializers.obj
+ 0002:000002f8       __xt_z                     00000001004342f8     MSVCRTD:initializers.obj
+ 0002:00003e30       _pDefaultRawDllMain        0000000100437e30     MSVCRTD:dll_dllmain.obj
+ 0002:00003e30       _pRawDllMain               0000000100437e30     MSVCRTD:dll_dllmain.obj
+ 0002:00003e70       ??_C@_0BJ@HEGAHDFO@Stack?5pointer?5corruption@ 0000000100437e70     MSVCRTD:userapi.obj
+ 0002:00003e90       ??_C@_0CK@FEGOIOPB@Cast?5to?5smaller?5type?5causing?5lo@ 0000000100437e90     MSVCRTD:userapi.obj
+ 0002:00003ec0       ??_C@_0BI@CIGMDCBH@Stack?5memory?5corruption@ 0000000100437ec0     MSVCRTD:userapi.obj
+ 0002:00003ed8       ??_C@_0CK@CNLNOEPB@Local?5variable?5used?5before?5init@ 0000000100437ed8     MSVCRTD:userapi.obj
+ 0002:00003f08       ??_C@_0BP@OGBCLIBO@Stack?5around?5_alloca?5corrupted@ 0000000100437f08     MSVCRTD:userapi.obj
+ 0002:00003ff0       ??_C@_0NN@JMPELKLB@The?5value?5of?5ESP?5was?5not?5proper@ 0000000100437ff0     MSVCRTD:error.obj
+ 0002:000040d0       ??_C@_0BBN@ELNNILBE@A?5cast?5to?5a?5smaller?5data?5type?5h@ 00000001004380d0     MSVCRTD:error.obj
+ 0002:000041f0       ??_C@_0BN@BPOGFMJL@Stack?5memory?5was?5corrupted?$AN?6@ 00000001004381f0     MSVCRTD:error.obj
+ 0002:00004210       ??_C@_0DG@DAJCDLPN@A?5local?5variable?5was?5used?5befor@ 0000000100438210     MSVCRTD:error.obj
+ 0002:00004248       ??_C@_0CM@JMIDGKLA@Stack?5memory?5around?5_alloca?5was@ 0000000100438248     MSVCRTD:error.obj
+ 0002:00004278       ??_C@_0BO@CHIONIOI@Unknown?5Runtime?5Check?5Error?$AN?6@ 0000000100438278     MSVCRTD:error.obj
+ 0002:000042a0       ??_C@_1GM@CNOOJIHC@?$AAR?$AAu?$AAn?$AAt?$AAi?$AAm?$AAe?$AA?5?$AAC?$AAh?$AAe?$AAc?$AAk?$AA?5?$AAE@ 00000001004382a0     MSVCRTD:error.obj
+ 0002:00004310       ??_C@_1EA@NFKNIFJP@?$AAR?$AAu?$AAn?$AA?9?$AAT?$AAi?$AAm?$AAe?$AA?5?$AAC?$AAh?$AAe?$AAc?$AAk?$AA?5@ 0000000100438310     MSVCRTD:error.obj
+ 0002:00004350       ??_C@_0BB@PFFGGCJP@Unknown?5Filename@ 0000000100438350     MSVCRTD:error.obj
+ 0002:00004368       ??_C@_0BE@GNBOBNCK@Unknown?5Module?5Name@ 0000000100438368     MSVCRTD:error.obj
+ 0002:00004380       ??_C@_0CA@IODNCDPG@Run?9Time?5Check?5Failure?5?$CD?$CFd?5?9?5?$CFs@ 0000000100438380     MSVCRTD:error.obj
+ 0002:000043a0       ??_C@_0CG@IAFNJNEE@Stack?5corrupted?5near?5unknown?5va@ 00000001004383a0     MSVCRTD:error.obj
+ 0002:000043c8       ??_C@_05MKKEDADM@?$CF?42X?5@ 00000001004383c8     MSVCRTD:error.obj
+ 0002:000043d0       ??_C@_0EJ@LJKNEOLN@Stack?5area?5around?5_alloca?5memor@ 00000001004383d0     MSVCRTD:error.obj
+ 0002:0000441c       ??_C@_01EEMJAFIK@?6@       000000010043841c     MSVCRTD:error.obj
+ 0002:00004420       ??_C@_02LLMPMKNF@?$DO?5@   0000000100438420     MSVCRTD:error.obj
+ 0002:00004428       ??_C@_08OMAHNMHJ@?6Data?3?5?$DM@ 0000000100438428     MSVCRTD:error.obj
+ 0002:00004438       ??_C@_0CK@DKGBICFE@?6Allocation?5number?5within?5this?5@ 0000000100438438     MSVCRTD:error.obj
+ 0002:00004468       ??_C@_07DFDJCKFN@?6Size?3?5@ 0000000100438468     MSVCRTD:error.obj
+ 0002:00004470       ??_C@_0N@MHFFIMFG@?6Address?3?50x@ 0000000100438470     MSVCRTD:error.obj
+ 0002:00004480       ??_C@_0EI@CLEPFNGI@Stack?5area?5around?5_alloca?5memor@ 0000000100438480     MSVCRTD:error.obj
+ 0002:000044c8       ??_C@_0BK@ODNDAGKB@?$CFs?$CFs?$CFp?$CFs?$CFzd?$CFs?$CFd?$CFs?$CFs?$CFs?$CFs?$CFs@ 00000001004384c8     MSVCRTD:error.obj
+ 0002:000044e8       ??_C@_0DE@OHJBPMBP@A?5variable?5is?5being?5used?5withou@ 00000001004384e8     MSVCRTD:error.obj
+ 0002:00004580       ??_C@_1EI@MLPKHBGE@?$AAa?$AAp?$AAi?$AA?9?$AAm?$AAs?$AA?9?$AAw?$AAi?$AAn?$AA?9?$AAc?$AAo?$AAr?$AAe@ 0000000100438580     MSVCRTD:pdblkup.obj
+ 0002:000045c8       ??_C@_1BK@JHLNAEJL@?$AAa?$AAd?$AAv?$AAa?$AAp?$AAi?$AA3?$AA2?$AA?4?$AAd?$AAl?$AAl@ 00000001004385c8     MSVCRTD:pdblkup.obj
+ 0002:000045e8       ??_C@_0O@COHOBMLB@RegOpenKeyExW@ 00000001004385e8     MSVCRTD:pdblkup.obj
+ 0002:000045f8       ??_C@_0BB@GLNAEDBD@RegQueryValueExW@ 00000001004385f8     MSVCRTD:pdblkup.obj
+ 0002:00004610       ??_C@_0M@HLOHPNFA@RegCloseKey@ 0000000100438610     MSVCRTD:pdblkup.obj
+ 0002:00004620       ??_C@_1HE@EBEAGLFB@?$AAS?$AAO?$AAF?$AAT?$AAW?$AAA?$AAR?$AAE?$AA?2?$AAW?$AAo?$AAw?$AA6?$AA4?$AA3@ 0000000100438620     MSVCRTD:pdblkup.obj
+ 0002:00004698       ??_C@_1BG@EABPBLLF@?$AAP?$AAr?$AAo?$AAd?$AAu?$AAc?$AAt?$AAD?$AAi?$AAr@ 0000000100438698     MSVCRTD:pdblkup.obj
+ 0002:000046d0       ??_C@_1BC@JINFINNJ@?$AAM?$AAS?$AAP?$AAD?$AAB?$AA1?$AA4?$AA0@ 00000001004386d0     MSVCRTD:pdblkup.obj
+ 0002:000046e8       ??_C@_0BB@KCIACLNC@PDBOpenValidate5@ 00000001004386e8     MSVCRTD:pdblkup.obj
+ 0002:000046fc       ??_C@_01KDCPPGHE@r@        00000001004386fc     MSVCRTD:pdblkup.obj
+ 0002:00004700       _load_config_used          0000000100438700     MSVCRTD:loadcfg.obj
+ 0002:00004900       __CastGuardVftablesStart   0000000100438900     MSVCRTD:guard_support.obj
+ 0002:00004980       __CastGuardVftablesEnd     0000000100438980     MSVCRTD:guard_support.obj
+ 0002:00004a00       __volatile_metadata        0000000100438a00     <linker-defined>
+ 0002:00005058       __rtc_iaa                  0000000100439058     MSVCRTD:initsect.obj
+ 0002:00005080       __rtc_izz                  0000000100439080     MSVCRTD:initsect.obj
+ 0002:00005088       __rtc_taa                  0000000100439088     MSVCRTD:initsect.obj
+ 0002:000050b0       __rtc_tzz                  00000001004390b0     MSVCRTD:initsect.obj
+ 0002:00005e88       __IMPORT_DESCRIPTOR_hengine 0000000100439e88     hengine:hengine.dll
+ 0002:00005e9c       __IMPORT_DESCRIPTOR_hutil  0000000100439e9c     hutil:hutil.dll
+ 0002:00005eb0       __IMPORT_DESCRIPTOR_hsys   0000000100439eb0     hsys:hsys.dll
+ 0002:00005ec4       __IMPORT_DESCRIPTOR_VCRUNTIME140D 0000000100439ec4     vcruntimed:VCRUNTIME140D.dll
+ 0002:00005ed8       __IMPORT_DESCRIPTOR_ucrtbased 0000000100439ed8     ucrtd:ucrtbased.dll
+ 0002:00005eec       __IMPORT_DESCRIPTOR_KERNEL32 0000000100439eec     kernel32:KERNEL32.dll
+ 0002:00005f00       __NULL_IMPORT_DESCRIPTOR   0000000100439f00     hengine:hengine.dll
+ 0003:00000ed0       __security_cookie_complement 000000010043bed0     MSVCRTD:gs_cookie.obj
+ 0003:00000ed8       __security_cookie          000000010043bed8     MSVCRTD:gs_cookie.obj
+ 0003:00000ee0       __scrt_native_dllmain_reason 000000010043bee0     MSVCRTD:utility.obj
+ 0003:00000ee8       ?_RTC_ErrorLevels@@3PAHA   000000010043bee8     MSVCRTD:error.obj
+ 0003:00000f00       __isa_available            000000010043bf00     MSVCRTD:cpu_disp.obj
+ 0003:00000f04       __isa_enabled              000000010043bf04     MSVCRTD:cpu_disp.obj
+ 0003:00000f08       __memset_fast_string_threshold 000000010043bf08     MSVCRTD:cpu_disp.obj
+ 0003:00000f10       __memset_nt_threshold      000000010043bf10     MSVCRTD:cpu_disp.obj
+ 0003:00000f20       __scrt_ucrt_dll_is_in_use  000000010043bf20     MSVCRTD:ucrt_stubs.obj
+ 0003:000014c0       ?__type_info_root_node@@3U__type_info_node@@A 000000010043c4c0     MSVCRTD:tncleanup.obj
+ 0003:000014d0       ?_OptionsStorage@?1??__local_stdio_printf_options@@9@4_KA 000000010043c4d0     MSVCRTD:default_local_stdio_options.obj
+ 0003:000014d8       ?_OptionsStorage@?1??__local_stdio_scanf_options@@9@4_KA 000000010043c4d8     MSVCRTD:default_local_stdio_options.obj
+ 0003:000014e0       __scrt_current_native_startup_state 000000010043c4e0     MSVCRTD:utility.obj
+ 0003:000014e8       __scrt_native_startup_lock 000000010043c4e8     MSVCRTD:utility.obj
+ 0003:00001528       __scrt_debugger_hook_flag  000000010043c528     MSVCRTD:utility_desktop.obj
+ 0003:00001540       __favor                    000000010043c540     MSVCRTD:cpu_disp.obj
+ 0003:00001554       __@@_PchSym_@00@UkzkzUnbtrgUsbkvirlmRaevxgliUnhexOwvyftOznwGEOlyqUyfrowPkxsOlyq@4B2008FD98C1DD4 000000010043c554     <common>
+ 0003:00001558       __dyn_tls_init_callback    000000010043c558     <common>
+
+ entry point at        0001:0002f290
+
+ Static symbols
+
+ 0000:fffad000       .debug$S                   0000000100400000     dyncrypt.exp
+ 0000:00000000       _volmd                     0000000100400000     dyncrypt.obj
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffad000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:cpu_disp.obj
+ 0002:fffcc000       __guard_ehcont_?dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 0000000100400000     MSVCRTD:dll_dllmain.obj
+ 0002:fffcc000       __guard_fids_?dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 0000000100400000     MSVCRTD:dll_dllmain.obj
+ 0002:fffcc000       __guard_ehcont_?notify_debugger@@YAXAEBUtagEXCEPTION_VISUALCPP_DEBUG_INFO@@@Z 0000000100400000     MSVCRTD:error.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:gs_report.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:gs_report.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:gs_report.obj
+ 0002:fffcc000       __guard_fids__             0000000100400000     MSVCRTD:guard_support.obj
+ 0002:fffcc000       __guard_fids__             0000000100400000     MSVCRTD:guard_support.obj
+ 0002:fffcc000       __guard_fids__guard_icall_checks_enforced 0000000100400000     MSVCRTD:guard_support.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:guard_support.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:guard_support.obj
+ 0002:fffcc000       __guard_fids__CRT_RTC_INIT 0000000100400000     MSVCRTD:init.obj
+ 0002:fffcc000       __guard_fids__CRT_RTC_INITW 0000000100400000     MSVCRTD:init.obj
+ 0002:fffcc000       __guard_ehcont___scrt_is_nonwritable_in_current_image 0000000100400000     MSVCRTD:utility.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:utility.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:utility.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:utility.obj
+ 0002:fffcc000       __guard_fids___scrt_set_unhandled_exception_filter 0000000100400000     MSVCRTD:utility_desktop.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:utility_desktop.obj
+ 0002:fffcc000       __guard_fids__             0000000100400000     vcruntimed:softmemtag.obj
+ 0000:fffad000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffad000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffad000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffad000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffad000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffad000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffad000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffad000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffad000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffad000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffad000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffad000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffad000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffad000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffad000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffad000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffad000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffad000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffad000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffad000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffad000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffad000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffad000       .debug$S                   0000000100400000     hsys:hsys.dll
+ 0000:fffad000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffad000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:00000010       _volmd                     0000000100400010     dyncrypt.obj
+ 0000:00000020       _volmd                     0000000100400020     dyncrypt.obj
+ 0000:00000030       _volmd                     0000000100400030     dyncrypt.obj
+ 0000:00000040       _volmd                     0000000100400040     dyncrypt.obj
+ 0000:00000050       _volmd                     0000000100400050     dyncrypt.obj
+ 0000:00000060       _volmd                     0000000100400060     dyncrypt.obj
+ 0000:00000070       _volmd                     0000000100400070     dyncrypt.obj
+ 0000:00000080       _volmd                     0000000100400080     dyncrypt.obj
+ 0000:00000090       _volmd                     0000000100400090     dyncrypt.obj
+ 0000:000000a0       _volmd                     00000001004000a0     dyncrypt.obj
+ 0000:000000b0       _volmd                     00000001004000b0     dyncrypt.obj
+ 0000:000000c0       _volmd                     00000001004000c0     dyncrypt.obj
+ 0000:000000d0       _volmd                     00000001004000d0     dyncrypt.obj
+ 0000:000000e0       _volmd                     00000001004000e0     dyncrypt.obj
+ 0000:000000f0       _volmd                     00000001004000f0     dyncrypt.obj
+ 0000:00000100       _volmd                     0000000100400100     dyncrypt.obj
+ 0000:00000110       _volmd                     0000000100400110     dyncrypt.obj
+ 0000:00000120       _volmd                     0000000100400120     dyncrypt.obj
+ 0000:00000130       _volmd                     0000000100400130     dyncrypt.obj
+ 0000:00000140       _volmd                     0000000100400140     dyncrypt.obj
+ 0000:00000150       _volmd                     0000000100400150     dyncrypt.obj
+ 0000:00000160       _volmd                     0000000100400160     dyncrypt.obj
+ 0000:00000170       _volmd                     0000000100400170     dyncrypt.obj
+ 0000:00000180       _volmd                     0000000100400180     dyncrypt.obj
+ 0000:00000190       _volmd                     0000000100400190     dyncrypt.obj
+ 0000:000001a0       _volmd                     00000001004001a0     dyncrypt.obj
+ 0000:000001b0       _volmd                     00000001004001b0     dyncrypt.obj
+ 0000:000001c0       _volmd                     00000001004001c0     dyncrypt.obj
+ 0000:000001d0       _volmd                     00000001004001d0     dyncrypt.obj
+ 0000:000001e0       _volmd                     00000001004001e0     dyncrypt.obj
+ 0000:000001f0       _volmd                     00000001004001f0     dyncrypt.obj
+ 0000:00000200       _volmd                     0000000100400200     dyncrypt.obj
+ 0000:00000210       _volmd                     0000000100400210     dyncrypt.obj
+ 0000:00000220       _volmd                     0000000100400220     dyncrypt.obj
+ 0000:00000230       _volmd                     0000000100400230     dyncrypt.obj
+ 0000:00000240       _volmd                     0000000100400240     dyncrypt.obj
+ 0000:00000250       _volmd                     0000000100400250     dyncrypt.obj
+ 0000:00000260       _volmd                     0000000100400260     dyncrypt.obj
+ 0000:00000270       _volmd                     0000000100400270     dyncrypt.obj
+ 0000:00000280       _volmd                     0000000100400280     dyncrypt.obj
+ 0000:00000290       _volmd                     0000000100400290     dyncrypt.obj
+ 0000:000002a0       _volmd                     00000001004002a0     dyncrypt.obj
+ 0000:000002b0       _volmd                     00000001004002b0     dyncrypt.obj
+ 0000:000002c0       _volmd                     00000001004002c0     dyncrypt.obj
+ 0000:000002d0       _volmd                     00000001004002d0     dyncrypt.obj
+ 0000:000002e0       _volmd                     00000001004002e0     dyncrypt.obj
+ 0000:000002f0       _volmd                     00000001004002f0     dyncrypt.obj
+ 0000:00000300       _volmd                     0000000100400300     dyncrypt.obj
+ 0000:00000310       _volmd                     0000000100400310     dyncrypt.obj
+ 0000:00000320       _volmd                     0000000100400320     dyncrypt.obj
+ 0000:00000330       _volmd                     0000000100400330     dyncrypt.obj
+ 0000:00000340       _volmd                     0000000100400340     dyncrypt.obj
+ 0000:00000350       _volmd                     0000000100400350     dyncrypt.obj
+ 0000:00000360       _volmd                     0000000100400360     dyncrypt.obj
+ 0000:00000370       _volmd                     0000000100400370     dyncrypt.obj
+ 0000:00000380       _volmd                     0000000100400380     dyncrypt.obj
+ 0000:00000390       _volmd                     0000000100400390     dyncrypt.obj
+ 0000:000003a0       _volmd                     00000001004003a0     dyncrypt.obj
+ 0000:000003b0       _volmd                     00000001004003b0     dyncrypt.obj
+ 0000:000003c0       _volmd                     00000001004003c0     dyncrypt.obj
+ 0000:000003d0       _volmd                     00000001004003d0     dyncrypt.obj
+ 0000:000003e0       _volmd                     00000001004003e0     dyncrypt.obj
+ 0000:000003f0       _volmd                     00000001004003f0     dyncrypt.obj
+ 0000:00000400       _volmd                     0000000100400400     dyncrypt.obj
+ 0000:00000410       _volmd                     0000000100400410     dyncrypt.obj
+ 0000:00000420       _volmd                     0000000100400420     dyncrypt.obj
+ 0000:00000430       _volmd                     0000000100400430     dyncrypt.obj
+ 0000:00000440       _volmd                     0000000100400440     dyncrypt.obj
+ 0000:00000450       _volmd                     0000000100400450     dyncrypt.obj
+ 0000:00000460       _volmd                     0000000100400460     dyncrypt.obj
+ 0000:00000470       _volmd                     0000000100400470     dyncrypt.obj
+ 0000:00000480       _volmd                     0000000100400480     dyncrypt.obj
+ 0000:00000490       _volmd                     0000000100400490     dyncrypt.obj
+ 0000:000004a0       _volmd                     00000001004004a0     dyncrypt.obj
+ 0000:000004b0       _volmd                     00000001004004b0     dyncrypt.obj
+ 0000:000004c0       _volmd                     00000001004004c0     dyncrypt.obj
+ 0000:000004d0       _volmd                     00000001004004d0     dyncrypt.obj
+ 0000:000004e0       _volmd                     00000001004004e0     dyncrypt.obj
+ 0000:000004f0       _volmd                     00000001004004f0     dyncrypt.obj
+ 0000:00000500       _volmd                     0000000100400500     dyncrypt.obj
+ 0001:000012c0       rijndaelDecrypt            00000001004022c0 f   crypto64d:rijndael.c.obj
+ 0001:00007cd0       bitsel                     0000000100408cd0 f   crypto64d:sshdes.c.obj
+ 0001:0000a510       gcm_rightshift             000000010040b510 f   dyncrypt.obj
+ 0001:0000a8a0       get_msa                    000000010040b8a0 f   dyncrypt.obj
+ 0001:0000a970       sha1_getcv                 000000010040b970 f   dyncrypt.obj
+ 0001:0000aa60       sha1_seticv                000000010040ba60 f   dyncrypt.obj
+ 0001:0000ab70       sha256_getcv               000000010040bb70 f   dyncrypt.obj
+ 0001:0000ac60       sha256_seticv              000000010040bc60 f   dyncrypt.obj
+ 0001:0000ad70       sha512_getcv               000000010040bd70 f   dyncrypt.obj
+ 0001:0000af30       sha512_seticv              000000010040bf30 f   dyncrypt.obj
+ 0001:0000b8f0       unwrap_aes                 000000010040c8f0 f   dyncrypt.obj
+ 0001:0000bb90       unwrap_dea                 000000010040cb90 f   dyncrypt.obj
+ 0001:0000bdf0       wrap_aes                   000000010040cdf0 f   dyncrypt.obj
+ 0001:0000c070       wrap_dea                   000000010040d070 f   dyncrypt.obj
+ 0001:0000c270       s370_kimd_sha              000000010040d270 f   dyncrypt.obj
+ 0001:0000c730       s370_kimd_ghash            000000010040d730 f   dyncrypt.obj
+ 0001:0000ca90       s370_klmd_sha              000000010040da90 f   dyncrypt.obj
+ 0001:0000d0d0       s370_km_dea                000000010040e0d0 f   dyncrypt.obj
+ 0001:0000d640       s370_km_aes                000000010040e640 f   dyncrypt.obj
+ 0001:0000dad0       s370_km_xts_aes            000000010040ead0 f   dyncrypt.obj
+ 0001:0000e0b0       s370_kmac_dea              000000010040f0b0 f   dyncrypt.obj
+ 0001:0000e690       s370_kmac_aes              000000010040f690 f   dyncrypt.obj
+ 0001:0000eae0       s370_kmc_dea               000000010040fae0 f   dyncrypt.obj
+ 0001:0000f490       s370_kmc_aes               0000000100410490 f   dyncrypt.obj
+ 0001:0000fab0       s370_kmc_prng              0000000100410ab0 f   dyncrypt.obj
+ 0001:00010080       s370_kmctr_dea             0000000100411080 f   dyncrypt.obj
+ 0001:00010780       s370_kmctr_aes             0000000100411780 f   dyncrypt.obj
+ 0001:00010ce0       s370_kmf_dea               0000000100411ce0 f   dyncrypt.obj
+ 0001:000114e0       s370_kmf_aes               00000001004124e0 f   dyncrypt.obj
+ 0001:00011b50       s370_kmo_dea               0000000100412b50 f   dyncrypt.obj
+ 0001:00012200       s370_kmo_aes               0000000100413200 f   dyncrypt.obj
+ 0001:00012710       s370_pcc_cmac_dea          0000000100413710 f   dyncrypt.obj
+ 0001:00013120       s370_pcc_cmac_aes          0000000100414120 f   dyncrypt.obj
+ 0001:00013870       s370_pcc_xts_aes           0000000100414870 f   dyncrypt.obj
+ 0001:00013da0       s370_pckmo_dea             0000000100414da0 f   dyncrypt.obj
+ 0001:00013ef0       s370_pckmo_aes             0000000100414ef0 f   dyncrypt.obj
+ 0001:00014e64       $LN44                      0000000100415e64     dyncrypt.obj
+ 0001:00014eac       $LN43                      0000000100415eac     dyncrypt.obj
+ 0001:00015354       $LN37                      0000000100416354     dyncrypt.obj
+ 0001:000158b4       $LN41                      00000001004168b4     dyncrypt.obj
+ 0001:000158f0       $LN40                      00000001004168f0     dyncrypt.obj
+ 0001:00015d8c       $LN33                      0000000100416d8c     dyncrypt.obj
+ 0001:00016230       $LN33                      0000000100417230     dyncrypt.obj
+ 0001:000166d0       $LN33                      00000001004176d0     dyncrypt.obj
+ 0001:000168a4       $LN34                      00000001004178a4     dyncrypt.obj
+ 0001:000168ec       $LN33                      00000001004178ec     dyncrypt.obj
+ 0001:00016d84       $LN32                      0000000100417d84     dyncrypt.obj
+ 0001:00016de0       s390_kimd_sha              0000000100417de0 f   dyncrypt.obj
+ 0001:000172d0       s390_klmd_sha              00000001004182d0 f   dyncrypt.obj
+ 0001:00017940       s390_km_dea                0000000100418940 f   dyncrypt.obj
+ 0001:00017eb0       s390_km_aes                0000000100418eb0 f   dyncrypt.obj
+ 0001:00018330       s390_kmac_dea              0000000100419330 f   dyncrypt.obj
+ 0001:00018900       s390_kmc_dea               0000000100419900 f   dyncrypt.obj
+ 0001:000192b0       s390_kmc_aes               000000010041a2b0 f   dyncrypt.obj
+ 0001:000198d0       s390_kmc_prng              000000010041a8d0 f   dyncrypt.obj
+ 0001:0001ac38       $LN27                      000000010041bc38     dyncrypt.obj
+ 0001:0001b534       $LN31                      000000010041c534     dyncrypt.obj
+ 0001:0001b558       $LN30                      000000010041c558     dyncrypt.obj
+ 0001:0001bce0       z900_kimd_sha              000000010041cce0 f   dyncrypt.obj
+ 0001:0001c5d0       z900_kimd_ghash            000000010041d5d0 f   dyncrypt.obj
+ 0001:0001cd30       z900_klmd_sha              000000010041dd30 f   dyncrypt.obj
+ 0001:0001d7d0       z900_km_dea                000000010041e7d0 f   dyncrypt.obj
+ 0001:0001e1e0       z900_km_aes                000000010041f1e0 f   dyncrypt.obj
+ 0001:0001eb10       z900_km_xts_aes            000000010041fb10 f   dyncrypt.obj
+ 0001:0001f640       z900_kmac_dea              0000000100420640 f   dyncrypt.obj
+ 0001:00020040       z900_kmac_aes              0000000100421040 f   dyncrypt.obj
+ 0001:00020890       z900_kmc_dea               0000000100421890 f   dyncrypt.obj
+ 0001:000217a0       z900_kmc_aes               00000001004227a0 f   dyncrypt.obj
+ 0001:00022310       z900_kmc_prng              0000000100423310 f   dyncrypt.obj
+ 0001:00022e20       z900_kmctr_dea             0000000100423e20 f   dyncrypt.obj
+ 0001:00023b00       z900_kmctr_aes             0000000100424b00 f   dyncrypt.obj
+ 0001:00024650       z900_kmf_dea               0000000100425650 f   dyncrypt.obj
+ 0001:00025400       z900_kmf_aes               0000000100426400 f   dyncrypt.obj
+ 0001:00026000       z900_kmo_dea               0000000100427000 f   dyncrypt.obj
+ 0001:00026c00       z900_kmo_aes               0000000100427c00 f   dyncrypt.obj
+ 0001:00027660       z900_pcc_cmac_dea          0000000100428660 f   dyncrypt.obj
+ 0001:00028170       z900_pcc_cmac_aes          0000000100429170 f   dyncrypt.obj
+ 0001:000289b0       z900_pcc_xts_aes           00000001004299b0 f   dyncrypt.obj
+ 0001:00028fd0       z900_pckmo_dea             0000000100429fd0 f   dyncrypt.obj
+ 0001:00029210       z900_pckmo_aes             000000010042a210 f   dyncrypt.obj
+ 0001:0002a69c       $LN54                      000000010042b69c     dyncrypt.obj
+ 0001:0002a6e4       $LN53                      000000010042b6e4     dyncrypt.obj
+ 0001:0002ac28       $LN39                      000000010042bc28     dyncrypt.obj
+ 0001:0002b35c       $LN51                      000000010042c35c     dyncrypt.obj
+ 0001:0002b398       $LN50                      000000010042c398     dyncrypt.obj
+ 0001:0002b900       $LN35                      000000010042c900     dyncrypt.obj
+ 0001:0002bf68       $LN43                      000000010042cf68     dyncrypt.obj
+ 0001:0002c5d8       $LN43                      000000010042d5d8     dyncrypt.obj
+ 0001:0002c808       $LN36                      000000010042d808     dyncrypt.obj
+ 0001:0002c850       $LN35                      000000010042d850     dyncrypt.obj
+ 0001:0002cddc       $LN38                      000000010042dddc     dyncrypt.obj
+ 0001:0002ee50       ?dllmain_crt_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 000000010042fe50 f   MSVCRTD:dll_dllmain.obj
+ 0001:0002eee0       ?dllmain_crt_process_attach@@YAHQEAUHINSTANCE__@@QEAX@Z 000000010042fee0 f   MSVCRTD:dll_dllmain.obj
+ 0001:0002f020       ?dllmain_crt_process_detach@@YAH_N@Z 0000000100430020 f   MSVCRTD:dll_dllmain.obj
+ 0001:0002f0c0       ?dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 00000001004300c0 f   MSVCRTD:dll_dllmain.obj
+ 0001:0002f200       ?dllmain_raw@@YAHQEAUHINSTANCE__@@KQEAX@Z 0000000100430200 f   MSVCRTD:dll_dllmain.obj
+ 0001:0002f5c0       capture_current_context    00000001004305c0 f   MSVCRTD:gs_report.obj
+ 0001:0002f660       capture_previous_context   0000000100430660 f   MSVCRTD:gs_report.obj
+ 0001:0002f860       $$000000                   0000000100430860     MSVCRTD:amdsecgs.obj
+ 0001:0002fb00       __get_entropy              0000000100430b00 f   MSVCRTD:gs_support.obj
+ 0001:0002fd50       ?find_pe_section@@YAPEAU_IMAGE_SECTION_HEADER@@QEAE_K@Z 0000000100430d50 f   MSVCRTD:utility.obj
+ 0001:0002fe30       ?is_potentially_valid_image_base@@YA_NQEAX@Z 0000000100430e30 f   MSVCRTD:utility.obj
+ 0001:00030950       __castguard_check_failure_os_handled_wrapper 0000000100431950 f   MSVCRTD:guard_support.obj
+ 0001:00030980       __castguard_compat_check   0000000100431980 f   MSVCRTD:guard_support.obj
+ 0001:00030ae0       __castguard_slow_path_compat_check 0000000100431ae0 f   MSVCRTD:guard_support.obj
+ 0001:00030c50       ?DebuggerProbe@@YA_NK@Z    0000000100431c50 f   MSVCRTD:error.obj
+ 0001:00030c90       ?DebuggerRuntime@@YA_NKHPEAXPEB_W@Z 0000000100431c90 f   MSVCRTD:error.obj
+ 0001:00030f60       ?_getMemBlockDataString@@YAXPEAD0PEBD_K@Z 0000000100431f60 f   MSVCRTD:error.obj
+ 0001:00031020       ?_strlen_priv@@YA_KPEBD@Z  0000000100432020 f   MSVCRTD:error.obj
+ 0001:00031040       ?failwithmessage@@YAXPEAXHHPEBD@Z 0000000100432040 f   MSVCRTD:error.obj
+ 0001:000312a0       ?notify_debugger@@YAXAEBUtagEXCEPTION_VISUALCPP_DEBUG_INFO@@@Z 00000001004322a0 f   MSVCRTD:error.obj
+ 0001:00031820       ?GetPdbDll@@YAPEAUHINSTANCE__@@XZ 0000000100432820 f   MSVCRTD:pdblkup.obj
+ 0001:00031980       ?GetPdbDllFromInstallPath@@YAPEAUHINSTANCE__@@XZ 0000000100432980 f   MSVCRTD:pdblkup.obj
+ 0001:00031c30       ?GetPdbDllPathFromFilePath@@YAHPEB_WPEA_W_K@Z 0000000100432c30 f   MSVCRTD:pdblkup.obj
+ 0001:000322e0       $$000000                   00000001004332e0     MSVCRTD:guard_dispatch.obj
+ 0001:00032300       $$000000                   0000000100433300     MSVCRTD:guard_xfg_dispatch.obj
+ 0001:00032320       ?fin$0@?0??dllmain_crt_process_attach@@YAHQEAUHINSTANCE__@@QEAX@Z@4HA 0000000100433320 f   MSVCRTD:dll_dllmain.obj
+ 0001:00032340       ?fin$0@?0??dllmain_crt_process_detach@@YAH_N@Z@4HA 0000000100433340 f   MSVCRTD:dll_dllmain.obj
+ 0001:0003235a       ?fin$1@?0??dllmain_crt_process_detach@@YAH_N@Z@4HA 000000010043335a f   MSVCRTD:dll_dllmain.obj
+ 0001:00032370       ?filt$0@?0??dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z@4HA 0000000100433370 f   MSVCRTD:dll_dllmain.obj
+ 0001:000323c0       __scrt_is_nonwritable_in_current_image$filt$0 00000001004333c0 f   MSVCRTD:utility.obj
+ 0001:00032400       ?filt$0@?0??notify_debugger@@YAXAEBUtagEXCEPTION_VISUALCPP_DEBUG_INFO@@@Z@4HA 0000000100433400 f   MSVCRTD:error.obj
+ 0002:00000300       CKD_ENDTRK                 0000000100434300     dyncrypt.obj
+ 0002:00000308       mask                       0000000100434308     dyncrypt.obj
+ 0002:00000310       kmctr_wrap                 0000000100434310     dyncrypt.obj
+ 0002:00000390       kmctr_keylengths           0000000100434390     dyncrypt.obj
+ 0002:00000410       kmctr_pblens               0000000100434410     dyncrypt.obj
+ 0002:00000490       poly                       0000000100434490     dyncrypt.obj
+ 0002:00000498       ?query_bits@?1??s370_dyn_perform_cryptographic_computation@@9@9 0000000100434498     dyncrypt.obj
+ 0002:000004a8       ?query_bits@?1??z900_dyn_perform_cryptographic_computation@@9@9 00000001004344a8     dyncrypt.obj
+ 0002:000004c0       Te0                        00000001004344c0     crypto64d:rijndael.c.obj
+ 0002:000008c0       Te1                        00000001004348c0     crypto64d:rijndael.c.obj
+ 0002:00000cc0       Te2                        0000000100434cc0     crypto64d:rijndael.c.obj
+ 0002:000010c0       Te3                        00000001004350c0     crypto64d:rijndael.c.obj
+ 0002:000014c0       Td0                        00000001004354c0     crypto64d:rijndael.c.obj
+ 0002:000018c0       Td1                        00000001004358c0     crypto64d:rijndael.c.obj
+ 0002:00001cc0       Td2                        0000000100435cc0     crypto64d:rijndael.c.obj
+ 0002:000020c0       Td3                        00000001004360c0     crypto64d:rijndael.c.obj
+ 0002:000024c0       Td4                        00000001004364c0     crypto64d:rijndael.c.obj
+ 0002:000025c0       rcon                       00000001004365c0     crypto64d:rijndael.c.obj
+ 0002:000025f0       SHA1Transform$rtcName$0    00000001004365f0     crypto64d:sha1.c.obj
+ 0002:000025f4       SHA1Transform$rtcName$1    00000001004365f4     crypto64d:sha1.c.obj
+ 0002:000025f8       SHA1Transform$rtcName$2    00000001004365f8     crypto64d:sha1.c.obj
+ 0002:000025fc       SHA1Transform$rtcName$3    00000001004365fc     crypto64d:sha1.c.obj
+ 0002:00002600       SHA1Transform$rtcName$4    0000000100436600     crypto64d:sha1.c.obj
+ 0002:00002608       SHA1Transform$rtcName$5    0000000100436608     crypto64d:sha1.c.obj
+ 0002:00002620       SHA1Transform$rtcVarDesc   0000000100436620     crypto64d:sha1.c.obj
+ 0002:000027a0       SHA1Transform$rtcFrameData 00000001004367a0     crypto64d:sha1.c.obj
+ 0002:000027b0       SHA1Final$rtcName$0        00000001004367b0     crypto64d:sha1.c.obj
+ 0002:000027c0       SHA1Final$rtcVarDesc       00000001004367c0     crypto64d:sha1.c.obj
+ 0002:00002800       SHA1Final$rtcFrameData     0000000100436800     crypto64d:sha1.c.obj
+ 0002:00002810       K256                       0000000100436810     crypto64d:sha2.c.obj
+ 0002:00002910       sha256_initial_hash_value  0000000100436910     crypto64d:sha2.c.obj
+ 0002:00002930       K512                       0000000100436930     crypto64d:sha2.c.obj
+ 0002:00002bb0       sha384_initial_hash_value  0000000100436bb0     crypto64d:sha2.c.obj
+ 0002:00002bf0       sha512_initial_hash_value  0000000100436bf0     crypto64d:sha2.c.obj
+ 0002:00002c30       SHA256Transform$rtcName$0  0000000100436c30     crypto64d:sha2.c.obj
+ 0002:00002c34       SHA256Transform$rtcName$1  0000000100436c34     crypto64d:sha2.c.obj
+ 0002:00002c38       SHA256Transform$rtcName$2  0000000100436c38     crypto64d:sha2.c.obj
+ 0002:00002c3c       SHA256Transform$rtcName$3  0000000100436c3c     crypto64d:sha2.c.obj
+ 0002:00002c40       SHA256Transform$rtcName$4  0000000100436c40     crypto64d:sha2.c.obj
+ 0002:00002c44       SHA256Transform$rtcName$5  0000000100436c44     crypto64d:sha2.c.obj
+ 0002:00002c48       SHA256Transform$rtcName$6  0000000100436c48     crypto64d:sha2.c.obj
+ 0002:00002c4c       SHA256Transform$rtcName$7  0000000100436c4c     crypto64d:sha2.c.obj
+ 0002:00002c50       SHA256Transform$rtcName$8  0000000100436c50     crypto64d:sha2.c.obj
+ 0002:00002c54       SHA256Transform$rtcName$9  0000000100436c54     crypto64d:sha2.c.obj
+ 0002:00002c58       SHA256Transform$rtcName$10 0000000100436c58     crypto64d:sha2.c.obj
+ 0002:00002c5c       SHA256Transform$rtcName$11 0000000100436c5c     crypto64d:sha2.c.obj
+ 0002:00002c60       SHA256Transform$rtcName$12 0000000100436c60     crypto64d:sha2.c.obj
+ 0002:00002c70       SHA256Transform$rtcVarDesc 0000000100436c70     crypto64d:sha2.c.obj
+ 0002:00002fb0       SHA256Transform$rtcFrameData 0000000100436fb0     crypto64d:sha2.c.obj
+ 0002:00002fc0       SHA256Final$rtcName$0      0000000100436fc0     crypto64d:sha2.c.obj
+ 0002:00002fd0       SHA256Final$rtcVarDesc     0000000100436fd0     crypto64d:sha2.c.obj
+ 0002:00003010       SHA256Final$rtcFrameData   0000000100437010     crypto64d:sha2.c.obj
+ 0002:00003020       SHA512Transform$rtcName$0  0000000100437020     crypto64d:sha2.c.obj
+ 0002:00003024       SHA512Transform$rtcName$1  0000000100437024     crypto64d:sha2.c.obj
+ 0002:00003028       SHA512Transform$rtcName$2  0000000100437028     crypto64d:sha2.c.obj
+ 0002:0000302c       SHA512Transform$rtcName$3  000000010043702c     crypto64d:sha2.c.obj
+ 0002:00003030       SHA512Transform$rtcName$4  0000000100437030     crypto64d:sha2.c.obj
+ 0002:00003034       SHA512Transform$rtcName$5  0000000100437034     crypto64d:sha2.c.obj
+ 0002:00003038       SHA512Transform$rtcName$6  0000000100437038     crypto64d:sha2.c.obj
+ 0002:0000303c       SHA512Transform$rtcName$7  000000010043703c     crypto64d:sha2.c.obj
+ 0002:00003040       SHA512Transform$rtcName$8  0000000100437040     crypto64d:sha2.c.obj
+ 0002:00003044       SHA512Transform$rtcName$9  0000000100437044     crypto64d:sha2.c.obj
+ 0002:00003048       SHA512Transform$rtcName$10 0000000100437048     crypto64d:sha2.c.obj
+ 0002:0000304c       SHA512Transform$rtcName$11 000000010043704c     crypto64d:sha2.c.obj
+ 0002:00003050       SHA512Transform$rtcName$12 0000000100437050     crypto64d:sha2.c.obj
+ 0002:00003060       SHA512Transform$rtcVarDesc 0000000100437060     crypto64d:sha2.c.obj
+ 0002:000033a0       SHA512Transform$rtcFrameData 00000001004373a0     crypto64d:sha2.c.obj
+ 0002:000033b0       ?PC1_Cbits@?1??des_key_setup@@9@9 00000001004373b0     crypto64d:sshdes.c.obj
+ 0002:00003420       ?PC1_Dbits@?1??des_key_setup@@9@9 0000000100437420     crypto64d:sshdes.c.obj
+ 0002:00003490       ?PC2_0246@?1??des_key_setup@@9@9 0000000100437490     crypto64d:sshdes.c.obj
+ 0002:00003510       ?PC2_1357@?1??des_key_setup@@9@9 0000000100437510     crypto64d:sshdes.c.obj
+ 0002:00003590       ?leftshifts@?1??des_key_setup@@9@9 0000000100437590     crypto64d:sshdes.c.obj
+ 0002:000035d0       SPboxes                    00000001004375d0     crypto64d:sshdes.c.obj
+ 0002:00003dd0       des_key_setup$rtcName$0    0000000100437dd0     crypto64d:sshdes.c.obj
+ 0002:00003de0       des_key_setup$rtcVarDesc   0000000100437de0     crypto64d:sshdes.c.obj
+ 0002:00003e20       des_key_setup$rtcFrameData 0000000100437e20     crypto64d:sshdes.c.obj
+ 0002:00003e38       GS_ExceptionPointers       0000000100437e38     MSVCRTD:gs_report.obj
+ 0002:00003e48       ?_RTC_errlist@@3QBQEBDB    0000000100437e48     MSVCRTD:userapi.obj
+ 0002:00003f28       ?_RTC_ErrorMessages@@3QBQEBDB 0000000100437f28     MSVCRTD:error.obj
+ 0002:00003f58       ?_RTC_NoFalsePositives@@3QBHB 0000000100437f58     MSVCRTD:error.obj
+ 0002:00003f70       ?stack_premsg@@3QBDB       0000000100437f70     MSVCRTD:error.obj
+ 0002:00003f90       ?stack_postmsg@@3QBDB      0000000100437f90     MSVCRTD:error.obj
+ 0002:00003fa8       ?uninit_premsg@@3QBDB      0000000100437fa8     MSVCRTD:error.obj
+ 0002:00003fb8       ?uninit_postmsg@@3QBDB     0000000100437fb8     MSVCRTD:error.obj
+ 0002:00004520       ?mspdbName@@3QB_WB         0000000100438520     MSVCRTD:pdblkup.obj
+ 0002:00004550       ?debugCrtFileName@@3QB_WB  0000000100438550     MSVCRTD:pdblkup.obj
+ 0002:000046b0       ?dllExt@?1??GetPdbDllPathFromFilePath@@YAHPEB_WPEA_W_K@Z@4QB_WB 00000001004386b0     MSVCRTD:pdblkup.obj
+ 0002:000046b8       ?mspdbFilename@?1??GetPdbDllPathFromFilePath@@YAHPEB_WPEA_W_K@Z@4QB_WB 00000001004386b8     MSVCRTD:pdblkup.obj
+ 0002:00005060       _RTC_InitBase.rtc$IMZ      0000000100439060     crypto64d:rijndael.c.obj
+ 0002:00005068       _RTC_InitBase.rtc$IMZ      0000000100439068     crypto64d:sha1.c.obj
+ 0002:00005070       _RTC_InitBase.rtc$IMZ      0000000100439070     crypto64d:sha2.c.obj
+ 0002:00005078       _RTC_InitBase.rtc$IMZ      0000000100439078     crypto64d:sshdes.c.obj
+ 0002:00005090       _RTC_Shutdown.rtc$TMZ      0000000100439090     crypto64d:rijndael.c.obj
+ 0002:00005098       _RTC_Shutdown.rtc$TMZ      0000000100439098     crypto64d:sha1.c.obj
+ 0002:000050a0       _RTC_Shutdown.rtc$TMZ      00000001004390a0     crypto64d:sha2.c.obj
+ 0002:000050a8       _RTC_Shutdown.rtc$TMZ      00000001004390a8     crypto64d:sshdes.c.obj
+ 0002:000050b8       $unwind$RtlSecureZeroMemory 00000001004390b8     dyncrypt.obj
+ 0002:000050c0       $unwind$fetch_fw_noswap    00000001004390c0     dyncrypt.obj
+ 0002:000050c8       $unwind$s370_maddr_l       00000001004390c8     dyncrypt.obj
+ 0002:000050d0       $unwind$s370_vstorec       00000001004390d0     dyncrypt.obj
+ 0002:000050dc       $unwind$s370_vfetchc       00000001004390dc     dyncrypt.obj
+ 0002:000050e8       $unwind$s370_validate_operand 00000001004390e8     dyncrypt.obj
+ 0002:000050f0       $unwind$crypto_fetch32     00000001004390f0     dyncrypt.obj
+ 0002:000050f8       $unwind$crypto_store32     00000001004390f8     dyncrypt.obj
+ 0002:00005100       $unwind$crypto_cswap32     0000000100439100     dyncrypt.obj
+ 0002:00005108       $unwind$crypto_cswap64     0000000100439108     dyncrypt.obj
+ 0002:00005110       $unwind$crypto_secure0     0000000100439110     dyncrypt.obj
+ 0002:00005118       $unwind$gcm_rightshift     0000000100439118     dyncrypt.obj
+ 0002:00005120       $unwind$gcm_gf_mult        0000000100439120     dyncrypt.obj
+ 0002:00005134       $unwind$xts_mult_x         0000000100439134     dyncrypt.obj
+ 0002:0000513c       $unwind$xts_gf_mult        000000010043913c     dyncrypt.obj
+ 0002:0000514c       $unwind$sha1_getcv         000000010043914c     dyncrypt.obj
+ 0002:00005154       $unwind$sha1_seticv        0000000100439154     dyncrypt.obj
+ 0002:0000515c       $unwind$sha256_getcv       000000010043915c     dyncrypt.obj
+ 0002:00005164       $unwind$sha256_seticv      0000000100439164     dyncrypt.obj
+ 0002:0000516c       $unwind$sha512_getcv       000000010043916c     dyncrypt.obj
+ 0002:00005174       $unwind$sha512_seticv      0000000100439174     dyncrypt.obj
+ 0002:0000517c       $unwind$shift_left         000000010043917c     dyncrypt.obj
+ 0002:00005184       $unwind$des_set_key        0000000100439184     dyncrypt.obj
+ 0002:0000518c       $unwind$des_encrypt        000000010043918c     dyncrypt.obj
+ 0002:00005194       $unwind$des_decrypt        0000000100439194     dyncrypt.obj
+ 0002:0000519c       $unwind$des3_set_2keys     000000010043919c     dyncrypt.obj
+ 0002:000051a4       $unwind$des3_set_3keys     00000001004391a4     dyncrypt.obj
+ 0002:000051ac       $unwind$des3_encrypt       00000001004391ac     dyncrypt.obj
+ 0002:000051b4       $unwind$des3_decrypt       00000001004391b4     dyncrypt.obj
+ 0002:000051bc       $unwind$unwrap_aes         00000001004391bc     dyncrypt.obj
+ 0002:000051d0       $unwind$unwrap_dea         00000001004391d0     dyncrypt.obj
+ 0002:000051e0       $unwind$wrap_aes           00000001004391e0     dyncrypt.obj
+ 0002:000051f4       $unwind$wrap_dea           00000001004391f4     dyncrypt.obj
+ 0002:00005208       $unwind$s370_kimd_sha      0000000100439208     dyncrypt.obj
+ 0002:00005218       $unwind$s370_kimd_ghash    0000000100439218     dyncrypt.obj
+ 0002:00005228       $unwind$s370_klmd_sha      0000000100439228     dyncrypt.obj
+ 0002:0000523c       $unwind$s370_km_dea        000000010043923c     dyncrypt.obj
+ 0002:0000524c       $unwind$s370_km_aes        000000010043924c     dyncrypt.obj
+ 0002:0000525c       $unwind$s370_km_xts_aes    000000010043925c     dyncrypt.obj
+ 0002:0000526c       $unwind$s370_kmac_dea      000000010043926c     dyncrypt.obj
+ 0002:0000527c       $unwind$s370_kmac_aes      000000010043927c     dyncrypt.obj
+ 0002:0000528c       $unwind$s370_kmc_dea       000000010043928c     dyncrypt.obj
+ 0002:0000529c       $unwind$s370_kmc_aes       000000010043929c     dyncrypt.obj
+ 0002:000052b0       $unwind$s370_kmc_prng      00000001004392b0     dyncrypt.obj
+ 0002:000052c0       $unwind$s370_kmctr_dea     00000001004392c0     dyncrypt.obj
+ 0002:000052d0       $unwind$s370_kmctr_aes     00000001004392d0     dyncrypt.obj
+ 0002:000052e0       $unwind$s370_kmf_dea       00000001004392e0     dyncrypt.obj
+ 0002:000052f0       $unwind$s370_kmf_aes       00000001004392f0     dyncrypt.obj
+ 0002:00005300       $unwind$s370_kmo_dea       0000000100439300     dyncrypt.obj
+ 0002:00005310       $unwind$s370_kmo_aes       0000000100439310     dyncrypt.obj
+ 0002:00005320       $unwind$s370_pcc_cmac_dea  0000000100439320     dyncrypt.obj
+ 0002:00005334       $unwind$s370_pcc_cmac_aes  0000000100439334     dyncrypt.obj
+ 0002:00005348       $unwind$s370_pcc_xts_aes   0000000100439348     dyncrypt.obj
+ 0002:0000535c       $unwind$s370_pckmo_dea     000000010043935c     dyncrypt.obj
+ 0002:0000536c       $unwind$s370_pckmo_aes     000000010043936c     dyncrypt.obj
+ 0002:0000537c       $unwind$s370_dyn_compute_intermediate_message_digest 000000010043937c     dyncrypt.obj
+ 0002:0000538c       $unwind$s370_dyn_compute_last_message_digest 000000010043938c     dyncrypt.obj
+ 0002:0000539c       $unwind$s370_dyn_cipher_message 000000010043939c     dyncrypt.obj
+ 0002:000053ac       $unwind$s370_dyn_compute_message_authentication_code 00000001004393ac     dyncrypt.obj
+ 0002:000053bc       $unwind$s370_dyn_cipher_message_with_chaining 00000001004393bc     dyncrypt.obj
+ 0002:000053cc       $unwind$s370_dyn_cipher_message_with_counter 00000001004393cc     dyncrypt.obj
+ 0002:000053dc       $unwind$s370_dyn_cipher_message_with_cipher_feedback 00000001004393dc     dyncrypt.obj
+ 0002:000053ec       $unwind$s370_dyn_cipher_message_with_output_feedback 00000001004393ec     dyncrypt.obj
+ 0002:000053fc       $unwind$s370_dyn_perform_cryptographic_computation 00000001004393fc     dyncrypt.obj
+ 0002:00005404       $unwind$s370_dyn_perform_cryptographic_key_management_operation 0000000100439404     dyncrypt.obj
+ 0002:00005414       $unwind$s390_kimd_sha      0000000100439414     dyncrypt.obj
+ 0002:00005424       $unwind$s390_klmd_sha      0000000100439424     dyncrypt.obj
+ 0002:00005438       $unwind$s390_km_dea        0000000100439438     dyncrypt.obj
+ 0002:00005448       $unwind$s390_km_aes        0000000100439448     dyncrypt.obj
+ 0002:00005458       $unwind$s390_kmac_dea      0000000100439458     dyncrypt.obj
+ 0002:00005468       $unwind$s390_kmc_dea       0000000100439468     dyncrypt.obj
+ 0002:00005478       $unwind$s390_kmc_aes       0000000100439478     dyncrypt.obj
+ 0002:0000548c       $unwind$s390_kmc_prng      000000010043948c     dyncrypt.obj
+ 0002:0000549c       $unwind$s390_dyn_compute_intermediate_message_digest 000000010043949c     dyncrypt.obj
+ 0002:000054ac       $unwind$s390_dyn_compute_last_message_digest 00000001004394ac     dyncrypt.obj
+ 0002:000054bc       $unwind$s390_dyn_cipher_message 00000001004394bc     dyncrypt.obj
+ 0002:000054cc       $unwind$s390_dyn_compute_message_authentication_code 00000001004394cc     dyncrypt.obj
+ 0002:000054dc       $unwind$s390_dyn_cipher_message_with_chaining 00000001004394dc     dyncrypt.obj
+ 0002:000054ec       $unwind$s390_dyn_perform_cryptographic_key_management_operation 00000001004394ec     dyncrypt.obj
+ 0002:000054f4       $unwind$s390_dyn_perform_cryptographic_computation 00000001004394f4     dyncrypt.obj
+ 0002:000054fc       $unwind$s390_dyn_cipher_message_with_cipher_feedback 00000001004394fc     dyncrypt.obj
+ 0002:00005504       $unwind$s390_dyn_cipher_message_with_output_feedback 0000000100439504     dyncrypt.obj
+ 0002:0000550c       $unwind$s390_dyn_cipher_message_with_counter 000000010043950c     dyncrypt.obj
+ 0002:00005514       $unwind$z900_kimd_sha      0000000100439514     dyncrypt.obj
+ 0002:00005524       $unwind$z900_kimd_ghash    0000000100439524     dyncrypt.obj
+ 0002:00005534       $unwind$z900_klmd_sha      0000000100439534     dyncrypt.obj
+ 0002:00005548       $unwind$z900_km_dea        0000000100439548     dyncrypt.obj
+ 0002:00005558       $unwind$z900_km_aes        0000000100439558     dyncrypt.obj
+ 0002:00005568       $unwind$z900_km_xts_aes    0000000100439568     dyncrypt.obj
+ 0002:00005578       $unwind$z900_kmac_dea      0000000100439578     dyncrypt.obj
+ 0002:00005588       $unwind$z900_kmac_aes      0000000100439588     dyncrypt.obj
+ 0002:00005598       $unwind$z900_kmc_dea       0000000100439598     dyncrypt.obj
+ 0002:000055a8       $unwind$z900_kmc_aes       00000001004395a8     dyncrypt.obj
+ 0002:000055bc       $unwind$z900_kmc_prng      00000001004395bc     dyncrypt.obj
+ 0002:000055cc       $unwind$z900_kmctr_dea     00000001004395cc     dyncrypt.obj
+ 0002:000055dc       $unwind$z900_kmctr_aes     00000001004395dc     dyncrypt.obj
+ 0002:000055ec       $unwind$z900_kmf_dea       00000001004395ec     dyncrypt.obj
+ 0002:000055fc       $unwind$z900_kmf_aes       00000001004395fc     dyncrypt.obj
+ 0002:0000560c       $unwind$z900_kmo_dea       000000010043960c     dyncrypt.obj
+ 0002:0000561c       $unwind$z900_kmo_aes       000000010043961c     dyncrypt.obj
+ 0002:0000562c       $unwind$z900_pcc_cmac_dea  000000010043962c     dyncrypt.obj
+ 0002:00005640       $unwind$z900_pcc_cmac_aes  0000000100439640     dyncrypt.obj
+ 0002:00005654       $unwind$z900_pcc_xts_aes   0000000100439654     dyncrypt.obj
+ 0002:00005668       $unwind$z900_pckmo_dea     0000000100439668     dyncrypt.obj
+ 0002:00005678       $unwind$z900_pckmo_aes     0000000100439678     dyncrypt.obj
+ 0002:00005688       $unwind$z900_dyn_compute_intermediate_message_digest 0000000100439688     dyncrypt.obj
+ 0002:00005698       $unwind$z900_dyn_compute_last_message_digest 0000000100439698     dyncrypt.obj
+ 0002:000056a8       $unwind$z900_dyn_cipher_message 00000001004396a8     dyncrypt.obj
+ 0002:000056b8       $unwind$z900_dyn_compute_message_authentication_code 00000001004396b8     dyncrypt.obj
+ 0002:000056c8       $unwind$z900_dyn_cipher_message_with_chaining 00000001004396c8     dyncrypt.obj
+ 0002:000056d8       $unwind$z900_dyn_cipher_message_with_counter 00000001004396d8     dyncrypt.obj
+ 0002:000056e8       $unwind$z900_dyn_cipher_message_with_cipher_feedback 00000001004396e8     dyncrypt.obj
+ 0002:000056f8       $unwind$z900_dyn_cipher_message_with_output_feedback 00000001004396f8     dyncrypt.obj
+ 0002:00005708       $unwind$z900_dyn_perform_cryptographic_computation 0000000100439708     dyncrypt.obj
+ 0002:00005710       $unwind$z900_dyn_perform_cryptographic_key_management_operation 0000000100439710     dyncrypt.obj
+ 0002:00005720       $unwind$hdl_check_depends_ep 0000000100439720     dyncrypt.obj
+ 0002:00005728       $unwind$hdl_define_instructs_ep 0000000100439728     dyncrypt.obj
+ 0002:00005730       $unwind$hdl_register_symbols_ep 0000000100439730     dyncrypt.obj
+ 0002:00005738       $unwind$s390_maddr_l       0000000100439738     dyncrypt.obj
+ 0002:00005740       $unwind$s390_vstorec       0000000100439740     dyncrypt.obj
+ 0002:0000574c       $unwind$s390_vfetchc       000000010043974c     dyncrypt.obj
+ 0002:00005758       $unwind$s390_validate_operand 0000000100439758     dyncrypt.obj
+ 0002:00005760       $unwind$z900_per3_zero     0000000100439760     dyncrypt.obj
+ 0002:00005768       $unwind$z900_per3_zero_check 0000000100439768     dyncrypt.obj
+ 0002:00005770       $unwind$z900_per3_zero_check2 0000000100439770     dyncrypt.obj
+ 0002:00005778       $unwind$z900_per3_zero_lcheck 0000000100439778     dyncrypt.obj
+ 0002:00005780       $unwind$z900_maddr_l       0000000100439780     dyncrypt.obj
+ 0002:00005788       $unwind$z900_vstorec       0000000100439788     dyncrypt.obj
+ 0002:00005794       $unwind$z900_vfetchc       0000000100439794     dyncrypt.obj
+ 0002:000057a0       $unwind$z900_validate_operand 00000001004397a0     dyncrypt.obj
+ 0002:000057a8       $unwind$rijndaelKeySetupEnc 00000001004397a8     crypto64d:rijndael.c.obj
+ 0002:000057b0       $unwind$rijndaelKeySetupDec 00000001004397b0     crypto64d:rijndael.c.obj
+ 0002:000057b8       $unwind$rijndaelEncrypt    00000001004397b8     crypto64d:rijndael.c.obj
+ 0002:000057c0       $unwind$rijndael_set_key_enc_only 00000001004397c0     crypto64d:rijndael.c.obj
+ 0002:000057c8       $unwind$rijndael_set_key   00000001004397c8     crypto64d:rijndael.c.obj
+ 0002:000057d0       $unwind$rijndael_decrypt   00000001004397d0     crypto64d:rijndael.c.obj
+ 0002:000057d8       $unwind$rijndaelDecrypt    00000001004397d8     crypto64d:rijndael.c.obj
+ 0002:000057e0       $unwind$rijndael_encrypt   00000001004397e0     crypto64d:rijndael.c.obj
+ 0002:000057e8       $unwind$SHA1Transform      00000001004397e8     crypto64d:sha1.c.obj
+ 0002:000057fc       $unwind$SHA1Init           00000001004397fc     crypto64d:sha1.c.obj
+ 0002:00005804       $unwind$SHA1Update         0000000100439804     crypto64d:sha1.c.obj
+ 0002:0000580c       $unwind$SHA1Final          000000010043980c     crypto64d:sha1.c.obj
+ 0002:0000581c       $unwind$SHA256Init         000000010043981c     crypto64d:sha2.c.obj
+ 0002:00005824       $unwind$SHA256Transform    0000000100439824     crypto64d:sha2.c.obj
+ 0002:00005830       $unwind$SHA256Update       0000000100439830     crypto64d:sha2.c.obj
+ 0002:00005838       $unwind$SHA256Final        0000000100439838     crypto64d:sha2.c.obj
+ 0002:00005840       $unwind$SHA512Init         0000000100439840     crypto64d:sha2.c.obj
+ 0002:00005848       $unwind$SHA512Transform    0000000100439848     crypto64d:sha2.c.obj
+ 0002:00005854       $unwind$SHA512Update       0000000100439854     crypto64d:sha2.c.obj
+ 0002:0000585c       $unwind$SHA512Last         000000010043985c     crypto64d:sha2.c.obj
+ 0002:00005864       $unwind$SHA512Final        0000000100439864     crypto64d:sha2.c.obj
+ 0002:0000586c       $unwind$SHA384Init         000000010043986c     crypto64d:sha2.c.obj
+ 0002:00005874       $unwind$SHA384Update       0000000100439874     crypto64d:sha2.c.obj
+ 0002:0000587c       $unwind$SHA384Final        000000010043987c     crypto64d:sha2.c.obj
+ 0002:00005884       $unwind$des_key_setup      0000000100439884     crypto64d:sshdes.c.obj
+ 0002:0000588c       $unwind$bitsel             000000010043988c     crypto64d:sshdes.c.obj
+ 0002:00005894       $unwind$des_encipher       0000000100439894     crypto64d:sshdes.c.obj
+ 0002:0000589c       $unwind$des_decipher       000000010043989c     crypto64d:sshdes.c.obj
+ 0002:000058a4       $unwind$?dllmain_crt_process_attach@@YAHQEAUHINSTANCE__@@QEAX@Z 00000001004398a4     MSVCRTD:dll_dllmain.obj
+ 0002:000058c4       $unwind$?fin$0@?0??dllmain_crt_process_attach@@YAHQEAUHINSTANCE__@@QEAX@Z@4HA 00000001004398c4     MSVCRTD:dll_dllmain.obj
+ 0002:000058cc       $unwind$?dllmain_crt_process_detach@@YAH_N@Z 00000001004398cc     MSVCRTD:dll_dllmain.obj
+ 0002:000058fc       $unwind$?fin$0@?0??dllmain_crt_process_detach@@YAH_N@Z@4HA 00000001004398fc     MSVCRTD:dll_dllmain.obj
+ 0002:00005904       $unwind$?fin$1@?0??dllmain_crt_process_detach@@YAH_N@Z@4HA 0000000100439904     MSVCRTD:dll_dllmain.obj
+ 0002:0000590c       $unwind$?dllmain_crt_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 000000010043990c     MSVCRTD:dll_dllmain.obj
+ 0002:00005914       $unwind$_CRT_INIT          0000000100439914     MSVCRTD:dll_dllmain.obj
+ 0002:0000591c       $unwind$?dllmain_raw@@YAHQEAUHINSTANCE__@@KQEAX@Z 000000010043991c     MSVCRTD:dll_dllmain.obj
+ 0002:00005924       $unwind$?dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 0000000100439924     MSVCRTD:dll_dllmain.obj
+ 0002:00005944       $unwind$?filt$0@?0??dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z@4HA 0000000100439944     MSVCRTD:dll_dllmain.obj
+ 0002:0000594c       $unwind$_DllMainCRTStartup 000000010043994c     MSVCRTD:dll_dllmain.obj
+ 0002:00005954       $unwind$__report_securityfailure 0000000100439954     MSVCRTD:gs_report.obj
+ 0002:0000595c       $unwind$__report_securityfailureEx 000000010043995c     MSVCRTD:gs_report.obj
+ 0002:00005964       $unwind$__report_rangecheckfailure 0000000100439964     MSVCRTD:gs_report.obj
+ 0002:0000596c       $unwind$__report_gsfailure 000000010043996c     MSVCRTD:gs_report.obj
+ 0002:00005974       $unwind$capture_current_context 0000000100439974     MSVCRTD:gs_report.obj
+ 0002:0000597c       $unwind$capture_previous_context 000000010043997c     MSVCRTD:gs_report.obj
+ 0002:00005984       $unwind$__raise_securityfailure 0000000100439984     MSVCRTD:gs_report.obj
+ 0002:0000598c       $unwind$__GSHandlerCheckCommon 000000010043998c     MSVCRTD:gshandler.obj
+ 0002:00005994       $unwind$__GSHandlerCheck   0000000100439994     MSVCRTD:gshandler.obj
+ 0002:000059a0       $xdatasym                  00000001004399a0     MSVCRTD:amdsecgs.obj
+ 0002:000059a4       $unwind$_RTC_Shutdown      00000001004399a4     MSVCRTD:init.obj
+ 0002:000059ac       $unwind$_RTC_InitBase      00000001004399ac     MSVCRTD:init.obj
+ 0002:000059b4       $unwind$_RTC_CheckStackVars 00000001004399b4     MSVCRTD:stack.obj
+ 0002:000059c4       $chain$0$_RTC_CheckStackVars 00000001004399c4     MSVCRTD:stack.obj
+ 0002:000059d8       $chain$1$_RTC_CheckStackVars 00000001004399d8     MSVCRTD:stack.obj
+ 0002:000059e8       $unwind$_RTC_CheckStackVars2 00000001004399e8     MSVCRTD:stack.obj
+ 0002:000059f4       $chain$1$_RTC_CheckStackVars2 00000001004399f4     MSVCRTD:stack.obj
+ 0002:00005a0c       $chain$2$_RTC_CheckStackVars2 0000000100439a0c     MSVCRTD:stack.obj
+ 0002:00005a20       $chain$3$_RTC_CheckStackVars2 0000000100439a20     MSVCRTD:stack.obj
+ 0002:00005a34       $chain$4$_RTC_CheckStackVars2 0000000100439a34     MSVCRTD:stack.obj
+ 0002:00005a44       $chain$5$_RTC_CheckStackVars2 0000000100439a44     MSVCRTD:stack.obj
+ 0002:00005a54       $chain$6$_RTC_CheckStackVars2 0000000100439a54     MSVCRTD:stack.obj
+ 0002:00005a64       $unwind$_RTC_AllocaHelper  0000000100439a64     MSVCRTD:stack.obj
+ 0002:00005a6c       $chain$0$_RTC_AllocaHelper 0000000100439a6c     MSVCRTD:stack.obj
+ 0002:00005a80       $chain$1$_RTC_AllocaHelper 0000000100439a80     MSVCRTD:stack.obj
+ 0002:00005a90       $unwind$__security_init_cookie 0000000100439a90     MSVCRTD:gs_support.obj
+ 0002:00005a98       $unwind$__get_entropy      0000000100439a98     MSVCRTD:gs_support.obj
+ 0002:00005aa0       $unwind$DllMain            0000000100439aa0     MSVCRTD:dll_dllmain_stub.obj
+ 0002:00005aa8       $unwind$?__scrt_initialize_type_info@@YAXXZ 0000000100439aa8     MSVCRTD:tncleanup.obj
+ 0002:00005ab0       $unwind$?__scrt_uninitialize_type_info@@YAXXZ 0000000100439ab0     MSVCRTD:tncleanup.obj
+ 0002:00005ab8       $unwind$__scrt_initialize_default_local_stdio_options 0000000100439ab8     MSVCRTD:default_local_stdio_options.obj
+ 0002:00005ac0       $unwind$atexit             0000000100439ac0     MSVCRTD:utility.obj
+ 0002:00005ac8       $unwind$_onexit            0000000100439ac8     MSVCRTD:utility.obj
+ 0002:00005ad0       $unwind$at_quick_exit      0000000100439ad0     MSVCRTD:utility.obj
+ 0002:00005ad8       $unwind$__scrt_is_nonwritable_in_current_image 0000000100439ad8     MSVCRTD:utility.obj
+ 0002:00005af8       $unwind$__scrt_is_nonwritable_in_current_image$filt$0 0000000100439af8     MSVCRTD:utility.obj
+ 0002:00005b00       $unwind$__scrt_acquire_startup_lock 0000000100439b00     MSVCRTD:utility.obj
+ 0002:00005b08       $unwind$__scrt_release_startup_lock 0000000100439b08     MSVCRTD:utility.obj
+ 0002:00005b10       $unwind$__scrt_initialize_crt 0000000100439b10     MSVCRTD:utility.obj
+ 0002:00005b18       $unwind$__scrt_uninitialize_crt 0000000100439b18     MSVCRTD:utility.obj
+ 0002:00005b20       $unwind$__scrt_initialize_onexit_tables 0000000100439b20     MSVCRTD:utility.obj
+ 0002:00005b2c       $unwind$__scrt_dllmain_exception_filter 0000000100439b2c     MSVCRTD:utility.obj
+ 0002:00005b34       $unwind$__scrt_dllmain_before_initialize_c 0000000100439b34     MSVCRTD:utility.obj
+ 0002:00005b3c       $unwind$__scrt_dllmain_after_initialize_c 0000000100439b3c     MSVCRTD:utility.obj
+ 0002:00005b44       $unwind$__scrt_dllmain_uninitialize_c 0000000100439b44     MSVCRTD:utility.obj
+ 0002:00005b4c       $unwind$__scrt_dllmain_uninitialize_critical 0000000100439b4c     MSVCRTD:utility.obj
+ 0002:00005b54       $unwind$__scrt_dllmain_crt_thread_attach 0000000100439b54     MSVCRTD:utility.obj
+ 0002:00005b5c       $unwind$__scrt_dllmain_crt_thread_detach 0000000100439b5c     MSVCRTD:utility.obj
+ 0002:00005b64       $unwind$?configure_argv@__scrt_narrow_argv_policy@@SAHXZ 0000000100439b64     MSVCRTD:utility.obj
+ 0002:00005b6c       $unwind$?initialize_environment@__scrt_narrow_environment_policy@@SAHXZ 0000000100439b6c     MSVCRTD:utility.obj
+ 0002:00005b74       $unwind$?is_potentially_valid_image_base@@YA_NQEAX@Z 0000000100439b74     MSVCRTD:utility.obj
+ 0002:00005b7c       $unwind$?find_pe_section@@YAPEAU_IMAGE_SECTION_HEADER@@QEAE_K@Z 0000000100439b7c     MSVCRTD:utility.obj
+ 0002:00005b84       $unwind$__scrt_get_show_window_mode 0000000100439b84     MSVCRTD:utility_desktop.obj
+ 0002:00005b90       $unwind$__scrt_is_managed_app 0000000100439b90     MSVCRTD:utility_desktop.obj
+ 0002:00005b98       $unwind$__scrt_initialize_mta 0000000100439b98     MSVCRTD:utility_desktop.obj
+ 0002:00005ba0       $unwind$__scrt_set_unhandled_exception_filter 0000000100439ba0     MSVCRTD:utility_desktop.obj
+ 0002:00005ba8       $unwind$__scrt_fastfail    0000000100439ba8     MSVCRTD:utility_desktop.obj
+ 0002:00005bb4       $unwind$__scrt_unhandled_exception_filter 0000000100439bb4     MSVCRTD:utility_desktop.obj
+ 0002:00005bbc       $unwind$_RTC_Initialize    0000000100439bbc     MSVCRTD:initsect.obj
+ 0002:00005bc8       $unwind$_RTC_Terminate     0000000100439bc8     MSVCRTD:initsect.obj
+ 0002:00005bd4       $unwind$ReadNoFence64      0000000100439bd4     MSVCRTD:guard_support.obj
+ 0002:00005bdc       $unwind$ReadPointerNoFence 0000000100439bdc     MSVCRTD:guard_support.obj
+ 0002:00005be4       $unwind$_guard_icall_checks_enforced 0000000100439be4     MSVCRTD:guard_support.obj
+ 0002:00005bec       $unwind$__castguard_compat_check 0000000100439bec     MSVCRTD:guard_support.obj
+ 0002:00005bf4       $unwind$__castguard_check_failure_os_handled_wrapper 0000000100439bf4     MSVCRTD:guard_support.obj
+ 0002:00005bfc       $unwind$__castguard_check_failure_debugbreak 0000000100439bfc     MSVCRTD:guard_support.obj
+ 0002:00005c04       $unwind$__castguard_check_failure_fastfail 0000000100439c04     MSVCRTD:guard_support.obj
+ 0002:00005c0c       $unwind$__castguard_check_failure_os_handled 0000000100439c0c     MSVCRTD:guard_support.obj
+ 0002:00005c14       $unwind$__castguard_slow_path_compat_check 0000000100439c14     MSVCRTD:guard_support.obj
+ 0002:00005c1c       $unwind$__castguard_slow_path_check_debugbreak 0000000100439c1c     MSVCRTD:guard_support.obj
+ 0002:00005c24       $unwind$__castguard_slow_path_check_fastfail 0000000100439c24     MSVCRTD:guard_support.obj
+ 0002:00005c2c       $unwind$__castguard_slow_path_check_os_handled 0000000100439c2c     MSVCRTD:guard_support.obj
+ 0002:00005c34       $unwind$_RTC_UninitUse     0000000100439c34     MSVCRTD:error.obj
+ 0002:00005c4c       $unwind$?_RTC_StackFailure@@YAXPEAXPEBD@Z 0000000100439c4c     MSVCRTD:error.obj
+ 0002:00005c68       $unwind$?_RTC_AllocaFailure@@YAXPEAXPEAU_RTC_ALLOCA_NODE@@H@Z 0000000100439c68     MSVCRTD:error.obj
+ 0002:00005c80       $chain$0$?_RTC_AllocaFailure@@YAXPEAXPEAU_RTC_ALLOCA_NODE@@H@Z 0000000100439c80     MSVCRTD:error.obj
+ 0002:00005c94       $chain$1$?_RTC_AllocaFailure@@YAXPEAXPEAU_RTC_ALLOCA_NODE@@H@Z 0000000100439c94     MSVCRTD:error.obj
+ 0002:00005ca4       $unwind$_vsprintf_s_l      0000000100439ca4     MSVCRTD:error.obj
+ 0002:00005cb8       $unwind$sprintf_s          0000000100439cb8     MSVCRTD:error.obj
+ 0002:00005cc0       $unwind$?notify_debugger@@YAXAEBUtagEXCEPTION_VISUALCPP_DEBUG_INFO@@@Z 0000000100439cc0     MSVCRTD:error.obj
+ 0002:00005ce0       $unwind$?filt$0@?0??notify_debugger@@YAXAEBUtagEXCEPTION_VISUALCPP_DEBUG_INFO@@@Z@4HA 0000000100439ce0     MSVCRTD:error.obj
+ 0002:00005ce8       $unwind$?DebuggerProbe@@YA_NK@Z 0000000100439ce8     MSVCRTD:error.obj
+ 0002:00005cf0       $unwind$?DebuggerRuntime@@YA_NKHPEAXPEB_W@Z 0000000100439cf0     MSVCRTD:error.obj
+ 0002:00005cf8       $unwind$?failwithmessage@@YAXPEAXHHPEBD@Z 0000000100439cf8     MSVCRTD:error.obj
+ 0002:00005d1c       $unwind$?_getMemBlockDataString@@YAXPEAD0PEBD_K@Z 0000000100439d1c     MSVCRTD:error.obj
+ 0002:00005d2c       $chain$3$?_getMemBlockDataString@@YAXPEAD0PEBD_K@Z 0000000100439d2c     MSVCRTD:error.obj
+ 0002:00005d4c       $chain$4$?_getMemBlockDataString@@YAXPEAD0PEBD_K@Z 0000000100439d4c     MSVCRTD:error.obj
+ 0002:00005d5c       $unwind$__isa_available_init 0000000100439d5c     MSVCRTD:cpu_disp.obj
+ 0002:00005d6c       $unwind$__scrt_is_ucrt_dll_in_use 0000000100439d6c     MSVCRTD:ucrt_detection.obj
+ 0002:00005d78       $xdatasym                  0000000100439d78     MSVCRTD:guard_dispatch.obj
+ 0002:00005d80       $xdatasym                  0000000100439d80     MSVCRTD:guard_xfg_dispatch.obj
+ 0002:00005d84       $unwind$?_RTC_GetSrcLine@@YAHPEAEPEA_WKPEAH1K@Z 0000000100439d84     MSVCRTD:pdblkup.obj
+ 0002:00005d9c       $unwind$?GetPdbDllFromInstallPath@@YAPEAUHINSTANCE__@@XZ 0000000100439d9c     MSVCRTD:pdblkup.obj
+ 0002:00005dc0       $unwind$?GetPdbDllPathFromFilePath@@YAHPEB_WPEA_W_K@Z 0000000100439dc0     MSVCRTD:pdblkup.obj
+ 0002:00005dd8       $unwind$?GetPdbDll@@YAPEAUHINSTANCE__@@XZ 0000000100439dd8     MSVCRTD:pdblkup.obj
+ 0002:00005df0       .edata                     0000000100439df0     dyncrypt.exp
+ 0002:00005e18       rgpv                       0000000100439e18     dyncrypt.exp
+ 0002:00005e24       rgszName                   0000000100439e24     dyncrypt.exp
+ 0002:00005e30       rgwOrd                     0000000100439e30     dyncrypt.exp
+ 0002:00005e36       szName                     0000000100439e36     dyncrypt.exp
+ 0002:00005e43       $N00001                    0000000100439e43     dyncrypt.exp
+ 0002:00005e58       $N00002                    0000000100439e58     dyncrypt.exp
+ 0002:00005e70       $N00003                    0000000100439e70     dyncrypt.exp
+ 0002:00006294       .idata$6                   000000010043a294     hengine:hengine.dll
+ 0002:000062bc       .idata$6                   000000010043a2bc     hutil:hutil.dll
+ 0002:000062d0       .idata$6                   000000010043a2d0     hsys:hsys.dll
+ 0002:000063dc       .idata$6                   000000010043a3dc     vcruntimed:VCRUNTIME140D.dll
+ 0002:0000659a       .idata$6                   000000010043a59a     ucrtd:ucrtbased.dll
+ 0002:000067dc       .idata$6                   000000010043a7dc     kernel32:KERNEL32.dll
+ 0003:00000000       exp_table                  000000010043b000     dyncrypt.obj
+ 0003:00000800       $SG196144                  000000010043b800     dyncrypt.obj
+ 0003:00000830       $SG196177                  000000010043b830     dyncrypt.obj
+ 0003:0000083c       $SG196184                  000000010043b83c     dyncrypt.obj
+ 0003:00000844       $SG196378                  000000010043b844     dyncrypt.obj
+ 0003:00000848       $SG196178                  000000010043b848     dyncrypt.obj
+ 0003:00000854       $SG196377                  000000010043b854     dyncrypt.obj
+ 0003:0000085c       $SG196383                  000000010043b85c     dyncrypt.obj
+ 0003:00000860       $SG196180                  000000010043b860     dyncrypt.obj
+ 0003:0000086c       $SG196181                  000000010043b86c     dyncrypt.obj
+ 0003:00000874       $SG196388                  000000010043b874     dyncrypt.obj
+ 0003:00000878       $SG196183                  000000010043b878     dyncrypt.obj
+ 0003:00000880       $SG196310                  000000010043b880     dyncrypt.obj
+ 0003:000008a8       $SG196312                  000000010043b8a8     dyncrypt.obj
+ 0003:000008d0       $SG196314                  000000010043b8d0     dyncrypt.obj
+ 0003:000008f8       $SG196316                  000000010043b8f8     dyncrypt.obj
+ 0003:00000918       $SG196318                  000000010043b918     dyncrypt.obj
+ 0003:00000938       $SG196320                  000000010043b938     dyncrypt.obj
+ 0003:00000958       $SG196322                  000000010043b958     dyncrypt.obj
+ 0003:00000970       $SG196324                  000000010043b970     dyncrypt.obj
+ 0003:00000988       $SG196326                  000000010043b988     dyncrypt.obj
+ 0003:000009a0       $SG196328                  000000010043b9a0     dyncrypt.obj
+ 0003:000009c8       $SG196330                  000000010043b9c8     dyncrypt.obj
+ 0003:000009f0       $SG196332                  000000010043b9f0     dyncrypt.obj
+ 0003:00000a18       $SG196334                  000000010043ba18     dyncrypt.obj
+ 0003:00000a40       $SG196336                  000000010043ba40     dyncrypt.obj
+ 0003:00000a68       $SG196338                  000000010043ba68     dyncrypt.obj
+ 0003:00000a90       $SG196340                  000000010043ba90     dyncrypt.obj
+ 0003:00000ac8       $SG196342                  000000010043bac8     dyncrypt.obj
+ 0003:00000b00       $SG196344                  000000010043bb00     dyncrypt.obj
+ 0003:00000b38       $SG196346                  000000010043bb38     dyncrypt.obj
+ 0003:00000b58       $SG196348                  000000010043bb58     dyncrypt.obj
+ 0003:00000b78       $SG196350                  000000010043bb78     dyncrypt.obj
+ 0003:00000b98       $SG196352                  000000010043bb98     dyncrypt.obj
+ 0003:00000bc0       $SG196354                  000000010043bbc0     dyncrypt.obj
+ 0003:00000be8       $SG196356                  000000010043bbe8     dyncrypt.obj
+ 0003:00000c10       $SG196358                  000000010043bc10     dyncrypt.obj
+ 0003:00000c38       $SG196360                  000000010043bc38     dyncrypt.obj
+ 0003:00000c60       $SG196362                  000000010043bc60     dyncrypt.obj
+ 0003:00000c88       $SG196364                  000000010043bc88     dyncrypt.obj
+ 0003:00000cb0       $SG196366                  000000010043bcb0     dyncrypt.obj
+ 0003:00000cd8       $SG196368                  000000010043bcd8     dyncrypt.obj
+ 0003:00000d00       $SG196376                  000000010043bd00     dyncrypt.obj
+ 0003:00000d38       $SG196379                  000000010043bd38     dyncrypt.obj
+ 0003:00000d58       $SG196380                  000000010043bd58     dyncrypt.obj
+ 0003:00000d70       $SG196381                  000000010043bd70     dyncrypt.obj
+ 0003:00000da0       $SG196382                  000000010043bda0     dyncrypt.obj
+ 0003:00000db8       $SG196384                  000000010043bdb8     dyncrypt.obj
+ 0003:00000de0       $SG196385                  000000010043bde0     dyncrypt.obj
+ 0003:00000df8       $SG196386                  000000010043bdf8     dyncrypt.obj
+ 0003:00000e28       $SG196387                  000000010043be28     dyncrypt.obj
+ 0003:00000e58       $SG196389                  000000010043be58     dyncrypt.obj
+ 0003:00000e80       $SG196390                  000000010043be80     dyncrypt.obj
+ 0003:00000e98       $SG196391                  000000010043be98     dyncrypt.obj
+ 0003:00000ec4       $SG80289                   000000010043bec4     crypto64d:sha1.c.obj
+ 0003:00000f30       $SG80293                   000000010043bf30     crypto64d:sha1.c.obj
+ 0003:00000f34       ?__proc_attached@@3HA      000000010043bf34     MSVCRTD:dll_dllmain.obj
+ 0003:00000f40       GS_ExceptionRecord         000000010043bf40     MSVCRTD:gs_report.obj
+ 0003:00000fe0       GS_ContextRecord           000000010043bfe0     MSVCRTD:gs_report.obj
+ 0003:000014b0       ?init@?1??_RTC_InitBase@@9@4_NA 000000010043c4b0     MSVCRTD:init.obj
+ 0003:000014f0       ?is_initialized_as_dll@@3_NA 000000010043c4f0     MSVCRTD:utility.obj
+ 0003:000014f1       ?module_local_atexit_table_initialized@@3_NA 000000010043c4f1     MSVCRTD:utility.obj
+ 0003:000014f8       ?module_local_atexit_table@@3U_onexit_table_t@@A 000000010043c4f8     MSVCRTD:utility.obj
+ 0003:00001510       ?module_local_at_quick_exit_table@@3U_onexit_table_t@@A 000000010043c510     MSVCRTD:utility.obj
+ 0003:00001530       ?_RTC_ErrorReportFunc@@3P6AHHPEBDH00ZZEA 000000010043c530     MSVCRTD:userapi.obj
+ 0003:00001538       ?_RTC_ErrorReportFuncW@@3P6AHHPEB_WH00ZZEA 000000010043c538     MSVCRTD:userapi.obj
+ 0003:00001548       ?mspdb@@3PEAUHINSTANCE__@@EA 000000010043c548     MSVCRTD:pdblkup.obj
+ 0003:00001550       ?alreadyTried@?1??GetPdbDll@@YAPEAUHINSTANCE__@@XZ@4_NA 000000010043c550     MSVCRTD:pdblkup.obj
+ 0003:00001551       ?PDBOK@?1??_RTC_GetSrcLine@@YAHPEAEPEA_WKPEAH1K@Z@4_NA 000000010043c551     MSVCRTD:pdblkup.obj
+ 0005:000002d0       $R000000                   000000010043e2d0     hercprod.res
+ 0005:00000878       $R0005A8                   000000010043e878     hercprod.res
+ 0005:000009a0       $R0006D0                   000000010043e9a0     hercprod.res
+ 0005:00000f08       $R000C38                   000000010043ef08     hercprod.res
+ 0005:00001370       $R0010A0                   000000010043f370     hercprod.res
+ 0005:00001658       $R001388                   000000010043f658     hercprod.res
+ 0005:00001f00       $R001C30                   000000010043ff00     hercprod.res
+ 0005:00002fa8       $R002CD8                   0000000100440fa8     hercprod.res
+ 0005:00003610       $R003340                   0000000100441610     hercprod.res
+ 0005:000044b8       $R0041E8                   00000001004424b8     hercprod.res
+ 0005:00006a60       $R006790                   0000000100444a60     hercprod.res
+ 0005:0000ff08       $R00FC38                   000000010044df08     hercprod.res
+ 0005:00013bc8       $R0138F8                   0000000100451bc8     hercprod.res

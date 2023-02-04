@@ -771,8 +771,8 @@ het_read( HETB *hetb, void *sbuf )
     unsigned long slen;
     unsigned long tlen;
 
-    unsigned int bz_slen;
-    unsigned int bz_tlen;
+//    unsigned int bz_slen; @salva unreferenced local variable error
+//    unsigned int bz_tlen; @salva unreferenced local variable error
 
     int flags1, flags2;
     char *tbuf;
@@ -1269,7 +1269,7 @@ het_write( HETB *hetb, const void *sbuf, int slen )
 
     unsigned long tlen;
 
-    unsigned int bz_tlen;
+//    unsigned int bz_tlen; @salva unreferenced local variable error
 
     char *tbuf = NULL;
 #if defined( HAVE_ZLIB ) || defined( HET_BZIP2 )
