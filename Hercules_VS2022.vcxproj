@@ -1170,6 +1170,8 @@
     <None Include="util\voldsext.cmd" />
     <None Include="util\zzsacard.bin" />
     <None Include="vstools.cmd" />
+    <None Include="zvector.asm" />
+    <None Include="zvector.tst" />
     <None Include="_dynamic_version" />
     <None Include="_dynamic_version.cmd" />
   </ItemGroup>

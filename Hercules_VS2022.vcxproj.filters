@@ -2913,6 +2913,13 @@
       <Filter>Other Files\Utilities</Filter>
     </None>
     <None Include="tests\cpu0off.core" />
+    <None Include="tests\cpu0off.core" />
+    <None Include="zvector.asm">
+      <Filter>Other Files\tests\scripts\asm</Filter>
+    </None>
+    <None Include="zvector.tst">
+      <Filter>Other Files\tests\scripts\tst</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="crypto\include\crypto.h">
