@@ -1681,7 +1681,16 @@ int display_inst_regs( bool trace2file, REGS *regs, BYTE *inst, BYTE opcode, cha
         else
             len += display_fregs (regs, buf + len, buflen - len - 1, "HHC02270I ");
     }
-
+    
+    /* Display vector registers if appropriate */
+    if (opcode == 0xE7)
+    {
+        if (trace2file)
+            tf_2270(regs);
+        else
+            len += display_vregs(regs, buf + len, buflen - len - 1, "HHC0227xI ");
+    }
+    
     if (len && sysblk.showregsfirst)
         len += idx_snprintf( len, buf, buflen, "\n" );
 
@@ -1817,6 +1826,38 @@ char cpustr[32] = "";
 
 } /* end function display_fregs */
 
+/*-------------------------------------------------------------------*/
+/*               Display vector registers                            */
+/*-------------------------------------------------------------------*/
+#pragma optimize("", off)
+int display_vregs (REGS* regs, char* buf, int buflen, char* hdr)
+{
+    char cpustr[32] = "";
+    char vrstr[32][33] = { "" };
+
+    if (sysblk.cpus > 1)
+        MSGBUF(cpustr, "%s%s%02X: ", hdr, PTYPSTR(regs->cpuad), regs->cpuad);
+    else
+        MSGBUF(cpustr, "%s", hdr);
+    
+    for (int i = 0; i < 32; i++) {
+        uint8_t *x = regs->vr[i];
+        MSGBUF(vrstr[i], "VR%02d=%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X", i,
+            x[0], x[1],x[2],x[3],x[4],x[5],x[6],x[7],x[7],x[8],x[9],x[10],x[11],x[12],x[13],x[14],x[15]);
+    }
+
+    return(snprintf(buf, buflen,
+        "%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n"
+        "%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n"
+        , cpustr, vrstr[0], vrstr[1], cpustr, vrstr[2], vrstr[3], cpustr, vrstr[4], vrstr[5]
+        , cpustr, vrstr[6], vrstr[7], cpustr, vrstr[8], vrstr[9], cpustr, vrstr[10], vrstr[11]
+        , cpustr, vrstr[12], vrstr[13], cpustr, vrstr[14], vrstr[15], cpustr, vrstr[16], vrstr[17]
+        , cpustr, vrstr[18], vrstr[19], cpustr, vrstr[20], vrstr[21], cpustr, vrstr[22], vrstr[23]
+        , cpustr, vrstr[24], vrstr[25], cpustr, vrstr[26], vrstr[27], cpustr, vrstr[28], vrstr[29]
+        , cpustr, vrstr[30], vrstr[31]
+    ));
+
+} /* end function display_vregs */
 
 /*-------------------------------------------------------------------*/
 /*                     Display subchannel                            */

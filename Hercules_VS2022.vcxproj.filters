@@ -2920,6 +2920,7 @@
     <None Include="zvector.tst">
       <Filter>Other Files\tests\scripts\tst</Filter>
     </None>
+    <None Include="tests\cpu0off.core" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="crypto\include\crypto.h">

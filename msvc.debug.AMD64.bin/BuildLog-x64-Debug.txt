@@ -1,5 +1,5 @@
-﻿  makefile.bat begun on Sat 02/04/2023 at 10:38:58.15
-  cmdline: makefile.bat DEBUG-X64 makefile.msvc 64 -title "** The SoftDevLabs version of Hercules **"
+﻿  makefile.bat begun on Sun 02/05/2023 at 18:23:57.85
+  cmdline: makefile.bat DEBUG-X64 makefile.msvc 64 clean -title "** The SoftDevLabs version of Hercules **"
   **********************************************************************
   ** Visual Studio 2022 Developer Command Prompt v17.4.4
   ** Copyright (c) 2022 Microsoft Corporation
@@ -16,7 +16,7 @@
   **********************************************************************
   [vcvarsall.bat] Environment initialized for: 'x64'
   
-  VERSION = "4.6.0.10890-SDL-DEV-gf2a603e2-modified"
+  VERSION = "4.6.0.10892-SDL-DEV-g69ad4a9d-modified"
   CUSTOM_BUILD_STRING = "** The SoftDevLabs version of Hercules **"
   
   --------------------------- ENVIRONMENT POOL ---------------------------
@@ -28,7 +28,6 @@
   APPDATA=C:\Users\salva\AppData\Roaming
   break=goto :break
   build_type=DEBUG-X64
-  CAExcludePath=C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\atlmfc\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\Include\um;
   CFG=DEBUG
   ChocolateyInstall=C:\ProgramData\chocolatey
   ChocolateyLastPathUpdate=132959482323173617
@@ -46,7 +45,7 @@
   exit=goto :exit
   ExtensionSdkDir=C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs
   EXTERNAL_INCLUDE=C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include;;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\atlmfc\include;;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt;;;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\UnitTest\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\Include\um
-  ForceIdentityAuthenticationType=Embedded
+  extra_nmake_args=clean
   FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
   FPS_BROWSER_USER_PROFILE_STRING=Default
   Framework40Version=v4.0
@@ -70,7 +69,7 @@
   NUMBER_OF_PROCESSORS=8
   num_cpus=64
   nx0=makefile.bat
-  nx0_cmdline=makefile.bat DEBUG-X64 makefile.msvc 64 -title "** The SoftDevLabs version of Hercules **"
+  nx0_cmdline=makefile.bat DEBUG-X64 makefile.msvc 64 clean -title "** The SoftDevLabs version of Hercules **"
   OneDrive=C:\Users\salva\OneDrive
   OneDriveConsumer=C:\Users\salva\OneDrive
   opt=-title
@@ -97,9 +96,8 @@
   REGINA_LANG=en
   REGINA_LANG_DIR=C:\Program Files\rexx.org\Regina
   return=goto :EOF
-  ServiceHubLogSessionKey=00B6C080
+  ServiceHubLogSessionKey=9F438D94
   SESSIONNAME=Console
-  SignInWithHomeTenantOnly=False
   SystemDrive=C:
   SystemRoot=C:\WINDOWS
   targ_arch=amd64
@@ -119,8 +117,8 @@
   VCToolsRedistDir=C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.34.31931\
   VCToolsVersion=14.34.31933
   VCVARSDIR=C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\..\..\VC\Auxiliary\Build
-  VERSION="4.6.0.10890-SDL-DEV-gf2a603e2-modified"
-  VERS_BLD=10890
+  VERSION="4.6.0.10892-SDL-DEV-g69ad4a9d-modified"
+  VERS_BLD=10892
   VERS_INT=6
   VERS_MAJ=4
   VERS_MIN=0
@@ -356,6 +354,7 @@
   Regina Rexx support will be included from "C:\Program Files\rexx.org\Regina"
   Regina Rexx flags:  /D HAVE_REGINA_REXX /I"C:\Program Files\rexx.org\Regina\include" /D HAVE_REXXSAA_H
   IPV6   FLAGS  /D ENABLE_IPV6
+  msvc.debug.AMD64.bin\BuildLog-x64-Debug.txt - The process cannot access the file because it is being used by another process.
   
-  -- Hercules build complete --
-  makefile.bat ended on Sat 02/04/2023 at 10:39:02.67, rc=0
+  -- Hercules clean complete --
+  makefile.bat ended on Sun 02/05/2023 at 18:24:02.89, rc=0

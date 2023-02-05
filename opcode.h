@@ -3224,6 +3224,8 @@ DEF_INST(convert_dfp_long_to_packed);
 #if defined( FEATURE_129_ZVECTOR_FACILITY )
 DEF_INST(vector_load);
 DEF_INST(vector_store);
+DEF_INST(vector_load_multiple);
+DEF_INST(vector_store_multiple);
 #endif
 
 #if defined( FEATURE_145_INS_REF_BITS_MULT_FACILITY )

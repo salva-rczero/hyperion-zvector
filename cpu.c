@@ -1936,6 +1936,14 @@ int     aswitch;
     else
     {
         memset(regs, 0, sizeof(REGS));
+        
+        // @salva som: ToRemove - Fill Vector with an increasing pattern-------------------
+        char t = 0;
+        byte* p = (byte *) & regs->vr;
+        for (i = 0; i < sizeof(regs->vr); i++) {
+            p[i] = t++;
+        }
+        // @salva eom----------------------------------------------------------------------
 
         if (cpu_init( cpu, regs, NULL ))
             return NULL;

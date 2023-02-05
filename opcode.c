@@ -677,6 +677,8 @@ DISABLE_GCC_UNUSED_FUNCTION_WARNING;
 #if !defined( FEATURE_129_ZVECTOR_FACILITY )
      UNDEF_INST(vector_load)
      UNDEF_INST(vector_store)
+     UNDEF_INST(vector_load_multiple)
+     UNDEF_INST(vector_store_multiple)
 #endif
 
 #if !defined( FEATURE_145_INS_REF_BITS_MULT_FACILITY )
@@ -1508,6 +1510,7 @@ FWD_REF_IPRINT_FUNC( ASMFMT_SSF );
 FWD_REF_IPRINT_FUNC( ASMFMT_SSF_RSS );
 FWD_REF_IPRINT_FUNC( ASMFMT_VS );
 FWD_REF_IPRINT_FUNC( ASMFMT_VRX );
+FWD_REF_IPRINT_FUNC( ASMFMT_VRS_A );
 
 #endif // COMPILE_THIS_ONLY_ONCE
 
@@ -2574,12 +2577,23 @@ IPRINT_FUNC( ASMFMT_VS );
 IPRINT_FUNC(ASMFMT_VRX);
     int v1, d2, x2, b2, m3;
     UNREFERENCED(regs);
-    v1 = ((inst[1] >> 4) & 0x0F) | ((inst[4] & 0x0F) << 1);
+    v1 = ((inst[1] >> 4) & 0x0F) | ((inst[4] & 0x08) << 1);
     d2 = (inst[2] & 0x0F) << 8 | inst[3];
     x2 = inst[1] & 0x0F;
     b2 = inst[2] >> 4;
     m3 = inst[4] >> 4;
     IPRINT_PRINT("%d,%d(%d,%d),%d", v1, d2, x2, b2, m3)
+
+IPRINT_FUNC(ASMFMT_VRS_A);
+    int v1, v3, b2, d2, m4;
+    UNREFERENCED(regs);
+    v1 = ((inst[1] >> 4) & 0x0F) | ((inst[4] & 0x08) << 1);
+    v3 = ((inst[1] >> 0) & 0x0F) | ((inst[4] & 0x04) << 2);
+    b2 = inst[2] >> 4;
+    d2 = (inst[2] & 0x0F) << 8 | inst[3];
+    m4 = inst[4] >> 4;
+    IPRINT_PRINT("%d,%d,%d(%d),%d", v1, v3, d2, b2, m4)
+
 /*----------------------------------------------------------------------------*/
 /*          'GENx___x___x900' instruction opcode jump tables                  */
 /*----------------------------------------------------------------------------*/
@@ -4652,7 +4666,7 @@ static INSTR_FUNC gen_opcode_e7xx[256][NUM_INSTR_TAB_PTRS] =
     /*E733*/ GENx___x___x___ ,
     /*E734*/ GENx___x___x___ ,
     /*E735*/ GENx___x___x___ ,
-    /*E736*/ GENx___x___x___ ,
+    /*E736*/ GENx370x390x900("VLM"        , VRS_A , ASMFMT_VRS_A     , vector_load_multiple),
     /*E737*/ GENx___x___x___ ,
     /*E738*/ GENx___x___x___ ,
     /*E739*/ GENx___x___x___ ,
@@ -4660,7 +4674,7 @@ static INSTR_FUNC gen_opcode_e7xx[256][NUM_INSTR_TAB_PTRS] =
     /*E73B*/ GENx___x___x___ ,
     /*E73C*/ GENx___x___x___ ,
     /*E73D*/ GENx___x___x___ ,
-    /*E73E*/ GENx___x___x___ ,
+    /*E73E*/ GENx370x390x900("VSTM"       , VRS_A , ASMFMT_VRS_A     , vector_store_multiple),
     /*E73F*/ GENx___x___x___ ,
     /*E740*/ GENx___x___x___ ,
     /*E741*/ GENx___x___x___ ,

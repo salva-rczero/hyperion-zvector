@@ -1783,7 +1783,7 @@
 /*             and an extended op-code field.                        */
 /*-------------------------------------------------------------------*/
 
-#define VRX( _inst, _regs, _v1, _effective_addr2, _m3 )  VRX_DECODER( _inst, _regs, _v1, _effective_addr2, _m3, 6, 6 )
+#define VRX( _inst, _regs, _v1, _x2, _b2, _effective_addr2, _m3 )  VRX_DECODER( _inst, _regs, _v1, _x2, _b2, _effective_addr2, _m3, 6, 6 )
 
 //  0           1           2           3           4           5           6
 //  +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
@@ -1791,19 +1791,50 @@
 //  +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
 //  0     4     8     12    16    20    24    28    32    36    40    44   47
 
-#define VRX_DECODER( _inst, _regs, _v1, _effective_addr2, _m3, _len, _ilc ) \
+#define VRX_DECODER( _inst, _regs, _v1, _x2, _b2, _effective_addr2, _m3, _len, _ilc ) \
 {                                                                   \
     U32 temp = fetch_fw( (_inst) + 1);                              \
                                                                     \
     U32 _rxb = (temp >> 0) & 0xf;                                   \
-    (_v1) = ((temp >> 28) & 0xf) + ((_rxb << 1) & 0x10);            \
-    U32 _x2 = (temp >> 24) & 0xf;                                   \
-    U32 _b2 = (temp >> 20) & 0xf;                                   \
+    (_v1) = ((temp >> 28) & 0xf) | ((_rxb & 0x8) << 1);             \
+    (_x2) = (temp >> 24) & 0xf;                                     \
+    (_b2) = (temp >> 20) & 0xf;                                     \
     (_effective_addr2) = (temp >>  8) & 0xfff;                      \
     (_m3) = (temp >>  4) & 0xf;                                     \
                                                                     \
     if (( _x2 ))                                                    \
         (_effective_addr2) += (_regs)->GR((_x2));                   \
+                                                                    \
+    if (( _b2 ))                                                    \
+        (_effective_addr2) += (_regs)->GR(( _b2 ));                 \
+                                                                    \
+    (_effective_addr2) &= ADDRESS_MAXWRAP((_regs));                 \
+                                                                    \
+    INST_UPDATE_PSW( (_regs), (_len), (_ilc) );                     \
+}
+/*-------------------------------------------------------------------*/
+/*       VRX - vector register-and-index-storage operation           */
+/*             and an extended op-code field.                        */
+/*-------------------------------------------------------------------*/
+
+#define VRS_A( _inst, _regs, _v1, _v3, _b2, _effective_addr2, _m4 )  VRS_A_DECODER( _inst, _regs, _v1, _v3, _b2, _effective_addr2, _m4, 6, 6 )
+
+//  0           1           2           3           4           5           6
+//  +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+//  |     OP    | v1  | v3  | b2  |       d2        | m4  | rxb |    XOP    |    VRS_A
+//  +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+//  0     4     8     12    16    20    24    28    32    36    40    44   47
+
+#define VRS_A_DECODER( _inst, _regs, _v1, _v3, _b2, _effective_addr2, _m4, _len, _ilc ) \
+{                                                                   \
+    U32 temp = fetch_fw( (_inst) + 1);                              \
+                                                                    \
+    U32 _rxb = (temp >> 0) & 0xf;                                   \
+    (_v1) = ((temp >> 28) & 0xf) | ((_rxb & 0x8) << 1);             \
+    (_v3) = ((temp >> 24) & 0xf) | ((_rxb & 0x4) << 2);             \
+    (_b2) = (temp >> 20) & 0xf;                                     \
+    (_effective_addr2) = (temp >>  8) & 0xfff;                      \
+    (_m4) = (temp >>  4) & 0xf;                                     \
                                                                     \
     if (( _b2 ))                                                    \
         (_effective_addr2) += (_regs)->GR(( _b2 ));                 \

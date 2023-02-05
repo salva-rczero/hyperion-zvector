@@ -57,7 +57,9 @@ ZVECTOR  BALR  R12,0            Initalize FIRST base register
 ***********************************************************************
 *        Begin test
 ***********************************************************************
-         VL    V1,VSPACE0
+         VSTM  V0,V15,VSPACE0
+         VLM   V1,V2,VSPACE0
+         VSTM  V0,V15,VSPACE0
          B     SUCCESS
 ***********************************************************************
 *        Normal completion or Abnormal termination PSWs
@@ -68,7 +70,7 @@ FAILURE  DWAIT LOAD=YES,CODE=BAD    Abnormal termination
 *        Working Storage
 ***********************************************************************
          LTORG ,                Literals pool
-VSPACE0  DC    XL255'00'                              
+VSPACE0  DC    XL4096'00'                              
 ***********************************************************************
 *        Register equates
 ***********************************************************************
@@ -104,4 +106,20 @@ V12      EQU   12
 V13      EQU   13
 V14      EQU   14
 V15      EQU   15
+V16      EQU   16
+V17      EQU   17
+V18      EQU   18
+V19      EQU   19
+V20      EQU   20
+V21      EQU   21
+V22      EQU   22
+V23      EQU   23
+V24      EQU   24
+V25      EQU   25
+V26      EQU   26
+V27      EQU   27
+V28      EQU   28
+V29      EQU   29
+V30      EQU   30
+V31      EQU   31
          END
