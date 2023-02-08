@@ -78,6 +78,11 @@ autoconf/compile
 /msvc.AMD64.map
 /msvc.AMD64.obj
 /msvc.AMD64.pdb
+/msvc.debug.AMD64.bin
+/msvc.debug.AMD64.cod
+/msvc.debug.AMD64.map
+/msvc.debug.AMD64.obj
+/msvc.debug.AMD64.pdb
 /msvc.dllmod.bin
 /msvc.dllmod.cod
 /msvc.dllmod.map
