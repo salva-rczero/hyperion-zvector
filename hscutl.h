@@ -1369,6 +1369,17 @@ ATTRIBUTE_PACKED; typedef struct TF02276 TF02276;
 CASSERT( sizeof( TF02276 ) % 8 == 0, hscutl_h );
 
 //---------------------------------------------------------------------
+//   TraceFile TF02277 Vector Register Record
+//---------------------------------------------------------------------
+struct TF02277
+{
+    TFHDR   rhdr;           // Record Header
+    QWORD   vr[32];         // Vector registers
+}
+ATTRIBUTE_PACKED; typedef struct TF02277 TF02277;
+CASSERT(sizeof(TF02277) % 8 == 0, hscutl_h);
+
+//---------------------------------------------------------------------
 //     TraceFile TF02324 Primary Instruction Trace Record
 //---------------------------------------------------------------------
 struct TF02324
@@ -1650,6 +1661,8 @@ HUT_DLL_IMPORT bool tf_2271( REGS* regs );             // Control Registers
 HUT_DLL_IMPORT bool tf_2272( REGS* regs );             // Access Registers
 
 HUT_DLL_IMPORT bool tf_2276( REGS* regs );             // Floating Point Control Register
+
+HUT_DLL_IMPORT bool tf_2277( REGS* regs );             // Vector Registers
 
 HUT_DLL_IMPORT bool tf_2324( REGS* regs,               // Primary Instruction Trace
                              BYTE* inst );

@@ -1806,6 +1806,19 @@ do {                                                                  \
 
 #define MAIN_TO_ABS(_main)  ((U64)((BYTE*)(_main) - sysblk.mainstor))
 
+/*-------------------------------------------------------------------*/
+/*              zVector Facility                                     */
+/*-------------------------------------------------------------------*/
+#if defined( FEATURE_129_ZVECTOR_FACILITY )
+
+    /* Program check if vector instructions is executed when VOP control is zero */
+#define ZVECTOR_CHECK(_regs) \
+        if( !((_regs)->CR(0) & CR0_VOP) ) { \
+            (_regs)->dxc = DXC_VECTOR_INSTRUCTION; \
+            (_regs)->program_interrupt( (_regs), PGM_DATA_EXCEPTION); \
+        }
+#endif /*defined( FEATURE_129_ZVECTOR_FACILITY )*/
+
 /* Perform invalidation after storage key update...
  *
  * If the REF or CHANGE bit is turned off for an absolute address,

@@ -27,7 +27,7 @@ DEF_INST(vector_load)
 
     VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
 
-    TXF_FLOAT_INSTR_CHECK(regs);
+    ZVECTOR_CHECK(regs);
     PER_ZEROADDR_XCHECK2(regs, x2, b2);
 
     ARCH_DEP(vfetchc) (&regs->vr[(v1)], sizeof(QWORD) - 1, effective_addr2, b2, regs);
@@ -42,7 +42,7 @@ DEF_INST(vector_store)
     VADR    effective_addr2;        /* Effective address         */
 
     VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
-    TXF_FLOAT_INSTR_CHECK(regs);
+    ZVECTOR_CHECK(regs);
     PER_ZEROADDR_XCHECK2(regs, x2, b2);
 
     ARCH_DEP(vstorec) (&regs->vr[(v1)], sizeof(QWORD) - 1, effective_addr2, b2, regs);
@@ -56,7 +56,7 @@ DEF_INST(vector_load_multiple)
     VADR    effective_addr2;        /* Effective address         */
 
     VRS_A(inst, regs, v1, v3, b2, effective_addr2, m4);
-    TXF_FLOAT_INSTR_CHECK(regs);
+    ZVECTOR_CHECK(regs);
     PER_ZEROADDR_XCHECK(regs, b2);
     int len = (1 + v3 - v1) * sizeof(QWORD);
     if (len < 0 || len > 16 * sizeof(QWORD))
@@ -73,7 +73,7 @@ DEF_INST(vector_store_multiple)
     VADR    effective_addr2;        /* Effective address         */
 
     VRS_A(inst, regs, v1, v3, b2, effective_addr2, m4);
-    TXF_FLOAT_INSTR_CHECK(regs);
+    ZVECTOR_CHECK(regs);
     PER_ZEROADDR_XCHECK(regs, b2);
     int len = (1 + v3 - v1) * sizeof(QWORD);
     if (len < 0 || len > 16 * sizeof(QWORD))
