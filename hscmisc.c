@@ -1686,9 +1686,9 @@ int display_inst_regs( bool trace2file, REGS *regs, BYTE *inst, BYTE opcode, cha
     if (opcode == 0xE7)
     {
         if (trace2file)
-            tf_2270(regs);
+            tf_2277(regs);
         else
-            len += display_vregs(regs, buf + len, buflen - len - 1, "HHC0227xI ");
+            len += display_vregs(regs, buf + len, buflen - len - 1, "HHC02277I ");
     }
     
     if (len && sysblk.showregsfirst)
