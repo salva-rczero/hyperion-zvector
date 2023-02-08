@@ -1,0 +1,1304 @@
+ hdt2703
+
+ Timestamp is 63e3da0e (Wed Feb  8 18:21:18 2023)
+
+ Preferred load address is 0000000100400000
+
+ Start         Length     Name                   Class
+ 0001:00000000 0000dc50H .text$mn                CODE
+ 0001:0000dc50 00000040H .text$mn$00             CODE
+ 0001:0000dc90 000000ddH .text$x                 CODE
+ 0002:00000000 00000350H .idata$5                DATA
+ 0002:00000350 00000038H .00cfg                  DATA
+ 0002:00000388 00000008H .CRT$XCA                DATA
+ 0002:00000390 00000008H .CRT$XCZ                DATA
+ 0002:00000398 00000008H .CRT$XIA                DATA
+ 0002:000003a0 00000008H .CRT$XIZ                DATA
+ 0002:000003a8 00000008H .CRT$XPA                DATA
+ 0002:000003b0 00000008H .CRT$XPZ                DATA
+ 0002:000003b8 00000008H .CRT$XTA                DATA
+ 0002:000003c0 00000010H .CRT$XTZ                DATA
+ 0002:000003c8 00000000H .gehcont$y              DATA
+ 0002:000003c8 00000000H .gfids$y                DATA
+ 0002:000003d0 00000230H .rdata                  DATA
+ 0002:00000600 00000080H .rdata$CastGuardVftablesA DATA
+ 0002:00000680 00000080H .rdata$CastGuardVftablesC DATA
+ 0002:00000700 000000d0H .rdata$voltmd           DATA
+ 0002:000007d0 00000310H .rdata$zzzdbg           DATA
+ 0002:00000ae0 00000008H .rtc$IAA                DATA
+ 0002:00000ae8 00000008H .rtc$IZZ                DATA
+ 0002:00000af0 00000008H .rtc$TAA                DATA
+ 0002:00000af8 00000008H .rtc$TZZ                DATA
+ 0002:00000b00 00000440H .xdata                  DATA
+ 0002:00000f40 00000074H .edata                  DATA
+ 0002:00000fb4 0000008cH .idata$2                DATA
+ 0002:00001040 00000018H .idata$3                DATA
+ 0002:00001058 00000350H .idata$4                DATA
+ 0002:000013a8 000006b4H .idata$6                DATA
+ 0003:00000000 00003230H .data                   DATA
+ 0003:00003230 00000610H .bss                    DATA
+ 0004:00000000 00000510H .pdata                  DATA
+ 0005:00000000 000002d0H .rsrc$01                DATA
+ 0005:000002d0 00013998H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base               Lib:Object
+
+ 0000:00000000       __AbsoluteZero             0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_count   0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   0000000000000000     <absolute>
+ 0000:00000000       __arm64x_extra_rfe_table   0000000000000000     <absolute>
+ 0000:00000000       __arm64x_extra_rfe_table_size 0000000000000000     <absolute>
+ 0000:00000000       __arm64x_native_entrypoint 0000000000000000     <absolute>
+ 0000:00000000       __arm64x_redirection_metadata 0000000000000000     <absolute>
+ 0000:00000000       __arm64x_redirection_metadata_count 0000000000000000     <absolute>
+ 0000:00000000       __dynamic_value_reloc_table 0000000000000000     <absolute>
+ 0000:00000000       __enclave_config           0000000000000000     <absolute>
+ 0000:00000000       __guard_check_icall_a64n_fptr 0000000000000000     <absolute>
+ 0000:00000000       __guard_eh_cont_count      0000000000000000     <absolute>
+ 0000:00000000       __guard_eh_cont_table      0000000000000000     <absolute>
+ 0000:00000000       __guard_fids_count         0000000000000000     <absolute>
+ 0000:00000000       __guard_fids_table         0000000000000000     <absolute>
+ 0000:00000000       __guard_iat_count          0000000000000000     <absolute>
+ 0000:00000000       __guard_iat_table          0000000000000000     <absolute>
+ 0000:00000000       __guard_longjmp_count      0000000000000000     <absolute>
+ 0000:00000000       __guard_longjmp_table      0000000000000000     <absolute>
+ 0000:00000000       __hybrid_auxiliary_iat     0000000000000000     <absolute>
+ 0000:00000000       __hybrid_auxiliary_iat_copy 0000000000000000     <absolute>
+ 0000:00000000       __hybrid_code_map          0000000000000000     <absolute>
+ 0000:00000000       __hybrid_code_map_count    0000000000000000     <absolute>
+ 0000:00000000       __x64_code_ranges_to_entry_points 0000000000000000     <absolute>
+ 0000:00000000       __x64_code_ranges_to_entry_points_count 0000000000000000     <absolute>
+ 0000:00000100       __guard_flags              0000000000000100     <absolute>
+ 0000:00000000       __ImageBase                0000000100400000     <linker-defined>
+ 0001:000006b0       commadpt_ring_init         00000001004016b0 f   commadpt.obj
+ 0001:0000b840       hdl_check_depends_ep       000000010040c840 f   commadpt.obj
+ 0001:0000b8e0       hdl_define_devtypes_ep     000000010040c8e0 f   commadpt.obj
+ 0001:0000b900       __local_stdio_printf_options 000000010040c900 f i commadpt.obj
+ 0001:0000b910       __local_stdio_scanf_options 000000010040c910 f i commadpt.obj
+ 0001:0000b920       _vsnprintf_s               000000010040c920 f i commadpt.obj
+ 0001:0000b970       _vsnprintf_s_l             000000010040c970 f i commadpt.obj
+ 0001:0000b9f0       _vsscanf_l                 000000010040c9f0 f i commadpt.obj
+ 0001:0000ba40       sscanf                     000000010040ca40 f i commadpt.obj
+ 0001:0000ba8f       parse_conkpalv             000000010040ca8f f   hengine:hengine.dll
+ 0001:0000ba95       fthread_self               000000010040ca95 f   hutil:hutil.dll
+ 0001:0000ba9b       hthread_initialize_lock    000000010040ca9b f   hutil:hutil.dll
+ 0001:0000baa1       hthread_obtain_lock        000000010040caa1 f   hutil:hutil.dll
+ 0001:0000baa7       hthread_release_lock       000000010040caa7 f   hutil:hutil.dll
+ 0001:0000baad       hthread_initialize_condition 000000010040caad f   hutil:hutil.dll
+ 0001:0000bab3       hthread_signal_condition   000000010040cab3 f   hutil:hutil.dll
+ 0001:0000bab9       hthread_wait_condition     000000010040cab9 f   hutil:hutil.dll
+ 0001:0000babf       hthread_create_thread      000000010040cabf f   hutil:hutil.dll
+ 0001:0000bac5       hthread_set_thread_prio    000000010040cac5 f   hutil:hutil.dll
+ 0001:0000bacb       hthread_get_thread_prio    000000010040cacb f   hutil:hutil.dll
+ 0001:0000bad1       strlcpy                    000000010040cad1 f   hutil:hutil.dll
+ 0001:0000bad7       strlcat                    000000010040cad7 f   hutil:hutil.dll
+ 0001:0000badd       reverse_bits               000000010040cadd f   hutil:hutil.dll
+ 0001:0000bae3       w32_strerror               000000010040cae3 f   hutil:hutil.dll
+ 0001:0000bae9       w32_strerror_r             000000010040cae9 f   hutil:hutil.dll
+ 0001:0000baef       socketpair                 000000010040caef f   hutil:hutil.dll
+ 0001:0000baf5       usleep                     000000010040caf5 f   hutil:hutil.dll
+ 0001:0000bafb       socket_set_blocking_mode   000000010040cafb f   hutil:hutil.dll
+ 0001:0000bb01       socket_is_socket           000000010040cb01 f   hutil:hutil.dll
+ 0001:0000bb07       set_socket_keepalive       000000010040cb07 f   hutil:hutil.dll
+ 0001:0000bb0d       get_socket_keepalive       000000010040cb0d f   hutil:hutil.dll
+ 0001:0000bb13       w32_socket                 000000010040cb13 f   hutil:hutil.dll
+ 0001:0000bb19       w32_accept                 000000010040cb19 f   hutil:hutil.dll
+ 0001:0000bb1f       w32_close_socket           000000010040cb1f f   hutil:hutil.dll
+ 0001:0000bb25       w32_FD_SET                 000000010040cb25 f   hutil:hutil.dll
+ 0001:0000bb2b       w32_FD_ISSET               000000010040cb2b f   hutil:hutil.dll
+ 0001:0000bb31       w32_select                 000000010040cb31 f   hutil:hutil.dll
+ 0001:0000bb37       w32_snprintf               000000010040cb37 f   hutil:hutil.dll
+ 0001:0000bb3d       w32_basename               000000010040cb3d f   hutil:hutil.dll
+ 0001:0000bb43       host_to_guest              000000010040cb43 f   hutil:hutil.dll
+ 0001:0000bb49       guest_to_host              000000010040cb49 f   hutil:hutil.dll
+ 0001:0000bb4f       read_socket                000000010040cb4f f   hutil:hutil.dll
+ 0001:0000bb55       write_socket               000000010040cb55 f   hutil:hutil.dll
+ 0001:0000bb5b       fwritemsg                  000000010040cb5b f   hutil:hutil.dll
+ 0001:0000bb61       logmsg                     000000010040cb61 f   hutil:hutil.dll
+ 0001:0000bb67       parser                     000000010040cb67 f   hutil:hutil.dll
+ 0001:0000bb6d       IsDebuggerPresent          000000010040cb6d f   kernel32:KERNEL32.dll
+ 0001:0000bb73       OutputDebugStringA         000000010040cb73 f   kernel32:KERNEL32.dll
+ 0001:0000bb79       bind                       000000010040cb79 f   ws2_32:WS2_32.dll
+ 0001:0000bb7f       connect                    000000010040cb7f f   ws2_32:WS2_32.dll
+ 0001:0000bb85       getpeername                000000010040cb85 f   ws2_32:WS2_32.dll
+ 0001:0000bb8b       getsockopt                 000000010040cb8b f   ws2_32:WS2_32.dll
+ 0001:0000bb91       htons                      000000010040cb91 f   ws2_32:WS2_32.dll
+ 0001:0000bb97       inet_ntoa                  000000010040cb97 f   ws2_32:WS2_32.dll
+ 0001:0000bb9d       listen                     000000010040cb9d f   ws2_32:WS2_32.dll
+ 0001:0000bba3       ntohs                      000000010040cba3 f   ws2_32:WS2_32.dll
+ 0001:0000bba9       recv                       000000010040cba9 f   ws2_32:WS2_32.dll
+ 0001:0000bbaf       send                       000000010040cbaf f   ws2_32:WS2_32.dll
+ 0001:0000bbb5       setsockopt                 000000010040cbb5 f   ws2_32:WS2_32.dll
+ 0001:0000bbbb       gethostbyname              000000010040cbbb f   ws2_32:WS2_32.dll
+ 0001:0000bbc1       getservbyname              000000010040cbc1 f   ws2_32:WS2_32.dll
+ 0001:0000bbc7       WSAGetLastError            000000010040cbc7 f   ws2_32:WS2_32.dll
+ 0001:0000bfe0       _CRT_INIT                  000000010040cfe0 f   MSVCRTD:dll_dllmain.obj
+ 0001:0000c010       _DllMainCRTStartup         000000010040d010 f   MSVCRTD:dll_dllmain.obj
+ 0001:0000c050       __raise_securityfailure    000000010040d050 f   MSVCRTD:gs_report.obj
+ 0001:0000c090       __report_gsfailure         000000010040d090 f   MSVCRTD:gs_report.obj
+ 0001:0000c170       __report_rangecheckfailure 000000010040d170 f   MSVCRTD:gs_report.obj
+ 0001:0000c190       __report_securityfailure   000000010040d190 f   MSVCRTD:gs_report.obj
+ 0001:0000c230       __report_securityfailureEx 000000010040d230 f   MSVCRTD:gs_report.obj
+ 0001:0000c4a0       __GSHandlerCheck           000000010040d4a0 f   MSVCRTD:gshandler.obj
+ 0001:0000c4e0       __GSHandlerCheckCommon     000000010040d4e0 f   MSVCRTD:gshandler.obj
+ 0001:0000c5f0       __chkstk                   000000010040d5f0 f   MSVCRTD:chkstk.obj
+ 0001:0000c5f0       _alloca_probe              000000010040d5f0 f   MSVCRTD:chkstk.obj
+ 0001:0000c650       __security_check_cookie    000000010040d650 f   MSVCRTD:amdsecgs.obj
+ 0001:0000c730       __security_init_cookie     000000010040d730 f   MSVCRTD:gs_support.obj
+ 0001:0000c7b0       DllMain                    000000010040d7b0 f   MSVCRTD:dll_dllmain_stub.obj
+ 0001:0000c7f0       ?__scrt_initialize_type_info@@YAXXZ 000000010040d7f0 f   MSVCRTD:tncleanup.obj
+ 0001:0000c810       ?__scrt_uninitialize_type_info@@YAXXZ 000000010040d810 f   MSVCRTD:tncleanup.obj
+ 0001:0000c830       __scrt_initialize_default_local_stdio_options 000000010040d830 f   MSVCRTD:default_local_stdio_options.obj
+ 0001:0000c880       ?configure_argv@__scrt_narrow_argv_policy@@SAHXZ 000000010040d880 f i MSVCRTD:utility.obj
+ 0001:0000c970       ?initialize_environment@__scrt_narrow_environment_policy@@SAHXZ 000000010040d970 f i MSVCRTD:utility.obj
+ 0001:0000ca10       NtCurrentTeb               000000010040da10 f i MSVCRTD:utility.obj
+ 0001:0000ca20       __scrt_acquire_startup_lock 000000010040da20 f   MSVCRTD:utility.obj
+ 0001:0000ca90       __scrt_dllmain_after_initialize_c 000000010040da90 f   MSVCRTD:utility.obj
+ 0001:0000cac0       __scrt_dllmain_before_initialize_c 000000010040dac0 f   MSVCRTD:utility.obj
+ 0001:0000cae0       __scrt_dllmain_crt_thread_attach 000000010040dae0 f   MSVCRTD:utility.obj
+ 0001:0000cb10       __scrt_dllmain_crt_thread_detach 000000010040db10 f   MSVCRTD:utility.obj
+ 0001:0000cb30       __scrt_dllmain_exception_filter 000000010040db30 f   MSVCRTD:utility.obj
+ 0001:0000cba0       __scrt_dllmain_uninitialize_c 000000010040dba0 f   MSVCRTD:utility.obj
+ 0001:0000cbd0       __scrt_dllmain_uninitialize_critical 000000010040dbd0 f   MSVCRTD:utility.obj
+ 0001:0000cbf0       __scrt_initialize_crt      000000010040dbf0 f   MSVCRTD:utility.obj
+ 0001:0000cc40       __scrt_initialize_onexit_tables 000000010040dc40 f   MSVCRTD:utility.obj
+ 0001:0000cd50       __scrt_is_nonwritable_in_current_image 000000010040dd50 f   MSVCRTD:utility.obj
+ 0001:0000cde0       __scrt_release_startup_lock 000000010040dde0 f   MSVCRTD:utility.obj
+ 0001:0000ce10       __scrt_uninitialize_crt    000000010040de10 f   MSVCRTD:utility.obj
+ 0001:0000ce50       _onexit                    000000010040de50 f   MSVCRTD:utility.obj
+ 0001:0000ced0       at_quick_exit              000000010040ded0 f   MSVCRTD:utility.obj
+ 0001:0000cf20       atexit                     000000010040df20 f   MSVCRTD:utility.obj
+ 0001:0000cf60       __scrt_get_dyn_tls_init_callback 000000010040df60 f   MSVCRTD:dyn_tls_init.obj
+ 0001:0000cf70       __crt_debugger_hook        000000010040df70 f   MSVCRTD:utility_desktop.obj
+ 0001:0000cf80       __scrt_fastfail            000000010040df80 f   MSVCRTD:utility_desktop.obj
+ 0001:0000d120       __scrt_get_show_window_mode 000000010040e120 f   MSVCRTD:utility_desktop.obj
+ 0001:0000d180       __scrt_initialize_mta      000000010040e180 f   MSVCRTD:utility_desktop.obj
+ 0001:0000d190       __scrt_initialize_winrt    000000010040e190 f   MSVCRTD:utility_desktop.obj
+ 0001:0000d1a0       __scrt_is_managed_app      000000010040e1a0 f   MSVCRTD:utility_desktop.obj
+ 0001:0000d250       __scrt_set_unhandled_exception_filter 000000010040e250 f   MSVCRTD:utility_desktop.obj
+ 0001:0000d270       __scrt_exe_initialize_mta  000000010040e270 f   MSVCRTD:utility_desktop.obj
+ 0001:0000d270       __scrt_stub_for_initialize_mta 000000010040e270 f   MSVCRTD:utility_desktop.obj
+ 0001:0000d280       __scrt_unhandled_exception_filter 000000010040e280 f   MSVCRTD:utility_desktop.obj
+ 0001:0000d320       _RTC_Initialize            000000010040e320 f   MSVCRTD:initsect.obj
+ 0001:0000d370       _RTC_Terminate             000000010040e370 f   MSVCRTD:initsect.obj
+ 0001:0000d3c0       _guard_check_icall_nop     000000010040e3c0 f i MSVCRTD:guard_support.obj
+ 0001:0000d3d0       ReadNoFence64              000000010040e3d0 f i MSVCRTD:guard_support.obj
+ 0001:0000d3f0       ReadPointerNoFence         000000010040e3f0 f i MSVCRTD:guard_support.obj
+ 0001:0000d410       __castguard_check_failure_debugbreak 000000010040e410 f i MSVCRTD:guard_support.obj
+ 0001:0000d430       __castguard_check_failure_fastfail 000000010040e430 f i MSVCRTD:guard_support.obj
+ 0001:0000d460       __castguard_check_failure_nop 000000010040e460 f i MSVCRTD:guard_support.obj
+ 0001:0000d470       __castguard_check_failure_os_handled 000000010040e470 f i MSVCRTD:guard_support.obj
+ 0001:0000d540       __castguard_slow_path_check_debugbreak 000000010040e540 f i MSVCRTD:guard_support.obj
+ 0001:0000d580       __castguard_slow_path_check_fastfail 000000010040e580 f i MSVCRTD:guard_support.obj
+ 0001:0000d5d0       __castguard_slow_path_check_nop 000000010040e5d0 f i MSVCRTD:guard_support.obj
+ 0001:0000d5e0       __castguard_slow_path_check_os_handled 000000010040e5e0 f i MSVCRTD:guard_support.obj
+ 0001:0000d6a0       _guard_icall_checks_enforced 000000010040e6a0 f i MSVCRTD:guard_support.obj
+ 0001:0000d6e0       _guard_rf_checks_enforced  000000010040e6e0 f i MSVCRTD:guard_support.obj
+ 0001:0000d6f0       __isa_available_init       000000010040e6f0 f   MSVCRTD:cpu_disp.obj
+ 0001:0000daa0       _get_startup_argv_mode     000000010040eaa0 f   MSVCRTD:argv_mode.obj
+ 0001:0000dab0       __scrt_is_ucrt_dll_in_use  000000010040eab0 f   MSVCRTD:ucrt_detection.obj
+ 0001:0000dae0       __C_specific_handler       000000010040eae0 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:0000dae6       __std_type_info_destroy_list 000000010040eae6 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:0000daec       __current_exception        000000010040eaec f   vcruntimed:VCRUNTIME140D.dll
+ 0001:0000daf2       __current_exception_context 000000010040eaf2 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:0000daf8       toupper                    000000010040eaf8 f   ucrtd:ucrtbased.dll
+ 0001:0000dafe       _errno                     000000010040eafe f   ucrtd:ucrtbased.dll
+ 0001:0000db04       strcmp                     000000010040eb04 f   ucrtd:ucrtbased.dll
+ 0001:0000db0a       _stricmp                   000000010040eb0a f   ucrtd:ucrtbased.dll
+ 0001:0000db10       strlen                     000000010040eb10 f   ucrtd:ucrtbased.dll
+ 0001:0000db16       free                       000000010040eb16 f   ucrtd:ucrtbased.dll
+ 0001:0000db1c       malloc                     000000010040eb1c f   ucrtd:ucrtbased.dll
+ 0001:0000db22       atoi                       000000010040eb22 f   ucrtd:ucrtbased.dll
+ 0001:0000db28       __acrt_iob_func            000000010040eb28 f   ucrtd:ucrtbased.dll
+ 0001:0000db2e       __stdio_common_vsnprintf_s 000000010040eb2e f   ucrtd:ucrtbased.dll
+ 0001:0000db34       __stdio_common_vsscanf     000000010040eb34 f   ucrtd:ucrtbased.dll
+ 0001:0000db3a       _initterm                  000000010040eb3a f   ucrtd:ucrtbased.dll
+ 0001:0000db40       _initterm_e                000000010040eb40 f   ucrtd:ucrtbased.dll
+ 0001:0000db46       _seh_filter_dll            000000010040eb46 f   ucrtd:ucrtbased.dll
+ 0001:0000db4c       _configure_narrow_argv     000000010040eb4c f   ucrtd:ucrtbased.dll
+ 0001:0000db52       _initialize_narrow_environment 000000010040eb52 f   ucrtd:ucrtbased.dll
+ 0001:0000db58       _initialize_onexit_table   000000010040eb58 f   ucrtd:ucrtbased.dll
+ 0001:0000db5e       _register_onexit_function  000000010040eb5e f   ucrtd:ucrtbased.dll
+ 0001:0000db64       _execute_onexit_table      000000010040eb64 f   ucrtd:ucrtbased.dll
+ 0001:0000db6a       _crt_atexit                000000010040eb6a f   ucrtd:ucrtbased.dll
+ 0001:0000db70       _crt_at_quick_exit         000000010040eb70 f   ucrtd:ucrtbased.dll
+ 0001:0000db76       _cexit                     000000010040eb76 f   ucrtd:ucrtbased.dll
+ 0001:0000db7c       terminate                  000000010040eb7c f   ucrtd:ucrtbased.dll
+ 0001:0000db82       _write                     000000010040eb82 f   ucrtd:ucrtbased.dll
+ 0001:0000db88       RtlCaptureContext          000000010040eb88 f   kernel32:KERNEL32.dll
+ 0001:0000db8e       RtlLookupFunctionEntry     000000010040eb8e f   kernel32:KERNEL32.dll
+ 0001:0000db94       RtlVirtualUnwind           000000010040eb94 f   kernel32:KERNEL32.dll
+ 0001:0000db9a       UnhandledExceptionFilter   000000010040eb9a f   kernel32:KERNEL32.dll
+ 0001:0000dba0       SetUnhandledExceptionFilter 000000010040eba0 f   kernel32:KERNEL32.dll
+ 0001:0000dba6       GetCurrentProcess          000000010040eba6 f   kernel32:KERNEL32.dll
+ 0001:0000dbac       TerminateProcess           000000010040ebac f   kernel32:KERNEL32.dll
+ 0001:0000dbb2       IsProcessorFeaturePresent  000000010040ebb2 f   kernel32:KERNEL32.dll
+ 0001:0000dbb8       QueryPerformanceCounter    000000010040ebb8 f   kernel32:KERNEL32.dll
+ 0001:0000dbbe       GetCurrentProcessId        000000010040ebbe f   kernel32:KERNEL32.dll
+ 0001:0000dbc4       GetCurrentThreadId         000000010040ebc4 f   kernel32:KERNEL32.dll
+ 0001:0000dbca       GetSystemTimeAsFileTime    000000010040ebca f   kernel32:KERNEL32.dll
+ 0001:0000dbd0       DisableThreadLibraryCalls  000000010040ebd0 f   kernel32:KERNEL32.dll
+ 0001:0000dbd6       InitializeSListHead        000000010040ebd6 f   kernel32:KERNEL32.dll
+ 0001:0000dbdc       GetStartupInfoW            000000010040ebdc f   kernel32:KERNEL32.dll
+ 0001:0000dbe2       GetModuleHandleW           000000010040ebe2 f   kernel32:KERNEL32.dll
+ 0001:0000dbf0       __acrt_initialize          000000010040ebf0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dbf0       __scrt_stub_for_acrt_initialize 000000010040ebf0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dbf0       __vcrt_initialize          000000010040ebf0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dc00       __acrt_thread_attach       000000010040ec00 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dc00       __scrt_stub_for_acrt_thread_attach 000000010040ec00 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dc00       __vcrt_thread_attach       000000010040ec00 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dc10       __acrt_thread_detach       000000010040ec10 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dc10       __scrt_stub_for_acrt_thread_detach 000000010040ec10 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dc10       __vcrt_thread_detach       000000010040ec10 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dc20       __acrt_uninitialize        000000010040ec20 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dc20       __scrt_stub_for_acrt_uninitialize 000000010040ec20 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dc20       __vcrt_uninitialize        000000010040ec20 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dc30       __acrt_uninitialize_critical 000000010040ec30 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dc30       __scrt_stub_for_acrt_uninitialize_critical 000000010040ec30 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dc30       __vcrt_uninitialize_critical 000000010040ec30 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dc40       __scrt_stub_for_is_c_termination_complete 000000010040ec40 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dc40       _is_c_termination_complete 000000010040ec40 f   MSVCRTD:ucrt_stubs.obj
+ 0001:0000dc43       memcpy                     000000010040ec43 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:0000dc60       _guard_dispatch_icall_nop  000000010040ec60 f   MSVCRTD:guard_dispatch.obj
+ 0001:0000dc80       _guard_xfg_dispatch_icall_nop 000000010040ec80 f   MSVCRTD:guard_xfg_dispatch.obj
+ 0002:00000000       __imp_IsDebuggerPresent    000000010040f000     kernel32:KERNEL32.dll
+ 0002:00000008       __imp_GetModuleHandleW     000000010040f008     kernel32:KERNEL32.dll
+ 0002:00000010       __imp_GetStartupInfoW      000000010040f010     kernel32:KERNEL32.dll
+ 0002:00000018       __imp_InitializeSListHead  000000010040f018     kernel32:KERNEL32.dll
+ 0002:00000020       __imp_DisableThreadLibraryCalls 000000010040f020     kernel32:KERNEL32.dll
+ 0002:00000028       __imp_GetSystemTimeAsFileTime 000000010040f028     kernel32:KERNEL32.dll
+ 0002:00000030       __imp_GetCurrentThreadId   000000010040f030     kernel32:KERNEL32.dll
+ 0002:00000038       __imp_GetCurrentProcessId  000000010040f038     kernel32:KERNEL32.dll
+ 0002:00000040       __imp_QueryPerformanceCounter 000000010040f040     kernel32:KERNEL32.dll
+ 0002:00000048       __imp_IsProcessorFeaturePresent 000000010040f048     kernel32:KERNEL32.dll
+ 0002:00000050       __imp_TerminateProcess     000000010040f050     kernel32:KERNEL32.dll
+ 0002:00000058       __imp_GetCurrentProcess    000000010040f058     kernel32:KERNEL32.dll
+ 0002:00000060       __imp_SetUnhandledExceptionFilter 000000010040f060     kernel32:KERNEL32.dll
+ 0002:00000068       __imp_UnhandledExceptionFilter 000000010040f068     kernel32:KERNEL32.dll
+ 0002:00000070       __imp_RtlVirtualUnwind     000000010040f070     kernel32:KERNEL32.dll
+ 0002:00000078       __imp_RtlLookupFunctionEntry 000000010040f078     kernel32:KERNEL32.dll
+ 0002:00000080       __imp_RtlCaptureContext    000000010040f080     kernel32:KERNEL32.dll
+ 0002:00000088       __imp_OutputDebugStringA   000000010040f088     kernel32:KERNEL32.dll
+ 0002:00000090       \177KERNEL32_NULL_THUNK_DATA 000000010040f090     kernel32:KERNEL32.dll
+ 0002:00000098       __imp___std_type_info_destroy_list 000000010040f098     vcruntimed:VCRUNTIME140D.dll
+ 0002:000000a0       __imp___C_specific_handler 000000010040f0a0     vcruntimed:VCRUNTIME140D.dll
+ 0002:000000a8       __imp___current_exception  000000010040f0a8     vcruntimed:VCRUNTIME140D.dll
+ 0002:000000b0       __imp___current_exception_context 000000010040f0b0     vcruntimed:VCRUNTIME140D.dll
+ 0002:000000b8       __imp_memcpy               000000010040f0b8     vcruntimed:VCRUNTIME140D.dll
+ 0002:000000c0       \177VCRUNTIME140D_NULL_THUNK_DATA 000000010040f0c0     vcruntimed:VCRUNTIME140D.dll
+ 0002:000000c8       __imp_setsockopt           000000010040f0c8     ws2_32:WS2_32.dll
+ 0002:000000d0       __imp_send                 000000010040f0d0     ws2_32:WS2_32.dll
+ 0002:000000d8       __imp_recv                 000000010040f0d8     ws2_32:WS2_32.dll
+ 0002:000000e0       __imp_ntohs                000000010040f0e0     ws2_32:WS2_32.dll
+ 0002:000000e8       __imp_listen               000000010040f0e8     ws2_32:WS2_32.dll
+ 0002:000000f0       __imp_gethostbyname        000000010040f0f0     ws2_32:WS2_32.dll
+ 0002:000000f8       __imp_htons                000000010040f0f8     ws2_32:WS2_32.dll
+ 0002:00000100       __imp_getsockopt           000000010040f100     ws2_32:WS2_32.dll
+ 0002:00000108       __imp_getpeername          000000010040f108     ws2_32:WS2_32.dll
+ 0002:00000110       __imp_connect              000000010040f110     ws2_32:WS2_32.dll
+ 0002:00000118       __imp_bind                 000000010040f118     ws2_32:WS2_32.dll
+ 0002:00000120       __imp_WSAGetLastError      000000010040f120     ws2_32:WS2_32.dll
+ 0002:00000128       __imp_inet_ntoa            000000010040f128     ws2_32:WS2_32.dll
+ 0002:00000130       __imp_getservbyname        000000010040f130     ws2_32:WS2_32.dll
+ 0002:00000138       \177WS2_32_NULL_THUNK_DATA 000000010040f138     ws2_32:WS2_32.dll
+ 0002:00000140       __imp_parse_conkpalv       000000010040f140     hengine:hengine.dll
+ 0002:00000148       \177hengine_NULL_THUNK_DATA 000000010040f148     hengine:hengine.dll
+ 0002:00000150       __imp_sysblk               000000010040f150     hsys:hsys.dll
+ 0002:00000158       \177hsys_NULL_THUNK_DATA   000000010040f158     hsys:hsys.dll
+ 0002:00000160       __imp_fwritemsg            000000010040f160     hutil:hutil.dll
+ 0002:00000168       __imp_write_socket         000000010040f168     hutil:hutil.dll
+ 0002:00000170       __imp_read_socket          000000010040f170     hutil:hutil.dll
+ 0002:00000178       __imp_guest_to_host        000000010040f178     hutil:hutil.dll
+ 0002:00000180       __imp_host_to_guest        000000010040f180     hutil:hutil.dll
+ 0002:00000188       __imp_w32_basename         000000010040f188     hutil:hutil.dll
+ 0002:00000190       __imp_w32_snprintf         000000010040f190     hutil:hutil.dll
+ 0002:00000198       __imp_w32_select           000000010040f198     hutil:hutil.dll
+ 0002:000001a0       __imp_w32_FD_ISSET         000000010040f1a0     hutil:hutil.dll
+ 0002:000001a8       __imp_w32_FD_SET           000000010040f1a8     hutil:hutil.dll
+ 0002:000001b0       __imp_w32_close_socket     000000010040f1b0     hutil:hutil.dll
+ 0002:000001b8       __imp_w32_accept           000000010040f1b8     hutil:hutil.dll
+ 0002:000001c0       __imp_w32_socket           000000010040f1c0     hutil:hutil.dll
+ 0002:000001c8       __imp_get_socket_keepalive 000000010040f1c8     hutil:hutil.dll
+ 0002:000001d0       __imp_parser               000000010040f1d0     hutil:hutil.dll
+ 0002:000001d8       __imp_set_socket_keepalive 000000010040f1d8     hutil:hutil.dll
+ 0002:000001e0       __imp_socket_is_socket     000000010040f1e0     hutil:hutil.dll
+ 0002:000001e8       __imp_socket_set_blocking_mode 000000010040f1e8     hutil:hutil.dll
+ 0002:000001f0       __imp_usleep               000000010040f1f0     hutil:hutil.dll
+ 0002:000001f8       __imp_socketpair           000000010040f1f8     hutil:hutil.dll
+ 0002:00000200       __imp_hthread_initialize_lock 000000010040f200     hutil:hutil.dll
+ 0002:00000208       __imp_hthread_obtain_lock  000000010040f208     hutil:hutil.dll
+ 0002:00000210       __imp_hthread_release_lock 000000010040f210     hutil:hutil.dll
+ 0002:00000218       __imp_hthread_initialize_condition 000000010040f218     hutil:hutil.dll
+ 0002:00000220       __imp_hthread_signal_condition 000000010040f220     hutil:hutil.dll
+ 0002:00000228       __imp_hthread_wait_condition 000000010040f228     hutil:hutil.dll
+ 0002:00000230       __imp_hthread_create_thread 000000010040f230     hutil:hutil.dll
+ 0002:00000238       __imp_hthread_set_thread_prio 000000010040f238     hutil:hutil.dll
+ 0002:00000240       __imp_hthread_get_thread_prio 000000010040f240     hutil:hutil.dll
+ 0002:00000248       __imp_fthread_self         000000010040f248     hutil:hutil.dll
+ 0002:00000250       __imp_strlcpy              000000010040f250     hutil:hutil.dll
+ 0002:00000258       __imp_strlcat              000000010040f258     hutil:hutil.dll
+ 0002:00000260       __imp_reverse_bits         000000010040f260     hutil:hutil.dll
+ 0002:00000268       __imp_w32_strerror         000000010040f268     hutil:hutil.dll
+ 0002:00000270       __imp_w32_strerror_r       000000010040f270     hutil:hutil.dll
+ 0002:00000278       __imp_logmsg               000000010040f278     hutil:hutil.dll
+ 0002:00000280       \177hutil_NULL_THUNK_DATA  000000010040f280     hutil:hutil.dll
+ 0002:00000288       __imp__register_onexit_function 000000010040f288     ucrtd:ucrtbased.dll
+ 0002:00000290       __imp__execute_onexit_table 000000010040f290     ucrtd:ucrtbased.dll
+ 0002:00000298       __imp__crt_atexit          000000010040f298     ucrtd:ucrtbased.dll
+ 0002:000002a0       __imp__crt_at_quick_exit   000000010040f2a0     ucrtd:ucrtbased.dll
+ 0002:000002a8       __imp__cexit               000000010040f2a8     ucrtd:ucrtbased.dll
+ 0002:000002b0       __imp_terminate            000000010040f2b0     ucrtd:ucrtbased.dll
+ 0002:000002b8       __imp__write               000000010040f2b8     ucrtd:ucrtbased.dll
+ 0002:000002b8       __imp_write                000000010040f2b8     ucrtd:ucrtbased.dll
+ 0002:000002c0       __imp__initialize_narrow_environment 000000010040f2c0     ucrtd:ucrtbased.dll
+ 0002:000002c8       __imp__configure_narrow_argv 000000010040f2c8     ucrtd:ucrtbased.dll
+ 0002:000002d0       __imp__seh_filter_dll      000000010040f2d0     ucrtd:ucrtbased.dll
+ 0002:000002d8       __imp__initterm_e          000000010040f2d8     ucrtd:ucrtbased.dll
+ 0002:000002e0       __imp__initterm            000000010040f2e0     ucrtd:ucrtbased.dll
+ 0002:000002e8       __imp___stdio_common_vsscanf 000000010040f2e8     ucrtd:ucrtbased.dll
+ 0002:000002f0       __imp__initialize_onexit_table 000000010040f2f0     ucrtd:ucrtbased.dll
+ 0002:000002f8       __imp_atoi                 000000010040f2f8     ucrtd:ucrtbased.dll
+ 0002:00000300       __imp_malloc               000000010040f300     ucrtd:ucrtbased.dll
+ 0002:00000308       __imp_free                 000000010040f308     ucrtd:ucrtbased.dll
+ 0002:00000310       __imp_strlen               000000010040f310     ucrtd:ucrtbased.dll
+ 0002:00000318       __imp__stricmp             000000010040f318     ucrtd:ucrtbased.dll
+ 0002:00000320       __imp_strcmp               000000010040f320     ucrtd:ucrtbased.dll
+ 0002:00000328       __imp__errno               000000010040f328     ucrtd:ucrtbased.dll
+ 0002:00000330       __imp_toupper              000000010040f330     ucrtd:ucrtbased.dll
+ 0002:00000338       __imp___stdio_common_vsnprintf_s 000000010040f338     ucrtd:ucrtbased.dll
+ 0002:00000340       __imp___acrt_iob_func      000000010040f340     ucrtd:ucrtbased.dll
+ 0002:00000348       \177ucrtbased_NULL_THUNK_DATA 000000010040f348     ucrtd:ucrtbased.dll
+ 0002:00000350       __guard_check_icall_fptr   000000010040f350     MSVCRTD:guard_support.obj
+ 0002:00000358       __guard_xfg_check_icall_fptr 000000010040f358     MSVCRTD:guard_support.obj
+ 0002:00000360       __guard_dispatch_icall_fptr 000000010040f360     MSVCRTD:guard_support.obj
+ 0002:00000368       __guard_xfg_dispatch_icall_fptr 000000010040f368     MSVCRTD:guard_support.obj
+ 0002:00000370       __guard_xfg_table_dispatch_icall_fptr 000000010040f370     MSVCRTD:guard_support.obj
+ 0002:00000378       __castguard_check_failure_os_handled_fptr 000000010040f378     MSVCRTD:guard_support.obj
+ 0002:00000380       __guard_memcpy_fptr        000000010040f380     vcruntimed:softmemtag.obj
+ 0002:00000388       __xc_a                     000000010040f388     MSVCRTD:initializers.obj
+ 0002:00000390       __xc_z                     000000010040f390     MSVCRTD:initializers.obj
+ 0002:00000398       __xi_a                     000000010040f398     MSVCRTD:initializers.obj
+ 0002:000003a0       __xi_z                     000000010040f3a0     MSVCRTD:initializers.obj
+ 0002:000003a8       __xp_a                     000000010040f3a8     MSVCRTD:initializers.obj
+ 0002:000003b0       __xp_z                     000000010040f3b0     MSVCRTD:initializers.obj
+ 0002:000003b8       __xt_a                     000000010040f3b8     MSVCRTD:initializers.obj
+ 0002:000003c0       __xt_z                     000000010040f3c0     MSVCRTD:initializers.obj
+ 0002:000003d8       _pDefaultRawDllMain        000000010040f3d8     MSVCRTD:dll_dllmain.obj
+ 0002:000003d8       _pRawDllMain               000000010040f3d8     MSVCRTD:dll_dllmain.obj
+ 0002:000003f0       _load_config_used          000000010040f3f0     MSVCRTD:loadcfg.obj
+ 0002:00000600       __CastGuardVftablesStart   000000010040f600     MSVCRTD:guard_support.obj
+ 0002:00000680       __CastGuardVftablesEnd     000000010040f680     MSVCRTD:guard_support.obj
+ 0002:00000700       __volatile_metadata        000000010040f700     <linker-defined>
+ 0002:00000ae0       __rtc_iaa                  000000010040fae0     MSVCRTD:initsect.obj
+ 0002:00000ae8       __rtc_izz                  000000010040fae8     MSVCRTD:initsect.obj
+ 0002:00000af0       __rtc_taa                  000000010040faf0     MSVCRTD:initsect.obj
+ 0002:00000af8       __rtc_tzz                  000000010040faf8     MSVCRTD:initsect.obj
+ 0002:00000fb4       __IMPORT_DESCRIPTOR_hengine 000000010040ffb4     hengine:hengine.dll
+ 0002:00000fc8       __IMPORT_DESCRIPTOR_hutil  000000010040ffc8     hutil:hutil.dll
+ 0002:00000fdc       __IMPORT_DESCRIPTOR_hsys   000000010040ffdc     hsys:hsys.dll
+ 0002:00000ff0       __IMPORT_DESCRIPTOR_KERNEL32 000000010040fff0     kernel32:KERNEL32.dll
+ 0002:00001004       __IMPORT_DESCRIPTOR_WS2_32 0000000100410004     ws2_32:WS2_32.dll
+ 0002:00001018       __IMPORT_DESCRIPTOR_VCRUNTIME140D 0000000100410018     vcruntimed:VCRUNTIME140D.dll
+ 0002:0000102c       __IMPORT_DESCRIPTOR_ucrtbased 000000010041002c     ucrtd:ucrtbased.dll
+ 0002:00001040       __NULL_IMPORT_DESCRIPTOR   0000000100410040     hengine:hengine.dll
+ 0003:000002d8       overstrike_2741_pairs      00000001004112d8     commadpt.obj
+ 0003:000002f8       overstrike_rxvt4apl_chars  00000001004112f8     commadpt.obj
+ 0003:000031f0       __security_cookie_complement 00000001004141f0     MSVCRTD:gs_cookie.obj
+ 0003:000031f8       __security_cookie          00000001004141f8     MSVCRTD:gs_cookie.obj
+ 0003:00003200       __scrt_native_dllmain_reason 0000000100414200     MSVCRTD:utility.obj
+ 0003:00003208       __isa_available            0000000100414208     MSVCRTD:cpu_disp.obj
+ 0003:0000320c       __isa_enabled              000000010041420c     MSVCRTD:cpu_disp.obj
+ 0003:00003210       __memset_fast_string_threshold 0000000100414210     MSVCRTD:cpu_disp.obj
+ 0003:00003218       __memset_nt_threshold      0000000100414218     MSVCRTD:cpu_disp.obj
+ 0003:00003220       __scrt_ucrt_dll_is_in_use  0000000100414220     MSVCRTD:ucrt_stubs.obj
+ 0003:000037b0       ?__type_info_root_node@@3U__type_info_node@@A 00000001004147b0     MSVCRTD:tncleanup.obj
+ 0003:000037c0       ?_OptionsStorage@?1??__local_stdio_printf_options@@9@4_KA 00000001004147c0     MSVCRTD:default_local_stdio_options.obj
+ 0003:000037c8       ?_OptionsStorage@?1??__local_stdio_scanf_options@@9@4_KA 00000001004147c8     MSVCRTD:default_local_stdio_options.obj
+ 0003:000037d0       __scrt_current_native_startup_state 00000001004147d0     MSVCRTD:utility.obj
+ 0003:000037d8       __scrt_native_startup_lock 00000001004147d8     MSVCRTD:utility.obj
+ 0003:00003818       __scrt_debugger_hook_flag  0000000100414818     MSVCRTD:utility_desktop.obj
+ 0003:0000381c       __favor                    000000010041481c     MSVCRTD:cpu_disp.obj
+ 0003:00003820       ?_OptionsStorage@?1??__local_stdio_scanf_options@@9@9 0000000100414820     <common>
+ 0003:00003828       ?_OptionsStorage@?1??__local_stdio_printf_options@@9@9 0000000100414828     <common>
+ 0003:00003830       commadpt_kw                0000000100414830     <common>
+ 0003:00003834       __@@_PchSym_@00@UkzkzUnbtrgUsbkvirlmRaevxgliUnhexOwvyftOznwGEOlyqUyfrowPkxsOlyq@4B2008FD98C1DD4 0000000100414834     <common>
+ 0003:00003838       __dyn_tls_init_callback    0000000100414838     <common>
+
+ entry point at        0001:0000c010
+
+ Static symbols
+
+ 0000:00000000       _volmd                     0000000100400000     commadpt.obj
+ 0000:fffd5000       .debug$S                   0000000100400000     hdt2703.exp
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:cpu_disp.obj
+ 0002:ffff1000       __guard_ehcont_?dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 0000000100400000     MSVCRTD:dll_dllmain.obj
+ 0002:ffff1000       __guard_fids_?dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 0000000100400000     MSVCRTD:dll_dllmain.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:gs_report.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:gs_report.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:gs_report.obj
+ 0002:ffff1000       __guard_fids__             0000000100400000     MSVCRTD:guard_support.obj
+ 0002:ffff1000       __guard_fids__             0000000100400000     MSVCRTD:guard_support.obj
+ 0002:ffff1000       __guard_fids__guard_icall_checks_enforced 0000000100400000     MSVCRTD:guard_support.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:guard_support.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:guard_support.obj
+ 0002:ffff1000       __guard_ehcont___scrt_is_nonwritable_in_current_image 0000000100400000     MSVCRTD:utility.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:utility.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:utility.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:utility.obj
+ 0002:ffff1000       __guard_fids___scrt_set_unhandled_exception_filter 0000000100400000     MSVCRTD:utility_desktop.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:utility_desktop.obj
+ 0002:ffff1000       __guard_fids__             0000000100400000     vcruntimed:softmemtag.obj
+ 0000:fffd5000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hsys:hsys.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffd5000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:00000010       _volmd                     0000000100400010     commadpt.obj
+ 0000:00000020       _volmd                     0000000100400020     commadpt.obj
+ 0000:00000030       _volmd                     0000000100400030     commadpt.obj
+ 0000:00000040       _volmd                     0000000100400040     commadpt.obj
+ 0000:00000050       _volmd                     0000000100400050     commadpt.obj
+ 0000:00000060       _volmd                     0000000100400060     commadpt.obj
+ 0000:00000070       _volmd                     0000000100400070     commadpt.obj
+ 0000:00000080       _volmd                     0000000100400080     commadpt.obj
+ 0001:00000000       DebuggerTrace              0000000100401000 f   commadpt.obj
+ 0001:00000100       logdump                    0000000100401100 f   commadpt.obj
+ 0001:000007a0       commadpt_ring_terminate    00000001004017a0 f   commadpt.obj
+ 0001:000008a0       commadpt_ring_flush        00000001004018a0 f   commadpt.obj
+ 0001:000008f0       commadpt_ring_push         00000001004018f0 f   commadpt.obj
+ 0001:00000990       commadpt_ring_pushbfr      0000000100401990 f   commadpt.obj
+ 0001:00000a00       commadpt_ring_pop          0000000100401a00 f   commadpt.obj
+ 0001:00000a90       commadpt_ring_popbfr       0000000100401a90 f   commadpt.obj
+ 0001:00000b10       commadpt_clean_device      0000000100401b10 f   commadpt.obj
+ 0001:00000d90       commadpt_alloc_device      0000000100401d90 f   commadpt.obj
+ 0001:00001040       commadpt_getport           0000000100402040 f   commadpt.obj
+ 0001:000010b0       commadpt_getaddr           00000001004020b0 f   commadpt.obj
+ 0001:00001110       commadpt_connout           0000000100402110 f   commadpt.obj
+ 0001:000013f0       commadpt_initiate_userdial 00000001004023f0 f   commadpt.obj
+ 0001:00001ad0       $LN29                      0000000100402ad0     commadpt.obj
+ 0001:00001af0       connect_message            0000000100402af0 f   commadpt.obj
+ 0001:00001e40       commadpt_read_poll         0000000100402e40 f   commadpt.obj
+ 0001:00001ee0       commadpt_read_tty          0000000100402ee0 f   commadpt.obj
+ 0001:00002a50       commadpt_read              0000000100403a50 f   commadpt.obj
+ 0001:00002be0       commadpt_setto             0000000100403be0 f   commadpt.obj
+ 0001:00002c50       SET_COMM_KEEPALIVE         0000000100403c50 f   commadpt.obj
+ 0001:00003070       commadpt_thread            0000000100404070 f   commadpt.obj
+ 0001:000052c8       $LN168                     00000001004062c8     commadpt.obj
+ 0001:00005300       commadpt_wakeup            0000000100406300 f   commadpt.obj
+ 0001:000053b0       commadpt_wait              00000001004063b0 f   commadpt.obj
+ 0001:00005400       commadpt_halt_or_clear     0000000100406400 f   commadpt.obj
+ 0001:000054e0       msg01007e                  00000001004064e0 f   commadpt.obj
+ 0001:000055c0       msg01008e                  00000001004065c0 f   commadpt.obj
+ 0001:000056a0       msg01009w                  00000001004066a0 f   commadpt.obj
+ 0001:00005830       commadpt_init_handler      0000000100406830 f   commadpt.obj
+ 0001:00008270       $LN198                     0000000100409270     commadpt.obj
+ 0001:000082e0       commadpt_query_device      00000001004092e0 f   commadpt.obj
+ 0001:00008570       commadpt_close_device      0000000100409570 f   commadpt.obj
+ 0001:000087d0       commadpt_execute_ccw       00000001004097d0 f   commadpt.obj
+ 0001:0000b6c8       $LN222                     000000010040c6c8     commadpt.obj
+ 0001:0000b700       $LN221                     000000010040c700     commadpt.obj
+ 0001:0000b7e4       $LN220                     000000010040c7e4     commadpt.obj
+ 0001:0000b800       $LN219                     000000010040c800     commadpt.obj
+ 0001:0000bbd0       ?dllmain_crt_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 000000010040cbd0 f   MSVCRTD:dll_dllmain.obj
+ 0001:0000bc60       ?dllmain_crt_process_attach@@YAHQEAUHINSTANCE__@@QEAX@Z 000000010040cc60 f   MSVCRTD:dll_dllmain.obj
+ 0001:0000bda0       ?dllmain_crt_process_detach@@YAH_N@Z 000000010040cda0 f   MSVCRTD:dll_dllmain.obj
+ 0001:0000be40       ?dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 000000010040ce40 f   MSVCRTD:dll_dllmain.obj
+ 0001:0000bf80       ?dllmain_raw@@YAHQEAUHINSTANCE__@@KQEAX@Z 000000010040cf80 f   MSVCRTD:dll_dllmain.obj
+ 0001:0000c340       capture_current_context    000000010040d340 f   MSVCRTD:gs_report.obj
+ 0001:0000c3e0       capture_previous_context   000000010040d3e0 f   MSVCRTD:gs_report.obj
+ 0001:0000c5e0       $$000000                   000000010040d5e0     MSVCRTD:chkstk.obj
+ 0001:0000c640       $$000000                   000000010040d640     MSVCRTD:amdsecgs.obj
+ 0001:0000c670       __get_entropy              000000010040d670 f   MSVCRTD:gs_support.obj
+ 0001:0000c8a0       ?find_pe_section@@YAPEAU_IMAGE_SECTION_HEADER@@QEAE_K@Z 000000010040d8a0 f   MSVCRTD:utility.obj
+ 0001:0000c980       ?is_potentially_valid_image_base@@YA_NQEAX@Z 000000010040d980 f   MSVCRTD:utility.obj
+ 0001:0000d4a0       __castguard_check_failure_os_handled_wrapper 000000010040e4a0 f   MSVCRTD:guard_support.obj
+ 0001:0000d4d0       __castguard_compat_check   000000010040e4d0 f   MSVCRTD:guard_support.obj
+ 0001:0000d630       __castguard_slow_path_compat_check 000000010040e630 f   MSVCRTD:guard_support.obj
+ 0001:0000dc50       $$000000                   000000010040ec50     MSVCRTD:guard_dispatch.obj
+ 0001:0000dc70       $$000000                   000000010040ec70     MSVCRTD:guard_xfg_dispatch.obj
+ 0001:0000dc90       ?fin$0@?0??dllmain_crt_process_attach@@YAHQEAUHINSTANCE__@@QEAX@Z@4HA 000000010040ec90 f   MSVCRTD:dll_dllmain.obj
+ 0001:0000dcb0       ?fin$0@?0??dllmain_crt_process_detach@@YAH_N@Z@4HA 000000010040ecb0 f   MSVCRTD:dll_dllmain.obj
+ 0001:0000dcca       ?fin$1@?0??dllmain_crt_process_detach@@YAH_N@Z@4HA 000000010040ecca f   MSVCRTD:dll_dllmain.obj
+ 0001:0000dce0       ?filt$0@?0??dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z@4HA 000000010040ece0 f   MSVCRTD:dll_dllmain.obj
+ 0001:0000dd30       __scrt_is_nonwritable_in_current_image$filt$0 000000010040ed30 f   MSVCRTD:utility.obj
+ 0002:000003d0       CKD_ENDTRK                 000000010040f3d0     commadpt.obj
+ 0002:000003e0       GS_ExceptionPointers       000000010040f3e0     MSVCRTD:gs_report.obj
+ 0002:00000b00       $unwind$_vsnprintf_s_l     000000010040fb00     commadpt.obj
+ 0002:00000b08       $unwind$_vsnprintf_s       000000010040fb08     commadpt.obj
+ 0002:00000b10       $unwind$_vsscanf_l         000000010040fb10     commadpt.obj
+ 0002:00000b18       $unwind$sscanf             000000010040fb18     commadpt.obj
+ 0002:00000b20       $unwind$DebuggerTrace      000000010040fb20     commadpt.obj
+ 0002:00000b28       $unwind$logdump            000000010040fb28     commadpt.obj
+ 0002:00000b38       $unwind$commadpt_ring_init 000000010040fb38     commadpt.obj
+ 0002:00000b40       $unwind$commadpt_ring_terminate 000000010040fb40     commadpt.obj
+ 0002:00000b48       $unwind$commadpt_ring_pushbfr 000000010040fb48     commadpt.obj
+ 0002:00000b50       $unwind$commadpt_ring_pop  000000010040fb50     commadpt.obj
+ 0002:00000b58       $unwind$commadpt_ring_popbfr 000000010040fb58     commadpt.obj
+ 0002:00000b60       $unwind$commadpt_clean_device 000000010040fb60     commadpt.obj
+ 0002:00000b68       $unwind$commadpt_alloc_device 000000010040fb68     commadpt.obj
+ 0002:00000b7c       $unwind$commadpt_getport   000000010040fb7c     commadpt.obj
+ 0002:00000b84       $unwind$commadpt_getaddr   000000010040fb84     commadpt.obj
+ 0002:00000b8c       $unwind$commadpt_connout   000000010040fb8c     commadpt.obj
+ 0002:00000b9c       $unwind$commadpt_initiate_userdial 000000010040fb9c     commadpt.obj
+ 0002:00000ba4       $unwind$connect_message    000000010040fba4     commadpt.obj
+ 0002:00000bb4       $unwind$commadpt_read_poll 000000010040fbb4     commadpt.obj
+ 0002:00000bbc       $unwind$commadpt_read_tty  000000010040fbbc     commadpt.obj
+ 0002:00000bcc       $unwind$commadpt_read      000000010040fbcc     commadpt.obj
+ 0002:00000bdc       $unwind$SET_COMM_KEEPALIVE 000000010040fbdc     commadpt.obj
+ 0002:00000be4       $unwind$commadpt_thread    000000010040fbe4     commadpt.obj
+ 0002:00000bf4       $unwind$commadpt_wakeup    000000010040fbf4     commadpt.obj
+ 0002:00000bfc       $unwind$commadpt_wait      000000010040fbfc     commadpt.obj
+ 0002:00000c04       $unwind$commadpt_halt_or_clear 000000010040fc04     commadpt.obj
+ 0002:00000c0c       $unwind$msg01007e          000000010040fc0c     commadpt.obj
+ 0002:00000c14       $unwind$msg01008e          000000010040fc14     commadpt.obj
+ 0002:00000c1c       $unwind$msg01009w          000000010040fc1c     commadpt.obj
+ 0002:00000c24       $unwind$commadpt_init_handler 000000010040fc24     commadpt.obj
+ 0002:00000c38       $unwind$commadpt_query_device 000000010040fc38     commadpt.obj
+ 0002:00000c48       $unwind$commadpt_close_device 000000010040fc48     commadpt.obj
+ 0002:00000c50       $unwind$commadpt_execute_ccw 000000010040fc50     commadpt.obj
+ 0002:00000c5c       $unwind$hdl_check_depends_ep 000000010040fc5c     commadpt.obj
+ 0002:00000c64       $unwind$hdl_define_devtypes_ep 000000010040fc64     commadpt.obj
+ 0002:00000c6c       $unwind$?dllmain_crt_process_attach@@YAHQEAUHINSTANCE__@@QEAX@Z 000000010040fc6c     MSVCRTD:dll_dllmain.obj
+ 0002:00000c8c       $unwind$?fin$0@?0??dllmain_crt_process_attach@@YAHQEAUHINSTANCE__@@QEAX@Z@4HA 000000010040fc8c     MSVCRTD:dll_dllmain.obj
+ 0002:00000c94       $unwind$?dllmain_crt_process_detach@@YAH_N@Z 000000010040fc94     MSVCRTD:dll_dllmain.obj
+ 0002:00000cc4       $unwind$?fin$0@?0??dllmain_crt_process_detach@@YAH_N@Z@4HA 000000010040fcc4     MSVCRTD:dll_dllmain.obj
+ 0002:00000ccc       $unwind$?fin$1@?0??dllmain_crt_process_detach@@YAH_N@Z@4HA 000000010040fccc     MSVCRTD:dll_dllmain.obj
+ 0002:00000cd4       $unwind$?dllmain_crt_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 000000010040fcd4     MSVCRTD:dll_dllmain.obj
+ 0002:00000cdc       $unwind$_CRT_INIT          000000010040fcdc     MSVCRTD:dll_dllmain.obj
+ 0002:00000ce4       $unwind$?dllmain_raw@@YAHQEAUHINSTANCE__@@KQEAX@Z 000000010040fce4     MSVCRTD:dll_dllmain.obj
+ 0002:00000cec       $unwind$?dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 000000010040fcec     MSVCRTD:dll_dllmain.obj
+ 0002:00000d0c       $unwind$?filt$0@?0??dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z@4HA 000000010040fd0c     MSVCRTD:dll_dllmain.obj
+ 0002:00000d14       $unwind$_DllMainCRTStartup 000000010040fd14     MSVCRTD:dll_dllmain.obj
+ 0002:00000d1c       $unwind$__report_securityfailure 000000010040fd1c     MSVCRTD:gs_report.obj
+ 0002:00000d24       $unwind$__report_securityfailureEx 000000010040fd24     MSVCRTD:gs_report.obj
+ 0002:00000d2c       $unwind$__report_rangecheckfailure 000000010040fd2c     MSVCRTD:gs_report.obj
+ 0002:00000d34       $unwind$__report_gsfailure 000000010040fd34     MSVCRTD:gs_report.obj
+ 0002:00000d3c       $unwind$capture_current_context 000000010040fd3c     MSVCRTD:gs_report.obj
+ 0002:00000d44       $unwind$capture_previous_context 000000010040fd44     MSVCRTD:gs_report.obj
+ 0002:00000d4c       $unwind$__raise_securityfailure 000000010040fd4c     MSVCRTD:gs_report.obj
+ 0002:00000d54       $unwind$__GSHandlerCheckCommon 000000010040fd54     MSVCRTD:gshandler.obj
+ 0002:00000d5c       $unwind$__GSHandlerCheck   000000010040fd5c     MSVCRTD:gshandler.obj
+ 0002:00000d68       $xdatasym                  000000010040fd68     MSVCRTD:chkstk.obj
+ 0002:00000d70       $xdatasym                  000000010040fd70     MSVCRTD:amdsecgs.obj
+ 0002:00000d74       $unwind$__security_init_cookie 000000010040fd74     MSVCRTD:gs_support.obj
+ 0002:00000d7c       $unwind$__get_entropy      000000010040fd7c     MSVCRTD:gs_support.obj
+ 0002:00000d84       $unwind$DllMain            000000010040fd84     MSVCRTD:dll_dllmain_stub.obj
+ 0002:00000d8c       $unwind$?__scrt_initialize_type_info@@YAXXZ 000000010040fd8c     MSVCRTD:tncleanup.obj
+ 0002:00000d94       $unwind$?__scrt_uninitialize_type_info@@YAXXZ 000000010040fd94     MSVCRTD:tncleanup.obj
+ 0002:00000d9c       $unwind$__scrt_initialize_default_local_stdio_options 000000010040fd9c     MSVCRTD:default_local_stdio_options.obj
+ 0002:00000da4       $unwind$atexit             000000010040fda4     MSVCRTD:utility.obj
+ 0002:00000dac       $unwind$_onexit            000000010040fdac     MSVCRTD:utility.obj
+ 0002:00000db4       $unwind$at_quick_exit      000000010040fdb4     MSVCRTD:utility.obj
+ 0002:00000dbc       $unwind$__scrt_is_nonwritable_in_current_image 000000010040fdbc     MSVCRTD:utility.obj
+ 0002:00000ddc       $unwind$__scrt_is_nonwritable_in_current_image$filt$0 000000010040fddc     MSVCRTD:utility.obj
+ 0002:00000de4       $unwind$__scrt_acquire_startup_lock 000000010040fde4     MSVCRTD:utility.obj
+ 0002:00000dec       $unwind$__scrt_release_startup_lock 000000010040fdec     MSVCRTD:utility.obj
+ 0002:00000df4       $unwind$__scrt_initialize_crt 000000010040fdf4     MSVCRTD:utility.obj
+ 0002:00000dfc       $unwind$__scrt_uninitialize_crt 000000010040fdfc     MSVCRTD:utility.obj
+ 0002:00000e04       $unwind$__scrt_initialize_onexit_tables 000000010040fe04     MSVCRTD:utility.obj
+ 0002:00000e10       $unwind$__scrt_dllmain_exception_filter 000000010040fe10     MSVCRTD:utility.obj
+ 0002:00000e18       $unwind$__scrt_dllmain_before_initialize_c 000000010040fe18     MSVCRTD:utility.obj
+ 0002:00000e20       $unwind$__scrt_dllmain_after_initialize_c 000000010040fe20     MSVCRTD:utility.obj
+ 0002:00000e28       $unwind$__scrt_dllmain_uninitialize_c 000000010040fe28     MSVCRTD:utility.obj
+ 0002:00000e30       $unwind$__scrt_dllmain_uninitialize_critical 000000010040fe30     MSVCRTD:utility.obj
+ 0002:00000e38       $unwind$__scrt_dllmain_crt_thread_attach 000000010040fe38     MSVCRTD:utility.obj
+ 0002:00000e40       $unwind$__scrt_dllmain_crt_thread_detach 000000010040fe40     MSVCRTD:utility.obj
+ 0002:00000e48       $unwind$?configure_argv@__scrt_narrow_argv_policy@@SAHXZ 000000010040fe48     MSVCRTD:utility.obj
+ 0002:00000e50       $unwind$?initialize_environment@__scrt_narrow_environment_policy@@SAHXZ 000000010040fe50     MSVCRTD:utility.obj
+ 0002:00000e58       $unwind$?is_potentially_valid_image_base@@YA_NQEAX@Z 000000010040fe58     MSVCRTD:utility.obj
+ 0002:00000e60       $unwind$?find_pe_section@@YAPEAU_IMAGE_SECTION_HEADER@@QEAE_K@Z 000000010040fe60     MSVCRTD:utility.obj
+ 0002:00000e68       $unwind$__scrt_get_show_window_mode 000000010040fe68     MSVCRTD:utility_desktop.obj
+ 0002:00000e74       $unwind$__scrt_is_managed_app 000000010040fe74     MSVCRTD:utility_desktop.obj
+ 0002:00000e7c       $unwind$__scrt_initialize_mta 000000010040fe7c     MSVCRTD:utility_desktop.obj
+ 0002:00000e84       $unwind$__scrt_set_unhandled_exception_filter 000000010040fe84     MSVCRTD:utility_desktop.obj
+ 0002:00000e8c       $unwind$__scrt_fastfail    000000010040fe8c     MSVCRTD:utility_desktop.obj
+ 0002:00000e98       $unwind$__scrt_unhandled_exception_filter 000000010040fe98     MSVCRTD:utility_desktop.obj
+ 0002:00000ea0       $unwind$_RTC_Initialize    000000010040fea0     MSVCRTD:initsect.obj
+ 0002:00000eac       $unwind$_RTC_Terminate     000000010040feac     MSVCRTD:initsect.obj
+ 0002:00000eb8       $unwind$ReadNoFence64      000000010040feb8     MSVCRTD:guard_support.obj
+ 0002:00000ec0       $unwind$ReadPointerNoFence 000000010040fec0     MSVCRTD:guard_support.obj
+ 0002:00000ec8       $unwind$_guard_icall_checks_enforced 000000010040fec8     MSVCRTD:guard_support.obj
+ 0002:00000ed0       $unwind$__castguard_compat_check 000000010040fed0     MSVCRTD:guard_support.obj
+ 0002:00000ed8       $unwind$__castguard_check_failure_os_handled_wrapper 000000010040fed8     MSVCRTD:guard_support.obj
+ 0002:00000ee0       $unwind$__castguard_check_failure_debugbreak 000000010040fee0     MSVCRTD:guard_support.obj
+ 0002:00000ee8       $unwind$__castguard_check_failure_fastfail 000000010040fee8     MSVCRTD:guard_support.obj
+ 0002:00000ef0       $unwind$__castguard_check_failure_os_handled 000000010040fef0     MSVCRTD:guard_support.obj
+ 0002:00000ef8       $unwind$__castguard_slow_path_compat_check 000000010040fef8     MSVCRTD:guard_support.obj
+ 0002:00000f00       $unwind$__castguard_slow_path_check_debugbreak 000000010040ff00     MSVCRTD:guard_support.obj
+ 0002:00000f08       $unwind$__castguard_slow_path_check_fastfail 000000010040ff08     MSVCRTD:guard_support.obj
+ 0002:00000f10       $unwind$__castguard_slow_path_check_os_handled 000000010040ff10     MSVCRTD:guard_support.obj
+ 0002:00000f18       $unwind$__isa_available_init 000000010040ff18     MSVCRTD:cpu_disp.obj
+ 0002:00000f28       $unwind$__scrt_is_ucrt_dll_in_use 000000010040ff28     MSVCRTD:ucrt_detection.obj
+ 0002:00000f30       $xdatasym                  000000010040ff30     MSVCRTD:guard_dispatch.obj
+ 0002:00000f38       $xdatasym                  000000010040ff38     MSVCRTD:guard_xfg_dispatch.obj
+ 0002:00000f40       .edata                     000000010040ff40     hdt2703.exp
+ 0002:00000f68       rgpv                       000000010040ff68     hdt2703.exp
+ 0002:00000f70       rgszName                   000000010040ff70     hdt2703.exp
+ 0002:00000f78       rgwOrd                     000000010040ff78     hdt2703.exp
+ 0002:00000f7c       szName                     000000010040ff7c     hdt2703.exp
+ 0002:00000f88       $N00001                    000000010040ff88     hdt2703.exp
+ 0002:00000f9d       $N00002                    000000010040ff9d     hdt2703.exp
+ 0002:000013ba       .idata$6                   00000001004103ba     hengine:hengine.dll
+ 0002:00001658       .idata$6                   0000000100410658     hutil:hutil.dll
+ 0002:0000166c       .idata$6                   000000010041066c     hsys:hsys.dll
+ 0002:000016a0       .idata$6                   00000001004106a0     kernel32:KERNEL32.dll
+ 0002:000016ae       .idata$6                   00000001004106ae     ws2_32:WS2_32.dll
+ 0002:00001726       .idata$6                   0000000100410726     vcruntimed:VCRUNTIME140D.dll
+ 0002:000018cc       .idata$6                   00000001004108cc     ucrtd:ucrtbased.dll
+ 0003:00000000       commadpt_immed_command     0000000100411000     commadpt.obj
+ 0003:00000100       $SG159164                  0000000100411100     commadpt.obj
+ 0003:00000108       $SG159165                  0000000100411108     commadpt.obj
+ 0003:00000110       $SG159166                  0000000100411110     commadpt.obj
+ 0003:00000118       $SG159167                  0000000100411118     commadpt.obj
+ 0003:00000120       $SG159168                  0000000100411120     commadpt.obj
+ 0003:00000128       $SG159169                  0000000100411128     commadpt.obj
+ 0003:00000130       $SG159170                  0000000100411130     commadpt.obj
+ 0003:00000138       $SG159171                  0000000100411138     commadpt.obj
+ 0003:00000140       $SG159172                  0000000100411140     commadpt.obj
+ 0003:00000148       $SG159173                  0000000100411148     commadpt.obj
+ 0003:00000150       $SG159174                  0000000100411150     commadpt.obj
+ 0003:0000015c       $SG159178                  000000010041115c     commadpt.obj
+ 0003:00000164       $SG159179                  0000000100411164     commadpt.obj
+ 0003:0000016c       $SG159180                  000000010041116c     commadpt.obj
+ 0003:00000174       $SG159181                  0000000100411174     commadpt.obj
+ 0003:0000017c       $SG159182                  000000010041117c     commadpt.obj
+ 0003:00000184       $SG159183                  0000000100411184     commadpt.obj
+ 0003:0000018c       $SG159184                  000000010041118c     commadpt.obj
+ 0003:00000194       $SG159185                  0000000100411194     commadpt.obj
+ 0003:0000019c       $SG159186                  000000010041119c     commadpt.obj
+ 0003:000001a4       $SG159187                  00000001004111a4     commadpt.obj
+ 0003:000001ac       $SG159188                  00000001004111ac     commadpt.obj
+ 0003:000001b0       $SG159189                  00000001004111b0     commadpt.obj
+ 0003:000001b8       $SG159190                  00000001004111b8     commadpt.obj
+ 0003:000001bc       $SG159191                  00000001004111bc     commadpt.obj
+ 0003:000001c4       $SG159192                  00000001004111c4     commadpt.obj
+ 0003:000001c8       $SG159193                  00000001004111c8     commadpt.obj
+ 0003:000001d0       $SG159194                  00000001004111d0     commadpt.obj
+ 0003:000001dc       $SG159195                  00000001004111dc     commadpt.obj
+ 0003:000001e4       $SG159196                  00000001004111e4     commadpt.obj
+ 0003:000001ec       $SG159197                  00000001004111ec     commadpt.obj
+ 0003:000001f4       $SG159198                  00000001004111f4     commadpt.obj
+ 0003:000001fc       $SG159199                  00000001004111fc     commadpt.obj
+ 0003:00000204       $SG159200                  0000000100411204     commadpt.obj
+ 0003:0000020c       $SG159201                  000000010041120c     commadpt.obj
+ 0003:00000214       $SG159206                  0000000100411214     commadpt.obj
+ 0003:0000021c       $SG159208                  000000010041121c     commadpt.obj
+ 0003:00000220       $SG159202                  0000000100411220     commadpt.obj
+ 0003:00000228       $SG159203                  0000000100411228     commadpt.obj
+ 0003:00000230       $SG159204                  0000000100411230     commadpt.obj
+ 0003:00000238       $SG159205                  0000000100411238     commadpt.obj
+ 0003:00000240       $SG159207                  0000000100411240     commadpt.obj
+ 0003:00000248       $SG159209                  0000000100411248     commadpt.obj
+ 0003:00000250       $SG159210                  0000000100411250     commadpt.obj
+ 0003:00000258       $SG159211                  0000000100411258     commadpt.obj
+ 0003:00000260       $SG159212                  0000000100411260     commadpt.obj
+ 0003:00000268       $SG159213                  0000000100411268     commadpt.obj
+ 0003:00000270       $SG159214                  0000000100411270     commadpt.obj
+ 0003:00000278       $SG159215                  0000000100411278     commadpt.obj
+ 0003:00000280       $SG159216                  0000000100411280     commadpt.obj
+ 0003:00000284       $SG159217                  0000000100411284     commadpt.obj
+ 0003:0000028c       $SG159218                  000000010041128c     commadpt.obj
+ 0003:00000294       $SG159219                  0000000100411294     commadpt.obj
+ 0003:0000029c       $SG159220                  000000010041129c     commadpt.obj
+ 0003:000002a4       $SG159221                  00000001004112a4     commadpt.obj
+ 0003:000002ac       $SG159222                  00000001004112ac     commadpt.obj
+ 0003:000002b4       $SG159223                  00000001004112b4     commadpt.obj
+ 0003:000002bc       $SG159224                  00000001004112bc     commadpt.obj
+ 0003:000002c0       $SG159225                  00000001004112c0     commadpt.obj
+ 0003:000002c8       $SG159226                  00000001004112c8     commadpt.obj
+ 0003:000002d0       $SG159227                  00000001004112d0     commadpt.obj
+ 0003:000002f4       $SG160493                  00000001004112f4     commadpt.obj
+ 0003:00000308       $SG160492                  0000000100411308     commadpt.obj
+ 0003:00000310       $SG160494                  0000000100411310     commadpt.obj
+ 0003:00000320       commadpt_pendccw_text      0000000100411320     commadpt.obj
+ 0003:00000378       telnet_binary              0000000100411378     commadpt.obj
+ 0003:00000380       ptab                       0000000100411380     commadpt.obj
+ 0003:00000520       overstrike_map             0000000100411520     commadpt.obj
+ 0003:00000620       rxvt4apl_from_2741         0000000100411620     commadpt.obj
+ 0003:00000720       rxvt4apl_to_2741           0000000100411720     commadpt.obj
+ 0003:00000820       xlate_table_ebcd_toebcdic  0000000100411820     commadpt.obj
+ 0003:00000920       xlate_table_ebcd_fromebcdic 0000000100411920     commadpt.obj
+ 0003:00000a20       xlate_table_cc_toebcdic    0000000100411a20     commadpt.obj
+ 0003:00000b20       xlate_table_cc_fromebcdic  0000000100411b20     commadpt.obj
+ 0003:00000c20       byte_parity_table          0000000100411c20     commadpt.obj
+ 0003:00000ca0       $SG159288                  0000000100411ca0     commadpt.obj
+ 0003:00000ca4       $SG159289                  0000000100411ca4     commadpt.obj
+ 0003:00000ca8       $SG159290                  0000000100411ca8     commadpt.obj
+ 0003:00000cac       $SG159291                  0000000100411cac     commadpt.obj
+ 0003:00000cb0       $SG159292                  0000000100411cb0     commadpt.obj
+ 0003:00000cb4       $SG159293                  0000000100411cb4     commadpt.obj
+ 0003:00000cb8       $SG159294                  0000000100411cb8     commadpt.obj
+ 0003:00000cc0       $SG159295                  0000000100411cc0     commadpt.obj
+ 0003:00000d00       $SG159296                  0000000100411d00     commadpt.obj
+ 0003:00000d08       $SG159297                  0000000100411d08     commadpt.obj
+ 0003:00000d14       $SG159298                  0000000100411d14     commadpt.obj
+ 0003:00000d18       $SG159299                  0000000100411d18     commadpt.obj
+ 0003:00000d54       $SG159304                  0000000100411d54     commadpt.obj
+ 0003:00000d58       $SG159300                  0000000100411d58     commadpt.obj
+ 0003:00000d60       $SG159301                  0000000100411d60     commadpt.obj
+ 0003:00000d6c       $SG159310                  0000000100411d6c     commadpt.obj
+ 0003:00000d70       $SG159305                  0000000100411d70     commadpt.obj
+ 0003:00000d94       $SG159312                  0000000100411d94     commadpt.obj
+ 0003:00000d98       $SG159306                  0000000100411d98     commadpt.obj
+ 0003:00000da0       $SG159307                  0000000100411da0     commadpt.obj
+ 0003:00000dac       $SG159308                  0000000100411dac     commadpt.obj
+ 0003:00000db4       $SG159311                  0000000100411db4     commadpt.obj
+ 0003:00000dbc       $SG159326                  0000000100411dbc     commadpt.obj
+ 0003:00000dc0       $SG159313                  0000000100411dc0     commadpt.obj
+ 0003:00000de4       $SG159341                  0000000100411de4     commadpt.obj
+ 0003:00000de8       $SG159314                  0000000100411de8     commadpt.obj
+ 0003:00000df0       $SG159315                  0000000100411df0     commadpt.obj
+ 0003:00000dfc       $SG159401                  0000000100411dfc     commadpt.obj
+ 0003:00000e00       $SG159325                  0000000100411e00     commadpt.obj
+ 0003:00000e0c       $SG159407                  0000000100411e0c     commadpt.obj
+ 0003:00000e10       $SG159327                  0000000100411e10     commadpt.obj
+ 0003:00000e40       $SG159328                  0000000100411e40     commadpt.obj
+ 0003:00000e54       $SG159423                  0000000100411e54     commadpt.obj
+ 0003:00000e58       $SG159329                  0000000100411e58     commadpt.obj
+ 0003:00000e64       $SG159340                  0000000100411e64     commadpt.obj
+ 0003:00000e6c       $SG159435                  0000000100411e6c     commadpt.obj
+ 0003:00000e70       $SG159342                  0000000100411e70     commadpt.obj
+ 0003:00000ea0       $SG159343                  0000000100411ea0     commadpt.obj
+ 0003:00000eb8       $SG159344                  0000000100411eb8     commadpt.obj
+ 0003:00000ec4       $SG159476                  0000000100411ec4     commadpt.obj
+ 0003:00000ec8       $SG159398                  0000000100411ec8     commadpt.obj
+ 0003:00000ed8       $SG159400                  0000000100411ed8     commadpt.obj
+ 0003:00000eec       $SG159498                  0000000100411eec     commadpt.obj
+ 0003:00000ef0       $SG159402                  0000000100411ef0     commadpt.obj
+ 0003:00000f18       $SG159403                  0000000100411f18     commadpt.obj
+ 0003:00000f30       $SG159404                  0000000100411f30     commadpt.obj
+ 0003:00000f3c       $SG159507                  0000000100411f3c     commadpt.obj
+ 0003:00000f40       $SG159406                  0000000100411f40     commadpt.obj
+ 0003:00000f68       $SG159408                  0000000100411f68     commadpt.obj
+ 0003:00000f90       $SG159409                  0000000100411f90     commadpt.obj
+ 0003:00000fa8       $SG159410                  0000000100411fa8     commadpt.obj
+ 0003:00000fb4       $SG159511                  0000000100411fb4     commadpt.obj
+ 0003:00000fb8       $SG159422                  0000000100411fb8     commadpt.obj
+ 0003:00000fc4       $SG159516                  0000000100411fc4     commadpt.obj
+ 0003:00000fc8       $SG159424                  0000000100411fc8     commadpt.obj
+ 0003:00000ffc       $SG159526                  0000000100411ffc     commadpt.obj
+ 0003:00001000       $SG159425                  0000000100412000     commadpt.obj
+ 0003:00001018       $SG159426                  0000000100412018     commadpt.obj
+ 0003:00001024       $SG159535                  0000000100412024     commadpt.obj
+ 0003:00001028       $SG159468                  0000000100412028     commadpt.obj
+ 0003:0000103c       $SG159541                  000000010041203c     commadpt.obj
+ 0003:00001040       $SG159469                  0000000100412040     commadpt.obj
+ 0003:00001050       $SG159470                  0000000100412050     commadpt.obj
+ 0003:00001098       $SG159472                  0000000100412098     commadpt.obj
+ 0003:000010ac       $SG159582                  00000001004120ac     commadpt.obj
+ 0003:000010b0       $SG159473                  00000001004120b0     commadpt.obj
+ 0003:000010c0       $SG159474                  00000001004120c0     commadpt.obj
+ 0003:00001108       $SG159478                  0000000100412108     commadpt.obj
+ 0003:00001120       $SG159477                  0000000100412120     commadpt.obj
+ 0003:00001174       $SG159584                  0000000100412174     commadpt.obj
+ 0003:00001178       $SG159479                  0000000100412178     commadpt.obj
+ 0003:00001184       $SG159596                  0000000100412184     commadpt.obj
+ 0003:00001188       $SG159499                  0000000100412188     commadpt.obj
+ 0003:000011bc       $SG159605                  00000001004121bc     commadpt.obj
+ 0003:000011c0       $SG159500                  00000001004121c0     commadpt.obj
+ 0003:000011dc       $SG159607                  00000001004121dc     commadpt.obj
+ 0003:000011e0       $SG159501                  00000001004121e0     commadpt.obj
+ 0003:000011f0       $SG159508                  00000001004121f0     commadpt.obj
+ 0003:00001240       $SG159509                  0000000100412240     commadpt.obj
+ 0003:0000125c       $SG159672                  000000010041225c     commadpt.obj
+ 0003:00001260       $SG159510                  0000000100412260     commadpt.obj
+ 0003:0000126c       $SG159678                  000000010041226c     commadpt.obj
+ 0003:00001270       $SG159512                  0000000100412270     commadpt.obj
+ 0003:000012b0       $SG159513                  00000001004122b0     commadpt.obj
+ 0003:000012cc       $SG159684                  00000001004122cc     commadpt.obj
+ 0003:000012d0       $SG159514                  00000001004122d0     commadpt.obj
+ 0003:000012dc       $SG159766                  00000001004122dc     commadpt.obj
+ 0003:000012e0       $SG159517                  00000001004122e0     commadpt.obj
+ 0003:0000131c       $SG159772                  000000010041231c     commadpt.obj
+ 0003:00001320       $SG159518                  0000000100412320     commadpt.obj
+ 0003:0000133c       $SG159777                  000000010041233c     commadpt.obj
+ 0003:00001340       $SG159519                  0000000100412340     commadpt.obj
+ 0003:0000134c       $SG159783                  000000010041234c     commadpt.obj
+ 0003:00001350       $SG159527                  0000000100412350     commadpt.obj
+ 0003:0000138c       $SG159787                  000000010041238c     commadpt.obj
+ 0003:00001390       $SG159528                  0000000100412390     commadpt.obj
+ 0003:000013ac       $SG159869                  00000001004123ac     commadpt.obj
+ 0003:000013b0       $SG159529                  00000001004123b0     commadpt.obj
+ 0003:000013c0       $SG159536                  00000001004123c0     commadpt.obj
+ 0003:00001408       $SG159537                  0000000100412408     commadpt.obj
+ 0003:00001424       $SG159875                  0000000100412424     commadpt.obj
+ 0003:00001428       $SG159538                  0000000100412428     commadpt.obj
+ 0003:00001434       $SG159583                  0000000100412434     commadpt.obj
+ 0003:00001440       $SG159542                  0000000100412440     commadpt.obj
+ 0003:0000148c       $SG159884                  000000010041248c     commadpt.obj
+ 0003:00001490       $SG159543                  0000000100412490     commadpt.obj
+ 0003:000014ac       $SG159909                  00000001004124ac     commadpt.obj
+ 0003:000014b0       $SG159544                  00000001004124b0     commadpt.obj
+ 0003:000014bc       $SG159914                  00000001004124bc     commadpt.obj
+ 0003:000014c0       $SG159585                  00000001004124c0     commadpt.obj
+ 0003:000014f8       $SG159587                  00000001004124f8     commadpt.obj
+ 0003:00001508       $SG159588                  0000000100412508     commadpt.obj
+ 0003:00001518       $SG159591                  0000000100412518     commadpt.obj
+ 0003:00001528       $SG159606                  0000000100412528     commadpt.obj
+ 0003:00001530       $SG159589                  0000000100412530     commadpt.obj
+ 0003:00001578       $SG159592                  0000000100412578     commadpt.obj
+ 0003:00001588       $SG159597                  0000000100412588     commadpt.obj
+ 0003:00001598       $SG159608                  0000000100412598     commadpt.obj
+ 0003:000015d0       $SG159593                  00000001004125d0     commadpt.obj
+ 0003:00001618       $SG159598                  0000000100412618     commadpt.obj
+ 0003:00001628       $SG159601                  0000000100412628     commadpt.obj
+ 0003:00001638       $SG159674                  0000000100412638     commadpt.obj
+ 0003:00001650       $SG159599                  0000000100412650     commadpt.obj
+ 0003:00001698       $SG159602                  0000000100412698     commadpt.obj
+ 0003:000016a8       $SG159609                  00000001004126a8     commadpt.obj
+ 0003:000016b8       $SG159680                  00000001004126b8     commadpt.obj
+ 0003:000016d0       $SG159603                  00000001004126d0     commadpt.obj
+ 0003:00001718       $SG159610                  0000000100412718     commadpt.obj
+ 0003:00001724       $SG159922                  0000000100412724     commadpt.obj
+ 0003:00001728       $SG159613                  0000000100412728     commadpt.obj
+ 0003:00001738       $SG159614                  0000000100412738     commadpt.obj
+ 0003:00001748       $SG159617                  0000000100412748     commadpt.obj
+ 0003:00001758       $SG159685                  0000000100412758     commadpt.obj
+ 0003:00001790       $SG159615                  0000000100412790     commadpt.obj
+ 0003:000017d8       $SG159618                  00000001004127d8     commadpt.obj
+ 0003:000017e8       $SG159686                  00000001004127e8     commadpt.obj
+ 0003:00001800       $SG159619                  0000000100412800     commadpt.obj
+ 0003:00001848       $SG159722                  0000000100412848     commadpt.obj
+ 0003:00001850       $SG159673                  0000000100412850     commadpt.obj
+ 0003:00001894       $SG159908                  0000000100412894     commadpt.obj
+ 0003:0000189c       $SG159942                  000000010041289c     commadpt.obj
+ 0003:000018a0       $SG159675                  00000001004128a0     commadpt.obj
+ 0003:000018b0       $SG159679                  00000001004128b0     commadpt.obj
+ 0003:000018f0       $SG159681                  00000001004128f0     commadpt.obj
+ 0003:000018fc       $SG159952                  00000001004128fc     commadpt.obj
+ 0003:00001900       $SG159687                  0000000100412900     commadpt.obj
+ 0003:0000190c       $SG159736                  000000010041290c     commadpt.obj
+ 0003:00001914       $SG159996                  0000000100412914     commadpt.obj
+ 0003:00001918       $SG159742                  0000000100412918     commadpt.obj
+ 0003:00001928       $SG159768                  0000000100412928     commadpt.obj
+ 0003:00001940       $SG159767                  0000000100412940     commadpt.obj
+ 0003:0000199c       $SG160002                  000000010041299c     commadpt.obj
+ 0003:000019a0       $SG159769                  00000001004129a0     commadpt.obj
+ 0003:000019ac       $SG160010                  00000001004129ac     commadpt.obj
+ 0003:000019b0       $SG159771                  00000001004129b0     commadpt.obj
+ 0003:000019c8       $SG159773                  00000001004129c8     commadpt.obj
+ 0003:000019fc       $SG160016                  00000001004129fc     commadpt.obj
+ 0003:00001a00       $SG159774                  0000000100412a00     commadpt.obj
+ 0003:00001a14       $SG160024                  0000000100412a14     commadpt.obj
+ 0003:00001a18       $SG159775                  0000000100412a18     commadpt.obj
+ 0003:00001a28       $SG159779                  0000000100412a28     commadpt.obj
+ 0003:00001a40       $SG159778                  0000000100412a40     commadpt.obj
+ 0003:00001a84       $SG160029                  0000000100412a84     commadpt.obj
+ 0003:00001a88       $SG159780                  0000000100412a88     commadpt.obj
+ 0003:00001a94       $SG160042                  0000000100412a94     commadpt.obj
+ 0003:00001a98       $SG159782                  0000000100412a98     commadpt.obj
+ 0003:00001ab0       $SG159784                  0000000100412ab0     commadpt.obj
+ 0003:00001ae4       $SG160060                  0000000100412ae4     commadpt.obj
+ 0003:00001ae8       $SG159785                  0000000100412ae8     commadpt.obj
+ 0003:00001afc       $SG160069                  0000000100412afc     commadpt.obj
+ 0003:00001b00       $SG159786                  0000000100412b00     commadpt.obj
+ 0003:00001b0c       $SG160079                  0000000100412b0c     commadpt.obj
+ 0003:00001b10       $SG159788                  0000000100412b10     commadpt.obj
+ 0003:00001b44       $SG160095                  0000000100412b44     commadpt.obj
+ 0003:00001b48       $SG159789                  0000000100412b48     commadpt.obj
+ 0003:00001b5c       $SG160144                  0000000100412b5c     commadpt.obj
+ 0003:00001b60       $SG159790                  0000000100412b60     commadpt.obj
+ 0003:00001b6c       $SG160156                  0000000100412b6c     commadpt.obj
+ 0003:00001b70       $SG159865                  0000000100412b70     commadpt.obj
+ 0003:00001b80       $SG159866                  0000000100412b80     commadpt.obj
+ 0003:00001b90       $SG159867                  0000000100412b90     commadpt.obj
+ 0003:00001bb0       $SG159868                  0000000100412bb0     commadpt.obj
+ 0003:00001bc0       $SG159870                  0000000100412bc0     commadpt.obj
+ 0003:00001bf8       $SG159871                  0000000100412bf8     commadpt.obj
+ 0003:00001c08       $SG159872                  0000000100412c08     commadpt.obj
+ 0003:00001c18       $SG159877                  0000000100412c18     commadpt.obj
+ 0003:00001c28       $SG159910                  0000000100412c28     commadpt.obj
+ 0003:00001c60       $SG159876                  0000000100412c60     commadpt.obj
+ 0003:00001ca8       $SG159878                  0000000100412ca8     commadpt.obj
+ 0003:00001cb4       $SG160170                  0000000100412cb4     commadpt.obj
+ 0003:00001cb8       $SG159879                  0000000100412cb8     commadpt.obj
+ 0003:00001cc8       $SG159923                  0000000100412cc8     commadpt.obj
+ 0003:00001d00       $SG159885                  0000000100412d00     commadpt.obj
+ 0003:00001d50       $SG159886                  0000000100412d50     commadpt.obj
+ 0003:00001d60       $SG159887                  0000000100412d60     commadpt.obj
+ 0003:00001d6c       $SG160174                  0000000100412d6c     commadpt.obj
+ 0003:00001d70       $SG159889                  0000000100412d70     commadpt.obj
+ 0003:00001d80       $SG159891                  0000000100412d80     commadpt.obj
+ 0003:00001d90       $SG159892                  0000000100412d90     commadpt.obj
+ 0003:00001da0       $SG159893                  0000000100412da0     commadpt.obj
+ 0003:00001dac       $SG160250                  0000000100412dac     commadpt.obj
+ 0003:00001db0       $SG159894                  0000000100412db0     commadpt.obj
+ 0003:00001dc0       $SG159896                  0000000100412dc0     commadpt.obj
+ 0003:00001dd0       $SG159899                  0000000100412dd0     commadpt.obj
+ 0003:00001de0       $SG159900                  0000000100412de0     commadpt.obj
+ 0003:00001df0       $SG159901                  0000000100412df0     commadpt.obj
+ 0003:00001e38       $SG159903                  0000000100412e38     commadpt.obj
+ 0003:00001e48       $SG159904                  0000000100412e48     commadpt.obj
+ 0003:00001e58       $SG159907                  0000000100412e58     commadpt.obj
+ 0003:00001e68       $SG159953                  0000000100412e68     commadpt.obj
+ 0003:00001ea0       $SG159905                  0000000100412ea0     commadpt.obj
+ 0003:00001ee8       $SG159911                  0000000100412ee8     commadpt.obj
+ 0003:00001ef8       $SG159912                  0000000100412ef8     commadpt.obj
+ 0003:00001f08       $SG159916                  0000000100412f08     commadpt.obj
+ 0003:00001f18       $SG160011                  0000000100412f18     commadpt.obj
+ 0003:00001f50       $SG159915                  0000000100412f50     commadpt.obj
+ 0003:00001fa0       $SG159917                  0000000100412fa0     commadpt.obj
+ 0003:00001fac       $SG160255                  0000000100412fac     commadpt.obj
+ 0003:00001fb0       $SG159919                  0000000100412fb0     commadpt.obj
+ 0003:00001fc0       $SG159924                  0000000100412fc0     commadpt.obj
+ 0003:00001fd0       $SG159925                  0000000100412fd0     commadpt.obj
+ 0003:00001fdc       $SG160260                  0000000100412fdc     commadpt.obj
+ 0003:00001fe0       $SG159930                  0000000100412fe0     commadpt.obj
+ 0003:00001ff0       $SG159934                  0000000100412ff0     commadpt.obj
+ 0003:00002000       $SG159943                  0000000100413000     commadpt.obj
+ 0003:00002048       $SG159944                  0000000100413048     commadpt.obj
+ 0003:00002058       $SG159945                  0000000100413058     commadpt.obj
+ 0003:00002064       $SG160265                  0000000100413064     commadpt.obj
+ 0003:00002068       $SG159946                  0000000100413068     commadpt.obj
+ 0003:00002078       $SG159954                  0000000100413078     commadpt.obj
+ 0003:00002088       $SG159955                  0000000100413088     commadpt.obj
+ 0003:00002094       $SG160270                  0000000100413094     commadpt.obj
+ 0003:00002098       $SG159960                  0000000100413098     commadpt.obj
+ 0003:000020a8       $SG159962                  00000001004130a8     commadpt.obj
+ 0003:000020b8       $SG159965                  00000001004130b8     commadpt.obj
+ 0003:000020c8       $SG159968                  00000001004130c8     commadpt.obj
+ 0003:000020d8       $SG159971                  00000001004130d8     commadpt.obj
+ 0003:000020e8       $SG159978                  00000001004130e8     commadpt.obj
+ 0003:000020f8       $SG159983                  00000001004130f8     commadpt.obj
+ 0003:00002108       $SG159986                  0000000100413108     commadpt.obj
+ 0003:00002118       $SG159990                  0000000100413118     commadpt.obj
+ 0003:00002128       $SG159993                  0000000100413128     commadpt.obj
+ 0003:00002138       $SG159994                  0000000100413138     commadpt.obj
+ 0003:00002148       $SG160017                  0000000100413148     commadpt.obj
+ 0003:00002180       $SG159997                  0000000100413180     commadpt.obj
+ 0003:000021c8       $SG159998                  00000001004131c8     commadpt.obj
+ 0003:000021d8       $SG159999                  00000001004131d8     commadpt.obj
+ 0003:000021e4       $SG160279                  00000001004131e4     commadpt.obj
+ 0003:000021e8       $SG160000                  00000001004131e8     commadpt.obj
+ 0003:000021f4       $SG160287                  00000001004131f4     commadpt.obj
+ 0003:000021f8       $SG160003                  00000001004131f8     commadpt.obj
+ 0003:00002238       $SG160004                  0000000100413238     commadpt.obj
+ 0003:00002248       $SG160005                  0000000100413248     commadpt.obj
+ 0003:00002254       $SG160301                  0000000100413254     commadpt.obj
+ 0003:00002258       $SG160006                  0000000100413258     commadpt.obj
+ 0003:00002268       $SG160009                  0000000100413268     commadpt.obj
+ 0003:00002274       $SG160276                  0000000100413274     commadpt.obj
+ 0003:0000227c       $SG160306                  000000010041327c     commadpt.obj
+ 0003:00002280       $SG160012                  0000000100413280     commadpt.obj
+ 0003:00002290       $SG160013                  0000000100413290     commadpt.obj
+ 0003:0000229c       $SG160328                  000000010041329c     commadpt.obj
+ 0003:000022a0       $SG160018                  00000001004132a0     commadpt.obj
+ 0003:000022b0       $SG160019                  00000001004132b0     commadpt.obj
+ 0003:000022bc       $SG160331                  00000001004132bc     commadpt.obj
+ 0003:000022c0       $SG160020                  00000001004132c0     commadpt.obj
+ 0003:000022d0       $SG160025                  00000001004132d0     commadpt.obj
+ 0003:00002308       $SG160026                  0000000100413308     commadpt.obj
+ 0003:00002318       $SG160027                  0000000100413318     commadpt.obj
+ 0003:00002324       $SG160336                  0000000100413324     commadpt.obj
+ 0003:00002328       $SG160030                  0000000100413328     commadpt.obj
+ 0003:00002364       $SG160339                  0000000100413364     commadpt.obj
+ 0003:00002368       $SG160031                  0000000100413368     commadpt.obj
+ 0003:00002378       $SG160032                  0000000100413378     commadpt.obj
+ 0003:00002384       $SG160344                  0000000100413384     commadpt.obj
+ 0003:00002388       $SG160036                  0000000100413388     commadpt.obj
+ 0003:00002398       $SG160037                  0000000100413398     commadpt.obj
+ 0003:000023a8       $SG160043                  00000001004133a8     commadpt.obj
+ 0003:000023e4       $SG160281                  00000001004133e4     commadpt.obj
+ 0003:000023ec       $SG160340                  00000001004133ec     commadpt.obj
+ 0003:000023f4       $SG160347                  00000001004133f4     commadpt.obj
+ 0003:000023f8       $SG160044                  00000001004133f8     commadpt.obj
+ 0003:00002408       $SG160045                  0000000100413408     commadpt.obj
+ 0003:00002414       $SG160352                  0000000100413414     commadpt.obj
+ 0003:00002418       $SG160055                  0000000100413418     commadpt.obj
+ 0003:00002428       $SG160061                  0000000100413428     commadpt.obj
+ 0003:00002464       $SG160355                  0000000100413464     commadpt.obj
+ 0003:00002468       $SG160062                  0000000100413468     commadpt.obj
+ 0003:00002478       $SG160063                  0000000100413478     commadpt.obj
+ 0003:00002488       $SG160071                  0000000100413488     commadpt.obj
+ 0003:00002498       $SG160096                  0000000100413498     commadpt.obj
+ 0003:000024d0       $SG160070                  00000001004134d0     commadpt.obj
+ 0003:00002518       $SG160072                  0000000100413518     commadpt.obj
+ 0003:00002524       $SG160359                  0000000100413524     commadpt.obj
+ 0003:00002528       $SG160074                  0000000100413528     commadpt.obj
+ 0003:00002538       $SG160080                  0000000100413538     commadpt.obj
+ 0003:00002564       $SG160284                  0000000100413564     commadpt.obj
+ 0003:0000256c       $SG160348                  000000010041356c     commadpt.obj
+ 0003:00002574       $SG160362                  0000000100413574     commadpt.obj
+ 0003:00002578       $SG160081                  0000000100413578     commadpt.obj
+ 0003:00002588       $SG160082                  0000000100413588     commadpt.obj
+ 0003:00002594       $SG160365                  0000000100413594     commadpt.obj
+ 0003:00002598       $SG160088                  0000000100413598     commadpt.obj
+ 0003:000025a8       $SG160093                  00000001004135a8     commadpt.obj
+ 0003:000025b8       $SG160094                  00000001004135b8     commadpt.obj
+ 0003:000025c8       $SG160097                  00000001004135c8     commadpt.obj
+ 0003:000025d8       $SG160098                  00000001004135d8     commadpt.obj
+ 0003:000025e4       $SG160368                  00000001004135e4     commadpt.obj
+ 0003:000025e8       $SG160099                  00000001004135e8     commadpt.obj
+ 0003:000025f8       $SG160114                  00000001004135f8     commadpt.obj
+ 0003:00002608       $SG160115                  0000000100413608     commadpt.obj
+ 0003:00002618       $SG160118                  0000000100413618     commadpt.obj
+ 0003:00002628       $SG160145                  0000000100413628     commadpt.obj
+ 0003:00002660       $SG160116                  0000000100413660     commadpt.obj
+ 0003:000026a8       $SG160119                  00000001004136a8     commadpt.obj
+ 0003:000026b8       $SG160127                  00000001004136b8     commadpt.obj
+ 0003:000026c8       $SG160175                  00000001004136c8     commadpt.obj
+ 0003:00002700       $SG160120                  0000000100413700     commadpt.obj
+ 0003:00002748       $SG160133                  0000000100413748     commadpt.obj
+ 0003:00002758       $SG160134                  0000000100413758     commadpt.obj
+ 0003:00002768       $SG160135                  0000000100413768     commadpt.obj
+ 0003:00002778       $SG160146                  0000000100413778     commadpt.obj
+ 0003:00002784       $SG160371                  0000000100413784     commadpt.obj
+ 0003:00002788       $SG160147                  0000000100413788     commadpt.obj
+ 0003:00002798       $SG160251                  0000000100413798     commadpt.obj
+ 0003:000027d0       $SG160157                  00000001004137d0     commadpt.obj
+ 0003:0000281c       $SG160382                  000000010041381c     commadpt.obj
+ 0003:00002820       $SG160158                  0000000100413820     commadpt.obj
+ 0003:0000282c       $SG160383                  000000010041382c     commadpt.obj
+ 0003:00002830       $SG160159                  0000000100413830     commadpt.obj
+ 0003:00002840       $SG160171                  0000000100413840     commadpt.obj
+ 0003:00002890       $SG160172                  0000000100413890     commadpt.obj
+ 0003:0000289c       $SG160387                  000000010041389c     commadpt.obj
+ 0003:000028a0       $SG160173                  00000001004138a0     commadpt.obj
+ 0003:000028ac       $SG160388                  00000001004138ac     commadpt.obj
+ 0003:000028b0       $SG160176                  00000001004138b0     commadpt.obj
+ 0003:000028bc       $SG160390                  00000001004138bc     commadpt.obj
+ 0003:000028c0       $SG160177                  00000001004138c0     commadpt.obj
+ 0003:000028cc       $SG160392                  00000001004138cc     commadpt.obj
+ 0003:000028d0       $SG160252                  00000001004138d0     commadpt.obj
+ 0003:000028e8       $SG160253                  00000001004138e8     commadpt.obj
+ 0003:000028f4       $SG160393                  00000001004138f4     commadpt.obj
+ 0003:000028f8       $SG160256                  00000001004138f8     commadpt.obj
+ 0003:00002930       $SG160257                  0000000100413930     commadpt.obj
+ 0003:00002948       $SG160258                  0000000100413948     commadpt.obj
+ 0003:00002958       $SG160262                  0000000100413958     commadpt.obj
+ 0003:00002970       $SG160261                  0000000100413970     commadpt.obj
+ 0003:000029b4       $SG160400                  00000001004139b4     commadpt.obj
+ 0003:000029b8       $SG160263                  00000001004139b8     commadpt.obj
+ 0003:000029c4       $SG160404                  00000001004139c4     commadpt.obj
+ 0003:000029c8       $SG160266                  00000001004139c8     commadpt.obj
+ 0003:000029f4       $SG160408                  00000001004139f4     commadpt.obj
+ 0003:000029f8       $SG160267                  00000001004139f8     commadpt.obj
+ 0003:00002a10       $SG160268                  0000000100413a10     commadpt.obj
+ 0003:00002a1c       $SG160411                  0000000100413a1c     commadpt.obj
+ 0003:00002a20       $SG160271                  0000000100413a20     commadpt.obj
+ 0003:00002a4c       $SG160415                  0000000100413a4c     commadpt.obj
+ 0003:00002a50       $SG160272                  0000000100413a50     commadpt.obj
+ 0003:00002a68       $SG160273                  0000000100413a68     commadpt.obj
+ 0003:00002a74       $SG160289                  0000000100413a74     commadpt.obj
+ 0003:00002a7c       $SG160297                  0000000100413a7c     commadpt.obj
+ 0003:00002a84       $SG160298                  0000000100413a84     commadpt.obj
+ 0003:00002a8c       $SG160302                  0000000100413a8c     commadpt.obj
+ 0003:00002a94       $SG160309                  0000000100413a94     commadpt.obj
+ 0003:00002a9c       $SG160384                  0000000100413a9c     commadpt.obj
+ 0003:00002aa4       $SG160417                  0000000100413aa4     commadpt.obj
+ 0003:00002aa8       $SG160312                  0000000100413aa8     commadpt.obj
+ 0003:00002ab4       $SG160313                  0000000100413ab4     commadpt.obj
+ 0003:00002abc       $SG160317                  0000000100413abc     commadpt.obj
+ 0003:00002ac4       $SG160320                  0000000100413ac4     commadpt.obj
+ 0003:00002acc       $SG160323                  0000000100413acc     commadpt.obj
+ 0003:00002ad4       $SG160324                  0000000100413ad4     commadpt.obj
+ 0003:00002adc       $SG160332                  0000000100413adc     commadpt.obj
+ 0003:00002ae4       $SG160419                  0000000100413ae4     commadpt.obj
+ 0003:00002ae8       $SG160356                  0000000100413ae8     commadpt.obj
+ 0003:00002af0       $SG160374                  0000000100413af0     commadpt.obj
+ 0003:00002af8       $SG160377                  0000000100413af8     commadpt.obj
+ 0003:00002b00       $SG160394                  0000000100413b00     commadpt.obj
+ 0003:00002b5c       $SG160432                  0000000100413b5c     commadpt.obj
+ 0003:00002b60       $SG160395                  0000000100413b60     commadpt.obj
+ 0003:00002b78       $SG160396                  0000000100413b78     commadpt.obj
+ 0003:00002b84       $SG160433                  0000000100413b84     commadpt.obj
+ 0003:00002b88       $SG160412                  0000000100413b88     commadpt.obj
+ 0003:00002b90       $SG160421                  0000000100413b90     commadpt.obj
+ 0003:00002b98       $SG160423                  0000000100413b98     commadpt.obj
+ 0003:00002ba0       $SG160426                  0000000100413ba0     commadpt.obj
+ 0003:00002ba8       $SG160428                  0000000100413ba8     commadpt.obj
+ 0003:00002bb0       $SG160430                  0000000100413bb0     commadpt.obj
+ 0003:00002bb8       $SG160437                  0000000100413bb8     commadpt.obj
+ 0003:00002bc0       $SG160439                  0000000100413bc0     commadpt.obj
+ 0003:00002bc4       $SG160440                  0000000100413bc4     commadpt.obj
+ 0003:00002bcc       $SG160442                  0000000100413bcc     commadpt.obj
+ 0003:00002bd4       $SG160445                  0000000100413bd4     commadpt.obj
+ 0003:00002bd8       $SG160446                  0000000100413bd8     commadpt.obj
+ 0003:00002be0       $SG160448                  0000000100413be0     commadpt.obj
+ 0003:00002be4       $SG160449                  0000000100413be4     commadpt.obj
+ 0003:00002bec       $SG160451                  0000000100413bec     commadpt.obj
+ 0003:00002bf4       $SG160453                  0000000100413bf4     commadpt.obj
+ 0003:00002bfc       $SG160455                  0000000100413bfc     commadpt.obj
+ 0003:00002c00       $SG160456                  0000000100413c00     commadpt.obj
+ 0003:00002c48       $SG160457                  0000000100413c48     commadpt.obj
+ 0003:00002c60       $SG160458                  0000000100413c60     commadpt.obj
+ 0003:00002c6c       $SG160479                  0000000100413c6c     commadpt.obj
+ 0003:00002c70       $SG160459                  0000000100413c70     commadpt.obj
+ 0003:00002c80       $SG160460                  0000000100413c80     commadpt.obj
+ 0003:00002c98       $SG160461                  0000000100413c98     commadpt.obj
+ 0003:00002ca8       $SG160462                  0000000100413ca8     commadpt.obj
+ 0003:00002cb8       $SG160464                  0000000100413cb8     commadpt.obj
+ 0003:00002cd0       $SG160465                  0000000100413cd0     commadpt.obj
+ 0003:00002ce0       $SG160466                  0000000100413ce0     commadpt.obj
+ 0003:00002d28       $SG160468                  0000000100413d28     commadpt.obj
+ 0003:00002d40       $SG160469                  0000000100413d40     commadpt.obj
+ 0003:00002d50       $SG160470                  0000000100413d50     commadpt.obj
+ 0003:00002d98       $SG160472                  0000000100413d98     commadpt.obj
+ 0003:00002da8       $SG160476                  0000000100413da8     commadpt.obj
+ 0003:00002dc0       $SG160477                  0000000100413dc0     commadpt.obj
+ 0003:00002dd0       $SG160480                  0000000100413dd0     commadpt.obj
+ 0003:00002e04       $SG160485                  0000000100413e04     commadpt.obj
+ 0003:00002e08       $SG160481                  0000000100413e08     commadpt.obj
+ 0003:00002e20       $SG160482                  0000000100413e20     commadpt.obj
+ 0003:00002e2c       $SG160514                  0000000100413e2c     commadpt.obj
+ 0003:00002e30       $SG160483                  0000000100413e30     commadpt.obj
+ 0003:00002e40       $SG160486                  0000000100413e40     commadpt.obj
+ 0003:00002e88       $SG160487                  0000000100413e88     commadpt.obj
+ 0003:00002ea0       $SG160488                  0000000100413ea0     commadpt.obj
+ 0003:00002eac       $SG160515                  0000000100413eac     commadpt.obj
+ 0003:00002eb0       $SG160489                  0000000100413eb0     commadpt.obj
+ 0003:00002ec0       $SG160490                  0000000100413ec0     commadpt.obj
+ 0003:00002ed0       commadpt_lnctl_names       0000000100413ed0     commadpt.obj
+ 0003:00002ee8       $SG160508                  0000000100413ee8     commadpt.obj
+ 0003:00002ef0       $SG160516                  0000000100413ef0     commadpt.obj
+ 0003:00002ef4       $SG160517                  0000000100413ef4     commadpt.obj
+ 0003:00002ef8       $SG160518                  0000000100413ef8     commadpt.obj
+ 0003:00002efc       $SG160519                  0000000100413efc     commadpt.obj
+ 0003:00002f00       $SG160520                  0000000100413f00     commadpt.obj
+ 0003:00002f08       $SG160521                  0000000100413f08     commadpt.obj
+ 0003:00002f30       $SG160528                  0000000100413f30     commadpt.obj
+ 0003:00002f34       $SG160536                  0000000100413f34     commadpt.obj
+ 0003:00002f38       $SG160529                  0000000100413f38     commadpt.obj
+ 0003:00002f60       $SG160530                  0000000100413f60     commadpt.obj
+ 0003:00002f78       $SG160531                  0000000100413f78     commadpt.obj
+ 0003:00002f84       $SG160611                  0000000100413f84     commadpt.obj
+ 0003:00002f88       $SG160533                  0000000100413f88     commadpt.obj
+ 0003:00002f98       $SG160537                  0000000100413f98     commadpt.obj
+ 0003:00002fc0       $SG160538                  0000000100413fc0     commadpt.obj
+ 0003:00002fd8       $SG160539                  0000000100413fd8     commadpt.obj
+ 0003:00002fe4       $SG160636                  0000000100413fe4     commadpt.obj
+ 0003:00002fe8       $SG160612                  0000000100413fe8     commadpt.obj
+ 0003:0000301c       $SG160638                  000000010041401c     commadpt.obj
+ 0003:00003020       $SG160613                  0000000100414020     commadpt.obj
+ 0003:00003038       $SG160614                  0000000100414038     commadpt.obj
+ 0003:00003048       $SG160615                  0000000100414048     commadpt.obj
+ 0003:00003058       $SG160637                  0000000100414058     commadpt.obj
+ 0003:00003060       $SG160639                  0000000100414060     commadpt.obj
+ 0003:00003088       $SG160640                  0000000100414088     commadpt.obj
+ 0003:000030a0       $SG160641                  00000001004140a0     commadpt.obj
+ 0003:000030ac       $SG160719                  00000001004140ac     commadpt.obj
+ 0003:000030b4       $SG160723                  00000001004140b4     commadpt.obj
+ 0003:000030bc       $SG160729                  00000001004140bc     commadpt.obj
+ 0003:000030c8       $SG160781                  00000001004140c8     commadpt.obj
+ 0003:000030d8       $SG160823                  00000001004140d8     commadpt.obj
+ 0003:000030e0       comadpt_device_hndinfo     00000001004140e0     commadpt.obj
+ 0003:000031a8       $SG160819                  00000001004141a8     commadpt.obj
+ 0003:000031b8       $SG160820                  00000001004141b8     commadpt.obj
+ 0003:000031c8       $SG160822                  00000001004141c8     commadpt.obj
+ 0003:000031d8       $SG160825                  00000001004141d8     commadpt.obj
+ 0003:000031e0       $SG160826                  00000001004141e0     commadpt.obj
+ 0003:000031e8       $SG160831                  00000001004141e8     commadpt.obj
+ 0003:00003230       ?__proc_attached@@3HA      0000000100414230     MSVCRTD:dll_dllmain.obj
+ 0003:00003240       GS_ExceptionRecord         0000000100414240     MSVCRTD:gs_report.obj
+ 0003:000032e0       GS_ContextRecord           00000001004142e0     MSVCRTD:gs_report.obj
+ 0003:000037e0       ?is_initialized_as_dll@@3_NA 00000001004147e0     MSVCRTD:utility.obj
+ 0003:000037e1       ?module_local_atexit_table_initialized@@3_NA 00000001004147e1     MSVCRTD:utility.obj
+ 0003:000037e8       ?module_local_atexit_table@@3U_onexit_table_t@@A 00000001004147e8     MSVCRTD:utility.obj
+ 0003:00003800       ?module_local_at_quick_exit_table@@3U_onexit_table_t@@A 0000000100414800     MSVCRTD:utility.obj
+ 0005:000002d0       $R000000                   00000001004162d0     hercprod.res
+ 0005:00000878       $R0005A8                   0000000100416878     hercprod.res
+ 0005:000009a0       $R0006D0                   00000001004169a0     hercprod.res
+ 0005:00000f08       $R000C38                   0000000100416f08     hercprod.res
+ 0005:00001370       $R0010A0                   0000000100417370     hercprod.res
+ 0005:00001658       $R001388                   0000000100417658     hercprod.res
+ 0005:00001f00       $R001C30                   0000000100417f00     hercprod.res
+ 0005:00002fa8       $R002CD8                   0000000100418fa8     hercprod.res
+ 0005:00003610       $R003340                   0000000100419610     hercprod.res
+ 0005:000044b8       $R0041E8                   000000010041a4b8     hercprod.res
+ 0005:00006a60       $R006790                   000000010041ca60     hercprod.res
+ 0005:0000ff08       $R00FC38                   0000000100425f08     hercprod.res
+ 0005:00013bc8       $R0138F8                   0000000100429bc8     hercprod.res

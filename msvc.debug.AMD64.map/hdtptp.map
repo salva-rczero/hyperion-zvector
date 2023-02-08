@@ -1,0 +1,2160 @@
+ hdtptp
+
+ Timestamp is 63e3da10 (Wed Feb  8 18:21:20 2023)
+
+ Preferred load address is 0000000100400000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00023f50H .text$mn                CODE
+ 0001:00023f50 00000040H .text$mn$00             CODE
+ 0001:00023f90 000000ddH .text$x                 CODE
+ 0002:00000000 000003c8H .idata$5                DATA
+ 0002:000003c8 00000038H .00cfg                  DATA
+ 0002:00000400 00000008H .CRT$XCA                DATA
+ 0002:00000408 00000008H .CRT$XCZ                DATA
+ 0002:00000410 00000008H .CRT$XIA                DATA
+ 0002:00000418 00000008H .CRT$XIZ                DATA
+ 0002:00000420 00000008H .CRT$XPA                DATA
+ 0002:00000428 00000008H .CRT$XPZ                DATA
+ 0002:00000430 00000008H .CRT$XTA                DATA
+ 0002:00000438 00000008H .CRT$XTZ                DATA
+ 0002:00000440 00000000H .gehcont$y              DATA
+ 0002:00000440 00000000H .gfids$y                DATA
+ 0002:00000440 00000ac0H .rdata                  DATA
+ 0002:00000f00 00000080H .rdata$CastGuardVftablesA DATA
+ 0002:00000f80 00000080H .rdata$CastGuardVftablesC DATA
+ 0002:00001000 000001b8H .rdata$voltmd           DATA
+ 0002:000011b8 00000310H .rdata$zzzdbg           DATA
+ 0002:000014c8 00000008H .rtc$IAA                DATA
+ 0002:000014d0 00000008H .rtc$IZZ                DATA
+ 0002:000014d8 00000008H .rtc$TAA                DATA
+ 0002:000014e0 00000008H .rtc$TZZ                DATA
+ 0002:000014e8 00000848H .xdata                  DATA
+ 0002:00001d30 000000b8H .edata                  DATA
+ 0002:00001de8 0000008cH .idata$2                DATA
+ 0002:00001e74 00000014H .idata$3                DATA
+ 0002:00001e88 000003c8H .idata$4                DATA
+ 0002:00002250 0000086eH .idata$6                DATA
+ 0003:00000000 00006ac0H .data                   DATA
+ 0003:00006ac0 00000d68H .bss                    DATA
+ 0004:00000000 000008d0H .pdata                  DATA
+ 0005:00000000 000002d0H .rsrc$01                DATA
+ 0005:000002d0 00013998H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base               Lib:Object
+
+ 0000:00000000       __AbsoluteZero             0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_count   0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   0000000000000000     <absolute>
+ 0000:00000000       __arm64x_extra_rfe_table   0000000000000000     <absolute>
+ 0000:00000000       __arm64x_extra_rfe_table_size 0000000000000000     <absolute>
+ 0000:00000000       __arm64x_native_entrypoint 0000000000000000     <absolute>
+ 0000:00000000       __arm64x_redirection_metadata 0000000000000000     <absolute>
+ 0000:00000000       __arm64x_redirection_metadata_count 0000000000000000     <absolute>
+ 0000:00000000       __dynamic_value_reloc_table 0000000000000000     <absolute>
+ 0000:00000000       __enclave_config           0000000000000000     <absolute>
+ 0000:00000000       __guard_check_icall_a64n_fptr 0000000000000000     <absolute>
+ 0000:00000000       __guard_eh_cont_count      0000000000000000     <absolute>
+ 0000:00000000       __guard_eh_cont_table      0000000000000000     <absolute>
+ 0000:00000000       __guard_fids_count         0000000000000000     <absolute>
+ 0000:00000000       __guard_fids_table         0000000000000000     <absolute>
+ 0000:00000000       __guard_iat_count          0000000000000000     <absolute>
+ 0000:00000000       __guard_iat_table          0000000000000000     <absolute>
+ 0000:00000000       __guard_longjmp_count      0000000000000000     <absolute>
+ 0000:00000000       __guard_longjmp_table      0000000000000000     <absolute>
+ 0000:00000000       __hybrid_auxiliary_iat     0000000000000000     <absolute>
+ 0000:00000000       __hybrid_auxiliary_iat_copy 0000000000000000     <absolute>
+ 0000:00000000       __hybrid_code_map          0000000000000000     <absolute>
+ 0000:00000000       __hybrid_code_map_count    0000000000000000     <absolute>
+ 0000:00000000       __x64_code_ranges_to_entry_points 0000000000000000     <absolute>
+ 0000:00000000       __x64_code_ranges_to_entry_points_count 0000000000000000     <absolute>
+ 0000:00000100       __guard_flags              0000000000000100     <absolute>
+ 0000:00000000       __ImageBase                0000000100400000     <linker-defined>
+ 0001:0001ce20       hdl_check_depends_ep       000000010041de20 f   ctc_ptp.obj
+ 0001:0001cef0       hdl_resolve_symbols_ep     000000010041def0 f   ctc_ptp.obj
+ 0001:0001cf10       hdl_register_symbols_ep    000000010041df10 f   ctc_ptp.obj
+ 0001:0001cf50       hdl_define_devtypes_ep     000000010041df50 f   ctc_ptp.obj
+ 0001:0001cf70       __local_stdio_printf_options 000000010041df70 f i ctc_ptp.obj
+ 0001:0001cf80       _vsnprintf_s               000000010041df80 f i ctc_ptp.obj
+ 0001:0001cfd0       _vsnprintf_s_l             000000010041dfd0 f i ctc_ptp.obj
+ 0001:0001d050       fetch_dw_noswap            000000010041e050 f i ctc_ptp.obj
+ 0001:0001d070       fetch_f3_noswap            000000010041e070 f i ctc_ptp.obj
+ 0001:0001d0b0       fetch_fw_noswap            000000010041e0b0 f i ctc_ptp.obj
+ 0001:0001d0d0       fetch_hw_noswap            000000010041e0d0 f i ctc_ptp.obj
+ 0001:0001d0f0       store_dw_noswap            000000010041e0f0 f i ctc_ptp.obj
+ 0001:0001d110       store_f3_noswap            000000010041e110 f i ctc_ptp.obj
+ 0001:0001d140       store_fw_noswap            000000010041e140 f i ctc_ptp.obj
+ 0001:0001d160       store_hw_noswap            000000010041e160 f i ctc_ptp.obj
+ 0001:0001d280       TUNTAP_CreateInterface     000000010041e280 f   tuntap.obj
+ 0001:0001d480       TUNTAP_SetIPAddr           000000010041e480 f   tuntap.obj
+ 0001:0001d6a0       TUNTAP_SetDestAddr         000000010041e6a0 f   tuntap.obj
+ 0001:0001d8b0       TUNTAP_SetNetMask          000000010041e8b0 f   tuntap.obj
+ 0001:0001dac0       TUNTAP_SetBCastAddr        000000010041eac0 f   tuntap.obj
+ 0001:0001dcd0       TUNTAP_SetIPAddr6          000000010041ecd0 f   tuntap.obj
+ 0001:0001e020       TUNTAP_GetMTU              000000010041f020 f   tuntap.obj
+ 0001:0001e2c0       TUNTAP_SetMTU              000000010041f2c0 f   tuntap.obj
+ 0001:0001e520       TUNTAP_GetMACAddr          000000010041f520 f   tuntap.obj
+ 0001:0001e780       TUNTAP_SetMACAddr          000000010041f780 f   tuntap.obj
+ 0001:0001e990       TUNTAP_SetFlags            000000010041f990 f   tuntap.obj
+ 0001:0001eac0       TUNTAP_GetFlags            000000010041fac0 f   tuntap.obj
+ 0001:0001ec10       TT32_AddIPAddr             000000010041fc10 f   tuntap.obj
+ 0001:0001ec40       TT32_DelIPAddr             000000010041fc40 f   tuntap.obj
+ 0001:0001ec70       TT32_QryIPAddrs            000000010041fc70 f   tuntap.obj
+ 0001:0001eca0       build_herc_iface_mac       000000010041fca0 f   tuntap.obj
+ 0001:0001ee80       ParseMAC                   000000010041fe80 f   tuntap.obj
+ 0001:0001f020       FormatMAC                  0000000100420020 f   tuntap.obj
+ 0001:0001f180       packet_trace               0000000100420180 f   tuntap.obj
+ 0001:0001f1d0       net_data_trace             00000001004201d0 f   tuntap.obj
+ 0001:0001f620       __local_stdio_scanf_options 0000000100420620 f i tuntap.obj
+ 0001:0001f630       _vsscanf_l                 0000000100420630 f i tuntap.obj
+ 0001:0001f680       sscanf                     0000000100420680 f i tuntap.obj
+ 0001:0001f7d0       tt32_open                  00000001004207d0 f   w32ctca.obj
+ 0001:0001f840       tt32_read                  0000000100420840 f   w32ctca.obj
+ 0001:0001f8c0       tt32_write                 00000001004208c0 f   w32ctca.obj
+ 0001:0001f940       tt32_beg_write_multi       0000000100420940 f   w32ctca.obj
+ 0001:0001f9c0       tt32_end_write_multi       00000001004209c0 f   w32ctca.obj
+ 0001:0001fa40       tt32_close                 0000000100420a40 f   w32ctca.obj
+ 0001:0001fab0       tt32_ioctl                 0000000100420ab0 f   w32ctca.obj
+ 0001:0001fb30       tt32_get_default_iface     0000000100420b30 f   w32ctca.obj
+ 0001:0001fbb0       tt32_build_herc_iface_mac  0000000100420bb0 f   w32ctca.obj
+ 0001:0001fbf0       tt32_version_numbers       0000000100420bf0 f   w32ctca.obj
+ 0001:0001fc70       display_tt32_stats         0000000100420c70 f   w32ctca.obj
+ 0001:00020920       enable_tt32_debug_tracing  0000000100421920 f   w32ctca.obj
+ 0001:000209a0       GetTT32ProcAddrs           00000001004219a0 f   w32ctca.obj
+ 0001:00020dd0       tt32_output_debug_string   0000000100421dd0 f   w32ctca.obj
+ 0001:00020ef0       tt32_loaddll               0000000100421ef0 f   w32ctca.obj
+ 0001:00021370       _vsnprintf_l               0000000100422370 f i w32ctca.obj
+ 0001:000213f0       _vsprintf_l                00000001004223f0 f i w32ctca.obj
+ 0001:00021440       sprintf                    0000000100422440 f i w32ctca.obj
+ 0001:00021490       resolve_host               0000000100422490 f   resolve.obj
+ 0001:00021810       resolve_ipaddr             0000000100422810 f   resolve.obj
+ 0001:00021b50       resolve_sa                 0000000100422b50 f   resolve.obj
+ 0001:00021cf0       gai_strerrorA              0000000100422cf0 f i resolve.obj
+ 0001:00021d39       etod_clock                 0000000100422d39 f   hengine:hengine.dll
+ 0001:00021d3f       init_sysblk_netdev         0000000100422d3f f   hengine:hengine.dll
+ 0001:00021d45       group_device               0000000100422d45 f   hengine:hengine.dll
+ 0001:00021d4b       device_attention           0000000100422d4b f   hengine:hengine.dll
+ 0001:00021d51       mpc_point_pus              0000000100422d51 f   hengine:hengine.dll
+ 0001:00021d57       mpc_display_description    0000000100422d57 f   hengine:hengine.dll
+ 0001:00021d5d       mpc_display_rrh            0000000100422d5d f   hengine:hengine.dll
+ 0001:00021d63       mpc_display_rrh_and_puk    0000000100422d63 f   hengine:hengine.dll
+ 0001:00021d69       mpc_display_rrh_and_pix    0000000100422d69 f   hengine:hengine.dll
+ 0001:00021d6f       mpc_display_ptp_th_etc     0000000100422d6f f   hengine:hengine.dll
+ 0001:00021d75       hthread_initialize_lock    0000000100422d75 f   hutil:hutil.dll
+ 0001:00021d7b       hthread_obtain_lock        0000000100422d7b f   hutil:hutil.dll
+ 0001:00021d81       hthread_release_lock       0000000100422d81 f   hutil:hutil.dll
+ 0001:00021d87       hthread_initialize_condition 0000000100422d87 f   hutil:hutil.dll
+ 0001:00021d8d       hthread_signal_condition   0000000100422d8d f   hutil:hutil.dll
+ 0001:00021d93       hthread_timed_wait_condition 0000000100422d93 f   hutil:hutil.dll
+ 0001:00021d99       hthread_create_thread      0000000100422d99 f   hutil:hutil.dll
+ 0001:00021d9f       hthread_join_thread        0000000100422d9f f   hutil:hutil.dll
+ 0001:00021da5       hthread_detach_thread      0000000100422da5 f   hutil:hutil.dll
+ 0001:00021dab       strlcpy                    0000000100422dab f   hutil:hutil.dll
+ 0001:00021db1       w32_strerror               0000000100422db1 f   hutil:hutil.dll
+ 0001:00021db7       gettimeofday               0000000100422db7 f   hutil:hutil.dll
+ 0001:00021dbd       usleep                     0000000100422dbd f   hutil:hutil.dll
+ 0001:00021dc3       sleep                      0000000100422dc3 f   hutil:hutil.dll
+ 0001:00021dc9       sched_yield                0000000100422dc9 f   hutil:hutil.dll
+ 0001:00021dcf       inet_aton                  0000000100422dcf f   hutil:hutil.dll
+ 0001:00021dd5       w32_socket                 0000000100422dd5 f   hutil:hutil.dll
+ 0001:00021ddb       w32_inet_ntop              0000000100422ddb f   hutil:hutil.dll
+ 0001:00021de1       w32_snprintf               0000000100422de1 f   hutil:hutil.dll
+ 0001:00021de7       w32_basename               0000000100422de7 f   hutil:hutil.dll
+ 0001:00021ded       getopt_long                0000000100422ded f   hutil:hutil.dll
+ 0001:00021df3       fwritemsg                  0000000100422df3 f   hutil:hutil.dll
+ 0001:00021df9       logmsg                     0000000100422df9 f   hutil:hutil.dll
+ 0001:00021dff       strlcat                    0000000100422dff f   hutil:hutil.dll
+ 0001:00021e05       w32_if_nametoindex         0000000100422e05 f   hutil:hutil.dll
+ 0001:00021e0b       w32_inet_pton              0000000100422e0b f   hutil:hutil.dll
+ 0001:00021e11       guest_to_host              0000000100422e11 f   hutil:hutil.dll
+ 0001:00021e17       get_symbol                 0000000100422e17 f   hutil:hutil.dll
+ 0001:00021e1d       hdl_getpath                0000000100422e1d f   hutil:hutil.dll
+ 0001:00021e23       IsDebuggerPresent          0000000100422e23 f   kernel32:KERNEL32.dll
+ 0001:00021e29       OutputDebugStringA         0000000100422e29 f   kernel32:KERNEL32.dll
+ 0001:00021e2f       GetLastError               0000000100422e2f f   kernel32:KERNEL32.dll
+ 0001:00021e35       InitializeCriticalSection  0000000100422e35 f   kernel32:KERNEL32.dll
+ 0001:00021e3b       EnterCriticalSection       0000000100422e3b f   kernel32:KERNEL32.dll
+ 0001:00021e41       LeaveCriticalSection       0000000100422e41 f   kernel32:KERNEL32.dll
+ 0001:00021e47       FreeLibrary                0000000100422e47 f   kernel32:KERNEL32.dll
+ 0001:00021e4d       GetProcAddress             0000000100422e4d f   kernel32:KERNEL32.dll
+ 0001:00021e53       LoadLibraryExA             0000000100422e53 f   kernel32:KERNEL32.dll
+ 0001:00021e59       FormatMessageA             0000000100422e59 f   kernel32:KERNEL32.dll
+ 0001:00021e5f       htonl                      0000000100422e5f f   ws2_32:WS2_32.dll
+ 0001:00021e65       getaddrinfo                0000000100422e65 f   ws2_32:WS2_32.dll
+ 0001:00021e6b       freeaddrinfo               0000000100422e6b f   ws2_32:WS2_32.dll
+ 0001:00021e71       getnameinfo                0000000100422e71 f   ws2_32:WS2_32.dll
+ 0001:00022290       _CRT_INIT                  0000000100423290 f   MSVCRTD:dll_dllmain.obj
+ 0001:000222c0       _DllMainCRTStartup         00000001004232c0 f   MSVCRTD:dll_dllmain.obj
+ 0001:00022300       __raise_securityfailure    0000000100423300 f   MSVCRTD:gs_report.obj
+ 0001:00022340       __report_gsfailure         0000000100423340 f   MSVCRTD:gs_report.obj
+ 0001:00022420       __report_rangecheckfailure 0000000100423420 f   MSVCRTD:gs_report.obj
+ 0001:00022440       __report_securityfailure   0000000100423440 f   MSVCRTD:gs_report.obj
+ 0001:000224e0       __report_securityfailureEx 00000001004234e0 f   MSVCRTD:gs_report.obj
+ 0001:00022750       __GSHandlerCheck           0000000100423750 f   MSVCRTD:gshandler.obj
+ 0001:00022790       __GSHandlerCheckCommon     0000000100423790 f   MSVCRTD:gshandler.obj
+ 0001:000228a0       __chkstk                   00000001004238a0 f   MSVCRTD:chkstk.obj
+ 0001:000228a0       _alloca_probe              00000001004238a0 f   MSVCRTD:chkstk.obj
+ 0001:00022900       __security_check_cookie    0000000100423900 f   MSVCRTD:amdsecgs.obj
+ 0001:000229e0       __security_init_cookie     00000001004239e0 f   MSVCRTD:gs_support.obj
+ 0001:00022a60       DllMain                    0000000100423a60 f   MSVCRTD:dll_dllmain_stub.obj
+ 0001:00022aa0       ?__scrt_initialize_type_info@@YAXXZ 0000000100423aa0 f   MSVCRTD:tncleanup.obj
+ 0001:00022ac0       ?__scrt_uninitialize_type_info@@YAXXZ 0000000100423ac0 f   MSVCRTD:tncleanup.obj
+ 0001:00022ae0       __scrt_initialize_default_local_stdio_options 0000000100423ae0 f   MSVCRTD:default_local_stdio_options.obj
+ 0001:00022b30       ?configure_argv@__scrt_narrow_argv_policy@@SAHXZ 0000000100423b30 f i MSVCRTD:utility.obj
+ 0001:00022c20       ?initialize_environment@__scrt_narrow_environment_policy@@SAHXZ 0000000100423c20 f i MSVCRTD:utility.obj
+ 0001:00022cc0       NtCurrentTeb               0000000100423cc0 f i MSVCRTD:utility.obj
+ 0001:00022cd0       __scrt_acquire_startup_lock 0000000100423cd0 f   MSVCRTD:utility.obj
+ 0001:00022d40       __scrt_dllmain_after_initialize_c 0000000100423d40 f   MSVCRTD:utility.obj
+ 0001:00022d70       __scrt_dllmain_before_initialize_c 0000000100423d70 f   MSVCRTD:utility.obj
+ 0001:00022d90       __scrt_dllmain_crt_thread_attach 0000000100423d90 f   MSVCRTD:utility.obj
+ 0001:00022dc0       __scrt_dllmain_crt_thread_detach 0000000100423dc0 f   MSVCRTD:utility.obj
+ 0001:00022de0       __scrt_dllmain_exception_filter 0000000100423de0 f   MSVCRTD:utility.obj
+ 0001:00022e50       __scrt_dllmain_uninitialize_c 0000000100423e50 f   MSVCRTD:utility.obj
+ 0001:00022e80       __scrt_dllmain_uninitialize_critical 0000000100423e80 f   MSVCRTD:utility.obj
+ 0001:00022ea0       __scrt_initialize_crt      0000000100423ea0 f   MSVCRTD:utility.obj
+ 0001:00022ef0       __scrt_initialize_onexit_tables 0000000100423ef0 f   MSVCRTD:utility.obj
+ 0001:00023000       __scrt_is_nonwritable_in_current_image 0000000100424000 f   MSVCRTD:utility.obj
+ 0001:00023090       __scrt_release_startup_lock 0000000100424090 f   MSVCRTD:utility.obj
+ 0001:000230c0       __scrt_uninitialize_crt    00000001004240c0 f   MSVCRTD:utility.obj
+ 0001:00023100       _onexit                    0000000100424100 f   MSVCRTD:utility.obj
+ 0001:00023180       at_quick_exit              0000000100424180 f   MSVCRTD:utility.obj
+ 0001:000231d0       atexit                     00000001004241d0 f   MSVCRTD:utility.obj
+ 0001:00023210       __scrt_get_dyn_tls_init_callback 0000000100424210 f   MSVCRTD:dyn_tls_init.obj
+ 0001:00023220       __crt_debugger_hook        0000000100424220 f   MSVCRTD:utility_desktop.obj
+ 0001:00023230       __scrt_fastfail            0000000100424230 f   MSVCRTD:utility_desktop.obj
+ 0001:000233d0       __scrt_get_show_window_mode 00000001004243d0 f   MSVCRTD:utility_desktop.obj
+ 0001:00023430       __scrt_initialize_mta      0000000100424430 f   MSVCRTD:utility_desktop.obj
+ 0001:00023440       __scrt_initialize_winrt    0000000100424440 f   MSVCRTD:utility_desktop.obj
+ 0001:00023450       __scrt_is_managed_app      0000000100424450 f   MSVCRTD:utility_desktop.obj
+ 0001:00023500       __scrt_set_unhandled_exception_filter 0000000100424500 f   MSVCRTD:utility_desktop.obj
+ 0001:00023520       __scrt_exe_initialize_mta  0000000100424520 f   MSVCRTD:utility_desktop.obj
+ 0001:00023520       __scrt_stub_for_initialize_mta 0000000100424520 f   MSVCRTD:utility_desktop.obj
+ 0001:00023530       __scrt_unhandled_exception_filter 0000000100424530 f   MSVCRTD:utility_desktop.obj
+ 0001:000235d0       _RTC_Initialize            00000001004245d0 f   MSVCRTD:initsect.obj
+ 0001:00023620       _RTC_Terminate             0000000100424620 f   MSVCRTD:initsect.obj
+ 0001:00023670       _guard_check_icall_nop     0000000100424670 f i MSVCRTD:guard_support.obj
+ 0001:00023680       ReadNoFence64              0000000100424680 f i MSVCRTD:guard_support.obj
+ 0001:000236a0       ReadPointerNoFence         00000001004246a0 f i MSVCRTD:guard_support.obj
+ 0001:000236c0       __castguard_check_failure_debugbreak 00000001004246c0 f i MSVCRTD:guard_support.obj
+ 0001:000236e0       __castguard_check_failure_fastfail 00000001004246e0 f i MSVCRTD:guard_support.obj
+ 0001:00023710       __castguard_check_failure_nop 0000000100424710 f i MSVCRTD:guard_support.obj
+ 0001:00023720       __castguard_check_failure_os_handled 0000000100424720 f i MSVCRTD:guard_support.obj
+ 0001:000237f0       __castguard_slow_path_check_debugbreak 00000001004247f0 f i MSVCRTD:guard_support.obj
+ 0001:00023830       __castguard_slow_path_check_fastfail 0000000100424830 f i MSVCRTD:guard_support.obj
+ 0001:00023880       __castguard_slow_path_check_nop 0000000100424880 f i MSVCRTD:guard_support.obj
+ 0001:00023890       __castguard_slow_path_check_os_handled 0000000100424890 f i MSVCRTD:guard_support.obj
+ 0001:00023950       _guard_icall_checks_enforced 0000000100424950 f i MSVCRTD:guard_support.obj
+ 0001:00023990       _guard_rf_checks_enforced  0000000100424990 f i MSVCRTD:guard_support.obj
+ 0001:000239a0       __isa_available_init       00000001004249a0 f   MSVCRTD:cpu_disp.obj
+ 0001:00023d50       _get_startup_argv_mode     0000000100424d50 f   MSVCRTD:argv_mode.obj
+ 0001:00023d60       __scrt_is_ucrt_dll_in_use  0000000100424d60 f   MSVCRTD:ucrt_detection.obj
+ 0001:00023d90       strchr                     0000000100424d90 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:00023d96       memcmp                     0000000100424d96 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:00023d9c       __C_specific_handler       0000000100424d9c f   vcruntimed:VCRUNTIME140D.dll
+ 0001:00023da2       __std_type_info_destroy_list 0000000100424da2 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:00023da8       __current_exception        0000000100424da8 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:00023dae       __current_exception_context 0000000100424dae f   vcruntimed:VCRUNTIME140D.dll
+ 0001:00023db4       _errno                     0000000100424db4 f   ucrtd:ucrtbased.dll
+ 0001:00023dba       strcmp                     0000000100424dba f   ucrtd:ucrtbased.dll
+ 0001:00023dc0       strcpy                     0000000100424dc0 f   ucrtd:ucrtbased.dll
+ 0001:00023dc6       strlen                     0000000100424dc6 f   ucrtd:ucrtbased.dll
+ 0001:00023dcc       free                       0000000100424dcc f   ucrtd:ucrtbased.dll
+ 0001:00023dd2       malloc                     0000000100424dd2 f   ucrtd:ucrtbased.dll
+ 0001:00023dd8       _byteswap_ushort           0000000100424dd8 f   ucrtd:ucrtbased.dll
+ 0001:00023dde       _byteswap_ulong            0000000100424dde f   ucrtd:ucrtbased.dll
+ 0001:00023de4       _byteswap_uint64           0000000100424de4 f   ucrtd:ucrtbased.dll
+ 0001:00023dea       rand                       0000000100424dea f   ucrtd:ucrtbased.dll
+ 0001:00023df0       atoi                       0000000100424df0 f   ucrtd:ucrtbased.dll
+ 0001:00023df6       __acrt_iob_func            0000000100424df6 f   ucrtd:ucrtbased.dll
+ 0001:00023dfc       __stdio_common_vsnprintf_s 0000000100424dfc f   ucrtd:ucrtbased.dll
+ 0001:00023e02       isxdigit                   0000000100424e02 f   ucrtd:ucrtbased.dll
+ 0001:00023e08       isprint                    0000000100424e08 f   ucrtd:ucrtbased.dll
+ 0001:00023e0e       strncpy                    0000000100424e0e f   ucrtd:ucrtbased.dll
+ 0001:00023e14       __stdio_common_vsscanf     0000000100424e14 f   ucrtd:ucrtbased.dll
+ 0001:00023e1a       isspace                    0000000100424e1a f   ucrtd:ucrtbased.dll
+ 0001:00023e20       _fullpath                  0000000100424e20 f   ucrtd:ucrtbased.dll
+ 0001:00023e26       __stdio_common_vsprintf    0000000100424e26 f   ucrtd:ucrtbased.dll
+ 0001:00023e2c       _initterm                  0000000100424e2c f   ucrtd:ucrtbased.dll
+ 0001:00023e32       _initterm_e                0000000100424e32 f   ucrtd:ucrtbased.dll
+ 0001:00023e38       _seh_filter_dll            0000000100424e38 f   ucrtd:ucrtbased.dll
+ 0001:00023e3e       _configure_narrow_argv     0000000100424e3e f   ucrtd:ucrtbased.dll
+ 0001:00023e44       _initialize_narrow_environment 0000000100424e44 f   ucrtd:ucrtbased.dll
+ 0001:00023e4a       _initialize_onexit_table   0000000100424e4a f   ucrtd:ucrtbased.dll
+ 0001:00023e50       _register_onexit_function  0000000100424e50 f   ucrtd:ucrtbased.dll
+ 0001:00023e56       _execute_onexit_table      0000000100424e56 f   ucrtd:ucrtbased.dll
+ 0001:00023e5c       _crt_atexit                0000000100424e5c f   ucrtd:ucrtbased.dll
+ 0001:00023e62       _crt_at_quick_exit         0000000100424e62 f   ucrtd:ucrtbased.dll
+ 0001:00023e68       _cexit                     0000000100424e68 f   ucrtd:ucrtbased.dll
+ 0001:00023e6e       terminate                  0000000100424e6e f   ucrtd:ucrtbased.dll
+ 0001:00023e74       _close                     0000000100424e74 f   ucrtd:ucrtbased.dll
+ 0001:00023e7a       _getpid                    0000000100424e7a f   ucrtd:ucrtbased.dll
+ 0001:00023e80       _strdup                    0000000100424e80 f   ucrtd:ucrtbased.dll
+ 0001:00023e86       RtlCaptureContext          0000000100424e86 f   kernel32:KERNEL32.dll
+ 0001:00023e8c       RtlLookupFunctionEntry     0000000100424e8c f   kernel32:KERNEL32.dll
+ 0001:00023e92       RtlVirtualUnwind           0000000100424e92 f   kernel32:KERNEL32.dll
+ 0001:00023e98       UnhandledExceptionFilter   0000000100424e98 f   kernel32:KERNEL32.dll
+ 0001:00023e9e       SetUnhandledExceptionFilter 0000000100424e9e f   kernel32:KERNEL32.dll
+ 0001:00023ea4       GetCurrentProcess          0000000100424ea4 f   kernel32:KERNEL32.dll
+ 0001:00023eaa       TerminateProcess           0000000100424eaa f   kernel32:KERNEL32.dll
+ 0001:00023eb0       IsProcessorFeaturePresent  0000000100424eb0 f   kernel32:KERNEL32.dll
+ 0001:00023eb6       QueryPerformanceCounter    0000000100424eb6 f   kernel32:KERNEL32.dll
+ 0001:00023ebc       GetCurrentProcessId        0000000100424ebc f   kernel32:KERNEL32.dll
+ 0001:00023ec2       GetCurrentThreadId         0000000100424ec2 f   kernel32:KERNEL32.dll
+ 0001:00023ec8       GetSystemTimeAsFileTime    0000000100424ec8 f   kernel32:KERNEL32.dll
+ 0001:00023ece       DisableThreadLibraryCalls  0000000100424ece f   kernel32:KERNEL32.dll
+ 0001:00023ed4       InitializeSListHead        0000000100424ed4 f   kernel32:KERNEL32.dll
+ 0001:00023eda       GetStartupInfoW            0000000100424eda f   kernel32:KERNEL32.dll
+ 0001:00023ee0       GetModuleHandleW           0000000100424ee0 f   kernel32:KERNEL32.dll
+ 0001:00023ef0       __acrt_initialize          0000000100424ef0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023ef0       __scrt_stub_for_acrt_initialize 0000000100424ef0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023ef0       __vcrt_initialize          0000000100424ef0 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023f00       __acrt_thread_attach       0000000100424f00 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023f00       __scrt_stub_for_acrt_thread_attach 0000000100424f00 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023f00       __vcrt_thread_attach       0000000100424f00 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023f10       __acrt_thread_detach       0000000100424f10 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023f10       __scrt_stub_for_acrt_thread_detach 0000000100424f10 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023f10       __vcrt_thread_detach       0000000100424f10 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023f20       __acrt_uninitialize        0000000100424f20 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023f20       __scrt_stub_for_acrt_uninitialize 0000000100424f20 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023f20       __vcrt_uninitialize        0000000100424f20 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023f30       __acrt_uninitialize_critical 0000000100424f30 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023f30       __scrt_stub_for_acrt_uninitialize_critical 0000000100424f30 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023f30       __vcrt_uninitialize_critical 0000000100424f30 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023f40       __scrt_stub_for_is_c_termination_complete 0000000100424f40 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023f40       _is_c_termination_complete 0000000100424f40 f   MSVCRTD:ucrt_stubs.obj
+ 0001:00023f43       memcpy                     0000000100424f43 f   vcruntimed:VCRUNTIME140D.dll
+ 0001:00023f60       _guard_dispatch_icall_nop  0000000100424f60 f   MSVCRTD:guard_dispatch.obj
+ 0001:00023f80       _guard_xfg_dispatch_icall_nop 0000000100424f80 f   MSVCRTD:guard_xfg_dispatch.obj
+ 0002:00000000       __imp_IsDebuggerPresent    0000000100426000     kernel32:KERNEL32.dll
+ 0002:00000008       __imp_GetModuleHandleW     0000000100426008     kernel32:KERNEL32.dll
+ 0002:00000010       __imp_GetStartupInfoW      0000000100426010     kernel32:KERNEL32.dll
+ 0002:00000018       __imp_InitializeSListHead  0000000100426018     kernel32:KERNEL32.dll
+ 0002:00000020       __imp_DisableThreadLibraryCalls 0000000100426020     kernel32:KERNEL32.dll
+ 0002:00000028       __imp_GetSystemTimeAsFileTime 0000000100426028     kernel32:KERNEL32.dll
+ 0002:00000030       __imp_GetCurrentThreadId   0000000100426030     kernel32:KERNEL32.dll
+ 0002:00000038       __imp_GetCurrentProcessId  0000000100426038     kernel32:KERNEL32.dll
+ 0002:00000040       __imp_QueryPerformanceCounter 0000000100426040     kernel32:KERNEL32.dll
+ 0002:00000048       __imp_IsProcessorFeaturePresent 0000000100426048     kernel32:KERNEL32.dll
+ 0002:00000050       __imp_TerminateProcess     0000000100426050     kernel32:KERNEL32.dll
+ 0002:00000058       __imp_GetCurrentProcess    0000000100426058     kernel32:KERNEL32.dll
+ 0002:00000060       __imp_SetUnhandledExceptionFilter 0000000100426060     kernel32:KERNEL32.dll
+ 0002:00000068       __imp_UnhandledExceptionFilter 0000000100426068     kernel32:KERNEL32.dll
+ 0002:00000070       __imp_RtlVirtualUnwind     0000000100426070     kernel32:KERNEL32.dll
+ 0002:00000078       __imp_RtlLookupFunctionEntry 0000000100426078     kernel32:KERNEL32.dll
+ 0002:00000080       __imp_RtlCaptureContext    0000000100426080     kernel32:KERNEL32.dll
+ 0002:00000088       __imp_OutputDebugStringA   0000000100426088     kernel32:KERNEL32.dll
+ 0002:00000090       __imp_LoadLibraryExA       0000000100426090     kernel32:KERNEL32.dll
+ 0002:00000098       __imp_FormatMessageA       0000000100426098     kernel32:KERNEL32.dll
+ 0002:000000a0       __imp_FreeLibrary          00000001004260a0     kernel32:KERNEL32.dll
+ 0002:000000a8       __imp_LeaveCriticalSection 00000001004260a8     kernel32:KERNEL32.dll
+ 0002:000000b0       __imp_EnterCriticalSection 00000001004260b0     kernel32:KERNEL32.dll
+ 0002:000000b8       __imp_InitializeCriticalSection 00000001004260b8     kernel32:KERNEL32.dll
+ 0002:000000c0       __imp_GetLastError         00000001004260c0     kernel32:KERNEL32.dll
+ 0002:000000c8       __imp_GetProcAddress       00000001004260c8     kernel32:KERNEL32.dll
+ 0002:000000d0       \177KERNEL32_NULL_THUNK_DATA 00000001004260d0     kernel32:KERNEL32.dll
+ 0002:000000d8       __imp___std_type_info_destroy_list 00000001004260d8     vcruntimed:VCRUNTIME140D.dll
+ 0002:000000e0       __imp___C_specific_handler 00000001004260e0     vcruntimed:VCRUNTIME140D.dll
+ 0002:000000e8       __imp___current_exception  00000001004260e8     vcruntimed:VCRUNTIME140D.dll
+ 0002:000000f0       __imp___current_exception_context 00000001004260f0     vcruntimed:VCRUNTIME140D.dll
+ 0002:000000f8       __imp_memcmp               00000001004260f8     vcruntimed:VCRUNTIME140D.dll
+ 0002:00000100       __imp_strchr               0000000100426100     vcruntimed:VCRUNTIME140D.dll
+ 0002:00000108       __imp_memcpy               0000000100426108     vcruntimed:VCRUNTIME140D.dll
+ 0002:00000110       \177VCRUNTIME140D_NULL_THUNK_DATA 0000000100426110     vcruntimed:VCRUNTIME140D.dll
+ 0002:00000118       __imp_getnameinfo          0000000100426118     ws2_32:WS2_32.dll
+ 0002:00000120       __imp_freeaddrinfo         0000000100426120     ws2_32:WS2_32.dll
+ 0002:00000128       __imp_getaddrinfo          0000000100426128     ws2_32:WS2_32.dll
+ 0002:00000130       __imp_htonl                0000000100426130     ws2_32:WS2_32.dll
+ 0002:00000138       \177WS2_32_NULL_THUNK_DATA 0000000100426138     ws2_32:WS2_32.dll
+ 0002:00000140       __imp_etod_clock           0000000100426140     hengine:hengine.dll
+ 0002:00000148       __imp_mpc_display_ptp_th_etc 0000000100426148     hengine:hengine.dll
+ 0002:00000150       __imp_init_sysblk_netdev   0000000100426150     hengine:hengine.dll
+ 0002:00000158       __imp_mpc_display_rrh_and_pix 0000000100426158     hengine:hengine.dll
+ 0002:00000160       __imp_mpc_display_rrh_and_puk 0000000100426160     hengine:hengine.dll
+ 0002:00000168       __imp_mpc_display_rrh      0000000100426168     hengine:hengine.dll
+ 0002:00000170       __imp_mpc_display_description 0000000100426170     hengine:hengine.dll
+ 0002:00000178       __imp_mpc_point_pus        0000000100426178     hengine:hengine.dll
+ 0002:00000180       __imp_device_attention     0000000100426180     hengine:hengine.dll
+ 0002:00000188       __imp_group_device         0000000100426188     hengine:hengine.dll
+ 0002:00000190       \177hengine_NULL_THUNK_DATA 0000000100426190     hengine:hengine.dll
+ 0002:00000198       __imp_sysblk               0000000100426198     hsys:hsys.dll
+ 0002:000001a0       \177hsys_NULL_THUNK_DATA   00000001004261a0     hsys:hsys.dll
+ 0002:000001a8       __imp_getopt_long          00000001004261a8     hutil:hutil.dll
+ 0002:000001b0       __imp_w32_basename         00000001004261b0     hutil:hutil.dll
+ 0002:000001b8       __imp_w32_snprintf         00000001004261b8     hutil:hutil.dll
+ 0002:000001c0       __imp_w32_inet_ntop        00000001004261c0     hutil:hutil.dll
+ 0002:000001c8       __imp_w32_socket           00000001004261c8     hutil:hutil.dll
+ 0002:000001d0       __imp_optind               00000001004261d0     hutil:hutil.dll
+ 0002:000001d8       __imp_sched_yield          00000001004261d8     hutil:hutil.dll
+ 0002:000001e0       __imp_sleep                00000001004261e0     hutil:hutil.dll
+ 0002:000001e8       __imp_usleep               00000001004261e8     hutil:hutil.dll
+ 0002:000001f0       __imp_fwritemsg            00000001004261f0     hutil:hutil.dll
+ 0002:000001f8       __imp_w32_strerror         00000001004261f8     hutil:hutil.dll
+ 0002:00000200       __imp_strlcpy              0000000100426200     hutil:hutil.dll
+ 0002:00000208       __imp_hthread_detach_thread 0000000100426208     hutil:hutil.dll
+ 0002:00000210       __imp_hthread_join_thread  0000000100426210     hutil:hutil.dll
+ 0002:00000218       __imp_hthread_create_thread 0000000100426218     hutil:hutil.dll
+ 0002:00000220       __imp_optarg               0000000100426220     hutil:hutil.dll
+ 0002:00000228       __imp_strlcat              0000000100426228     hutil:hutil.dll
+ 0002:00000230       __imp_w32_if_nametoindex   0000000100426230     hutil:hutil.dll
+ 0002:00000238       __imp_w32_inet_pton        0000000100426238     hutil:hutil.dll
+ 0002:00000240       __imp_guest_to_host        0000000100426240     hutil:hutil.dll
+ 0002:00000248       __imp_gettimeofday         0000000100426248     hutil:hutil.dll
+ 0002:00000250       __imp_logmsg               0000000100426250     hutil:hutil.dll
+ 0002:00000258       __imp_hdl_getpath          0000000100426258     hutil:hutil.dll
+ 0002:00000260       __imp_inet_aton            0000000100426260     hutil:hutil.dll
+ 0002:00000268       __imp_hthread_initialize_lock 0000000100426268     hutil:hutil.dll
+ 0002:00000270       __imp_hthread_obtain_lock  0000000100426270     hutil:hutil.dll
+ 0002:00000278       __imp_hthread_release_lock 0000000100426278     hutil:hutil.dll
+ 0002:00000280       __imp_get_symbol           0000000100426280     hutil:hutil.dll
+ 0002:00000288       __imp_hthread_initialize_condition 0000000100426288     hutil:hutil.dll
+ 0002:00000290       __imp_hthread_signal_condition 0000000100426290     hutil:hutil.dll
+ 0002:00000298       __imp_hthread_timed_wait_condition 0000000100426298     hutil:hutil.dll
+ 0002:000002a0       \177hutil_NULL_THUNK_DATA  00000001004262a0     hutil:hutil.dll
+ 0002:000002a8       __imp_isspace              00000001004262a8     ucrtd:ucrtbased.dll
+ 0002:000002b0       __imp__fullpath            00000001004262b0     ucrtd:ucrtbased.dll
+ 0002:000002b8       __imp___stdio_common_vsprintf 00000001004262b8     ucrtd:ucrtbased.dll
+ 0002:000002c0       __imp__initterm            00000001004262c0     ucrtd:ucrtbased.dll
+ 0002:000002c8       __imp__initterm_e          00000001004262c8     ucrtd:ucrtbased.dll
+ 0002:000002d0       __imp__seh_filter_dll      00000001004262d0     ucrtd:ucrtbased.dll
+ 0002:000002d8       __imp__configure_narrow_argv 00000001004262d8     ucrtd:ucrtbased.dll
+ 0002:000002e0       __imp__initialize_narrow_environment 00000001004262e0     ucrtd:ucrtbased.dll
+ 0002:000002e8       __imp__initialize_onexit_table 00000001004262e8     ucrtd:ucrtbased.dll
+ 0002:000002f0       __imp__register_onexit_function 00000001004262f0     ucrtd:ucrtbased.dll
+ 0002:000002f8       __imp__execute_onexit_table 00000001004262f8     ucrtd:ucrtbased.dll
+ 0002:00000300       __imp__crt_atexit          0000000100426300     ucrtd:ucrtbased.dll
+ 0002:00000308       __imp__crt_at_quick_exit   0000000100426308     ucrtd:ucrtbased.dll
+ 0002:00000310       __imp__cexit               0000000100426310     ucrtd:ucrtbased.dll
+ 0002:00000318       __imp_terminate            0000000100426318     ucrtd:ucrtbased.dll
+ 0002:00000320       __imp__close               0000000100426320     ucrtd:ucrtbased.dll
+ 0002:00000320       __imp_close                0000000100426320     ucrtd:ucrtbased.dll
+ 0002:00000328       __imp__getpid              0000000100426328     ucrtd:ucrtbased.dll
+ 0002:00000328       __imp_getpid               0000000100426328     ucrtd:ucrtbased.dll
+ 0002:00000330       __imp__strdup              0000000100426330     ucrtd:ucrtbased.dll
+ 0002:00000330       __imp_strdup               0000000100426330     ucrtd:ucrtbased.dll
+ 0002:00000338       __imp___stdio_common_vsscanf 0000000100426338     ucrtd:ucrtbased.dll
+ 0002:00000340       __imp_strncpy              0000000100426340     ucrtd:ucrtbased.dll
+ 0002:00000348       __imp_isprint              0000000100426348     ucrtd:ucrtbased.dll
+ 0002:00000350       __imp_isxdigit             0000000100426350     ucrtd:ucrtbased.dll
+ 0002:00000358       __imp___acrt_iob_func      0000000100426358     ucrtd:ucrtbased.dll
+ 0002:00000360       __imp_atoi                 0000000100426360     ucrtd:ucrtbased.dll
+ 0002:00000368       __imp_rand                 0000000100426368     ucrtd:ucrtbased.dll
+ 0002:00000370       __imp__byteswap_uint64     0000000100426370     ucrtd:ucrtbased.dll
+ 0002:00000378       __imp__byteswap_ulong      0000000100426378     ucrtd:ucrtbased.dll
+ 0002:00000380       __imp__byteswap_ushort     0000000100426380     ucrtd:ucrtbased.dll
+ 0002:00000388       __imp_malloc               0000000100426388     ucrtd:ucrtbased.dll
+ 0002:00000390       __imp_free                 0000000100426390     ucrtd:ucrtbased.dll
+ 0002:00000398       __imp_strlen               0000000100426398     ucrtd:ucrtbased.dll
+ 0002:000003a0       __imp_strcpy               00000001004263a0     ucrtd:ucrtbased.dll
+ 0002:000003a8       __imp_strcmp               00000001004263a8     ucrtd:ucrtbased.dll
+ 0002:000003b0       __imp__errno               00000001004263b0     ucrtd:ucrtbased.dll
+ 0002:000003b8       __imp___stdio_common_vsnprintf_s 00000001004263b8     ucrtd:ucrtbased.dll
+ 0002:000003c0       \177ucrtbased_NULL_THUNK_DATA 00000001004263c0     ucrtd:ucrtbased.dll
+ 0002:000003c8       __guard_check_icall_fptr   00000001004263c8     MSVCRTD:guard_support.obj
+ 0002:000003d0       __guard_xfg_check_icall_fptr 00000001004263d0     MSVCRTD:guard_support.obj
+ 0002:000003d8       __guard_dispatch_icall_fptr 00000001004263d8     MSVCRTD:guard_support.obj
+ 0002:000003e0       __guard_xfg_dispatch_icall_fptr 00000001004263e0     MSVCRTD:guard_support.obj
+ 0002:000003e8       __guard_xfg_table_dispatch_icall_fptr 00000001004263e8     MSVCRTD:guard_support.obj
+ 0002:000003f0       __castguard_check_failure_os_handled_fptr 00000001004263f0     MSVCRTD:guard_support.obj
+ 0002:000003f8       __guard_memcpy_fptr        00000001004263f8     vcruntimed:softmemtag.obj
+ 0002:00000400       __xc_a                     0000000100426400     MSVCRTD:initializers.obj
+ 0002:00000408       __xc_z                     0000000100426408     MSVCRTD:initializers.obj
+ 0002:00000410       __xi_a                     0000000100426410     MSVCRTD:initializers.obj
+ 0002:00000418       __xi_z                     0000000100426418     MSVCRTD:initializers.obj
+ 0002:00000420       __xp_a                     0000000100426420     MSVCRTD:initializers.obj
+ 0002:00000428       __xp_z                     0000000100426428     MSVCRTD:initializers.obj
+ 0002:00000430       __xt_a                     0000000100426430     MSVCRTD:initializers.obj
+ 0002:00000438       __xt_z                     0000000100426438     MSVCRTD:initializers.obj
+ 0002:00000cb0       __real@4070000000000000    0000000100426cb0     ctc_ptp.obj
+ 0002:00000cb8       __real@40e0000000000000    0000000100426cb8     ctc_ptp.obj
+ 0002:00000cd8       _pDefaultRawDllMain        0000000100426cd8     MSVCRTD:dll_dllmain.obj
+ 0002:00000cd8       _pRawDllMain               0000000100426cd8     MSVCRTD:dll_dllmain.obj
+ 0002:00000cf0       _load_config_used          0000000100426cf0     MSVCRTD:loadcfg.obj
+ 0002:00000f00       __CastGuardVftablesStart   0000000100426f00     MSVCRTD:guard_support.obj
+ 0002:00000f80       __CastGuardVftablesEnd     0000000100426f80     MSVCRTD:guard_support.obj
+ 0002:00001000       __volatile_metadata        0000000100427000     <linker-defined>
+ 0002:000014c8       __rtc_iaa                  00000001004274c8     MSVCRTD:initsect.obj
+ 0002:000014d0       __rtc_izz                  00000001004274d0     MSVCRTD:initsect.obj
+ 0002:000014d8       __rtc_taa                  00000001004274d8     MSVCRTD:initsect.obj
+ 0002:000014e0       __rtc_tzz                  00000001004274e0     MSVCRTD:initsect.obj
+ 0002:00001de8       __IMPORT_DESCRIPTOR_hengine 0000000100427de8     hengine:hengine.dll
+ 0002:00001dfc       __IMPORT_DESCRIPTOR_hutil  0000000100427dfc     hutil:hutil.dll
+ 0002:00001e10       __IMPORT_DESCRIPTOR_hsys   0000000100427e10     hsys:hsys.dll
+ 0002:00001e24       __IMPORT_DESCRIPTOR_KERNEL32 0000000100427e24     kernel32:KERNEL32.dll
+ 0002:00001e38       __IMPORT_DESCRIPTOR_WS2_32 0000000100427e38     ws2_32:WS2_32.dll
+ 0002:00001e4c       __IMPORT_DESCRIPTOR_VCRUNTIME140D 0000000100427e4c     vcruntimed:VCRUNTIME140D.dll
+ 0002:00001e60       __IMPORT_DESCRIPTOR_ucrtbased 0000000100427e60     ucrtd:ucrtbased.dll
+ 0002:00001e74       __NULL_IMPORT_DESCRIPTOR   0000000100427e74     hengine:hengine.dll
+ 0003:00000000       ptp_device_hndinfo         0000000100429000     ctc_ptp.obj
+ 0003:00006a80       __security_cookie_complement 000000010042fa80     MSVCRTD:gs_cookie.obj
+ 0003:00006a88       __security_cookie          000000010042fa88     MSVCRTD:gs_cookie.obj
+ 0003:00006a90       _fltused                   000000010042fa90     MSVCRTD:fltused.obj
+ 0003:00006a94       __scrt_native_dllmain_reason 000000010042fa94     MSVCRTD:utility.obj
+ 0003:00006a98       __isa_available            000000010042fa98     MSVCRTD:cpu_disp.obj
+ 0003:00006a9c       __isa_enabled              000000010042fa9c     MSVCRTD:cpu_disp.obj
+ 0003:00006aa0       __memset_fast_string_threshold 000000010042faa0     MSVCRTD:cpu_disp.obj
+ 0003:00006aa8       __memset_nt_threshold      000000010042faa8     MSVCRTD:cpu_disp.obj
+ 0003:00006ab0       __scrt_ucrt_dll_is_in_use  000000010042fab0     MSVCRTD:ucrt_stubs.obj
+ 0003:00006ad0       g_tt32_hmoddll             000000010042fad0     w32ctca.obj
+ 0003:00006ad8       g_tt32_pfn_open_ex         000000010042fad8     w32ctca.obj
+ 0003:00006ae0       g_tt32_pfn_open            000000010042fae0     w32ctca.obj
+ 0003:00006ae8       g_tt32_pfn_close_ex        000000010042fae8     w32ctca.obj
+ 0003:00006af0       g_tt32_pfn_close           000000010042faf0     w32ctca.obj
+ 0003:00006af8       g_tt32_pfn_read_ex         000000010042faf8     w32ctca.obj
+ 0003:00006b00       g_tt32_pfn_read            000000010042fb00     w32ctca.obj
+ 0003:00006b08       g_tt32_pfn_write_ex        000000010042fb08     w32ctca.obj
+ 0003:00006b10       g_tt32_pfn_write           000000010042fb10     w32ctca.obj
+ 0003:00006b18       g_tt32_pfn_ioctl_ex        000000010042fb18     w32ctca.obj
+ 0003:00006b20       g_tt32_pfn_ioctl           000000010042fb20     w32ctca.obj
+ 0003:00006b28       g_tt32_pfn_get_stats_ex    000000010042fb28     w32ctca.obj
+ 0003:00006b30       g_tt32_pfn_get_stats       000000010042fb30     w32ctca.obj
+ 0003:00006b38       g_tt32_pfn_get_default_iface_ex 000000010042fb38     w32ctca.obj
+ 0003:00006b40       g_tt32_pfn_get_default_iface 000000010042fb40     w32ctca.obj
+ 0003:00006b48       g_tt32_pfn_set_debug_output_func_ex 000000010042fb48     w32ctca.obj
+ 0003:00006b50       g_tt32_pfn_set_debug_output_func 000000010042fb50     w32ctca.obj
+ 0003:00006b58       g_tt32_pfn_version_string_ex 000000010042fb58     w32ctca.obj
+ 0003:00006b60       g_tt32_pfn_version_string  000000010042fb60     w32ctca.obj
+ 0003:00006b68       g_tt32_pfn_version_numbers_ex 000000010042fb68     w32ctca.obj
+ 0003:00006b70       g_tt32_pfn_version_numbers 000000010042fb70     w32ctca.obj
+ 0003:00006b78       g_tt32_pfn_copyright_string_ex 000000010042fb78     w32ctca.obj
+ 0003:00006b80       g_tt32_pfn_copyright_string 000000010042fb80     w32ctca.obj
+ 0003:00006b88       g_tt32_pfn_build_herc_iface_mac_ex 000000010042fb88     w32ctca.obj
+ 0003:00006b90       g_tt32_pfn_build_herc_iface_mac 000000010042fb90     w32ctca.obj
+ 0003:00006b98       g_tt32_pfn_beg_write_multi_ex 000000010042fb98     w32ctca.obj
+ 0003:00006ba0       g_tt32_pfn_beg_write_multi 000000010042fba0     w32ctca.obj
+ 0003:00006ba8       g_tt32_pfn_end_write_multi_ex 000000010042fba8     w32ctca.obj
+ 0003:00006bb0       g_tt32_pfn_end_write_multi 000000010042fbb0     w32ctca.obj
+ 0003:00006bc0       g_tt32_dllname             000000010042fbc0     w32ctca.obj
+ 0003:00007340       ?__type_info_root_node@@3U__type_info_node@@A 0000000100430340     MSVCRTD:tncleanup.obj
+ 0003:00007350       ?_OptionsStorage@?1??__local_stdio_printf_options@@9@4_KA 0000000100430350     MSVCRTD:default_local_stdio_options.obj
+ 0003:00007358       ?_OptionsStorage@?1??__local_stdio_scanf_options@@9@4_KA 0000000100430358     MSVCRTD:default_local_stdio_options.obj
+ 0003:00007360       __scrt_current_native_startup_state 0000000100430360     MSVCRTD:utility.obj
+ 0003:00007368       __scrt_native_startup_lock 0000000100430368     MSVCRTD:utility.obj
+ 0003:000073a8       __scrt_debugger_hook_flag  00000001004303a8     MSVCRTD:utility_desktop.obj
+ 0003:000073ac       __favor                    00000001004303ac     MSVCRTD:cpu_disp.obj
+ 0003:000073c0       ?buff@?1??gai_strerrorA@@9@9 00000001004303c0     <common>
+ 0003:000077e0       g_tt32_lock                00000001004307e0     <common>
+ 0003:00007808       ?_OptionsStorage@?1??__local_stdio_scanf_options@@9@9 0000000100430808     <common>
+ 0003:00007810       ?_OptionsStorage@?1??__local_stdio_printf_options@@9@9 0000000100430810     <common>
+ 0003:00007818       __@@_PchSym_@00@UkzkzUnbtrgUsbkvirlmRaevxgliUnhexOwvyftOznwGEOlyqUyfrowPkxsOlyq@4B2008FD98C1DD4 0000000100430818     <common>
+ 0003:00007820       __dyn_tls_init_callback    0000000100430820     <common>
+
+ entry point at        0001:000222c0
+
+ Static symbols
+
+ 0000:00000000       _volmd                     0000000100400000     ctc_ptp.obj
+ 0000:fffb9000       .debug$S                   0000000100400000     hdtptp.exp
+ 0002:fffda000       $unwind$_vsnprintf_s       0000000100400000     tuntap.obj
+ 0002:fffda000       $unwind$_vsnprintf_s_l     0000000100400000     tuntap.obj
+ 0000:00000000       _volmd                     0000000100400000     tuntap.obj
+ 0002:fffda000       $unwind$_vsnprintf_s       0000000100400000     w32ctca.obj
+ 0002:fffda000       $unwind$_vsnprintf_s_l     0000000100400000     w32ctca.obj
+ 0000:00000000       _volmd                     0000000100400000     w32ctca.obj
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     kernel32:KERNEL32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ws2_32:WS2_32.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     ucrtd:ucrtbased.dll
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:cpu_disp.obj
+ 0002:fffda000       __guard_ehcont_?dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 0000000100400000     MSVCRTD:dll_dllmain.obj
+ 0002:fffda000       __guard_fids_?dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 0000000100400000     MSVCRTD:dll_dllmain.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:gs_report.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:gs_report.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:gs_report.obj
+ 0002:fffda000       __guard_fids__             0000000100400000     MSVCRTD:guard_support.obj
+ 0002:fffda000       __guard_fids__             0000000100400000     MSVCRTD:guard_support.obj
+ 0002:fffda000       __guard_fids__guard_icall_checks_enforced 0000000100400000     MSVCRTD:guard_support.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:guard_support.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:guard_support.obj
+ 0002:fffda000       __guard_ehcont___scrt_is_nonwritable_in_current_image 0000000100400000     MSVCRTD:utility.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:utility.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:utility.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:utility.obj
+ 0002:fffda000       __guard_fids___scrt_set_unhandled_exception_filter 0000000100400000     MSVCRTD:utility_desktop.obj
+ 0000:00000000       _volmd                     0000000100400000     MSVCRTD:utility_desktop.obj
+ 0002:fffda000       __guard_fids__             0000000100400000     vcruntimed:softmemtag.obj
+ 0000:fffb9000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     vcruntimed:VCRUNTIME140D.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hengine:hengine.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hsys:hsys.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:fffb9000       .debug$S                   0000000100400000     hutil:hutil.dll
+ 0000:00000010       _volmd                     0000000100400010     ctc_ptp.obj
+ 0000:00000010       _volmd                     0000000100400010     tuntap.obj
+ 0000:00000010       _volmd                     0000000100400010     w32ctca.obj
+ 0000:00000020       _volmd                     0000000100400020     ctc_ptp.obj
+ 0000:00000020       _volmd                     0000000100400020     tuntap.obj
+ 0000:00000030       _volmd                     0000000100400030     ctc_ptp.obj
+ 0000:00000030       _volmd                     0000000100400030     tuntap.obj
+ 0000:00000040       _volmd                     0000000100400040     ctc_ptp.obj
+ 0000:00000040       _volmd                     0000000100400040     tuntap.obj
+ 0000:00000050       _volmd                     0000000100400050     ctc_ptp.obj
+ 0000:00000050       _volmd                     0000000100400050     tuntap.obj
+ 0000:00000060       _volmd                     0000000100400060     ctc_ptp.obj
+ 0000:00000060       _volmd                     0000000100400060     tuntap.obj
+ 0000:00000070       _volmd                     0000000100400070     ctc_ptp.obj
+ 0000:00000070       _volmd                     0000000100400070     tuntap.obj
+ 0000:00000080       _volmd                     0000000100400080     ctc_ptp.obj
+ 0000:00000080       _volmd                     0000000100400080     tuntap.obj
+ 0000:00000090       _volmd                     0000000100400090     ctc_ptp.obj
+ 0000:00000090       _volmd                     0000000100400090     tuntap.obj
+ 0000:000000a0       _volmd                     00000001004000a0     ctc_ptp.obj
+ 0000:000000a0       _volmd                     00000001004000a0     tuntap.obj
+ 0000:000000b0       _volmd                     00000001004000b0     ctc_ptp.obj
+ 0000:000000b0       _volmd                     00000001004000b0     tuntap.obj
+ 0000:000000c0       _volmd                     00000001004000c0     ctc_ptp.obj
+ 0000:000000c0       _volmd                     00000001004000c0     tuntap.obj
+ 0000:000000d0       _volmd                     00000001004000d0     ctc_ptp.obj
+ 0000:000000d0       _volmd                     00000001004000d0     tuntap.obj
+ 0000:000000e0       _volmd                     00000001004000e0     ctc_ptp.obj
+ 0000:000000e0       _volmd                     00000001004000e0     tuntap.obj
+ 0000:000000f0       _volmd                     00000001004000f0     ctc_ptp.obj
+ 0000:00000100       _volmd                     0000000100400100     ctc_ptp.obj
+ 0000:00000110       _volmd                     0000000100400110     ctc_ptp.obj
+ 0000:00000120       _volmd                     0000000100400120     ctc_ptp.obj
+ 0000:00000130       _volmd                     0000000100400130     ctc_ptp.obj
+ 0000:00000140       _volmd                     0000000100400140     ctc_ptp.obj
+ 0001:00000000       DebuggerTrace              0000000100401000 f   ctc_ptp.obj
+ 0001:00000100       ETOD2TOD                   0000000100401100 f   ctc_ptp.obj
+ 0001:00000130       SetSIDInfo                 0000000100401130 f   ctc_ptp.obj
+ 0001:00000250       ptp_init                   0000000100401250 f   ctc_ptp.obj
+ 0001:00001650       ptp_execute_ccw            0000000100402650 f   ctc_ptp.obj
+ 0001:00001c3c       $LN35                      0000000100402c3c     ctc_ptp.obj
+ 0001:00001c64       $LN34                      0000000100402c64     ctc_ptp.obj
+ 0001:00001d50       ptp_close                  0000000100402d50 f   ctc_ptp.obj
+ 0001:00001df0       ptp_query                  0000000100402df0 f   ctc_ptp.obj
+ 0001:000022c0       ptp_write                  00000001004032c0 f   ctc_ptp.obj
+ 0001:000029b0       write_th                   00000001004039b0 f   ctc_ptp.obj
+ 0001:00002d00       write_rrh_8108             0000000100403d00 f   ctc_ptp.obj
+ 0001:00003950       ptp_halt_or_clear          0000000100404950 f   ctc_ptp.obj
+ 0001:00003a00       ptp_read                   0000000100404a00 f   ctc_ptp.obj
+ 0001:00003e70       read_read_buffer           0000000100404e70 f   ctc_ptp.obj
+ 0001:000045f0       read_chain_buffer          00000001004055f0 f   ctc_ptp.obj
+ 0001:00004ac0       ptp_read_thread            0000000100405ac0 f   ctc_ptp.obj
+ 0001:00005a90       add_buffer_to_chain_and_signal_event 0000000100406a90 f   ctc_ptp.obj
+ 0001:00005bc0       add_buffer_to_chain        0000000100406bc0 f   ctc_ptp.obj
+ 0001:00005c90       remove_buffer_from_chain   0000000100406c90 f   ctc_ptp.obj
+ 0001:00005d50       remove_and_free_any_buffers_on_chain 0000000100406d50 f   ctc_ptp.obj
+ 0001:00005e00       alloc_ptp_buffer           0000000100406e00 f   ctc_ptp.obj
+ 0001:00005f80       alloc_storage              0000000100406f80 f   ctc_ptp.obj
+ 0001:000060f0       parse_conf_stmt            00000001004070f0 f   ctc_ptp.obj
+ 0001:00008014       $LN93                      0000000100409014     ctc_ptp.obj
+ 0001:00008038       $LN92                      0000000100409038     ctc_ptp.obj
+ 0001:00008080       get_preconfigured_value    0000000100409080 f   ctc_ptp.obj
+ 0001:00008150       check_specified_value      0000000100409150 f   ctc_ptp.obj
+ 0001:000085f0       raise_unsol_int            00000001004095f0 f   ctc_ptp.obj
+ 0001:00008860       ptp_unsol_int_thread       0000000100409860 f   ctc_ptp.obj
+ 0001:00008c60       ptp_get_tod_clock          0000000100409c60 f   ctc_ptp.obj
+ 0001:00008d70       get_subarea_address        0000000100409d70 f   ctc_ptp.obj
+ 0001:00008ed0       write_hx0_01               0000000100409ed0 f   ctc_ptp.obj
+ 0001:00009530       write_hx0_00               000000010040a530 f   ctc_ptp.obj
+ 0001:000095f0       write_hx2                  000000010040a5f0 f   ctc_ptp.obj
+ 0001:0000a080       point_CSVcv                000000010040b080 f   ctc_ptp.obj
+ 0001:0000a120       write_rrh_417E             000000010040b120 f   ctc_ptp.obj
+ 0001:0000b2d4       $LN67                      000000010040c2d4     ctc_ptp.obj
+ 0001:0000b310       build_417E_cm_enable       000000010040c310 f   ctc_ptp.obj
+ 0001:0000b9c0       build_417E_cm_setup        000000010040c9c0 f   ctc_ptp.obj
+ 0001:0000be60       build_417E_cm_confirm      000000010040ce60 f   ctc_ptp.obj
+ 0001:0000c300       build_417E_ulp_enable      000000010040d300 f   ctc_ptp.obj
+ 0001:0000c870       build_417E_ulp_setup       000000010040d870 f   ctc_ptp.obj
+ 0001:0000ce20       build_417E_ulp_confirm     000000010040de20 f   ctc_ptp.obj
+ 0001:0000d3d0       build_417E_dm_act          000000010040e3d0 f   ctc_ptp.obj
+ 0001:0000d700       write_rrh_C17E             000000010040e700 f   ctc_ptp.obj
+ 0001:0000d8f0       write_rrh_C108             000000010040e8f0 f   ctc_ptp.obj
+ 0001:0000f9b8       $LN135                     00000001004109b8     ctc_ptp.obj
+ 0001:0000f9f0       build_C108_will_you_start_4 00000001004109f0 f   ctc_ptp.obj
+ 0001:0000fc90       build_C108_will_you_start_6 0000000100410c90 f   ctc_ptp.obj
+ 0001:0000ff30       build_C108_i_will_start_4  0000000100410f30 f   ctc_ptp.obj
+ 0001:000101d0       build_C108_i_will_start_6  00000001004111d0 f   ctc_ptp.obj
+ 0001:00010470       build_C108_my_address_4    0000000100411470 f   ctc_ptp.obj
+ 0001:00010720       build_C108_my_address_6    0000000100411720 f   ctc_ptp.obj
+ 0001:00010a10       build_C108_your_address_4  0000000100411a10 f   ctc_ptp.obj
+ 0001:00010cc0       build_C108_your_address_6  0000000100411cc0 f   ctc_ptp.obj
+ 0001:00010f80       build_C108_will_you_stop_4 0000000100411f80 f   ctc_ptp.obj
+ 0001:00011220       build_C108_will_you_stop_6 0000000100412220 f   ctc_ptp.obj
+ 0001:000114c0       build_C108_i_will_stop_4   00000001004124c0 f   ctc_ptp.obj
+ 0001:00011740       build_C108_i_will_stop_6   0000000100412740 f   ctc_ptp.obj
+ 0001:000119c0       build_8108_icmpv6_packets  00000001004129c0 f   ctc_ptp.obj
+ 0001:00012b70       gen_csv_sid                0000000100413b70 f   ctc_ptp.obj
+ 0001:0001cab0       shift_left_dbl             000000010041dab0 f   ctc_ptp.obj
+ 0001:0001cb30       shift_right_dbl            000000010041db30 f   ctc_ptp.obj
+ 0001:0001cbb0       calculate_icmpv6_checksum  000000010041dbb0 f   ctc_ptp.obj
+ 0001:0001d180       DebuggerTrace              000000010041e180 f   tuntap.obj
+ 0001:0001f5e0       TUNTAP_SetMode             00000001004205e0 f   tuntap.obj
+ 0001:0001f6d0       DebuggerTrace              00000001004206d0 f   w32ctca.obj
+ 0001:00021e80       ?dllmain_crt_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 0000000100422e80 f   MSVCRTD:dll_dllmain.obj
+ 0001:00021f10       ?dllmain_crt_process_attach@@YAHQEAUHINSTANCE__@@QEAX@Z 0000000100422f10 f   MSVCRTD:dll_dllmain.obj
+ 0001:00022050       ?dllmain_crt_process_detach@@YAH_N@Z 0000000100423050 f   MSVCRTD:dll_dllmain.obj
+ 0001:000220f0       ?dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 00000001004230f0 f   MSVCRTD:dll_dllmain.obj
+ 0001:00022230       ?dllmain_raw@@YAHQEAUHINSTANCE__@@KQEAX@Z 0000000100423230 f   MSVCRTD:dll_dllmain.obj
+ 0001:000225f0       capture_current_context    00000001004235f0 f   MSVCRTD:gs_report.obj
+ 0001:00022690       capture_previous_context   0000000100423690 f   MSVCRTD:gs_report.obj
+ 0001:00022890       $$000000                   0000000100423890     MSVCRTD:chkstk.obj
+ 0001:000228f0       $$000000                   00000001004238f0     MSVCRTD:amdsecgs.obj
+ 0001:00022920       __get_entropy              0000000100423920 f   MSVCRTD:gs_support.obj
+ 0001:00022b50       ?find_pe_section@@YAPEAU_IMAGE_SECTION_HEADER@@QEAE_K@Z 0000000100423b50 f   MSVCRTD:utility.obj
+ 0001:00022c30       ?is_potentially_valid_image_base@@YA_NQEAX@Z 0000000100423c30 f   MSVCRTD:utility.obj
+ 0001:00023750       __castguard_check_failure_os_handled_wrapper 0000000100424750 f   MSVCRTD:guard_support.obj
+ 0001:00023780       __castguard_compat_check   0000000100424780 f   MSVCRTD:guard_support.obj
+ 0001:000238e0       __castguard_slow_path_compat_check 00000001004248e0 f   MSVCRTD:guard_support.obj
+ 0001:00023f50       $$000000                   0000000100424f50     MSVCRTD:guard_dispatch.obj
+ 0001:00023f70       $$000000                   0000000100424f70     MSVCRTD:guard_xfg_dispatch.obj
+ 0001:00023f90       ?fin$0@?0??dllmain_crt_process_attach@@YAHQEAUHINSTANCE__@@QEAX@Z@4HA 0000000100424f90 f   MSVCRTD:dll_dllmain.obj
+ 0001:00023fb0       ?fin$0@?0??dllmain_crt_process_detach@@YAH_N@Z@4HA 0000000100424fb0 f   MSVCRTD:dll_dllmain.obj
+ 0001:00023fca       ?fin$1@?0??dllmain_crt_process_detach@@YAH_N@Z@4HA 0000000100424fca f   MSVCRTD:dll_dllmain.obj
+ 0001:00023fe0       ?filt$0@?0??dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z@4HA 0000000100424fe0 f   MSVCRTD:dll_dllmain.obj
+ 0001:00024030       __scrt_is_nonwritable_in_current_image$filt$0 0000000100425030 f   MSVCRTD:utility.obj
+ 0002:00000440       CKD_ENDTRK                 0000000100426440     ctc_ptp.obj
+ 0002:00000448       VTAM_ebcdic                0000000100426448     ctc_ptp.obj
+ 0002:00000450       ?XorConstant@?1??gen_csv_sid@@9@9 0000000100426450     ctc_ptp.obj
+ 0002:00000c50       ?OrConstant@?1??gen_csv_sid@@9@9 0000000100426c50     ctc_ptp.obj
+ 0002:00000cc0       CKD_ENDTRK                 0000000100426cc0     tuntap.obj
+ 0002:00000cc8       CKD_ENDTRK                 0000000100426cc8     w32ctca.obj
+ 0002:00000cd0       CKD_ENDTRK                 0000000100426cd0     resolve.obj
+ 0002:00000ce0       GS_ExceptionPointers       0000000100426ce0     MSVCRTD:gs_report.obj
+ 0002:000014e8       $unwind$_vsnprintf_s_l     00000001004274e8     ctc_ptp.obj
+ 0002:000014f0       $unwind$_vsnprintf_s       00000001004274f0     ctc_ptp.obj
+ 0002:000014f8       $unwind$DebuggerTrace      00000001004274f8     ctc_ptp.obj
+ 0002:00001500       $unwind$SetSIDInfo         0000000100427500     ctc_ptp.obj
+ 0002:00001508       $unwind$ptp_init           0000000100427508     ctc_ptp.obj
+ 0002:0000151c       $unwind$ptp_execute_ccw    000000010042751c     ctc_ptp.obj
+ 0002:00001528       $unwind$ptp_close          0000000100427528     ctc_ptp.obj
+ 0002:00001530       $unwind$ptp_query          0000000100427530     ctc_ptp.obj
+ 0002:00001540       $unwind$ptp_write          0000000100427540     ctc_ptp.obj
+ 0002:00001548       $unwind$write_th           0000000100427548     ctc_ptp.obj
+ 0002:00001550       $unwind$write_rrh_8108     0000000100427550     ctc_ptp.obj
+ 0002:00001564       $unwind$ptp_halt_or_clear  0000000100427564     ctc_ptp.obj
+ 0002:0000156c       $unwind$ptp_read           000000010042756c     ctc_ptp.obj
+ 0002:00001580       $unwind$read_read_buffer   0000000100427580     ctc_ptp.obj
+ 0002:0000158c       $unwind$read_chain_buffer  000000010042758c     ctc_ptp.obj
+ 0002:00001598       $unwind$ptp_read_thread    0000000100427598     ctc_ptp.obj
+ 0002:000015ac       $unwind$add_buffer_to_chain_and_signal_event 00000001004275ac     ctc_ptp.obj
+ 0002:000015b4       $unwind$add_buffer_to_chain 00000001004275b4     ctc_ptp.obj
+ 0002:000015bc       $unwind$remove_buffer_from_chain 00000001004275bc     ctc_ptp.obj
+ 0002:000015c4       $unwind$remove_and_free_any_buffers_on_chain 00000001004275c4     ctc_ptp.obj
+ 0002:000015cc       $unwind$alloc_ptp_buffer   00000001004275cc     ctc_ptp.obj
+ 0002:000015e0       $unwind$alloc_storage      00000001004275e0     ctc_ptp.obj
+ 0002:000015f4       $unwind$parse_conf_stmt    00000001004275f4     ctc_ptp.obj
+ 0002:00001608       $unwind$get_preconfigured_value 0000000100427608     ctc_ptp.obj
+ 0002:00001610       $unwind$check_specified_value 0000000100427610     ctc_ptp.obj
+ 0002:00001624       $unwind$raise_unsol_int    0000000100427624     ctc_ptp.obj
+ 0002:00001634       $unwind$ptp_unsol_int_thread 0000000100427634     ctc_ptp.obj
+ 0002:00001644       $unwind$ptp_get_tod_clock  0000000100427644     ctc_ptp.obj
+ 0002:00001658       $unwind$get_subarea_address 0000000100427658     ctc_ptp.obj
+ 0002:0000166c       $unwind$write_hx0_01       000000010042766c     ctc_ptp.obj
+ 0002:00001678       $unwind$write_hx0_00       0000000100427678     ctc_ptp.obj
+ 0002:00001680       $unwind$write_hx2          0000000100427680     ctc_ptp.obj
+ 0002:0000168c       $unwind$point_CSVcv        000000010042768c     ctc_ptp.obj
+ 0002:00001694       $unwind$write_rrh_417E     0000000100427694     ctc_ptp.obj
+ 0002:0000169c       $unwind$build_417E_cm_enable 000000010042769c     ctc_ptp.obj
+ 0002:000016ac       $unwind$build_417E_cm_setup 00000001004276ac     ctc_ptp.obj
+ 0002:000016bc       $unwind$build_417E_cm_confirm 00000001004276bc     ctc_ptp.obj
+ 0002:000016cc       $unwind$build_417E_ulp_enable 00000001004276cc     ctc_ptp.obj
+ 0002:000016d8       $unwind$build_417E_ulp_setup 00000001004276d8     ctc_ptp.obj
+ 0002:000016ec       $unwind$build_417E_ulp_confirm 00000001004276ec     ctc_ptp.obj
+ 0002:00001700       $unwind$build_417E_dm_act  0000000100427700     ctc_ptp.obj
+ 0002:00001708       $unwind$write_rrh_C17E     0000000100427708     ctc_ptp.obj
+ 0002:00001710       $unwind$write_rrh_C108     0000000100427710     ctc_ptp.obj
+ 0002:00001724       $unwind$build_C108_will_you_start_4 0000000100427724     ctc_ptp.obj
+ 0002:0000172c       $unwind$build_C108_will_you_start_6 000000010042772c     ctc_ptp.obj
+ 0002:00001734       $unwind$build_C108_i_will_start_4 0000000100427734     ctc_ptp.obj
+ 0002:0000173c       $unwind$build_C108_i_will_start_6 000000010042773c     ctc_ptp.obj
+ 0002:00001744       $unwind$build_C108_my_address_4 0000000100427744     ctc_ptp.obj
+ 0002:0000174c       $unwind$build_C108_my_address_6 000000010042774c     ctc_ptp.obj
+ 0002:00001758       $unwind$build_C108_your_address_4 0000000100427758     ctc_ptp.obj
+ 0002:00001760       $unwind$build_C108_your_address_6 0000000100427760     ctc_ptp.obj
+ 0002:0000176c       $unwind$build_C108_will_you_stop_4 000000010042776c     ctc_ptp.obj
+ 0002:00001774       $unwind$build_C108_will_you_stop_6 0000000100427774     ctc_ptp.obj
+ 0002:0000177c       $unwind$build_C108_i_will_stop_4 000000010042777c     ctc_ptp.obj
+ 0002:00001784       $unwind$build_C108_i_will_stop_6 0000000100427784     ctc_ptp.obj
+ 0002:0000178c       $unwind$build_8108_icmpv6_packets 000000010042778c     ctc_ptp.obj
+ 0002:00001798       $unwind$gen_csv_sid        0000000100427798     ctc_ptp.obj
+ 0002:000017a8       $unwind$shift_left_dbl     00000001004277a8     ctc_ptp.obj
+ 0002:000017b0       $unwind$shift_right_dbl    00000001004277b0     ctc_ptp.obj
+ 0002:000017b8       $unwind$calculate_icmpv6_checksum 00000001004277b8     ctc_ptp.obj
+ 0002:000017cc       $unwind$hdl_check_depends_ep 00000001004277cc     ctc_ptp.obj
+ 0002:000017d4       $unwind$hdl_register_symbols_ep 00000001004277d4     ctc_ptp.obj
+ 0002:000017dc       $unwind$hdl_define_devtypes_ep 00000001004277dc     ctc_ptp.obj
+ 0002:000017e4       $unwind$fetch_hw_noswap    00000001004277e4     ctc_ptp.obj
+ 0002:000017ec       $unwind$fetch_fw_noswap    00000001004277ec     ctc_ptp.obj
+ 0002:000017f4       $unwind$fetch_f3_noswap    00000001004277f4     ctc_ptp.obj
+ 0002:00001800       $unwind$store_f3_noswap    0000000100427800     ctc_ptp.obj
+ 0002:00001808       $unwind$fetch_dw_noswap    0000000100427808     ctc_ptp.obj
+ 0002:00001810       $unwind$_vsscanf_l         0000000100427810     tuntap.obj
+ 0002:00001818       $unwind$sscanf             0000000100427818     tuntap.obj
+ 0002:00001820       $unwind$DebuggerTrace      0000000100427820     tuntap.obj
+ 0002:00001828       $unwind$TUNTAP_CreateInterface 0000000100427828     tuntap.obj
+ 0002:0000183c       $unwind$TUNTAP_SetIPAddr   000000010042783c     tuntap.obj
+ 0002:00001850       $unwind$TUNTAP_SetDestAddr 0000000100427850     tuntap.obj
+ 0002:00001864       $unwind$TUNTAP_SetNetMask  0000000100427864     tuntap.obj
+ 0002:00001878       $unwind$TUNTAP_SetBCastAddr 0000000100427878     tuntap.obj
+ 0002:0000188c       $unwind$TUNTAP_SetIPAddr6  000000010042788c     tuntap.obj
+ 0002:000018a0       $unwind$TUNTAP_GetMTU      00000001004278a0     tuntap.obj
+ 0002:000018b4       $unwind$TUNTAP_SetMTU      00000001004278b4     tuntap.obj
+ 0002:000018c8       $unwind$TUNTAP_GetMACAddr  00000001004278c8     tuntap.obj
+ 0002:000018dc       $unwind$TUNTAP_SetMACAddr  00000001004278dc     tuntap.obj
+ 0002:000018f0       $unwind$TUNTAP_SetFlags    00000001004278f0     tuntap.obj
+ 0002:00001904       $unwind$TUNTAP_GetFlags    0000000100427904     tuntap.obj
+ 0002:00001918       $unwind$TT32_AddIPAddr     0000000100427918     tuntap.obj
+ 0002:00001920       $unwind$TT32_DelIPAddr     0000000100427920     tuntap.obj
+ 0002:00001928       $unwind$TT32_QryIPAddrs    0000000100427928     tuntap.obj
+ 0002:00001930       $unwind$build_herc_iface_mac 0000000100427930     tuntap.obj
+ 0002:00001938       $unwind$ParseMAC           0000000100427938     tuntap.obj
+ 0002:00001948       $unwind$FormatMAC          0000000100427948     tuntap.obj
+ 0002:00001958       $unwind$packet_trace       0000000100427958     tuntap.obj
+ 0002:00001960       $unwind$net_data_trace     0000000100427960     tuntap.obj
+ 0002:00001974       $unwind$TUNTAP_SetMode     0000000100427974     tuntap.obj
+ 0002:0000197c       $unwind$_vsnprintf_l       000000010042797c     w32ctca.obj
+ 0002:00001984       $unwind$_vsprintf_l        0000000100427984     w32ctca.obj
+ 0002:0000198c       $unwind$sprintf            000000010042798c     w32ctca.obj
+ 0002:00001994       $unwind$DebuggerTrace      0000000100427994     w32ctca.obj
+ 0002:0000199c       $unwind$tt32_open          000000010042799c     w32ctca.obj
+ 0002:000019a4       $unwind$tt32_read          00000001004279a4     w32ctca.obj
+ 0002:000019ac       $unwind$tt32_write         00000001004279ac     w32ctca.obj
+ 0002:000019b4       $unwind$tt32_beg_write_multi 00000001004279b4     w32ctca.obj
+ 0002:000019bc       $unwind$tt32_end_write_multi 00000001004279bc     w32ctca.obj
+ 0002:000019c4       $unwind$tt32_close         00000001004279c4     w32ctca.obj
+ 0002:000019cc       $unwind$tt32_ioctl         00000001004279cc     w32ctca.obj
+ 0002:000019d4       $unwind$tt32_get_default_iface 00000001004279d4     w32ctca.obj
+ 0002:000019dc       $unwind$tt32_build_herc_iface_mac 00000001004279dc     w32ctca.obj
+ 0002:000019e4       $unwind$tt32_version_numbers 00000001004279e4     w32ctca.obj
+ 0002:000019ec       $unwind$display_tt32_stats 00000001004279ec     w32ctca.obj
+ 0002:00001a00       $unwind$enable_tt32_debug_tracing 0000000100427a00     w32ctca.obj
+ 0002:00001a08       $unwind$GetTT32ProcAddrs   0000000100427a08     w32ctca.obj
+ 0002:00001a10       $unwind$tt32_output_debug_string 0000000100427a10     w32ctca.obj
+ 0002:00001a18       $unwind$tt32_loaddll       0000000100427a18     w32ctca.obj
+ 0002:00001a2c       $unwind$gai_strerrorA      0000000100427a2c     resolve.obj
+ 0002:00001a34       $unwind$resolve_host       0000000100427a34     resolve.obj
+ 0002:00001a40       $unwind$resolve_ipaddr     0000000100427a40     resolve.obj
+ 0002:00001a4c       $unwind$resolve_sa         0000000100427a4c     resolve.obj
+ 0002:00001a54       $unwind$?dllmain_crt_process_attach@@YAHQEAUHINSTANCE__@@QEAX@Z 0000000100427a54     MSVCRTD:dll_dllmain.obj
+ 0002:00001a74       $unwind$?fin$0@?0??dllmain_crt_process_attach@@YAHQEAUHINSTANCE__@@QEAX@Z@4HA 0000000100427a74     MSVCRTD:dll_dllmain.obj
+ 0002:00001a7c       $unwind$?dllmain_crt_process_detach@@YAH_N@Z 0000000100427a7c     MSVCRTD:dll_dllmain.obj
+ 0002:00001aac       $unwind$?fin$0@?0??dllmain_crt_process_detach@@YAH_N@Z@4HA 0000000100427aac     MSVCRTD:dll_dllmain.obj
+ 0002:00001ab4       $unwind$?fin$1@?0??dllmain_crt_process_detach@@YAH_N@Z@4HA 0000000100427ab4     MSVCRTD:dll_dllmain.obj
+ 0002:00001abc       $unwind$?dllmain_crt_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 0000000100427abc     MSVCRTD:dll_dllmain.obj
+ 0002:00001ac4       $unwind$_CRT_INIT          0000000100427ac4     MSVCRTD:dll_dllmain.obj
+ 0002:00001acc       $unwind$?dllmain_raw@@YAHQEAUHINSTANCE__@@KQEAX@Z 0000000100427acc     MSVCRTD:dll_dllmain.obj
+ 0002:00001ad4       $unwind$?dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 0000000100427ad4     MSVCRTD:dll_dllmain.obj
+ 0002:00001af4       $unwind$?filt$0@?0??dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z@4HA 0000000100427af4     MSVCRTD:dll_dllmain.obj
+ 0002:00001afc       $unwind$_DllMainCRTStartup 0000000100427afc     MSVCRTD:dll_dllmain.obj
+ 0002:00001b04       $unwind$__report_securityfailure 0000000100427b04     MSVCRTD:gs_report.obj
+ 0002:00001b0c       $unwind$__report_securityfailureEx 0000000100427b0c     MSVCRTD:gs_report.obj
+ 0002:00001b14       $unwind$__report_rangecheckfailure 0000000100427b14     MSVCRTD:gs_report.obj
+ 0002:00001b1c       $unwind$__report_gsfailure 0000000100427b1c     MSVCRTD:gs_report.obj
+ 0002:00001b24       $unwind$capture_current_context 0000000100427b24     MSVCRTD:gs_report.obj
+ 0002:00001b2c       $unwind$capture_previous_context 0000000100427b2c     MSVCRTD:gs_report.obj
+ 0002:00001b34       $unwind$__raise_securityfailure 0000000100427b34     MSVCRTD:gs_report.obj
+ 0002:00001b3c       $unwind$__GSHandlerCheckCommon 0000000100427b3c     MSVCRTD:gshandler.obj
+ 0002:00001b44       $unwind$__GSHandlerCheck   0000000100427b44     MSVCRTD:gshandler.obj
+ 0002:00001b50       $xdatasym                  0000000100427b50     MSVCRTD:chkstk.obj
+ 0002:00001b58       $xdatasym                  0000000100427b58     MSVCRTD:amdsecgs.obj
+ 0002:00001b5c       $unwind$__security_init_cookie 0000000100427b5c     MSVCRTD:gs_support.obj
+ 0002:00001b64       $unwind$__get_entropy      0000000100427b64     MSVCRTD:gs_support.obj
+ 0002:00001b6c       $unwind$DllMain            0000000100427b6c     MSVCRTD:dll_dllmain_stub.obj
+ 0002:00001b74       $unwind$?__scrt_initialize_type_info@@YAXXZ 0000000100427b74     MSVCRTD:tncleanup.obj
+ 0002:00001b7c       $unwind$?__scrt_uninitialize_type_info@@YAXXZ 0000000100427b7c     MSVCRTD:tncleanup.obj
+ 0002:00001b84       $unwind$__scrt_initialize_default_local_stdio_options 0000000100427b84     MSVCRTD:default_local_stdio_options.obj
+ 0002:00001b8c       $unwind$atexit             0000000100427b8c     MSVCRTD:utility.obj
+ 0002:00001b94       $unwind$_onexit            0000000100427b94     MSVCRTD:utility.obj
+ 0002:00001b9c       $unwind$at_quick_exit      0000000100427b9c     MSVCRTD:utility.obj
+ 0002:00001ba4       $unwind$__scrt_is_nonwritable_in_current_image 0000000100427ba4     MSVCRTD:utility.obj
+ 0002:00001bc4       $unwind$__scrt_is_nonwritable_in_current_image$filt$0 0000000100427bc4     MSVCRTD:utility.obj
+ 0002:00001bcc       $unwind$__scrt_acquire_startup_lock 0000000100427bcc     MSVCRTD:utility.obj
+ 0002:00001bd4       $unwind$__scrt_release_startup_lock 0000000100427bd4     MSVCRTD:utility.obj
+ 0002:00001bdc       $unwind$__scrt_initialize_crt 0000000100427bdc     MSVCRTD:utility.obj
+ 0002:00001be4       $unwind$__scrt_uninitialize_crt 0000000100427be4     MSVCRTD:utility.obj
+ 0002:00001bec       $unwind$__scrt_initialize_onexit_tables 0000000100427bec     MSVCRTD:utility.obj
+ 0002:00001bf8       $unwind$__scrt_dllmain_exception_filter 0000000100427bf8     MSVCRTD:utility.obj
+ 0002:00001c00       $unwind$__scrt_dllmain_before_initialize_c 0000000100427c00     MSVCRTD:utility.obj
+ 0002:00001c08       $unwind$__scrt_dllmain_after_initialize_c 0000000100427c08     MSVCRTD:utility.obj
+ 0002:00001c10       $unwind$__scrt_dllmain_uninitialize_c 0000000100427c10     MSVCRTD:utility.obj
+ 0002:00001c18       $unwind$__scrt_dllmain_uninitialize_critical 0000000100427c18     MSVCRTD:utility.obj
+ 0002:00001c20       $unwind$__scrt_dllmain_crt_thread_attach 0000000100427c20     MSVCRTD:utility.obj
+ 0002:00001c28       $unwind$__scrt_dllmain_crt_thread_detach 0000000100427c28     MSVCRTD:utility.obj
+ 0002:00001c30       $unwind$?configure_argv@__scrt_narrow_argv_policy@@SAHXZ 0000000100427c30     MSVCRTD:utility.obj
+ 0002:00001c38       $unwind$?initialize_environment@__scrt_narrow_environment_policy@@SAHXZ 0000000100427c38     MSVCRTD:utility.obj
+ 0002:00001c40       $unwind$?is_potentially_valid_image_base@@YA_NQEAX@Z 0000000100427c40     MSVCRTD:utility.obj
+ 0002:00001c48       $unwind$?find_pe_section@@YAPEAU_IMAGE_SECTION_HEADER@@QEAE_K@Z 0000000100427c48     MSVCRTD:utility.obj
+ 0002:00001c50       $unwind$__scrt_get_show_window_mode 0000000100427c50     MSVCRTD:utility_desktop.obj
+ 0002:00001c5c       $unwind$__scrt_is_managed_app 0000000100427c5c     MSVCRTD:utility_desktop.obj
+ 0002:00001c64       $unwind$__scrt_initialize_mta 0000000100427c64     MSVCRTD:utility_desktop.obj
+ 0002:00001c6c       $unwind$__scrt_set_unhandled_exception_filter 0000000100427c6c     MSVCRTD:utility_desktop.obj
+ 0002:00001c74       $unwind$__scrt_fastfail    0000000100427c74     MSVCRTD:utility_desktop.obj
+ 0002:00001c80       $unwind$__scrt_unhandled_exception_filter 0000000100427c80     MSVCRTD:utility_desktop.obj
+ 0002:00001c88       $unwind$_RTC_Initialize    0000000100427c88     MSVCRTD:initsect.obj
+ 0002:00001c94       $unwind$_RTC_Terminate     0000000100427c94     MSVCRTD:initsect.obj
+ 0002:00001ca0       $unwind$ReadNoFence64      0000000100427ca0     MSVCRTD:guard_support.obj
+ 0002:00001ca8       $unwind$ReadPointerNoFence 0000000100427ca8     MSVCRTD:guard_support.obj
+ 0002:00001cb0       $unwind$_guard_icall_checks_enforced 0000000100427cb0     MSVCRTD:guard_support.obj
+ 0002:00001cb8       $unwind$__castguard_compat_check 0000000100427cb8     MSVCRTD:guard_support.obj
+ 0002:00001cc0       $unwind$__castguard_check_failure_os_handled_wrapper 0000000100427cc0     MSVCRTD:guard_support.obj
+ 0002:00001cc8       $unwind$__castguard_check_failure_debugbreak 0000000100427cc8     MSVCRTD:guard_support.obj
+ 0002:00001cd0       $unwind$__castguard_check_failure_fastfail 0000000100427cd0     MSVCRTD:guard_support.obj
+ 0002:00001cd8       $unwind$__castguard_check_failure_os_handled 0000000100427cd8     MSVCRTD:guard_support.obj
+ 0002:00001ce0       $unwind$__castguard_slow_path_compat_check 0000000100427ce0     MSVCRTD:guard_support.obj
+ 0002:00001ce8       $unwind$__castguard_slow_path_check_debugbreak 0000000100427ce8     MSVCRTD:guard_support.obj
+ 0002:00001cf0       $unwind$__castguard_slow_path_check_fastfail 0000000100427cf0     MSVCRTD:guard_support.obj
+ 0002:00001cf8       $unwind$__castguard_slow_path_check_os_handled 0000000100427cf8     MSVCRTD:guard_support.obj
+ 0002:00001d00       $unwind$__isa_available_init 0000000100427d00     MSVCRTD:cpu_disp.obj
+ 0002:00001d10       $unwind$__scrt_is_ucrt_dll_in_use 0000000100427d10     MSVCRTD:ucrt_detection.obj
+ 0002:00001d18       $xdatasym                  0000000100427d18     MSVCRTD:guard_dispatch.obj
+ 0002:00001d20       $xdatasym                  0000000100427d20     MSVCRTD:guard_xfg_dispatch.obj
+ 0002:00001d30       .edata                     0000000100427d30     hdtptp.exp
+ 0002:00001d58       rgpv                       0000000100427d58     hdtptp.exp
+ 0002:00001d68       rgszName                   0000000100427d68     hdtptp.exp
+ 0002:00001d78       rgwOrd                     0000000100427d78     hdtptp.exp
+ 0002:00001d80       szName                     0000000100427d80     hdtptp.exp
+ 0002:00001d8b       $N00001                    0000000100427d8b     hdtptp.exp
+ 0002:00001da0       $N00002                    0000000100427da0     hdtptp.exp
+ 0002:00001db7       $N00003                    0000000100427db7     hdtptp.exp
+ 0002:00001dcf       $N00004                    0000000100427dcf     hdtptp.exp
+ 0002:00002322       .idata$6                   0000000100428322     hengine:hengine.dll
+ 0002:00002540       .idata$6                   0000000100428540     hutil:hutil.dll
+ 0002:00002554       .idata$6                   0000000100428554     hsys:hsys.dll
+ 0002:00002628       .idata$6                   0000000100428628     kernel32:KERNEL32.dll
+ 0002:00002662       .idata$6                   0000000100428662     ws2_32:WS2_32.dll
+ 0002:000026ee       .idata$6                   00000001004286ee     vcruntimed:VCRUNTIME140D.dll
+ 0002:0000292e       .idata$6                   000000010042892e     ucrtd:ucrtbased.dll
+ 0003:000000c8       $SG171144                  00000001004290c8     ctc_ptp.obj
+ 0003:000000cc       $SG171145                  00000001004290cc     ctc_ptp.obj
+ 0003:000000d0       ptp_immed_commands         00000001004290d0     ctc_ptp.obj
+ 0003:000001d0       $SG171146                  00000001004291d0     ctc_ptp.obj
+ 0003:000001d8       $SG171147                  00000001004291d8     ctc_ptp.obj
+ 0003:000001e0       $SG171148                  00000001004291e0     ctc_ptp.obj
+ 0003:000001e8       $SG171149                  00000001004291e8     ctc_ptp.obj
+ 0003:000001ec       $SG171150                  00000001004291ec     ctc_ptp.obj
+ 0003:000001f4       $SG171151                  00000001004291f4     ctc_ptp.obj
+ 0003:000001fc       uTokenIssuerRm             00000001004291fc     ctc_ptp.obj
+ 0003:00000200       uTokenCmFilter             0000000100429200     ctc_ptp.obj
+ 0003:00000204       uTokenCmConnection         0000000100429204     ctc_ptp.obj
+ 0003:00000208       uTokenUlpFilter            0000000100429208     ctc_ptp.obj
+ 0003:0000020c       uTokenUlpConnection        000000010042920c     ctc_ptp.obj
+ 0003:00000210       $SG170099                  0000000100429210     ctc_ptp.obj
+ 0003:00000220       $SG170100                  0000000100429220     ctc_ptp.obj
+ 0003:0000022c       $SG170126                  000000010042922c     ctc_ptp.obj
+ 0003:00000230       $SG170106                  0000000100429230     ctc_ptp.obj
+ 0003:00000240       $SG170107                  0000000100429240     ctc_ptp.obj
+ 0003:0000025c       $SG170127                  000000010042925c     ctc_ptp.obj
+ 0003:00000260       $SG170108                  0000000100429260     ctc_ptp.obj
+ 0003:00000270       $SG170109                  0000000100429270     ctc_ptp.obj
+ 0003:00000288       $SG170110                  0000000100429288     ctc_ptp.obj
+ 0003:00000298       $SG170111                  0000000100429298     ctc_ptp.obj
+ 0003:000002a8       $SG170112                  00000001004292a8     ctc_ptp.obj
+ 0003:000002c0       $SG170113                  00000001004292c0     ctc_ptp.obj
+ 0003:000002d0       $SG170114                  00000001004292d0     ctc_ptp.obj
+ 0003:000002e8       $SG170115                  00000001004292e8     ctc_ptp.obj
+ 0003:000002f8       $SG170116                  00000001004292f8     ctc_ptp.obj
+ 0003:00000310       $SG170117                  0000000100429310     ctc_ptp.obj
+ 0003:00000320       $SG170118                  0000000100429320     ctc_ptp.obj
+ 0003:0000033c       $SG170134                  000000010042933c     ctc_ptp.obj
+ 0003:00000340       $SG170119                  0000000100429340     ctc_ptp.obj
+ 0003:00000350       $SG170120                  0000000100429350     ctc_ptp.obj
+ 0003:00000360       $SG170121                  0000000100429360     ctc_ptp.obj
+ 0003:00000378       $SG170122                  0000000100429378     ctc_ptp.obj
+ 0003:00000388       $SG170123                  0000000100429388     ctc_ptp.obj
+ 0003:000003a4       $SG170140                  00000001004293a4     ctc_ptp.obj
+ 0003:000003a8       $SG170124                  00000001004293a8     ctc_ptp.obj
+ 0003:000003b8       $SG170128                  00000001004293b8     ctc_ptp.obj
+ 0003:000003f0       $SG170129                  00000001004293f0     ctc_ptp.obj
+ 0003:000003fc       $SG170221                  00000001004293fc     ctc_ptp.obj
+ 0003:00000400       $SG170130                  0000000100429400     ctc_ptp.obj
+ 0003:0000040c       $SG170235                  000000010042940c     ctc_ptp.obj
+ 0003:00000410       $SG170133                  0000000100429410     ctc_ptp.obj
+ 0003:00000420       $SG170135                  0000000100429420     ctc_ptp.obj
+ 0003:0000045c       $SG170240                  000000010042945c     ctc_ptp.obj
+ 0003:00000460       $SG170136                  0000000100429460     ctc_ptp.obj
+ 0003:0000046c       $SG170245                  000000010042946c     ctc_ptp.obj
+ 0003:00000470       $SG170137                  0000000100429470     ctc_ptp.obj
+ 0003:0000047c       $SG170288                  000000010042947c     ctc_ptp.obj
+ 0003:00000480       $SG170139                  0000000100429480     ctc_ptp.obj
+ 0003:0000048c       $SG170306                  000000010042948c     ctc_ptp.obj
+ 0003:00000490       $SG170141                  0000000100429490     ctc_ptp.obj
+ 0003:000004cc       $SG170344                  00000001004294cc     ctc_ptp.obj
+ 0003:000004d0       $SG170142                  00000001004294d0     ctc_ptp.obj
+ 0003:000004dc       $SG170349                  00000001004294dc     ctc_ptp.obj
+ 0003:000004e0       $SG170143                  00000001004294e0     ctc_ptp.obj
+ 0003:000004ec       $SG170352                  00000001004294ec     ctc_ptp.obj
+ 0003:000004f0       $SG170145                  00000001004294f0     ctc_ptp.obj
+ 0003:000004fc       $SG170355                  00000001004294fc     ctc_ptp.obj
+ 0003:00000500       $SG170146                  0000000100429500     ctc_ptp.obj
+ 0003:00000510       $SG170147                  0000000100429510     ctc_ptp.obj
+ 0003:00000558       $SG170149                  0000000100429558     ctc_ptp.obj
+ 0003:00000564       $SG170358                  0000000100429564     ctc_ptp.obj
+ 0003:00000568       $SG170150                  0000000100429568     ctc_ptp.obj
+ 0003:00000578       $SG170218                  0000000100429578     ctc_ptp.obj
+ 0003:00000590       $SG170151                  0000000100429590     ctc_ptp.obj
+ 0003:000005d8       $SG170155                  00000001004295d8     ctc_ptp.obj
+ 0003:000005e4       $SG170361                  00000001004295e4     ctc_ptp.obj
+ 0003:000005e8       $SG170156                  00000001004295e8     ctc_ptp.obj
+ 0003:000005f8       $SG170219                  00000001004295f8     ctc_ptp.obj
+ 0003:00000608       $SG170222                  0000000100429608     ctc_ptp.obj
+ 0003:00000640       $SG170157                  0000000100429640     ctc_ptp.obj
+ 0003:00000688       $SG170159                  0000000100429688     ctc_ptp.obj
+ 0003:00000694       $SG170366                  0000000100429694     ctc_ptp.obj
+ 0003:00000698       $SG170160                  0000000100429698     ctc_ptp.obj
+ 0003:000006a8       $SG170236                  00000001004296a8     ctc_ptp.obj
+ 0003:000006d0       $SG170161                  00000001004296d0     ctc_ptp.obj
+ 0003:00000718       $SG170164                  0000000100429718     ctc_ptp.obj
+ 0003:00000724       $SG170369                  0000000100429724     ctc_ptp.obj
+ 0003:00000728       $SG170165                  0000000100429728     ctc_ptp.obj
+ 0003:00000738       $SG170241                  0000000100429738     ctc_ptp.obj
+ 0003:00000778       $SG170246                  0000000100429778     ctc_ptp.obj
+ 0003:000007b4       $SG170338                  00000001004297b4     ctc_ptp.obj
+ 0003:000007c0       $SG170166                  00000001004297c0     ctc_ptp.obj
+ 0003:00000808       $SG170168                  0000000100429808     ctc_ptp.obj
+ 0003:00000814       $SG170403                  0000000100429814     ctc_ptp.obj
+ 0003:00000818       $SG170169                  0000000100429818     ctc_ptp.obj
+ 0003:00000828       $SG170290                  0000000100429828     ctc_ptp.obj
+ 0003:00000838       $SG170408                  0000000100429838     ctc_ptp.obj
+ 0003:00000840       $SG170170                  0000000100429840     ctc_ptp.obj
+ 0003:00000888       $SG170173                  0000000100429888     ctc_ptp.obj
+ 0003:00000894       $SG170416                  0000000100429894     ctc_ptp.obj
+ 0003:00000898       $SG170174                  0000000100429898     ctc_ptp.obj
+ 0003:000008a8       $SG170307                  00000001004298a8     ctc_ptp.obj
+ 0003:000008e8       $SG170308                  00000001004298e8     ctc_ptp.obj
+ 0003:000008f8       $SG170412                  00000001004298f8     ctc_ptp.obj
+ 0003:00000900       $SG170175                  0000000100429900     ctc_ptp.obj
+ 0003:00000948       $SG170177                  0000000100429948     ctc_ptp.obj
+ 0003:00000954       $SG170426                  0000000100429954     ctc_ptp.obj
+ 0003:00000958       $SG170178                  0000000100429958     ctc_ptp.obj
+ 0003:00000968       $SG170318                  0000000100429968     ctc_ptp.obj
+ 0003:00000978       $SG170346                  0000000100429978     ctc_ptp.obj
+ 0003:00000988       $SG170436                  0000000100429988     ctc_ptp.obj
+ 0003:00000990       $SG170179                  0000000100429990     ctc_ptp.obj
+ 0003:000009d8       $SG170183                  00000001004299d8     ctc_ptp.obj
+ 0003:000009e4       $SG170432                  00000001004299e4     ctc_ptp.obj
+ 0003:000009e8       $SG170184                  00000001004299e8     ctc_ptp.obj
+ 0003:000009f8       $SG170319                  00000001004299f8     ctc_ptp.obj
+ 0003:00000a08       $SG170363                  0000000100429a08     ctc_ptp.obj
+ 0003:00000a28       $SG170491                  0000000100429a28     ctc_ptp.obj
+ 0003:00000a30       $SG170185                  0000000100429a30     ctc_ptp.obj
+ 0003:00000a78       $SG170187                  0000000100429a78     ctc_ptp.obj
+ 0003:00000a84       $SG170492                  0000000100429a84     ctc_ptp.obj
+ 0003:00000a88       $SG170188                  0000000100429a88     ctc_ptp.obj
+ 0003:00000a94       $SG170554                  0000000100429a94     ctc_ptp.obj
+ 0003:00000aa0       $SG170189                  0000000100429aa0     ctc_ptp.obj
+ 0003:00000ae8       $SG170192                  0000000100429ae8     ctc_ptp.obj
+ 0003:00000af4       $SG170557                  0000000100429af4     ctc_ptp.obj
+ 0003:00000afc       $SG170558                  0000000100429afc     ctc_ptp.obj
+ 0003:00000b00       $SG170193                  0000000100429b00     ctc_ptp.obj
+ 0003:00000b10       $SG170194                  0000000100429b10     ctc_ptp.obj
+ 0003:00000b58       $SG170196                  0000000100429b58     ctc_ptp.obj
+ 0003:00000b64       $SG170563                  0000000100429b64     ctc_ptp.obj
+ 0003:00000b68       $SG170197                  0000000100429b68     ctc_ptp.obj
+ 0003:00000b78       $SG170560                  0000000100429b78     ctc_ptp.obj
+ 0003:00000b88       $SG170567                  0000000100429b88     ctc_ptp.obj
+ 0003:00000b90       $SG170198                  0000000100429b90     ctc_ptp.obj
+ 0003:00000bd8       $SG170201                  0000000100429bd8     ctc_ptp.obj
+ 0003:00000be4       $SG170576                  0000000100429be4     ctc_ptp.obj
+ 0003:00000be8       $SG170202                  0000000100429be8     ctc_ptp.obj
+ 0003:00000bf8       $SG170565                  0000000100429bf8     ctc_ptp.obj
+ 0003:00000c08       $SG170585                  0000000100429c08     ctc_ptp.obj
+ 0003:00000c10       $SG170203                  0000000100429c10     ctc_ptp.obj
+ 0003:00000c58       $SG170205                  0000000100429c58     ctc_ptp.obj
+ 0003:00000c64       $SG170581                  0000000100429c64     ctc_ptp.obj
+ 0003:00000c68       $SG170206                  0000000100429c68     ctc_ptp.obj
+ 0003:00000c78       $SG170578                  0000000100429c78     ctc_ptp.obj
+ 0003:00000c88       $SG170596                  0000000100429c88     ctc_ptp.obj
+ 0003:00000c90       $SG170207                  0000000100429c90     ctc_ptp.obj
+ 0003:00000cd8       $SG170210                  0000000100429cd8     ctc_ptp.obj
+ 0003:00000ce4       $SG170587                  0000000100429ce4     ctc_ptp.obj
+ 0003:00000ce8       $SG170211                  0000000100429ce8     ctc_ptp.obj
+ 0003:00000cf8       $SG170583                  0000000100429cf8     ctc_ptp.obj
+ 0003:00000d08       $SG170607                  0000000100429d08     ctc_ptp.obj
+ 0003:00000d10       $SG170212                  0000000100429d10     ctc_ptp.obj
+ 0003:00000d58       $SG170214                  0000000100429d58     ctc_ptp.obj
+ 0003:00000d64       $SG170592                  0000000100429d64     ctc_ptp.obj
+ 0003:00000d68       $SG170215                  0000000100429d68     ctc_ptp.obj
+ 0003:00000d78       $SG170589                  0000000100429d78     ctc_ptp.obj
+ 0003:00000d88       $SG170667                  0000000100429d88     ctc_ptp.obj
+ 0003:00000dc0       $SG170216                  0000000100429dc0     ctc_ptp.obj
+ 0003:00000e08       $SG170223                  0000000100429e08     ctc_ptp.obj
+ 0003:00000e14       $SG170603                  0000000100429e14     ctc_ptp.obj
+ 0003:00000e18       $SG170224                  0000000100429e18     ctc_ptp.obj
+ 0003:00000e24       $SG170609                  0000000100429e24     ctc_ptp.obj
+ 0003:00000e28       $SG170226                  0000000100429e28     ctc_ptp.obj
+ 0003:00000e34       $SG170666                  0000000100429e34     ctc_ptp.obj
+ 0003:00000e38       $SG170227                  0000000100429e38     ctc_ptp.obj
+ 0003:00000e48       $SG170594                  0000000100429e48     ctc_ptp.obj
+ 0003:00000e58       $SG170748                  0000000100429e58     ctc_ptp.obj
+ 0003:00000e70       $SG170228                  0000000100429e70     ctc_ptp.obj
+ 0003:00000eb8       $SG170230                  0000000100429eb8     ctc_ptp.obj
+ 0003:00000ec4       $SG170746                  0000000100429ec4     ctc_ptp.obj
+ 0003:00000ec8       $SG170231                  0000000100429ec8     ctc_ptp.obj
+ 0003:00000ed8       $SG170605                  0000000100429ed8     ctc_ptp.obj
+ 0003:00000ee8       $SG170753                  0000000100429ee8     ctc_ptp.obj
+ 0003:00000f00       $SG170232                  0000000100429f00     ctc_ptp.obj
+ 0003:00000f48       $SG170237                  0000000100429f48     ctc_ptp.obj
+ 0003:00000f54       $SG170751                  0000000100429f54     ctc_ptp.obj
+ 0003:00000f58       $SG170238                  0000000100429f58     ctc_ptp.obj
+ 0003:00000f64       $SG170756                  0000000100429f64     ctc_ptp.obj
+ 0003:00000f68       $SG170242                  0000000100429f68     ctc_ptp.obj
+ 0003:00000f74       $SG170794                  0000000100429f74     ctc_ptp.obj
+ 0003:00000f78       $SG170243                  0000000100429f78     ctc_ptp.obj
+ 0003:00000f84       $SG170799                  0000000100429f84     ctc_ptp.obj
+ 0003:00000f88       $SG170247                  0000000100429f88     ctc_ptp.obj
+ 0003:00000f94       $SG170804                  0000000100429f94     ctc_ptp.obj
+ 0003:00000f98       $SG170248                  0000000100429f98     ctc_ptp.obj
+ 0003:00000fa8       $SG170610                  0000000100429fa8     ctc_ptp.obj
+ 0003:00000fe8       $SG170611                  0000000100429fe8     ctc_ptp.obj
+ 0003:00000ff8       $SG170758                  0000000100429ff8     ctc_ptp.obj
+ 0003:00001010       $SG170289                  000000010042a010     ctc_ptp.obj
+ 0003:00001074       $SG170892                  000000010042a074     ctc_ptp.obj
+ 0003:00001078       $SG170291                  000000010042a078     ctc_ptp.obj
+ 0003:00001084       $SG170903                  000000010042a084     ctc_ptp.obj
+ 0003:00001088       $SG170309                  000000010042a088     ctc_ptp.obj
+ 0003:00001094       $SG170908                  000000010042a094     ctc_ptp.obj
+ 0003:00001098       $SG170368                  000000010042a098     ctc_ptp.obj
+ 0003:000010b4       $SG170899                  000000010042a0b4     ctc_ptp.obj
+ 0003:000010bc       $SG170920                  000000010042a0bc     ctc_ptp.obj
+ 0003:000010c0       $SG170371                  000000010042a0c0     ctc_ptp.obj
+ 0003:000010e0       $SG170404                  000000010042a0e0     ctc_ptp.obj
+ 0003:00001124       $SG170902                  000000010042a124     ctc_ptp.obj
+ 0003:0000112c       $SG170925                  000000010042a12c     ctc_ptp.obj
+ 0003:00001130       $SG170405                  000000010042a130     ctc_ptp.obj
+ 0003:0000113c       $SG170941                  000000010042a13c     ctc_ptp.obj
+ 0003:00001140       $SG170406                  000000010042a140     ctc_ptp.obj
+ 0003:00001150       $SG170409                  000000010042a150     ctc_ptp.obj
+ 0003:000011b0       $SG170410                  000000010042a1b0     ctc_ptp.obj
+ 0003:000011bc       $SG170946                  000000010042a1bc     ctc_ptp.obj
+ 0003:000011c0       $SG170411                  000000010042a1c0     ctc_ptp.obj
+ 0003:000011d0       $SG170417                  000000010042a1d0     ctc_ptp.obj
+ 0003:00001214       $SG170953                  000000010042a214     ctc_ptp.obj
+ 0003:00001218       $SG170418                  000000010042a218     ctc_ptp.obj
+ 0003:00001224       $SG170958                  000000010042a224     ctc_ptp.obj
+ 0003:00001228       $SG170419                  000000010042a228     ctc_ptp.obj
+ 0003:00001238       $SG170619                  000000010042a238     ctc_ptp.obj
+ 0003:00001248       $SG170760                  000000010042a248     ctc_ptp.obj
+ 0003:00001250       $SG170427                  000000010042a250     ctc_ptp.obj
+ 0003:000012a0       $SG170428                  000000010042a2a0     ctc_ptp.obj
+ 0003:000012ac       $SG170967                  000000010042a2ac     ctc_ptp.obj
+ 0003:000012b0       $SG170429                  000000010042a2b0     ctc_ptp.obj
+ 0003:000012c0       $SG170433                  000000010042a2c0     ctc_ptp.obj
+ 0003:00001320       $SG170434                  000000010042a320     ctc_ptp.obj
+ 0003:0000132c       $SG170971                  000000010042a32c     ctc_ptp.obj
+ 0003:00001334       $SG171050                  000000010042a334     ctc_ptp.obj
+ 0003:00001338       $SG170435                  000000010042a338     ctc_ptp.obj
+ 0003:00001344       $SG171065                  000000010042a344     ctc_ptp.obj
+ 0003:00001348       $SG170493                  000000010042a348     ctc_ptp.obj
+ 0003:00001384       $SG171138                  000000010042a384     ctc_ptp.obj
+ 0003:00001388       $SG170494                  000000010042a388     ctc_ptp.obj
+ 0003:00001394       $SG171140                  000000010042a394     ctc_ptp.obj
+ 0003:00001398       $SG170495                  000000010042a398     ctc_ptp.obj
+ 0003:000013a8       $SG170621                  000000010042a3a8     ctc_ptp.obj
+ 0003:000013b8       $SG170796                  000000010042a3b8     ctc_ptp.obj
+ 0003:000013d0       $SG170559                  000000010042a3d0     ctc_ptp.obj
+ 0003:00001440       $SG170561                  000000010042a440     ctc_ptp.obj
+ 0003:00001450       $SG170564                  000000010042a450     ctc_ptp.obj
+ 0003:000014b0       $SG170566                  000000010042a4b0     ctc_ptp.obj
+ 0003:000014c0       $SG170577                  000000010042a4c0     ctc_ptp.obj
+ 0003:00001520       $SG170579                  000000010042a520     ctc_ptp.obj
+ 0003:00001530       $SG170582                  000000010042a530     ctc_ptp.obj
+ 0003:00001590       $SG170584                  000000010042a590     ctc_ptp.obj
+ 0003:000015a0       $SG170588                  000000010042a5a0     ctc_ptp.obj
+ 0003:00001608       $SG170590                  000000010042a608     ctc_ptp.obj
+ 0003:00001618       $SG170622                  000000010042a618     ctc_ptp.obj
+ 0003:00001628       $SG170801                  000000010042a628     ctc_ptp.obj
+ 0003:00001640       $SG170593                  000000010042a640     ctc_ptp.obj
+ 0003:000016a0       $SG170595                  000000010042a6a0     ctc_ptp.obj
+ 0003:000016b0       $SG170604                  000000010042a6b0     ctc_ptp.obj
+ 0003:000016f8       $SG170606                  000000010042a6f8     ctc_ptp.obj
+ 0003:00001704       $SG171142                  000000010042a704     ctc_ptp.obj
+ 0003:00001708       $SG170612                  000000010042a708     ctc_ptp.obj
+ 0003:00001714       $SG171143                  000000010042a714     ctc_ptp.obj
+ 0003:00001718       $SG170656                  000000010042a718     ctc_ptp.obj
+ 0003:00001728       $SG170658                  000000010042a728     ctc_ptp.obj
+ 0003:00001738       $SG170659                  000000010042a738     ctc_ptp.obj
+ 0003:00001748       $SG170660                  000000010042a748     ctc_ptp.obj
+ 0003:00001758       $SG170661                  000000010042a758     ctc_ptp.obj
+ 0003:00001768       $SG170663                  000000010042a768     ctc_ptp.obj
+ 0003:00001778       $SG170668                  000000010042a778     ctc_ptp.obj
+ 0003:00001784       $SG171158                  000000010042a784     ctc_ptp.obj
+ 0003:00001788       $SG170669                  000000010042a788     ctc_ptp.obj
+ 0003:00001798       $SG170806                  000000010042a798     ctc_ptp.obj
+ 0003:000017b0       $SG170747                  000000010042a7b0     ctc_ptp.obj
+ 0003:000017f0       $SG170749                  000000010042a7f0     ctc_ptp.obj
+ 0003:00001800       $SG170752                  000000010042a800     ctc_ptp.obj
+ 0003:00001840       $SG170754                  000000010042a840     ctc_ptp.obj
+ 0003:00001850       $SG170757                  000000010042a850     ctc_ptp.obj
+ 0003:000018b0       $SG170759                  000000010042a8b0     ctc_ptp.obj
+ 0003:000018c0       $SG170795                  000000010042a8c0     ctc_ptp.obj
+ 0003:00001900       $SG170797                  000000010042a900     ctc_ptp.obj
+ 0003:00001910       $SG170800                  000000010042a910     ctc_ptp.obj
+ 0003:00001950       $SG170802                  000000010042a950     ctc_ptp.obj
+ 0003:00001960       $SG170805                  000000010042a960     ctc_ptp.obj
+ 0003:000019c0       $SG170807                  000000010042a9c0     ctc_ptp.obj
+ 0003:000019cc       $SG170808                  000000010042a9cc     ctc_ptp.obj
+ 0003:000019d4       $SG171164                  000000010042a9d4     ctc_ptp.obj
+ 0003:000019d8       $SG170881                  000000010042a9d8     ctc_ptp.obj
+ 0003:000019e8       $SG170882                  000000010042a9e8     ctc_ptp.obj
+ 0003:000019f8       $SG170885                  000000010042a9f8     ctc_ptp.obj
+ 0003:00001a08       $SG170912                  000000010042aa08     ctc_ptp.obj
+ 0003:00001a10       $SG170883                  000000010042aa10     ctc_ptp.obj
+ 0003:00001a58       $SG170886                  000000010042aa58     ctc_ptp.obj
+ 0003:00001a68       $SG170893                  000000010042aa68     ctc_ptp.obj
+ 0003:00001aa8       $SG170894                  000000010042aaa8     ctc_ptp.obj
+ 0003:00001ab8       $SG170929                  000000010042aab8     ctc_ptp.obj
+ 0003:00001ac0       $SG170887                  000000010042aac0     ctc_ptp.obj
+ 0003:00001b08       $SG170895                  000000010042ab08     ctc_ptp.obj
+ 0003:00001b18       $SG170905                  000000010042ab18     ctc_ptp.obj
+ 0003:00001b28       $SG170950                  000000010042ab28     ctc_ptp.obj
+ 0003:00001b30       $SG170904                  000000010042ab30     ctc_ptp.obj
+ 0003:00001b9c       $SG171172                  000000010042ab9c     ctc_ptp.obj
+ 0003:00001ba0       $SG170906                  000000010042aba0     ctc_ptp.obj
+ 0003:00001bb0       $SG170909                  000000010042abb0     ctc_ptp.obj
+ 0003:00001c10       $SG170910                  000000010042ac10     ctc_ptp.obj
+ 0003:00001c20       $SG170911                  000000010042ac20     ctc_ptp.obj
+ 0003:00001c30       $SG170921                  000000010042ac30     ctc_ptp.obj
+ 0003:00001cb0       $SG170922                  000000010042acb0     ctc_ptp.obj
+ 0003:00001cc0       $SG170923                  000000010042acc0     ctc_ptp.obj
+ 0003:00001cd0       $SG170926                  000000010042acd0     ctc_ptp.obj
+ 0003:00001d30       $SG170927                  000000010042ad30     ctc_ptp.obj
+ 0003:00001d40       $SG170928                  000000010042ad40     ctc_ptp.obj
+ 0003:00001d4c       $SG171182                  000000010042ad4c     ctc_ptp.obj
+ 0003:00001d50       $SG170930                  000000010042ad50     ctc_ptp.obj
+ 0003:00001d60       $SG170934                  000000010042ad60     ctc_ptp.obj
+ 0003:00001d70       $SG170936                  000000010042ad70     ctc_ptp.obj
+ 0003:00001d80       $SG170938                  000000010042ad80     ctc_ptp.obj
+ 0003:00001d90       $SG170940                  000000010042ad90     ctc_ptp.obj
+ 0003:00001da0       $SG170942                  000000010042ada0     ctc_ptp.obj
+ 0003:00001e24       $SG171192                  000000010042ae24     ctc_ptp.obj
+ 0003:00001e28       $SG170943                  000000010042ae28     ctc_ptp.obj
+ 0003:00001e38       $SG170944                  000000010042ae38     ctc_ptp.obj
+ 0003:00001e48       $SG170948                  000000010042ae48     ctc_ptp.obj
+ 0003:00001e58       $SG170962                  000000010042ae58     ctc_ptp.obj
+ 0003:00001e60       $SG170947                  000000010042ae60     ctc_ptp.obj
+ 0003:00001ec0       $SG170949                  000000010042aec0     ctc_ptp.obj
+ 0003:00001ecc       $SG171200                  000000010042aecc     ctc_ptp.obj
+ 0003:00001ed0       $SG170952                  000000010042aed0     ctc_ptp.obj
+ 0003:00001ee0       $SG170954                  000000010042aee0     ctc_ptp.obj
+ 0003:00001f60       $SG170955                  000000010042af60     ctc_ptp.obj
+ 0003:00001f70       $SG170956                  000000010042af70     ctc_ptp.obj
+ 0003:00001f80       $SG170959                  000000010042af80     ctc_ptp.obj
+ 0003:00001fe0       $SG170960                  000000010042afe0     ctc_ptp.obj
+ 0003:00001ff0       $SG170961                  000000010042aff0     ctc_ptp.obj
+ 0003:00001ffc       $SG171208                  000000010042affc     ctc_ptp.obj
+ 0003:00002000       $SG170965                  000000010042b000     ctc_ptp.obj
+ 0003:00002010       $SG170968                  000000010042b010     ctc_ptp.obj
+ 0003:0000205c       $SG171213                  000000010042b05c     ctc_ptp.obj
+ 0003:00002060       $SG170969                  000000010042b060     ctc_ptp.obj
+ 0003:00002070       $SG170970                  000000010042b070     ctc_ptp.obj
+ 0003:0000207c       $SG171220                  000000010042b07c     ctc_ptp.obj
+ 0003:00002080       $SG170972                  000000010042b080     ctc_ptp.obj
+ 0003:00002090       $SG170973                  000000010042b090     ctc_ptp.obj
+ 0003:000020a0       $SG170974                  000000010042b0a0     ctc_ptp.obj
+ 0003:000020b0       $SG170975                  000000010042b0b0     ctc_ptp.obj
+ 0003:000020c0       $SG170977                  000000010042b0c0     ctc_ptp.obj
+ 0003:000020d0       $SG170978                  000000010042b0d0     ctc_ptp.obj
+ 0003:000020e0       $SG170979                  000000010042b0e0     ctc_ptp.obj
+ 0003:00002128       $SG170981                  000000010042b128     ctc_ptp.obj
+ 0003:00002138       $SG170982                  000000010042b138     ctc_ptp.obj
+ 0003:00002148       $SG170995                  000000010042b148     ctc_ptp.obj
+ 0003:00002158       $SG171051                  000000010042b158     ctc_ptp.obj
+ 0003:00002190       $SG170983                  000000010042b190     ctc_ptp.obj
+ 0003:000021d8       $SG170998                  000000010042b1d8     ctc_ptp.obj
+ 0003:000021e8       $SG170999                  000000010042b1e8     ctc_ptp.obj
+ 0003:000021f8       $SG171000                  000000010042b1f8     ctc_ptp.obj
+ 0003:00002208       $SG171001                  000000010042b208     ctc_ptp.obj
+ 0003:00002218       $SG171011                  000000010042b218     ctc_ptp.obj
+ 0003:00002228       $SG171014                  000000010042b228     ctc_ptp.obj
+ 0003:00002238       $SG171021                  000000010042b238     ctc_ptp.obj
+ 0003:00002248       $SG171024                  000000010042b248     ctc_ptp.obj
+ 0003:00002258       $SG171036                  000000010042b258     ctc_ptp.obj
+ 0003:00002268       $SG171037                  000000010042b268     ctc_ptp.obj
+ 0003:00002278       $SG171049                  000000010042b278     ctc_ptp.obj
+ 0003:00002284       $SG171227                  000000010042b284     ctc_ptp.obj
+ 0003:00002288       $SG171052                  000000010042b288     ctc_ptp.obj
+ 0003:0000229c       $SG171242                  000000010042b29c     ctc_ptp.obj
+ 0003:000022a0       $SG171053                  000000010042b2a0     ctc_ptp.obj
+ 0003:000022ac       $SG171250                  000000010042b2ac     ctc_ptp.obj
+ 0003:000022b0       $SG171064                  000000010042b2b0     ctc_ptp.obj
+ 0003:000022bc       $SG171255                  000000010042b2bc     ctc_ptp.obj
+ 0003:000022c0       $SG171066                  000000010042b2c0     ctc_ptp.obj
+ 0003:000022f4       $SG171260                  000000010042b2f4     ctc_ptp.obj
+ 0003:000022f8       $SG171067                  000000010042b2f8     ctc_ptp.obj
+ 0003:00002308       $SG171068                  000000010042b308     ctc_ptp.obj
+ 0003:00002314       $SG171139                  000000010042b314     ctc_ptp.obj
+ 0003:00002320       ?options@?3??parse_conf_stmt@@9@9 000000010042b320     ctc_ptp.obj
+ 0003:00002440       $SG171141                  000000010042b440     ctc_ptp.obj
+ 0003:00002450       $SG171152                  000000010042b450     ctc_ptp.obj
+ 0003:00002460       $SG171157                  000000010042b460     ctc_ptp.obj
+ 0003:00002470       $SG171159                  000000010042b470     ctc_ptp.obj
+ 0003:000024a4       $SG171267                  000000010042b4a4     ctc_ptp.obj
+ 0003:000024a8       $SG171160                  000000010042b4a8     ctc_ptp.obj
+ 0003:000024b8       $SG171161                  000000010042b4b8     ctc_ptp.obj
+ 0003:000024c4       $SG171275                  000000010042b4c4     ctc_ptp.obj
+ 0003:000024c8       $SG171163                  000000010042b4c8     ctc_ptp.obj
+ 0003:000024d4       $SG171286                  000000010042b4d4     ctc_ptp.obj
+ 0003:000024d8       $SG171165                  000000010042b4d8     ctc_ptp.obj
+ 0003:0000250c       $SG171293                  000000010042b50c     ctc_ptp.obj
+ 0003:00002510       $SG171166                  000000010042b510     ctc_ptp.obj
+ 0003:00002520       $SG171167                  000000010042b520     ctc_ptp.obj
+ 0003:0000252c       $SG171302                  000000010042b52c     ctc_ptp.obj
+ 0003:00002530       $SG171171                  000000010042b530     ctc_ptp.obj
+ 0003:0000253c       $SG171309                  000000010042b53c     ctc_ptp.obj
+ 0003:00002540       $SG171173                  000000010042b540     ctc_ptp.obj
+ 0003:00002574       $SG171331                  000000010042b574     ctc_ptp.obj
+ 0003:00002578       $SG171174                  000000010042b578     ctc_ptp.obj
+ 0003:00002588       $SG171175                  000000010042b588     ctc_ptp.obj
+ 0003:00002594       $SG171348                  000000010042b594     ctc_ptp.obj
+ 0003:00002598       $SG171181                  000000010042b598     ctc_ptp.obj
+ 0003:000025a4       $SG171353                  000000010042b5a4     ctc_ptp.obj
+ 0003:000025a8       $SG171183                  000000010042b5a8     ctc_ptp.obj
+ 0003:000025dc       $SG171360                  000000010042b5dc     ctc_ptp.obj
+ 0003:000025e0       $SG171184                  000000010042b5e0     ctc_ptp.obj
+ 0003:000025f0       $SG171185                  000000010042b5f0     ctc_ptp.obj
+ 0003:000025fc       $SG171365                  000000010042b5fc     ctc_ptp.obj
+ 0003:00002600       $SG171191                  000000010042b600     ctc_ptp.obj
+ 0003:0000260c       $SG171393                  000000010042b60c     ctc_ptp.obj
+ 0003:00002610       $SG171193                  000000010042b610     ctc_ptp.obj
+ 0003:00002644       $SG171400                  000000010042b644     ctc_ptp.obj
+ 0003:00002648       $SG171194                  000000010042b648     ctc_ptp.obj
+ 0003:00002658       $SG171195                  000000010042b658     ctc_ptp.obj
+ 0003:00002664       $SG171430                  000000010042b664     ctc_ptp.obj
+ 0003:00002668       $SG171199                  000000010042b668     ctc_ptp.obj
+ 0003:0000267c       $SG171494                  000000010042b67c     ctc_ptp.obj
+ 0003:00002680       $SG171201                  000000010042b680     ctc_ptp.obj
+ 0003:000026b4       $SG171499                  000000010042b6b4     ctc_ptp.obj
+ 0003:000026b8       $SG171202                  000000010042b6b8     ctc_ptp.obj
+ 0003:000026c8       $SG171203                  000000010042b6c8     ctc_ptp.obj
+ 0003:000026d4       $SG171487                  000000010042b6d4     ctc_ptp.obj
+ 0003:000026dc       $SG171504                  000000010042b6dc     ctc_ptp.obj
+ 0003:000026e0       $SG171207                  000000010042b6e0     ctc_ptp.obj
+ 0003:000026f4       $SG171626                  000000010042b6f4     ctc_ptp.obj
+ 0003:000026f8       $SG171209                  000000010042b6f8     ctc_ptp.obj
+ 0003:0000272c       $SG171637                  000000010042b72c     ctc_ptp.obj
+ 0003:00002730       $SG171210                  000000010042b730     ctc_ptp.obj
+ 0003:00002740       $SG171211                  000000010042b740     ctc_ptp.obj
+ 0003:00002750       $SG171214                  000000010042b750     ctc_ptp.obj
+ 0003:00002794       $SG171641                  000000010042b794     ctc_ptp.obj
+ 0003:00002798       $SG171215                  000000010042b798     ctc_ptp.obj
+ 0003:000027a8       $SG171216                  000000010042b7a8     ctc_ptp.obj
+ 0003:000027b4       $SG171540                  000000010042b7b4     ctc_ptp.obj
+ 0003:000027bc       $SG171738                  000000010042b7bc     ctc_ptp.obj
+ 0003:000027c0       $SG171221                  000000010042b7c0     ctc_ptp.obj
+ 0003:000027f8       $SG171222                  000000010042b7f8     ctc_ptp.obj
+ 0003:00002808       $SG171223                  000000010042b808     ctc_ptp.obj
+ 0003:00002814       $SG171620                  000000010042b814     ctc_ptp.obj
+ 0003:0000281c       $SG171745                  000000010042b81c     ctc_ptp.obj
+ 0003:00002820       $SG171226                  000000010042b820     ctc_ptp.obj
+ 0003:0000282c       $SG171756                  000000010042b82c     ctc_ptp.obj
+ 0003:00002830       $SG171228                  000000010042b830     ctc_ptp.obj
+ 0003:00002864       $SG171766                  000000010042b864     ctc_ptp.obj
+ 0003:00002868       $SG171229                  000000010042b868     ctc_ptp.obj
+ 0003:00002878       $SG171230                  000000010042b878     ctc_ptp.obj
+ 0003:00002884       $SG171736                  000000010042b884     ctc_ptp.obj
+ 0003:0000288c       $SG171782                  000000010042b88c     ctc_ptp.obj
+ 0003:00002890       $SG171241                  000000010042b890     ctc_ptp.obj
+ 0003:0000289c       $SG171789                  000000010042b89c     ctc_ptp.obj
+ 0003:000028a0       $SG171243                  000000010042b8a0     ctc_ptp.obj
+ 0003:000028d4       $SG171800                  000000010042b8d4     ctc_ptp.obj
+ 0003:000028d8       $SG171244                  000000010042b8d8     ctc_ptp.obj
+ 0003:000028e8       $SG171245                  000000010042b8e8     ctc_ptp.obj
+ 0003:000028f4       $SG171743                  000000010042b8f4     ctc_ptp.obj
+ 0003:000028fc       $SG171810                  000000010042b8fc     ctc_ptp.obj
+ 0003:00002900       $SG171249                  000000010042b900     ctc_ptp.obj
+ 0003:00002934       $SG171824                  000000010042b934     ctc_ptp.obj
+ 0003:00002938       $SG171251                  000000010042b938     ctc_ptp.obj
+ 0003:00002954       $SG171829                  000000010042b954     ctc_ptp.obj
+ 0003:00002958       $SG171252                  000000010042b958     ctc_ptp.obj
+ 0003:00002968       $SG171253                  000000010042b968     ctc_ptp.obj
+ 0003:00002974       $SG171754                  000000010042b974     ctc_ptp.obj
+ 0003:0000297c       $SG171834                  000000010042b97c     ctc_ptp.obj
+ 0003:00002980       $SG171254                  000000010042b980     ctc_ptp.obj
+ 0003:0000298c       $SG171839                  000000010042b98c     ctc_ptp.obj
+ 0003:00002990       $SG171256                  000000010042b990     ctc_ptp.obj
+ 0003:000029c4       $SG171840                  000000010042b9c4     ctc_ptp.obj
+ 0003:000029c8       $SG171257                  000000010042b9c8     ctc_ptp.obj
+ 0003:000029d8       $SG171258                  000000010042b9d8     ctc_ptp.obj
+ 0003:000029e4       $SG171764                  000000010042b9e4     ctc_ptp.obj
+ 0003:000029ec       $SG172163                  000000010042b9ec     ctc_ptp.obj
+ 0003:000029f0       $SG171259                  000000010042b9f0     ctc_ptp.obj
+ 0003:000029fc       $SG172164                  000000010042b9fc     ctc_ptp.obj
+ 0003:00002a00       $SG171261                  000000010042ba00     ctc_ptp.obj
+ 0003:00002a34       $SG172258                  000000010042ba34     ctc_ptp.obj
+ 0003:00002a38       $SG171262                  000000010042ba38     ctc_ptp.obj
+ 0003:00002a48       $SG171263                  000000010042ba48     ctc_ptp.obj
+ 0003:00002a54       $SG171780                  000000010042ba54     ctc_ptp.obj
+ 0003:00002a5c       $SG172266                  000000010042ba5c     ctc_ptp.obj
+ 0003:00002a60       $SG171266                  000000010042ba60     ctc_ptp.obj
+ 0003:00002a6c       $SG172272                  000000010042ba6c     ctc_ptp.obj
+ 0003:00002a70       $SG171268                  000000010042ba70     ctc_ptp.obj
+ 0003:00002aa4       $SG172287                  000000010042baa4     ctc_ptp.obj
+ 0003:00002aa8       $SG171269                  000000010042baa8     ctc_ptp.obj
+ 0003:00002ab8       $SG171270                  000000010042bab8     ctc_ptp.obj
+ 0003:00002ac4       $SG171787                  000000010042bac4     ctc_ptp.obj
+ 0003:00002acc       $SG172295                  000000010042bacc     ctc_ptp.obj
+ 0003:00002ad0       $SG171274                  000000010042bad0     ctc_ptp.obj
+ 0003:00002adc       $SG172302                  000000010042badc     ctc_ptp.obj
+ 0003:00002ae0       $SG171276                  000000010042bae0     ctc_ptp.obj
+ 0003:00002b14       $SG172319                  000000010042bb14     ctc_ptp.obj
+ 0003:00002b18       $SG171277                  000000010042bb18     ctc_ptp.obj
+ 0003:00002b28       $SG171278                  000000010042bb28     ctc_ptp.obj
+ 0003:00002b34       $SG171798                  000000010042bb34     ctc_ptp.obj
+ 0003:00002b3c       $SG172327                  000000010042bb3c     ctc_ptp.obj
+ 0003:00002b40       $SG171285                  000000010042bb40     ctc_ptp.obj
+ 0003:00002b4c       $SG172336                  000000010042bb4c     ctc_ptp.obj
+ 0003:00002b50       $SG171287                  000000010042bb50     ctc_ptp.obj
+ 0003:00002b84       $SG172342                  000000010042bb84     ctc_ptp.obj
+ 0003:00002b88       $SG171288                  000000010042bb88     ctc_ptp.obj
+ 0003:00002b98       $SG171289                  000000010042bb98     ctc_ptp.obj
+ 0003:00002ba4       $SG171808                  000000010042bba4     ctc_ptp.obj
+ 0003:00002bac       $SG172351                  000000010042bbac     ctc_ptp.obj
+ 0003:00002bb0       $SG171292                  000000010042bbb0     ctc_ptp.obj
+ 0003:00002bbc       $SG172362                  000000010042bbbc     ctc_ptp.obj
+ 0003:00002bc0       $SG171294                  000000010042bbc0     ctc_ptp.obj
+ 0003:00002bf4       $SG172368                  000000010042bbf4     ctc_ptp.obj
+ 0003:00002bf8       $SG171295                  000000010042bbf8     ctc_ptp.obj
+ 0003:00002c08       $SG171296                  000000010042bc08     ctc_ptp.obj
+ 0003:00002c14       $SG172388                  000000010042bc14     ctc_ptp.obj
+ 0003:00002c18       $SG171301                  000000010042bc18     ctc_ptp.obj
+ 0003:00002c24       $SG172397                  000000010042bc24     ctc_ptp.obj
+ 0003:00002c28       $SG171303                  000000010042bc28     ctc_ptp.obj
+ 0003:00002c5c       $SG172403                  000000010042bc5c     ctc_ptp.obj
+ 0003:00002c60       $SG171304                  000000010042bc60     ctc_ptp.obj
+ 0003:00002c70       $SG171305                  000000010042bc70     ctc_ptp.obj
+ 0003:00002c7c       $SG172408                  000000010042bc7c     ctc_ptp.obj
+ 0003:00002c80       $SG171308                  000000010042bc80     ctc_ptp.obj
+ 0003:00002c8c       $SG172409                  000000010042bc8c     ctc_ptp.obj
+ 0003:00002c90       $SG171310                  000000010042bc90     ctc_ptp.obj
+ 0003:00002cc4       $SG173040                  000000010042bcc4     ctc_ptp.obj
+ 0003:00002cc8       $SG171311                  000000010042bcc8     ctc_ptp.obj
+ 0003:00002cd8       $SG171312                  000000010042bcd8     ctc_ptp.obj
+ 0003:00002ce4       $SG173014                  000000010042bce4     ctc_ptp.obj
+ 0003:00002cf0       $SG171325                  000000010042bcf0     ctc_ptp.obj
+ 0003:00002d14       $SG171369                  000000010042bd14     ctc_ptp.obj
+ 0003:00002d20       $SG171332                  000000010042bd20     ctc_ptp.obj
+ 0003:00002d88       $SG171333                  000000010042bd88     ctc_ptp.obj
+ 0003:00002da0       $SG171334                  000000010042bda0     ctc_ptp.obj
+ 0003:00002db0       $SG171349                  000000010042bdb0     ctc_ptp.obj
+ 0003:00002df8       $SG171350                  000000010042bdf8     ctc_ptp.obj
+ 0003:00002e10       $SG171351                  000000010042be10     ctc_ptp.obj
+ 0003:00002e20       $SG171354                  000000010042be20     ctc_ptp.obj
+ 0003:00002e68       $SG171355                  000000010042be68     ctc_ptp.obj
+ 0003:00002e80       $SG171356                  000000010042be80     ctc_ptp.obj
+ 0003:00002e90       $SG171361                  000000010042be90     ctc_ptp.obj
+ 0003:00002ec0       $SG171362                  000000010042bec0     ctc_ptp.obj
+ 0003:00002ed8       $SG171363                  000000010042bed8     ctc_ptp.obj
+ 0003:00002ee8       $SG171367                  000000010042bee8     ctc_ptp.obj
+ 0003:00002f00       $SG171366                  000000010042bf00     ctc_ptp.obj
+ 0003:00002f50       $SG171368                  000000010042bf50     ctc_ptp.obj
+ 0003:00002f60       $SG171387                  000000010042bf60     ctc_ptp.obj
+ 0003:00002f70       $SG171389                  000000010042bf70     ctc_ptp.obj
+ 0003:00002f80       $SG171392                  000000010042bf80     ctc_ptp.obj
+ 0003:00002f98       $SG171394                  000000010042bf98     ctc_ptp.obj
+ 0003:00002fd0       $SG171395                  000000010042bfd0     ctc_ptp.obj
+ 0003:00002fe0       $SG171396                  000000010042bfe0     ctc_ptp.obj
+ 0003:00002ff0       $SG171397                  000000010042bff0     ctc_ptp.obj
+ 0003:00003008       $SG171398                  000000010042c008     ctc_ptp.obj
+ 0003:00003018       $SG171401                  000000010042c018     ctc_ptp.obj
+ 0003:00003050       $SG171402                  000000010042c050     ctc_ptp.obj
+ 0003:00003060       $SG171403                  000000010042c060     ctc_ptp.obj
+ 0003:00003070       $SG171426                  000000010042c070     ctc_ptp.obj
+ 0003:00003080       $SG171427                  000000010042c080     ctc_ptp.obj
+ 0003:00003090       $SG171428                  000000010042c090     ctc_ptp.obj
+ 0003:000030a0       $SG171431                  000000010042c0a0     ctc_ptp.obj
+ 0003:000030c8       $SG171432                  000000010042c0c8     ctc_ptp.obj
+ 0003:000030e0       $SG171433                  000000010042c0e0     ctc_ptp.obj
+ 0003:000030f0       $SG171436                  000000010042c0f0     ctc_ptp.obj
+ 0003:00003100       $SG171437                  000000010042c100     ctc_ptp.obj
+ 0003:00003110       $SG171438                  000000010042c110     ctc_ptp.obj
+ 0003:00003120       $SG171440                  000000010042c120     ctc_ptp.obj
+ 0003:00003130       $SG171441                  000000010042c130     ctc_ptp.obj
+ 0003:00003140       $SG171448                  000000010042c140     ctc_ptp.obj
+ 0003:00003150       $SG171449                  000000010042c150     ctc_ptp.obj
+ 0003:00003160       $SG171458                  000000010042c160     ctc_ptp.obj
+ 0003:00003170       $SG171459                  000000010042c170     ctc_ptp.obj
+ 0003:00003180       $SG171490                  000000010042c180     ctc_ptp.obj
+ 0003:00003190       $SG171495                  000000010042c190     ctc_ptp.obj
+ 0003:000031d8       $SG171496                  000000010042c1d8     ctc_ptp.obj
+ 0003:000031e8       $SG171497                  000000010042c1e8     ctc_ptp.obj
+ 0003:000031f8       $SG171501                  000000010042c1f8     ctc_ptp.obj
+ 0003:00003208       $SG171508                  000000010042c208     ctc_ptp.obj
+ 0003:00003218       $SG171661                  000000010042c218     ctc_ptp.obj
+ 0003:00003220       $SG171500                  000000010042c220     ctc_ptp.obj
+ 0003:00003268       $SG171502                  000000010042c268     ctc_ptp.obj
+ 0003:00003278       $SG171506                  000000010042c278     ctc_ptp.obj
+ 0003:00003288       $SG171509                  000000010042c288     ctc_ptp.obj
+ 0003:00003298       $SG171662                  000000010042c298     ctc_ptp.obj
+ 0003:000032a0       $SG171505                  000000010042c2a0     ctc_ptp.obj
+ 0003:000032e8       $SG171507                  000000010042c2e8     ctc_ptp.obj
+ 0003:000032f8       $SG171512                  000000010042c2f8     ctc_ptp.obj
+ 0003:00003308       $SG171624                  000000010042c308     ctc_ptp.obj
+ 0003:00003318       $SG171737                  000000010042c318     ctc_ptp.obj
+ 0003:00003328       $SG171765                  000000010042c328     ctc_ptp.obj
+ 0003:00003340       $SG171627                  000000010042c340     ctc_ptp.obj
+ 0003:00003388       $SG171628                  000000010042c388     ctc_ptp.obj
+ 0003:00003398       $SG171629                  000000010042c398     ctc_ptp.obj
+ 0003:000033a8       $SG171632                  000000010042c3a8     ctc_ptp.obj
+ 0003:000033b8       $SG171636                  000000010042c3b8     ctc_ptp.obj
+ 0003:000033c8       $SG171744                  000000010042c3c8     ctc_ptp.obj
+ 0003:000033d8       $SG171781                  000000010042c3d8     ctc_ptp.obj
+ 0003:000033f0       $SG171638                  000000010042c3f0     ctc_ptp.obj
+ 0003:00003460       $SG171639                  000000010042c460     ctc_ptp.obj
+ 0003:00003470       $SG171640                  000000010042c470     ctc_ptp.obj
+ 0003:00003480       $SG171642                  000000010042c480     ctc_ptp.obj
+ 0003:000034f0       $SG171643                  000000010042c4f0     ctc_ptp.obj
+ 0003:00003500       $SG171644                  000000010042c500     ctc_ptp.obj
+ 0003:00003510       $SG171645                  000000010042c510     ctc_ptp.obj
+ 0003:00003520       $SG171734                  000000010042c520     ctc_ptp.obj
+ 0003:00003550       $SG171739                  000000010042c550     ctc_ptp.obj
+ 0003:000035a8       $SG171740                  000000010042c5a8     ctc_ptp.obj
+ 0003:000035b8       $SG171741                  000000010042c5b8     ctc_ptp.obj
+ 0003:000035c8       $SG171747                  000000010042c5c8     ctc_ptp.obj
+ 0003:000035d8       $SG171775                  000000010042c5d8     ctc_ptp.obj
+ 0003:00003608       $SG171788                  000000010042c608     ctc_ptp.obj
+ 0003:00003620       $SG171746                  000000010042c620     ctc_ptp.obj
+ 0003:00003678       $SG171748                  000000010042c678     ctc_ptp.obj
+ 0003:00003688       $SG171752                  000000010042c688     ctc_ptp.obj
+ 0003:000036b8       $SG171755                  000000010042c6b8     ctc_ptp.obj
+ 0003:000036c8       $SG171799                  000000010042c6c8     ctc_ptp.obj
+ 0003:000036d8       $SG171809                  000000010042c6d8     ctc_ptp.obj
+ 0003:000036f0       $SG171757                  000000010042c6f0     ctc_ptp.obj
+ 0003:00003748       $SG171758                  000000010042c748     ctc_ptp.obj
+ 0003:00003758       $SG171759                  000000010042c758     ctc_ptp.obj
+ 0003:00003768       $SG171762                  000000010042c768     ctc_ptp.obj
+ 0003:00003798       $SG171806                  000000010042c798     ctc_ptp.obj
+ 0003:000037c8       $SG171822                  000000010042c7c8     ctc_ptp.obj
+ 0003:00003800       $SG171767                  000000010042c800     ctc_ptp.obj
+ 0003:00003858       $SG171768                  000000010042c858     ctc_ptp.obj
+ 0003:00003868       $SG171769                  000000010042c868     ctc_ptp.obj
+ 0003:00003878       $SG171772                  000000010042c878     ctc_ptp.obj
+ 0003:000038a8       $SG171778                  000000010042c8a8     ctc_ptp.obj
+ 0003:000038d8       $SG171819                  000000010042c8d8     ctc_ptp.obj
+ 0003:00003908       $SG172102                  000000010042c908     ctc_ptp.obj
+ 0003:00003940       $SG171783                  000000010042c940     ctc_ptp.obj
+ 0003:00003998       $SG171784                  000000010042c998     ctc_ptp.obj
+ 0003:000039a8       $SG171785                  000000010042c9a8     ctc_ptp.obj
+ 0003:000039b8       $SG171791                  000000010042c9b8     ctc_ptp.obj
+ 0003:000039c8       $SG171967                  000000010042c9c8     ctc_ptp.obj
+ 0003:000039f8       $SG172161                  000000010042c9f8     ctc_ptp.obj
+ 0003:00003a10       $SG171790                  000000010042ca10     ctc_ptp.obj
+ 0003:00003a68       $SG171792                  000000010042ca68     ctc_ptp.obj
+ 0003:00003a78       $SG171796                  000000010042ca78     ctc_ptp.obj
+ 0003:00003aa8       $SG171802                  000000010042caa8     ctc_ptp.obj
+ 0003:00003ab8       $SG172020                  000000010042cab8     ctc_ptp.obj
+ 0003:00003ae8       $SG172279                  000000010042cae8     ctc_ptp.obj
+ 0003:00003b10       $SG171801                  000000010042cb10     ctc_ptp.obj
+ 0003:00003b68       $SG171803                  000000010042cb68     ctc_ptp.obj
+ 0003:00003b78       $SG171812                  000000010042cb78     ctc_ptp.obj
+ 0003:00003b88       $SG172296                  000000010042cb88     ctc_ptp.obj
+ 0003:00003bc0       $SG171811                  000000010042cbc0     ctc_ptp.obj
+ 0003:00003c18       $SG171813                  000000010042cc18     ctc_ptp.obj
+ 0003:00003c28       $SG171816                  000000010042cc28     ctc_ptp.obj
+ 0003:00003c58       $SG171826                  000000010042cc58     ctc_ptp.obj
+ 0003:00003c68       $SG172308                  000000010042cc68     ctc_ptp.obj
+ 0003:00003c90       $SG171825                  000000010042cc90     ctc_ptp.obj
+ 0003:00003cd8       $SG171827                  000000010042ccd8     ctc_ptp.obj
+ 0003:00003ce8       $SG171831                  000000010042cce8     ctc_ptp.obj
+ 0003:00003cf8       $SG172328                  000000010042ccf8     ctc_ptp.obj
+ 0003:00003d30       $SG171830                  000000010042cd30     ctc_ptp.obj
+ 0003:00003d78       $SG171832                  000000010042cd78     ctc_ptp.obj
+ 0003:00003d88       $SG171836                  000000010042cd88     ctc_ptp.obj
+ 0003:00003d98       $SG172859                  000000010042cd98     ctc_ptp.obj
+ 0003:00003dd0       $SG171835                  000000010042cdd0     ctc_ptp.obj
+ 0003:00003e18       $SG171837                  000000010042ce18     ctc_ptp.obj
+ 0003:00003e28       $SG171841                  000000010042ce28     ctc_ptp.obj
+ 0003:00003e68       $SG171842                  000000010042ce68     ctc_ptp.obj
+ 0003:00003e78       $SG171843                  000000010042ce78     ctc_ptp.obj
+ 0003:00003e88       $SG171893                  000000010042ce88     ctc_ptp.obj
+ 0003:00003eb8       $SG171930                  000000010042ceb8     ctc_ptp.obj
+ 0003:00003ee8       $SG172061                  000000010042cee8     ctc_ptp.obj
+ 0003:00003f18       $SG172135                  000000010042cf18     ctc_ptp.obj
+ 0003:00003f48       $SG172165                  000000010042cf48     ctc_ptp.obj
+ 0003:00003f88       $SG172166                  000000010042cf88     ctc_ptp.obj
+ 0003:00003f98       $SG172167                  000000010042cf98     ctc_ptp.obj
+ 0003:00003fa8       $SG172241                  000000010042cfa8     ctc_ptp.obj
+ 0003:00003fd8       $SG172248                  000000010042cfd8     ctc_ptp.obj
+ 0003:00004008       $SG172256                  000000010042d008     ctc_ptp.obj
+ 0003:00004038       $SG172260                  000000010042d038     ctc_ptp.obj
+ 0003:00004048       $SG172862                  000000010042d048     ctc_ptp.obj
+ 0003:00004080       $SG172259                  000000010042d080     ctc_ptp.obj
+ 0003:000040c8       $SG172261                  000000010042d0c8     ctc_ptp.obj
+ 0003:000040d8       $SG172264                  000000010042d0d8     ctc_ptp.obj
+ 0003:00004108       $SG172268                  000000010042d108     ctc_ptp.obj
+ 0003:00004118       $SG173016                  000000010042d118     ctc_ptp.obj
+ 0003:00004120       $SG172267                  000000010042d120     ctc_ptp.obj
+ 0003:00004168       $SG172269                  000000010042d168     ctc_ptp.obj
+ 0003:00004178       $SG172274                  000000010042d178     ctc_ptp.obj
+ 0003:00004188       $SG173017                  000000010042d188     ctc_ptp.obj
+ 0003:00004190       $SG172273                  000000010042d190     ctc_ptp.obj
+ 0003:000041d8       $SG172275                  000000010042d1d8     ctc_ptp.obj
+ 0003:000041e8       $SG172288                  000000010042d1e8     ctc_ptp.obj
+ 0003:00004228       $SG172289                  000000010042d228     ctc_ptp.obj
+ 0003:00004238       $SG172290                  000000010042d238     ctc_ptp.obj
+ 0003:00004248       $SG172297                  000000010042d248     ctc_ptp.obj
+ 0003:00004258       $SG172298                  000000010042d258     ctc_ptp.obj
+ 0003:00004268       $SG172304                  000000010042d268     ctc_ptp.obj
+ 0003:00004278       $SG173020                  000000010042d278     ctc_ptp.obj
+ 0003:00004280       $SG172303                  000000010042d280     ctc_ptp.obj
+ 0003:000042c8       $SG172305                  000000010042d2c8     ctc_ptp.obj
+ 0003:000042d8       $SG172320                  000000010042d2d8     ctc_ptp.obj
+ 0003:00004318       $SG172321                  000000010042d318     ctc_ptp.obj
+ 0003:00004328       $SG172322                  000000010042d328     ctc_ptp.obj
+ 0003:00004338       $SG172329                  000000010042d338     ctc_ptp.obj
+ 0003:00004348       $SG172330                  000000010042d348     ctc_ptp.obj
+ 0003:00004358       $SG172338                  000000010042d358     ctc_ptp.obj
+ 0003:00004368       $SG173034                  000000010042d368     ctc_ptp.obj
+ 0003:00004380       $SG172337                  000000010042d380     ctc_ptp.obj
+ 0003:000043c8       $SG172339                  000000010042d3c8     ctc_ptp.obj
+ 0003:000043d8       $SG172344                  000000010042d3d8     ctc_ptp.obj
+ 0003:000043e8       $SG173035                  000000010042d3e8     ctc_ptp.obj
+ 0003:00004400       $SG172343                  000000010042d400     ctc_ptp.obj
+ 0003:00004448       $SG172345                  000000010042d448     ctc_ptp.obj
+ 0003:00004458       $SG172349                  000000010042d458     ctc_ptp.obj
+ 0003:00004488       $SG172353                  000000010042d488     ctc_ptp.obj
+ 0003:000044a0       $SG172352                  000000010042d4a0     ctc_ptp.obj
+ 0003:000044e8       $SG172354                  000000010042d4e8     ctc_ptp.obj
+ 0003:000044f8       $SG172357                  000000010042d4f8     ctc_ptp.obj
+ 0003:00004530       $SG172363                  000000010042d530     ctc_ptp.obj
+ 0003:00004578       $SG172364                  000000010042d578     ctc_ptp.obj
+ 0003:00004588       $SG172365                  000000010042d588     ctc_ptp.obj
+ 0003:000045a0       $SG172369                  000000010042d5a0     ctc_ptp.obj
+ 0003:000045e8       $SG172370                  000000010042d5e8     ctc_ptp.obj
+ 0003:000045f8       $SG172371                  000000010042d5f8     ctc_ptp.obj
+ 0003:00004608       $SG172375                  000000010042d608     ctc_ptp.obj
+ 0003:00004638       $SG172380                  000000010042d638     ctc_ptp.obj
+ 0003:00004668       $SG172385                  000000010042d668     ctc_ptp.obj
+ 0003:000046a0       $SG172389                  000000010042d6a0     ctc_ptp.obj
+ 0003:000046e8       $SG172390                  000000010042d6e8     ctc_ptp.obj
+ 0003:000046f8       $SG172391                  000000010042d6f8     ctc_ptp.obj
+ 0003:00004708       $SG172394                  000000010042d708     ctc_ptp.obj
+ 0003:00004740       $SG172398                  000000010042d740     ctc_ptp.obj
+ 0003:00004788       $SG172399                  000000010042d788     ctc_ptp.obj
+ 0003:00004798       $SG172400                  000000010042d798     ctc_ptp.obj
+ 0003:000047b0       $SG172404                  000000010042d7b0     ctc_ptp.obj
+ 0003:000047f8       $SG172405                  000000010042d7f8     ctc_ptp.obj
+ 0003:00004808       $SG172406                  000000010042d808     ctc_ptp.obj
+ 0003:00004818       $SG172410                  000000010042d818     ctc_ptp.obj
+ 0003:00004858       $SG172411                  000000010042d858     ctc_ptp.obj
+ 0003:00004868       $SG172412                  000000010042d868     ctc_ptp.obj
+ 0003:00004878       $SG172439                  000000010042d878     ctc_ptp.obj
+ 0003:000048a8       $SG172466                  000000010042d8a8     ctc_ptp.obj
+ 0003:000048d8       $SG172497                  000000010042d8d8     ctc_ptp.obj
+ 0003:00004908       $SG172528                  000000010042d908     ctc_ptp.obj
+ 0003:00004938       $SG172555                  000000010042d938     ctc_ptp.obj
+ 0003:00004968       $SG172586                  000000010042d968     ctc_ptp.obj
+ 0003:00004998       $SG172617                  000000010042d998     ctc_ptp.obj
+ 0003:000049c8       $SG172648                  000000010042d9c8     ctc_ptp.obj
+ 0003:000049f8       $SG172675                  000000010042d9f8     ctc_ptp.obj
+ 0003:00004a28       $SG172702                  000000010042da28     ctc_ptp.obj
+ 0003:00004a58       $SG172731                  000000010042da58     ctc_ptp.obj
+ 0003:00004a88       $SG172760                  000000010042da88     ctc_ptp.obj
+ 0003:00004ab8       $SG172850                  000000010042dab8     ctc_ptp.obj
+ 0003:00004ae8       $SG172853                  000000010042dae8     ctc_ptp.obj
+ 0003:00004b18       $SG172856                  000000010042db18     ctc_ptp.obj
+ 0003:00004b48       $SG173010                  000000010042db48     ctc_ptp.obj
+ 0003:00004b58       $SG173011                  000000010042db58     ctc_ptp.obj
+ 0003:00004b68       $SG173013                  000000010042db68     ctc_ptp.obj
+ 0003:00004b78       $SG173019                  000000010042db78     ctc_ptp.obj
+ 0003:00004b90       $SG159967                  000000010042db90     tuntap.obj
+ 0003:00004b98       $SG159968                  000000010042db98     tuntap.obj
+ 0003:00004bc8       $SG159969                  000000010042dbc8     tuntap.obj
+ 0003:00004be0       $SG159970                  000000010042dbe0     tuntap.obj
+ 0003:00004bec       $SG159973                  000000010042dbec     tuntap.obj
+ 0003:00004bf0       $SG159974                  000000010042dbf0     tuntap.obj
+ 0003:00004c20       $SG159975                  000000010042dc20     tuntap.obj
+ 0003:00004c38       $SG159976                  000000010042dc38     tuntap.obj
+ 0003:00004c44       $SG159989                  000000010042dc44     tuntap.obj
+ 0003:00004c4c       $SG159990                  000000010042dc4c     tuntap.obj
+ 0003:00004c50       $SG159991                  000000010042dc50     tuntap.obj
+ 0003:00004c78       $SG159992                  000000010042dc78     tuntap.obj
+ 0003:00004c8c       $SG159997                  000000010042dc8c     tuntap.obj
+ 0003:00004c90       $SG159993                  000000010042dc90     tuntap.obj
+ 0003:00004c9c       $SG159996                  000000010042dc9c     tuntap.obj
+ 0003:00004ca4       $SG160014                  000000010042dca4     tuntap.obj
+ 0003:00004ca8       $SG159998                  000000010042dca8     tuntap.obj
+ 0003:00004cd4       $SG160021                  000000010042dcd4     tuntap.obj
+ 0003:00004cd8       $SG159999                  000000010042dcd8     tuntap.obj
+ 0003:00004cec       $SG160038                  000000010042dcec     tuntap.obj
+ 0003:00004cf0       $SG160000                  000000010042dcf0     tuntap.obj
+ 0003:00004cfc       $SG160013                  000000010042dcfc     tuntap.obj
+ 0003:00004d04       $SG160045                  000000010042dd04     tuntap.obj
+ 0003:00004d08       $SG160015                  000000010042dd08     tuntap.obj
+ 0003:00004d30       $SG160016                  000000010042dd30     tuntap.obj
+ 0003:00004d44       $SG160062                  000000010042dd44     tuntap.obj
+ 0003:00004d48       $SG160017                  000000010042dd48     tuntap.obj
+ 0003:00004d54       $SG160020                  000000010042dd54     tuntap.obj
+ 0003:00004d5c       $SG160069                  000000010042dd5c     tuntap.obj
+ 0003:00004d60       $SG160022                  000000010042dd60     tuntap.obj
+ 0003:00004d9c       $SG160087                  000000010042dd9c     tuntap.obj
+ 0003:00004da0       $SG160023                  000000010042dda0     tuntap.obj
+ 0003:00004db4       $SG160093                  000000010042ddb4     tuntap.obj
+ 0003:00004db8       $SG160024                  000000010042ddb8     tuntap.obj
+ 0003:00004dc4       $SG160037                  000000010042ddc4     tuntap.obj
+ 0003:00004dcc       $SG160099                  000000010042ddcc     tuntap.obj
+ 0003:00004dd0       $SG160039                  000000010042ddd0     tuntap.obj
+ 0003:00004df8       $SG160040                  000000010042ddf8     tuntap.obj
+ 0003:00004e0c       $SG160105                  000000010042de0c     tuntap.obj
+ 0003:00004e10       $SG160041                  000000010042de10     tuntap.obj
+ 0003:00004e1c       $SG160044                  000000010042de1c     tuntap.obj
+ 0003:00004e24       $SG160110                  000000010042de24     tuntap.obj
+ 0003:00004e28       $SG160046                  000000010042de28     tuntap.obj
+ 0003:00004e58       $SG160047                  000000010042de58     tuntap.obj
+ 0003:00004e6c       $SG160128                  000000010042de6c     tuntap.obj
+ 0003:00004e70       $SG160048                  000000010042de70     tuntap.obj
+ 0003:00004e7c       $SG160061                  000000010042de7c     tuntap.obj
+ 0003:00004e84       $SG160135                  000000010042de84     tuntap.obj
+ 0003:00004e88       $SG160063                  000000010042de88     tuntap.obj
+ 0003:00004eb0       $SG160064                  000000010042deb0     tuntap.obj
+ 0003:00004ec4       $SG160141                  000000010042dec4     tuntap.obj
+ 0003:00004ec8       $SG160065                  000000010042dec8     tuntap.obj
+ 0003:00004ed4       $SG160068                  000000010042ded4     tuntap.obj
+ 0003:00004edc       $SG160145                  000000010042dedc     tuntap.obj
+ 0003:00004ee0       $SG160070                  000000010042dee0     tuntap.obj
+ 0003:00004f18       $SG160071                  000000010042df18     tuntap.obj
+ 0003:00004f2c       $SG160159                  000000010042df2c     tuntap.obj
+ 0003:00004f30       $SG160072                  000000010042df30     tuntap.obj
+ 0003:00004f3c       $SG160086                  000000010042df3c     tuntap.obj
+ 0003:00004f44       $SG160166                  000000010042df44     tuntap.obj
+ 0003:00004f48       $SG160088                  000000010042df48     tuntap.obj
+ 0003:00004f70       $SG160089                  000000010042df70     tuntap.obj
+ 0003:00004f84       $SG160172                  000000010042df84     tuntap.obj
+ 0003:00004f88       $SG160090                  000000010042df88     tuntap.obj
+ 0003:00004f94       $SG160092                  000000010042df94     tuntap.obj
+ 0003:00004f9c       $SG160192                  000000010042df9c     tuntap.obj
+ 0003:00004fa0       $SG160094                  000000010042dfa0     tuntap.obj
+ 0003:00004fcc       $SG160199                  000000010042dfcc     tuntap.obj
+ 0003:00004fd0       $SG160095                  000000010042dfd0     tuntap.obj
+ 0003:00004fe4       $SG160205                  000000010042dfe4     tuntap.obj
+ 0003:00004fe8       $SG160096                  000000010042dfe8     tuntap.obj
+ 0003:00004ff4       $SG160098                  000000010042dff4     tuntap.obj
+ 0003:00004ffc       $SG160223                  000000010042dffc     tuntap.obj
+ 0003:00005000       $SG160100                  000000010042e000     tuntap.obj
+ 0003:00005034       $SG160230                  000000010042e034     tuntap.obj
+ 0003:00005038       $SG160101                  000000010042e038     tuntap.obj
+ 0003:0000504c       $SG160245                  000000010042e04c     tuntap.obj
+ 0003:00005050       $SG160102                  000000010042e050     tuntap.obj
+ 0003:0000505c       $SG160263                  000000010042e05c     tuntap.obj
+ 0003:00005060       $SG160106                  000000010042e060     tuntap.obj
+ 0003:00005094       $SG160344                  000000010042e094     tuntap.obj
+ 0003:00005098       $SG160107                  000000010042e098     tuntap.obj
+ 0003:000050ac       $SG160402                  000000010042e0ac     tuntap.obj
+ 0003:000050b0       $SG160108                  000000010042e0b0     tuntap.obj
+ 0003:000050bc       $SG160406                  000000010042e0bc     tuntap.obj
+ 0003:000050c4       $SG160409                  000000010042e0c4     tuntap.obj
+ 0003:000050c8       $SG160111                  000000010042e0c8     tuntap.obj
+ 0003:000050f4       $SG160411                  000000010042e0f4     tuntap.obj
+ 0003:000050f8       $SG160112                  000000010042e0f8     tuntap.obj
+ 0003:0000510c       $SG160414                  000000010042e10c     tuntap.obj
+ 0003:00005110       $SG160113                  000000010042e110     tuntap.obj
+ 0003:0000511c       $SG160127                  000000010042e11c     tuntap.obj
+ 0003:00005124       $SG160418                  000000010042e124     tuntap.obj
+ 0003:00005128       $SG160129                  000000010042e128     tuntap.obj
+ 0003:00005150       $SG160130                  000000010042e150     tuntap.obj
+ 0003:00005160       $SG160131                  000000010042e160     tuntap.obj
+ 0003:00005170       $SG160133                  000000010042e170     tuntap.obj
+ 0003:00005188       $SG160134                  000000010042e188     tuntap.obj
+ 0003:00005198       $SG160136                  000000010042e198     tuntap.obj
+ 0003:000051c0       $SG160137                  000000010042e1c0     tuntap.obj
+ 0003:000051d0       $SG160138                  000000010042e1d0     tuntap.obj
+ 0003:000051e0       $SG160140                  000000010042e1e0     tuntap.obj
+ 0003:000051f0       $SG160142                  000000010042e1f0     tuntap.obj
+ 0003:00005218       $SG160143                  000000010042e218     tuntap.obj
+ 0003:00005228       $SG160144                  000000010042e228     tuntap.obj
+ 0003:00005234       $SG160158                  000000010042e234     tuntap.obj
+ 0003:00005240       $SG160160                  000000010042e240     tuntap.obj
+ 0003:00005268       $SG160161                  000000010042e268     tuntap.obj
+ 0003:00005278       $SG160162                  000000010042e278     tuntap.obj
+ 0003:00005284       $SG160165                  000000010042e284     tuntap.obj
+ 0003:00005290       $SG160167                  000000010042e290     tuntap.obj
+ 0003:000052c0       $SG160168                  000000010042e2c0     tuntap.obj
+ 0003:000052d0       $SG160169                  000000010042e2d0     tuntap.obj
+ 0003:000052e0       $SG160173                  000000010042e2e0     tuntap.obj
+ 0003:00005310       $SG160174                  000000010042e310     tuntap.obj
+ 0003:00005320       $SG160175                  000000010042e320     tuntap.obj
+ 0003:0000532c       $SG160191                  000000010042e32c     tuntap.obj
+ 0003:00005338       $SG160193                  000000010042e338     tuntap.obj
+ 0003:00005360       $SG160194                  000000010042e360     tuntap.obj
+ 0003:00005378       $SG160195                  000000010042e378     tuntap.obj
+ 0003:00005388       $SG160197                  000000010042e388     tuntap.obj
+ 0003:000053a0       $SG160198                  000000010042e3a0     tuntap.obj
+ 0003:000053b8       $SG160200                  000000010042e3b8     tuntap.obj
+ 0003:000053e0       $SG160201                  000000010042e3e0     tuntap.obj
+ 0003:000053f8       $SG160202                  000000010042e3f8     tuntap.obj
+ 0003:00005408       $SG160204                  000000010042e408     tuntap.obj
+ 0003:00005420       $SG160206                  000000010042e420     tuntap.obj
+ 0003:00005448       $SG160207                  000000010042e448     tuntap.obj
+ 0003:00005460       $SG160208                  000000010042e460     tuntap.obj
+ 0003:0000546c       $SG160222                  000000010042e46c     tuntap.obj
+ 0003:00005478       $SG160224                  000000010042e478     tuntap.obj
+ 0003:000054a0       $SG160225                  000000010042e4a0     tuntap.obj
+ 0003:000054b8       $SG160226                  000000010042e4b8     tuntap.obj
+ 0003:000054c4       $SG160229                  000000010042e4c4     tuntap.obj
+ 0003:000054d0       $SG160231                  000000010042e4d0     tuntap.obj
+ 0003:00005508       $SG160232                  000000010042e508     tuntap.obj
+ 0003:00005520       $SG160233                  000000010042e520     tuntap.obj
+ 0003:0000552c       $SG160244                  000000010042e52c     tuntap.obj
+ 0003:00005538       $SG160246                  000000010042e538     tuntap.obj
+ 0003:00005560       $SG160247                  000000010042e560     tuntap.obj
+ 0003:00005570       $SG160248                  000000010042e570     tuntap.obj
+ 0003:0000557c       $SG160262                  000000010042e57c     tuntap.obj
+ 0003:00005588       $SG160264                  000000010042e588     tuntap.obj
+ 0003:000055b0       $SG160265                  000000010042e5b0     tuntap.obj
+ 0003:000055c0       $SG160266                  000000010042e5c0     tuntap.obj
+ 0003:000055d0       $SG160310                  000000010042e5d0     tuntap.obj
+ 0003:000055e8       $SG160311                  000000010042e5e8     tuntap.obj
+ 0003:000055f8       $SG160314                  000000010042e5f8     tuntap.obj
+ 0003:00005610       $SG160312                  000000010042e610     tuntap.obj
+ 0003:00005658       $SG160315                  000000010042e658     tuntap.obj
+ 0003:00005668       $SG160353                  000000010042e668     tuntap.obj
+ 0003:00005688       $SG160416                  000000010042e688     tuntap.obj
+ 0003:000056a0       $SG160316                  000000010042e6a0     tuntap.obj
+ 0003:000056e8       $SG160363                  000000010042e6e8     tuntap.obj
+ 0003:000056f8       $SG160403                  000000010042e6f8     tuntap.obj
+ 0003:00005708       $SG160415                  000000010042e708     tuntap.obj
+ 0003:00005728       $SG160417                  000000010042e728     tuntap.obj
+ 0003:00005738       $SG160419                  000000010042e738     tuntap.obj
+ 0003:00005758       $SG160420                  000000010042e758     tuntap.obj
+ 0003:00005768       $SG160421                  000000010042e768     tuntap.obj
+ 0003:00005780       $SG159142                  000000010042e780     w32ctca.obj
+ 0003:00005798       $SG159143                  000000010042e798     w32ctca.obj
+ 0003:000057a8       $SG159145                  000000010042e7a8     w32ctca.obj
+ 0003:000057bc       $SG159181                  000000010042e7bc     w32ctca.obj
+ 0003:000057c0       $SG159146                  000000010042e7c0     w32ctca.obj
+ 0003:000057d0       $SG159148                  000000010042e7d0     w32ctca.obj
+ 0003:000057e4       $SG159201                  000000010042e7e4     w32ctca.obj
+ 0003:000057e8       $SG159149                  000000010042e7e8     w32ctca.obj
+ 0003:000057f8       $SG159151                  000000010042e7f8     w32ctca.obj
+ 0003:0000580c       $SG159256                  000000010042e80c     w32ctca.obj
+ 0003:00005810       $SG159152                  000000010042e810     w32ctca.obj
+ 0003:00005820       $SG159154                  000000010042e820     w32ctca.obj
+ 0003:00005834       $SG159270                  000000010042e834     w32ctca.obj
+ 0003:00005838       $SG159155                  000000010042e838     w32ctca.obj
+ 0003:00005848       $SG159157                  000000010042e848     w32ctca.obj
+ 0003:00005860       $SG159158                  000000010042e860     w32ctca.obj
+ 0003:00005874       $SG159275                  000000010042e874     w32ctca.obj
+ 0003:00005878       $SG159160                  000000010042e878     w32ctca.obj
+ 0003:00005898       $SG159161                  000000010042e898     w32ctca.obj
+ 0003:000058b4       $SG159378                  000000010042e8b4     w32ctca.obj
+ 0003:000058b8       $SG159163                  000000010042e8b8     w32ctca.obj
+ 0003:000058dc       $SG159383                  000000010042e8dc     w32ctca.obj
+ 0003:000058e0       $SG159164                  000000010042e8e0     w32ctca.obj
+ 0003:00005900       $SG159166                  000000010042e900     w32ctca.obj
+ 0003:0000591c       $SG159388                  000000010042e91c     w32ctca.obj
+ 0003:00005920       $SG159167                  000000010042e920     w32ctca.obj
+ 0003:00005938       $SG159169                  000000010042e938     w32ctca.obj
+ 0003:00005954       $SG159393                  000000010042e954     w32ctca.obj
+ 0003:00005958       $SG159170                  000000010042e958     w32ctca.obj
+ 0003:00005974       $SG159398                  000000010042e974     w32ctca.obj
+ 0003:00005978       $SG159172                  000000010042e978     w32ctca.obj
+ 0003:00005998       $SG159173                  000000010042e998     w32ctca.obj
+ 0003:000059b4       $SG159403                  000000010042e9b4     w32ctca.obj
+ 0003:000059b8       $SG159175                  000000010042e9b8     w32ctca.obj
+ 0003:000059dc       $SG159408                  000000010042e9dc     w32ctca.obj
+ 0003:000059e0       $SG159176                  000000010042e9e0     w32ctca.obj
+ 0003:00005a00       $SG159177                  000000010042ea00     w32ctca.obj
+ 0003:00005a1c       $SG159413                  000000010042ea1c     w32ctca.obj
+ 0003:00005a20       $SG159178                  000000010042ea20     w32ctca.obj
+ 0003:00005a3c       $SG159418                  000000010042ea3c     w32ctca.obj
+ 0003:00005a40       $SG159179                  000000010042ea40     w32ctca.obj
+ 0003:00005a5c       $SG159423                  000000010042ea5c     w32ctca.obj
+ 0003:00005a60       $SG159180                  000000010042ea60     w32ctca.obj
+ 0003:00005a7c       $SG159428                  000000010042ea7c     w32ctca.obj
+ 0003:00005a80       $SG159182                  000000010042ea80     w32ctca.obj
+ 0003:00005ab4       $SG159433                  000000010042eab4     w32ctca.obj
+ 0003:00005ab8       $SG159183                  000000010042eab8     w32ctca.obj
+ 0003:00005acc       $SG159438                  000000010042eacc     w32ctca.obj
+ 0003:00005ad0       $SG159184                  000000010042ead0     w32ctca.obj
+ 0003:00005adc       $SG159443                  000000010042eadc     w32ctca.obj
+ 0003:00005ae0       $SG159202                  000000010042eae0     w32ctca.obj
+ 0003:00005af4       $SG159448                  000000010042eaf4     w32ctca.obj
+ 0003:00005af8       $SG159203                  000000010042eaf8     w32ctca.obj
+ 0003:00005b14       $SG159453                  000000010042eb14     w32ctca.obj
+ 0003:00005b18       $SG159204                  000000010042eb18     w32ctca.obj
+ 0003:00005b24       $SG159458                  000000010042eb24     w32ctca.obj
+ 0003:00005b28       $SG159241                  000000010042eb28     w32ctca.obj
+ 0003:00005b38       $SG159242                  000000010042eb38     w32ctca.obj
+ 0003:00005b48       $SG159245                  000000010042eb48     w32ctca.obj
+ 0003:00005b58       $SG159246                  000000010042eb58     w32ctca.obj
+ 0003:00005b68       $SG159249                  000000010042eb68     w32ctca.obj
+ 0003:00005b78       $SG159269                  000000010042eb78     w32ctca.obj
+ 0003:00005b90       $SG159247                  000000010042eb90     w32ctca.obj
+ 0003:00005bd8       $SG159250                  000000010042ebd8     w32ctca.obj
+ 0003:00005be8       $SG159259                  000000010042ebe8     w32ctca.obj
+ 0003:00005bf8       $SG159276                  000000010042ebf8     w32ctca.obj
+ 0003:00005c20       $SG159251                  000000010042ec20     w32ctca.obj
+ 0003:00005c68       $SG159260                  000000010042ec68     w32ctca.obj
+ 0003:00005c78       $SG159263                  000000010042ec78     w32ctca.obj
+ 0003:00005c88       $SG159367                  000000010042ec88     w32ctca.obj
+ 0003:00005ca0       $SG159261                  000000010042eca0     w32ctca.obj
+ 0003:00005ce8       $SG159264                  000000010042ece8     w32ctca.obj
+ 0003:00005cf8       $SG159272                  000000010042ecf8     w32ctca.obj
+ 0003:00005d08       $SG159380                  000000010042ed08     w32ctca.obj
+ 0003:00005d20       $SG159265                  000000010042ed20     w32ctca.obj
+ 0003:00005d68       $SG159271                  000000010042ed68     w32ctca.obj
+ 0003:00005d94       $SG159462                  000000010042ed94     w32ctca.obj
+ 0003:00005d98       $SG159273                  000000010042ed98     w32ctca.obj
+ 0003:00005da4       $SG159467                  000000010042eda4     w32ctca.obj
+ 0003:00005da8       $SG159277                  000000010042eda8     w32ctca.obj
+ 0003:00005db8       $SG159278                  000000010042edb8     w32ctca.obj
+ 0003:00005dc4       $SG159472                  000000010042edc4     w32ctca.obj
+ 0003:00005dc8       $SG159379                  000000010042edc8     w32ctca.obj
+ 0003:00005de4       $SG159477                  000000010042ede4     w32ctca.obj
+ 0003:00005de8       $SG159381                  000000010042ede8     w32ctca.obj
+ 0003:00005df4       $SG159482                  000000010042edf4     w32ctca.obj
+ 0003:00005df8       $SG159382                  000000010042edf8     w32ctca.obj
+ 0003:00005e1c       $SG159487                  000000010042ee1c     w32ctca.obj
+ 0003:00005e20       $SG159384                  000000010042ee20     w32ctca.obj
+ 0003:00005e38       $SG159385                  000000010042ee38     w32ctca.obj
+ 0003:00005e4c       $SG159492                  000000010042ee4c     w32ctca.obj
+ 0003:00005e50       $SG159386                  000000010042ee50     w32ctca.obj
+ 0003:00005e5c       $SG159497                  000000010042ee5c     w32ctca.obj
+ 0003:00005e60       $SG159387                  000000010042ee60     w32ctca.obj
+ 0003:00005e84       $SG159502                  000000010042ee84     w32ctca.obj
+ 0003:00005e88       $SG159389                  000000010042ee88     w32ctca.obj
+ 0003:00005ea0       $SG159390                  000000010042eea0     w32ctca.obj
+ 0003:00005eb4       $SG159507                  000000010042eeb4     w32ctca.obj
+ 0003:00005eb8       $SG159391                  000000010042eeb8     w32ctca.obj
+ 0003:00005ec4       $SG159512                  000000010042eec4     w32ctca.obj
+ 0003:00005ec8       $SG159392                  000000010042eec8     w32ctca.obj
+ 0003:00005eec       $SG159517                  000000010042eeec     w32ctca.obj
+ 0003:00005ef0       $SG159394                  000000010042eef0     w32ctca.obj
+ 0003:00005f08       $SG159395                  000000010042ef08     w32ctca.obj
+ 0003:00005f1c       $SG159522                  000000010042ef1c     w32ctca.obj
+ 0003:00005f20       $SG159396                  000000010042ef20     w32ctca.obj
+ 0003:00005f2c       $SG159527                  000000010042ef2c     w32ctca.obj
+ 0003:00005f30       $SG159397                  000000010042ef30     w32ctca.obj
+ 0003:00005f48       $SG159399                  000000010042ef48     w32ctca.obj
+ 0003:00005f68       $SG159400                  000000010042ef68     w32ctca.obj
+ 0003:00005f80       $SG159401                  000000010042ef80     w32ctca.obj
+ 0003:00005f90       $SG159402                  000000010042ef90     w32ctca.obj
+ 0003:00005fa8       $SG159404                  000000010042efa8     w32ctca.obj
+ 0003:00005fc8       $SG159405                  000000010042efc8     w32ctca.obj
+ 0003:00005fe0       $SG159406                  000000010042efe0     w32ctca.obj
+ 0003:00005ff0       $SG159407                  000000010042eff0     w32ctca.obj
+ 0003:00006018       $SG159409                  000000010042f018     w32ctca.obj
+ 0003:00006038       $SG159410                  000000010042f038     w32ctca.obj
+ 0003:00006050       $SG159411                  000000010042f050     w32ctca.obj
+ 0003:00006060       $SG159412                  000000010042f060     w32ctca.obj
+ 0003:00006078       $SG159414                  000000010042f078     w32ctca.obj
+ 0003:00006098       $SG159415                  000000010042f098     w32ctca.obj
+ 0003:000060b0       $SG159416                  000000010042f0b0     w32ctca.obj
+ 0003:000060c0       $SG159417                  000000010042f0c0     w32ctca.obj
+ 0003:000060d8       $SG159419                  000000010042f0d8     w32ctca.obj
+ 0003:000060f8       $SG159420                  000000010042f0f8     w32ctca.obj
+ 0003:00006110       $SG159421                  000000010042f110     w32ctca.obj
+ 0003:00006120       $SG159422                  000000010042f120     w32ctca.obj
+ 0003:00006138       $SG159424                  000000010042f138     w32ctca.obj
+ 0003:00006158       $SG159425                  000000010042f158     w32ctca.obj
+ 0003:00006170       $SG159426                  000000010042f170     w32ctca.obj
+ 0003:00006180       $SG159427                  000000010042f180     w32ctca.obj
+ 0003:00006190       $SG159429                  000000010042f190     w32ctca.obj
+ 0003:000061b0       $SG159430                  000000010042f1b0     w32ctca.obj
+ 0003:000061c8       $SG159431                  000000010042f1c8     w32ctca.obj
+ 0003:000061d8       $SG159432                  000000010042f1d8     w32ctca.obj
+ 0003:000061f8       $SG159434                  000000010042f1f8     w32ctca.obj
+ 0003:00006218       $SG159435                  000000010042f218     w32ctca.obj
+ 0003:00006230       $SG159436                  000000010042f230     w32ctca.obj
+ 0003:00006240       $SG159437                  000000010042f240     w32ctca.obj
+ 0003:00006258       $SG159439                  000000010042f258     w32ctca.obj
+ 0003:00006278       $SG159440                  000000010042f278     w32ctca.obj
+ 0003:00006290       $SG159441                  000000010042f290     w32ctca.obj
+ 0003:000062a0       $SG159442                  000000010042f2a0     w32ctca.obj
+ 0003:000062b8       $SG159444                  000000010042f2b8     w32ctca.obj
+ 0003:000062d8       $SG159445                  000000010042f2d8     w32ctca.obj
+ 0003:000062f0       $SG159446                  000000010042f2f0     w32ctca.obj
+ 0003:00006300       $SG159447                  000000010042f300     w32ctca.obj
+ 0003:00006320       $SG159449                  000000010042f320     w32ctca.obj
+ 0003:00006340       $SG159450                  000000010042f340     w32ctca.obj
+ 0003:00006358       $SG159451                  000000010042f358     w32ctca.obj
+ 0003:00006368       $SG159452                  000000010042f368     w32ctca.obj
+ 0003:00006380       $SG159454                  000000010042f380     w32ctca.obj
+ 0003:000063a0       $SG159455                  000000010042f3a0     w32ctca.obj
+ 0003:000063b8       $SG159456                  000000010042f3b8     w32ctca.obj
+ 0003:000063c8       $SG159457                  000000010042f3c8     w32ctca.obj
+ 0003:000063e0       $SG159459                  000000010042f3e0     w32ctca.obj
+ 0003:00006400       $SG159460                  000000010042f400     w32ctca.obj
+ 0003:00006418       $SG159461                  000000010042f418     w32ctca.obj
+ 0003:00006428       $SG159463                  000000010042f428     w32ctca.obj
+ 0003:00006448       $SG159464                  000000010042f448     w32ctca.obj
+ 0003:00006460       $SG159465                  000000010042f460     w32ctca.obj
+ 0003:00006470       $SG159466                  000000010042f470     w32ctca.obj
+ 0003:00006498       $SG159468                  000000010042f498     w32ctca.obj
+ 0003:000064b0       $SG159469                  000000010042f4b0     w32ctca.obj
+ 0003:000064c8       $SG159470                  000000010042f4c8     w32ctca.obj
+ 0003:000064d8       $SG159471                  000000010042f4d8     w32ctca.obj
+ 0003:00006500       $SG159473                  000000010042f500     w32ctca.obj
+ 0003:00006518       $SG159474                  000000010042f518     w32ctca.obj
+ 0003:00006530       $SG159475                  000000010042f530     w32ctca.obj
+ 0003:00006540       $SG159476                  000000010042f540     w32ctca.obj
+ 0003:00006568       $SG159478                  000000010042f568     w32ctca.obj
+ 0003:00006580       $SG159479                  000000010042f580     w32ctca.obj
+ 0003:00006598       $SG159480                  000000010042f598     w32ctca.obj
+ 0003:000065a8       $SG159481                  000000010042f5a8     w32ctca.obj
+ 0003:000065c0       $SG159483                  000000010042f5c0     w32ctca.obj
+ 0003:000065e0       $SG159484                  000000010042f5e0     w32ctca.obj
+ 0003:000065f8       $SG159485                  000000010042f5f8     w32ctca.obj
+ 0003:00006608       $SG159486                  000000010042f608     w32ctca.obj
+ 0003:00006620       $SG159488                  000000010042f620     w32ctca.obj
+ 0003:00006640       $SG159489                  000000010042f640     w32ctca.obj
+ 0003:00006658       $SG159490                  000000010042f658     w32ctca.obj
+ 0003:00006668       $SG159491                  000000010042f668     w32ctca.obj
+ 0003:00006680       $SG159493                  000000010042f680     w32ctca.obj
+ 0003:000066a0       $SG159494                  000000010042f6a0     w32ctca.obj
+ 0003:000066b8       $SG159495                  000000010042f6b8     w32ctca.obj
+ 0003:000066c8       $SG159496                  000000010042f6c8     w32ctca.obj
+ 0003:000066e0       $SG159498                  000000010042f6e0     w32ctca.obj
+ 0003:00006700       $SG159499                  000000010042f700     w32ctca.obj
+ 0003:00006718       $SG159500                  000000010042f718     w32ctca.obj
+ 0003:00006728       $SG159501                  000000010042f728     w32ctca.obj
+ 0003:00006740       $SG159503                  000000010042f740     w32ctca.obj
+ 0003:00006760       $SG159504                  000000010042f760     w32ctca.obj
+ 0003:00006778       $SG159505                  000000010042f778     w32ctca.obj
+ 0003:00006788       $SG159506                  000000010042f788     w32ctca.obj
+ 0003:00006798       $SG159508                  000000010042f798     w32ctca.obj
+ 0003:000067b8       $SG159509                  000000010042f7b8     w32ctca.obj
+ 0003:000067d0       $SG159510                  000000010042f7d0     w32ctca.obj
+ 0003:000067e0       $SG159511                  000000010042f7e0     w32ctca.obj
+ 0003:00006800       $SG159513                  000000010042f800     w32ctca.obj
+ 0003:00006820       $SG159514                  000000010042f820     w32ctca.obj
+ 0003:00006838       $SG159515                  000000010042f838     w32ctca.obj
+ 0003:00006848       $SG159516                  000000010042f848     w32ctca.obj
+ 0003:00006860       $SG159518                  000000010042f860     w32ctca.obj
+ 0003:00006880       $SG159519                  000000010042f880     w32ctca.obj
+ 0003:00006898       $SG159520                  000000010042f898     w32ctca.obj
+ 0003:000068a8       $SG159521                  000000010042f8a8     w32ctca.obj
+ 0003:000068c0       $SG159523                  000000010042f8c0     w32ctca.obj
+ 0003:000068e0       $SG159524                  000000010042f8e0     w32ctca.obj
+ 0003:000068f8       $SG159525                  000000010042f8f8     w32ctca.obj
+ 0003:00006908       $SG159526                  000000010042f908     w32ctca.obj
+ 0003:00006920       $SG159528                  000000010042f920     w32ctca.obj
+ 0003:00006940       $SG159529                  000000010042f940     w32ctca.obj
+ 0003:00006958       $SG159530                  000000010042f958     w32ctca.obj
+ 0003:00006968       $SG159092                  000000010042f968     resolve.obj
+ 0003:00006988       $SG159099                  000000010042f988     resolve.obj
+ 0003:000069c0       $SG159110                  000000010042f9c0     resolve.obj
+ 0003:000069e0       $SG159115                  000000010042f9e0     resolve.obj
+ 0003:00006a10       $SG159117                  000000010042fa10     resolve.obj
+ 0003:00006a30       $SG159127                  000000010042fa30     resolve.obj
+ 0003:00006a60       $SG159129                  000000010042fa60     resolve.obj
+ 0003:00006ac0       TokenLock                  000000010042fac0     ctc_ptp.obj
+ 0003:00006ac8       TokenLockInitialized       000000010042fac8     ctc_ptp.obj
+ 0003:00006acc       $SG170362                  000000010042facc     ctc_ptp.obj
+ 0003:00006acd       $SG170367                  000000010042facd     ctc_ptp.obj
+ 0003:00006ace       $SG170370                  000000010042face     ctc_ptp.obj
+ 0003:00006dc0       ?tt32_init_done@?1??tt32_loaddll@@9@9 000000010042fdc0     w32ctca.obj
+ 0003:00006dc4       ?__proc_attached@@3HA      000000010042fdc4     MSVCRTD:dll_dllmain.obj
+ 0003:00006dd0       GS_ExceptionRecord         000000010042fdd0     MSVCRTD:gs_report.obj
+ 0003:00006e70       GS_ContextRecord           000000010042fe70     MSVCRTD:gs_report.obj
+ 0003:00007370       ?is_initialized_as_dll@@3_NA 0000000100430370     MSVCRTD:utility.obj
+ 0003:00007371       ?module_local_atexit_table_initialized@@3_NA 0000000100430371     MSVCRTD:utility.obj
+ 0003:00007378       ?module_local_atexit_table@@3U_onexit_table_t@@A 0000000100430378     MSVCRTD:utility.obj
+ 0003:00007390       ?module_local_at_quick_exit_table@@3U_onexit_table_t@@A 0000000100430390     MSVCRTD:utility.obj
+ 0005:000002d0       $R000000                   00000001004322d0     hercprod.res
+ 0005:00000878       $R0005A8                   0000000100432878     hercprod.res
+ 0005:000009a0       $R0006D0                   00000001004329a0     hercprod.res
+ 0005:00000f08       $R000C38                   0000000100432f08     hercprod.res
+ 0005:00001370       $R0010A0                   0000000100433370     hercprod.res
+ 0005:00001658       $R001388                   0000000100433658     hercprod.res
+ 0005:00001f00       $R001C30                   0000000100433f00     hercprod.res
+ 0005:00002fa8       $R002CD8                   0000000100434fa8     hercprod.res
+ 0005:00003610       $R003340                   0000000100435610     hercprod.res
+ 0005:000044b8       $R0041E8                   00000001004364b8     hercprod.res
+ 0005:00006a60       $R006790                   0000000100438a60     hercprod.res
+ 0005:0000ff08       $R00FC38                   0000000100441f08     hercprod.res
+ 0005:00013bc8       $R0138F8                   0000000100445bc8     hercprod.res
