@@ -1,4 +1,5 @@
 /* HETLIB.C    (C) Copyright Leland Lucius, 2000-2012                */
+/*             (C) and others 2013-2023                              */
 /*             Library for managing Hercules Emulated Tapes          */
 /*                                                                   */
 /*   Released under "The Q Public License Version 1"                 */
@@ -771,8 +772,15 @@ het_read( HETB *hetb, void *sbuf )
     unsigned long slen;
     unsigned long tlen;
 
+<<<<<<< HEAD
 //    unsigned int bz_slen; @salva unreferenced local variable error
 //    unsigned int bz_tlen; @salva unreferenced local variable error
+=======
+#if defined( HET_BZIP2 )
+    unsigned int bz_slen;
+    unsigned int bz_tlen;
+#endif
+>>>>>>> upstream/develop
 
     int flags1, flags2;
     char *tbuf;
@@ -1269,7 +1277,9 @@ het_write( HETB *hetb, const void *sbuf, int slen )
 
     unsigned long tlen;
 
-//    unsigned int bz_tlen; @salva unreferenced local variable error
+#if defined( HET_BZIP2 )
+    unsigned int bz_tlen;
+#endif
 
     char *tbuf = NULL;
 #if defined( HAVE_ZLIB ) || defined( HET_BZIP2 )
