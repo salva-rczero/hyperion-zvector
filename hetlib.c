@@ -772,15 +772,10 @@ het_read( HETB *hetb, void *sbuf )
     unsigned long slen;
     unsigned long tlen;
 
-<<<<<<< HEAD
-//    unsigned int bz_slen; @salva unreferenced local variable error
-//    unsigned int bz_tlen; @salva unreferenced local variable error
-=======
 #if defined( HET_BZIP2 )
     unsigned int bz_slen;
     unsigned int bz_tlen;
 #endif
->>>>>>> upstream/develop
 
     int flags1, flags2;
     char *tbuf;
