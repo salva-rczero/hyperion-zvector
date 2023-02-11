@@ -538,20 +538,6 @@ extern inline BYTE cmpxchg8_C11(U64 *old, U64 new, volatile void *ptr);
 #endif
 
 /*-------------------------------------------------------------------
- * store_qw_noswap and store_qw
-*-------------------------------------------------------------------*/
-#if !defined(store_qw_noswap)
-#if defined(store_qw)
-#define store_qw_noswap(_p, _v) store_qw((_p), (_v))
-#else
-    extern inline void store_qw_noswap(void* ptr, QWORD value);
-#endif
-#endif
-#if !defined(store_qw)
-#define store_qw(_p, _v) store_qw_noswap((_p), (_v))
-#endif
-
-/*-------------------------------------------------------------------
  * cmpxchg1
  *-------------------------------------------------------------------*/
 #ifndef cmpxchg1

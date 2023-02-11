@@ -2600,6 +2600,70 @@ char buf[512];
     return 0;
 }
 
+/*-------------------------------------------------------------------*/
+/* vr command - display vector registers                             */
+/*-------------------------------------------------------------------*/
+#pragma optimize("", off)
+int vr_cmd(int argc, char* argv[], char* cmdline)
+{
+    REGS* regs;
+    char buf[1536];
+
+    UNREFERENCED(cmdline);
+
+    obtain_lock(&sysblk.cpulock[sysblk.pcpu]);
+
+    if (!IS_CPU_ONLINE(sysblk.pcpu))
+    {
+        release_lock(&sysblk.cpulock[sysblk.pcpu]);
+        // "Processor %s%02X: processor is not %s"
+        WRMSG(HHC00816, "W", PTYPSTR(sysblk.pcpu), sysblk.pcpu, "online");
+        return 0;
+    }
+    regs = sysblk.regs[sysblk.pcpu];
+
+    if (argc > 1)
+    {
+        union {
+            struct { U64 H; U64 L; } D; 
+            QWORD Q;                    
+        } reg_value;
+
+        int   reg_num;
+        BYTE  equal_sign, c;
+
+        if (argc > 2)
+        {
+            release_lock(&sysblk.cpulock[sysblk.pcpu]);
+            // "Invalid argument '%s'%s"
+            WRMSG(HHC02205, "E", argv[1], "");
+            return 0;
+        }
+        if (0
+            || sscanf(argv[1], "%d%c%"SCNx64".%"SCNx64"%c", &reg_num, &equal_sign, &reg_value.D.H, &reg_value.D.L, &c) != 4
+            || reg_num < 0
+            || reg_num > 31
+            || '=' != equal_sign
+            )
+        {
+            release_lock(&sysblk.cpulock[sysblk.pcpu]);
+            // "Invalid argument '%s'%s"
+            WRMSG(HHC02205, "E", argv[1], "");
+            return 0;
+        }
+        reg_value.D.H = CSWAP64(reg_value.D.H);
+        reg_value.D.L = CSWAP64(reg_value.D.L);
+        memcpy(regs->vr[reg_num],reg_value.Q,sizeof(QWORD));
+    }
+
+    display_vregs(regs, buf, sizeof(buf), "HHC02277I ");
+    WRMSG(HHC02277, "I", "Vector registers");
+    LOGMSG("%s", buf);
+
+    release_lock(&sysblk.cpulock[sysblk.pcpu]);
+
+    return 0;
+}
 
 /*-------------------------------------------------------------------*/
 /* i command - generate I/O attention interrupt for device           */
@@ -2665,21 +2729,39 @@ int i_cmd( int argc, char* argv[], char* cmdline )
 
 #if defined( OPTION_INSTRUCTION_COUNTING )
 /*-------------------------------------------------------------------*/
+/* Definition of opcode execution count entries                      */
+/*-------------------------------------------------------------------*/
+typedef struct {
+    unsigned char opcode1; // Operation code, first byte
+    unsigned char opcode2; // Operation code, second byte
+    U8 opc2pos;            // Opcode2 position in Instr
+    U64 count;             // Execution count from sysblk.imap??
+} ICOUNT_INSTR;
+
+/*-------------------------------------------------------------------*/
+/* icount command sort callback (Descending by exec count)           */
+/*-------------------------------------------------------------------*/
+static int icount_cmd_sort(const ICOUNT_INSTR *x, const ICOUNT_INSTR *y)
+{
+    return (x->count < y->count) ? +1 : -1;
+}
+/*-------------------------------------------------------------------*/
 /* icount command - display instruction counts                       */
 /*-------------------------------------------------------------------*/
 int icount_cmd( int argc, char* argv[], char* cmdline )
 {
-    int i, i1, i2, i3;
-
-#define  MAX_ICOUNT_INSTR   1000    /* Maximum number of instructions
+    int i, i1, i2;
+    REGS *regs;
+    BYTE fakeinst[6];
+    
+    #define  MAX_ICOUNT_INSTR   1000    /* Maximum number of instructions
                                      in architecture instruction set */
     U64  total;
-    U64  count[ MAX_ICOUNT_INSTR ];
-
-    unsigned char opcode1[ MAX_ICOUNT_INSTR ];
-    unsigned char opcode2[ MAX_ICOUNT_INSTR ];
+    ICOUNT_INSTR icount[MAX_ICOUNT_INSTR];
 
     char buf[ 128 ];
+    
+    regs = sysblk.regs[sysblk.pcpu];
 
     UNREFERENCED( cmdline );
 
@@ -2729,12 +2811,6 @@ int icount_cmd( int argc, char* argv[], char* cmdline )
         return -1;
     }
 
-    /* Display sorted counts... */
-
-    memset( opcode1, 0, sizeof( opcode1 ));
-    memset( opcode2, 0, sizeof( opcode2 ));
-    memset( count,   0, sizeof( count   ));
-
     /* (collect...) */
 
     i = 0;
@@ -2744,7 +2820,7 @@ int icount_cmd( int argc, char* argv[], char* cmdline )
     {
       switch (i1)
       {
-#define ICOUNT_COLLECT_CASE( _case, _map, _nn )             \
+#define ICOUNT_COLLECT_CASE( _case, _map, _nn, _pos )       \
                                                             \
         case _case:                                         \
         {                                                   \
@@ -2752,9 +2828,10 @@ int icount_cmd( int argc, char* argv[], char* cmdline )
           {                                                 \
             if (sysblk._map[ i2 ])                          \
             {                                               \
-              opcode1[ i ] = i1;                            \
-              opcode2[ i ] = i2;                            \
-              count[ i++ ] = sysblk._map[ i2 ];             \
+              icount[i].opcode1 = i1;                       \
+              icount[i].opcode2 = i2;                       \
+              icount[i].opc2pos = _pos;                     \
+              icount[i++].count = sysblk._map[ i2 ];        \
               total += sysblk._map[ i2 ];                   \
                                                             \
               if (i == (MAX_ICOUNT_INSTR - 1))              \
@@ -2768,33 +2845,35 @@ int icount_cmd( int argc, char* argv[], char* cmdline )
           break;                                            \
         }
 
-        ICOUNT_COLLECT_CASE( 0x01, imap01, 256 )
-        ICOUNT_COLLECT_CASE( 0xA4, imapa4, 256 )
-        ICOUNT_COLLECT_CASE( 0xA5, imapa5,  16 )
-        ICOUNT_COLLECT_CASE( 0xA6, imapa6, 256 )
-        ICOUNT_COLLECT_CASE( 0xA7, imapa7,  16 )
-        ICOUNT_COLLECT_CASE( 0xB2, imapb2, 256 )
-        ICOUNT_COLLECT_CASE( 0xB3, imapb3, 256 )
-        ICOUNT_COLLECT_CASE( 0xB9, imapb9, 256 )
-        ICOUNT_COLLECT_CASE( 0xC0, imapc0,  16 )
-        ICOUNT_COLLECT_CASE( 0xC2, imapc2,  16 )
-        ICOUNT_COLLECT_CASE( 0xC4, imapc4,  16 )
-        ICOUNT_COLLECT_CASE( 0xC6, imapc6,  16 )
-        ICOUNT_COLLECT_CASE( 0xC8, imapc8,  16 )
-        ICOUNT_COLLECT_CASE( 0xE3, imape3, 256 )
-        ICOUNT_COLLECT_CASE( 0xE4, imape4, 256 )
-        ICOUNT_COLLECT_CASE( 0xE5, imape5, 256 )
-        ICOUNT_COLLECT_CASE( 0xEB, imapeb, 256 )
-        ICOUNT_COLLECT_CASE( 0xEC, imapec, 256 )
-        ICOUNT_COLLECT_CASE( 0xED, imaped, 256 )
+        ICOUNT_COLLECT_CASE( 0x01, imap01, 256, 1 )
+        ICOUNT_COLLECT_CASE( 0xA4, imapa4, 256, 1 ) 
+        ICOUNT_COLLECT_CASE( 0xA5, imapa5,  16, 1 )
+        ICOUNT_COLLECT_CASE( 0xA6, imapa6, 256, 1 ) 
+        ICOUNT_COLLECT_CASE( 0xA7, imapa7,  16, 1 )
+        ICOUNT_COLLECT_CASE( 0xB2, imapb2, 256, 1 )
+        ICOUNT_COLLECT_CASE( 0xB3, imapb3, 256, 1 )
+        ICOUNT_COLLECT_CASE( 0xB9, imapb9, 256, 1 )
+        ICOUNT_COLLECT_CASE( 0xC0, imapc0,  16, 1 )
+        ICOUNT_COLLECT_CASE( 0xC2, imapc2,  16, 1 )
+        ICOUNT_COLLECT_CASE( 0xC4, imapc4,  16, 1 )
+        ICOUNT_COLLECT_CASE( 0xC6, imapc6,  16, 1 )
+        ICOUNT_COLLECT_CASE( 0xC8, imapc8,  16, 1 )
+        ICOUNT_COLLECT_CASE( 0xE3, imape3, 256, 5 )
+        ICOUNT_COLLECT_CASE( 0xE4, imape4, 256, 1 )
+        ICOUNT_COLLECT_CASE( 0xE5, imape5, 256, 1 )
+        ICOUNT_COLLECT_CASE( 0xE7, imape7, 256, 5 )
+        ICOUNT_COLLECT_CASE( 0xEB, imapeb, 256, 5 )
+        ICOUNT_COLLECT_CASE( 0xEC, imapec, 256, 5 )
+        ICOUNT_COLLECT_CASE( 0xED, imaped, 256, 5 )
 
-        default:
+      default:
         {
           if (sysblk.imapxx[ i1 ])
           {
-            opcode1[ i ] = i1;
-            opcode2[ i ] = 0;
-            count[ i++ ] = sysblk.imapxx[ i1 ];
+            icount[i].opcode1 = i1;         
+            icount[i].opcode2 = 0;                       
+            icount[i].opc2pos = 0;                     
+            icount[i++].count = sysblk.imapxx[i1];        
             total += sysblk.imapxx[ i1 ];
 
             if (i == (MAX_ICOUNT_INSTR - 1))
@@ -2810,32 +2889,8 @@ int icount_cmd( int argc, char* argv[], char* cmdline )
     }
 
     /* (sort...) */
-
-    for (i1=0; i1 < i; i1++)
-    {
-      /* (find highest) */
-
-      for (i2 = i1, i3 = i1; i2 < i; i2++)
-      {
-        if (count[ i2 ] > count[ i3 ])
-          i3 = i2;
-      }
-
-      /* (exchange) */
-
-      opcode1[ (MAX_ICOUNT_INSTR - 1) ] = opcode1[ i1 ];
-      opcode2[ (MAX_ICOUNT_INSTR - 1) ] = opcode2[ i1 ];
-      count  [ (MAX_ICOUNT_INSTR - 1) ] = count  [ i1 ];
-
-      opcode1[ i1 ] = opcode1[ i3 ];
-      opcode2[ i1 ] = opcode2[ i3 ];
-      count  [ i1 ] = count  [ i3 ];
-
-      opcode1[ i3 ] = opcode1[ (MAX_ICOUNT_INSTR - 1) ];
-      opcode2[ i3 ] = opcode2[ (MAX_ICOUNT_INSTR - 1) ];
-      count  [ i3 ] = count  [ (MAX_ICOUNT_INSTR - 1) ];
-    }
-
+    qsort(icount, i, sizeof(ICOUNT_INSTR), icount_cmd_sort);
+    
 #define  ICOUNT_WIDTH  "12"     /* Print field width */
 
     /* (print...) */
@@ -2843,55 +2898,57 @@ int icount_cmd( int argc, char* argv[], char* cmdline )
     // "%s"
     WRMSG( HHC02292, "I", "Sorted icount display:" );
 
-    for (i1=0; i1 < i; i1++)
-    {
-      switch (opcode1[ i1 ])
-      {
-        case 0x01:
-        case 0xA4:
-        case 0xA5:
-        case 0xA6:
-        case 0xA7:
-        case 0xB2:
-        case 0xB3:
-        case 0xB9:
-        case 0xC0:
-        case 0xC2:
-        case 0xC4:
-        case 0xC6:
-        case 0xC8:
-        case 0xE3:
-        case 0xE4:
-        case 0xE5:
-        case 0xEB:
-        case 0xEC:
-        case 0xED:
-        {
-          MSGBUF
-          (
-            buf, "Inst '%2.2X%2.2X' count %" ICOUNT_WIDTH PRIu64 " (%2d%%)",
-            opcode1[ i1 ], opcode2[ i1 ],
-            count[ i1 ],
-            (int) (count[ i1 ] * 100 / total)
-          );
-          // "%s"
-          WRMSG( HHC02292, "I", buf );
-          break;
-        }
-        default:
-        {
-          MSGBUF
-          (
-            buf, "Inst '%2.2X'   count %" ICOUNT_WIDTH PRIu64 " (%2d%%)",
-            opcode1[ i1 ], count[ i1 ],
-            (int) (count[ i1 ] * 100 / total)
-          );
-          // "%s"
-          WRMSG( HHC02292, "I", buf );
-          break;
-        }
-      }
-    }
+	for (i1 = 0; i1 < i; i1++)
+	{
+		memset(fakeinst, 0, sizeof(fakeinst));
+		int bufl = 0;
+		switch (icount[i1].opcode1)
+		{
+		case 0x01:
+		case 0xA4:
+		case 0xA5:
+		case 0xA6:
+		case 0xA7:
+		case 0xB2:
+		case 0xB3:
+		case 0xB9:
+		case 0xC0:
+		case 0xC2:
+		case 0xC4:
+		case 0xC6:
+		case 0xC8:
+		case 0xE3:
+		case 0xE4:
+		case 0xE5:
+		case 0xE7:
+		case 0xEB:
+		case 0xEC:
+		case 0xED:
+		{
+			bufl = MSGBUF
+			(
+				buf, "Inst '%2.2X%2.2X' count %" ICOUNT_WIDTH PRIu64 " (%2d%%) ",
+				icount[i1].opcode1, icount[i1].opcode2, icount[i1].count,
+				(int)(icount[i1].count * 100 / total)
+			);
+			fakeinst[icount[i1].opc2pos] = icount[i1].opcode2;
+			break;
+		}
+		default:
+		{
+			bufl = MSGBUF
+			(
+				buf, "Inst '%2.2X'   count %" ICOUNT_WIDTH PRIu64 " (%2d%%) ",
+				icount[i1].opcode1, icount[i1].count,
+				(int)(icount[i1].count * 100 / total)
+			);
+			break;
+		}
+		}
+		fakeinst[0] = icount[i1].opcode1;
+		bufl += PRINT_INST(regs->arch_mode, fakeinst, buf + bufl);
+		WRMSG(HHC02292, "I", buf);
+	}
 
     return 0;
 }

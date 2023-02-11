@@ -1829,11 +1829,10 @@ char cpustr[32] = "";
 /*-------------------------------------------------------------------*/
 /*               Display vector registers                            */
 /*-------------------------------------------------------------------*/
-#pragma optimize("", off)
 int display_vregs (REGS* regs, char* buf, int buflen, char* hdr)
 {
     char cpustr[32] = "";
-    char vrstr[32][33] = { "" };
+    char vrstr[32][38] = { "" };
 
     if (sysblk.cpus > 1)
         MSGBUF(cpustr, "%s%s%02X: ", hdr, PTYPSTR(regs->cpuad), regs->cpuad);
@@ -1842,8 +1841,8 @@ int display_vregs (REGS* regs, char* buf, int buflen, char* hdr)
     
     for (int i = 0; i < 32; i++) {
         uint8_t *x = regs->vr[i];
-        MSGBUF(vrstr[i], "VR%02d=%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X", i,
-            x[0], x[1],x[2],x[3],x[4],x[5],x[6],x[7],x[7],x[8],x[9],x[10],x[11],x[12],x[13],x[14],x[15]);
+        MSGBUF(vrstr[i], "VR%02d=%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X", i,
+            x[0], x[1],x[2],x[3],x[4],x[5],x[6],x[7],x[8],x[9],x[10],x[11],x[12],x[13],x[14],x[15]);
     }
 
     return(snprintf(buf, buflen,
