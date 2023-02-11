@@ -1940,7 +1940,7 @@ int     aswitch;
     {
         memset(regs, 0, sizeof(REGS));
         
-            if (cpu_init( cpu, regs, NULL ))
+        if (cpu_init( cpu, regs, NULL ))
             return NULL;
 
         if (regs->insttrace && sysblk.traceFILE)
