@@ -18,6 +18,73 @@
 
 #if defined(FEATURE_129_ZVECTOR_FACILITY)
 /*-------------------------------------------------------------------*/
+/* E700 VLEB  - Vector Load Element (8)                        [VRX] */
+/*-------------------------------------------------------------------*/
+DEF_INST(vector_load_element_8)
+{
+    int     v1, m3, x2, b2;
+    VADR    effective_addr2;        /* Effective address         */
+
+    VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
+
+    ZVECTOR_CHECK(regs);
+    PER_ZEROADDR_XCHECK2(regs, x2, b2);
+
+    ARCH_DEP(vfetchc) (&regs->vr[v1].B[m3], 0, effective_addr2, b2, regs);
+
+}
+/*-------------------------------------------------------------------*/
+/* E701 VLEH  - Vector Load Element (16)                       [VRX] */
+/*-------------------------------------------------------------------*/
+DEF_INST(vector_load_element_16)
+{
+    int     v1, m3, x2, b2;
+    VADR    effective_addr2;        /* Effective address         */
+
+    VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
+
+    ZVECTOR_CHECK(regs);
+    PER_ZEROADDR_XCHECK2(regs, x2, b2);
+    if (m3 > 7)                    /* M3 > 7 => Specficitcation excp */
+        ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
+
+    ARCH_DEP(vfetchc) (&regs->vr[v1].B[m3*2], 1, effective_addr2, b2, regs);
+}
+/*-------------------------------------------------------------------*/
+/* E702 VLEF  - Vector Load Element (32)                       [VRX] */
+/*-------------------------------------------------------------------*/
+DEF_INST(vector_load_element_32)
+{
+    int     v1, m3, x2, b2;
+    VADR    effective_addr2;        /* Effective address         */
+
+    VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
+
+    ZVECTOR_CHECK(regs);
+    PER_ZEROADDR_XCHECK2(regs, x2, b2);
+    if (m3 > 3)                    /* M3 > 3 => Specficitcation excp */
+        ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
+
+    ARCH_DEP(vfetchc) (&regs->vr[v1].B[m3*4], 3, effective_addr2, b2, regs);
+}
+/*-------------------------------------------------------------------*/
+/* E703 VLEG  - Vector Load Element (64)                       [VRX] */
+/*-------------------------------------------------------------------*/
+DEF_INST(vector_load_element_64)
+{
+    int     v1, m3, x2, b2;
+    VADR    effective_addr2;        /* Effective address         */
+
+    VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
+
+    ZVECTOR_CHECK(regs);
+    PER_ZEROADDR_XCHECK2(regs, x2, b2);
+    if (m3 > 1)                    /* M3 > 1 => Specficitcation excp */
+        ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
+
+    ARCH_DEP(vfetchc) (&regs->vr[v1].B[m3*8], 7, effective_addr2, b2, regs);
+}
+/*-------------------------------------------------------------------*/
 /* E706 VL    - Vector Load                                    [VRX] */
 /*-------------------------------------------------------------------*/
 DEF_INST(vector_load)
@@ -30,7 +97,53 @@ DEF_INST(vector_load)
     ZVECTOR_CHECK(regs);
     PER_ZEROADDR_XCHECK2(regs, x2, b2);
 
-    ARCH_DEP(vfetchc) (&regs->vr[(v1)], sizeof(QWORD) - 1, effective_addr2, b2, regs);
+    ARCH_DEP(vfetchc) (&regs->vr[v1], sizeof(VR) - 1, effective_addr2, b2, regs);
+
+}
+/*-------------------------------------------------------------------*/
+/* E707 VLBB  - Vector Load to Block Boundary                  [VRX] */
+/*-------------------------------------------------------------------*/
+DEF_INST(vector_load_to_block_boundary)
+{
+    int     v1, m3, x2, b2;
+    VADR    effective_addr2;        /* Effective address         */
+
+    VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
+
+    ZVECTOR_CHECK(regs);
+    PER_ZEROADDR_XCHECK2(regs, x2, b2);
+    if (m3 > 6)                    /* M3 > 6 => Specficitcation excp */
+        ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
+
+    int boundary = 64 << m3; /* 0: 64 Byte, 1: 128 Byte, 2: 256 Byte, 3: 512 Byte,
+                                4: 1K - byte, 5: 2K - Byte, 6: 4K - Byte */
+    VADR nextbound = (effective_addr2 + boundary) & !boundary;
+    int length = min(sizeof(VR), nextbound - effective_addr2);
+        
+    ARCH_DEP(vfetchc) (&regs->vr[v1], length-1, effective_addr2, b2, regs);
+}
+/*-------------------------------------------------------------------*/
+/* E727 LCBB  - Load Count to Block Boundary                   [RXE] */
+/*-------------------------------------------------------------------*/
+DEF_INST(load_count_to_block_boundary)
+{
+    int     r1, x2, b2, m3;
+    VADR    effective_addr2;        /* Effective address         */
+        
+    RXE_M3(inst, regs, r1, x2, b2, effective_addr2, m3);
+
+    ZVECTOR_CHECK(regs);
+    PER_ZEROADDR_XCHECK2(regs, x2, b2);
+    if (m3 > 6)                    /* M3 > 6 => Specficitcation excp */
+        ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
+
+    int boundary = 64 << m3; /* 0: 64 Byte, 1: 128 Byte, 2: 256 Byte, 3: 512 Byte,
+                                4: 1K - byte, 5: 2K - Byte, 6: 4K - Byte */
+    VADR nextbound = (effective_addr2 + boundary) & !boundary;
+    int length = min(sizeof(VR), nextbound - effective_addr2);
+
+    regs->GR_L(r1) = length;
+    regs->psw.cc = (length == 16) ? 0 : 3;
 
 }
 /*-------------------------------------------------------------------*/
@@ -45,7 +158,7 @@ DEF_INST(vector_store)
     ZVECTOR_CHECK(regs);
     PER_ZEROADDR_XCHECK2(regs, x2, b2);
 
-    ARCH_DEP(vstorec) (&regs->vr[(v1)], sizeof(QWORD) - 1, effective_addr2, b2, regs);
+    ARCH_DEP(vstorec) (&regs->vr[v1], sizeof(VR) - 1, effective_addr2, b2, regs);
 }
 /*-------------------------------------------------------------------*/
 /* E736 VLM   - Vector Load Multiple                         [VRS_A] */
@@ -58,14 +171,14 @@ DEF_INST(vector_load_multiple)
     VRS_A(inst, regs, v1, v3, b2, effective_addr2, m4);
     ZVECTOR_CHECK(regs);
     PER_ZEROADDR_XCHECK(regs, b2);
-    int len = (1 + v3 - v1) * sizeof(QWORD);
-    if (len < 0 || len > 16 * sizeof(QWORD))
+    int len = (1 + v3 - v1) * sizeof(VR);
+    if (len < 0 || len > 16 * sizeof(VR))
         ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
 
-    ARCH_DEP(vfetchc) (&regs->vr[(v1)], len - 1, effective_addr2, b2, regs);
+    ARCH_DEP(vfetchc) (&regs->vr[v1], len - 1, effective_addr2, b2, regs);
 }
 /*-------------------------------------------------------------------*/
-/* E73E VST   - Vector Store Multiple                        [VRS_A] */
+/* E73E VSTM  - Vector Store Multiple                        [VRS_A] */
 /*-------------------------------------------------------------------*/
 DEF_INST(vector_store_multiple)
 {
@@ -75,11 +188,39 @@ DEF_INST(vector_store_multiple)
     VRS_A(inst, regs, v1, v3, b2, effective_addr2, m4);
     ZVECTOR_CHECK(regs);
     PER_ZEROADDR_XCHECK(regs, b2);
-    int len = (1 + v3 - v1) * sizeof(QWORD);
-    if (len < 0 || len > 16 * sizeof(QWORD))
+    int len = (1 + v3 - v1) * sizeof(VR);
+    if (len < 0 || len > 16 * sizeof(VR))
         ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
     
-    ARCH_DEP(vstorec) (&regs->vr[(v1)], len - 1, effective_addr2, b2, regs);
+    ARCH_DEP(vstorec) (&regs->vr[v1], len - 1, effective_addr2, b2, regs);
+}
+/*-------------------------------------------------------------------*/
+/* E744 VGBM   - Vector Generate Byte Mask                   [VRI_A] */
+/*-------------------------------------------------------------------*/
+DEF_INST(vector_generate_byte_mask)
+{
+    int     v1, i2, m3;
+    
+    VRI_A(inst, regs, v1, i2, m3);
+    ZVECTOR_CHECK(regs);
+    
+    for (int i = 0; i < 16; i++)
+    {
+        regs->vr[v1].B[i] = (i2 & (0x1 << (15 - i))) ? 0xff : 0x00;
+    }
+}
+/*-------------------------------------------------------------------*/
+/* E768 VN   - Vector AND                                    [VRR_C] */
+/*-------------------------------------------------------------------*/
+DEF_INST(vector_AND)
+{
+    int     v1, v2, v3, m4, m5, m6;
+
+    VRR_C(inst, regs, v1, v2, v3, m4, m5, m6);
+    regs->vr[v1].D.H.D = regs->vr[v2].D.H.D & regs->vr[v3].D.H.D;
+    regs->vr[v1].D.L.D = regs->vr[v2].D.L.D & regs->vr[v3].D.L.D;
+    ZVECTOR_CHECK(regs);
+
 }
 #endif /* defined(FEATURE_129_ZVECTOR_FACILITY) */
 

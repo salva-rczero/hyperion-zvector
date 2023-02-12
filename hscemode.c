@@ -2603,7 +2603,6 @@ char buf[512];
 /*-------------------------------------------------------------------*/
 /* vr command - display vector registers                             */
 /*-------------------------------------------------------------------*/
-#pragma optimize("", off)
 int vr_cmd(int argc, char* argv[], char* cmdline)
 {
     REGS* regs;
@@ -2624,10 +2623,7 @@ int vr_cmd(int argc, char* argv[], char* cmdline)
 
     if (argc > 1)
     {
-        union {
-            struct { U64 H; U64 L; } D; 
-            QWORD Q;                    
-        } reg_value;
+        VR reg_value;
 
         int   reg_num;
         BYTE  equal_sign, c;
@@ -2640,7 +2636,7 @@ int vr_cmd(int argc, char* argv[], char* cmdline)
             return 0;
         }
         if (0
-            || sscanf(argv[1], "%d%c%"SCNx64".%"SCNx64"%c", &reg_num, &equal_sign, &reg_value.D.H, &reg_value.D.L, &c) != 4
+            || sscanf(argv[1], "%d%c%"SCNx64".%"SCNx64"%c", &reg_num, &equal_sign, &reg_value.D.H.D, &reg_value.D.L.D, &c) != 4
             || reg_num < 0
             || reg_num > 31
             || '=' != equal_sign
@@ -2651,9 +2647,8 @@ int vr_cmd(int argc, char* argv[], char* cmdline)
             WRMSG(HHC02205, "E", argv[1], "");
             return 0;
         }
-        reg_value.D.H = CSWAP64(reg_value.D.H);
-        reg_value.D.L = CSWAP64(reg_value.D.L);
-        memcpy(regs->vr[reg_num],reg_value.Q,sizeof(QWORD));
+        regs->vr[reg_num].D.H.D = CSWAP64(reg_value.D.H.D);
+        regs->vr[reg_num].D.L.D = CSWAP64(reg_value.D.L.D);
     }
 
     display_vregs(regs, buf, sizeof(buf), "HHC02277I ");

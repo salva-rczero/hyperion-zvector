@@ -1374,7 +1374,7 @@ CASSERT( sizeof( TF02276 ) % 8 == 0, hscutl_h );
 struct TF02277
 {
     TFHDR   rhdr;           // Record Header
-    QWORD   vr[32];         // Vector registers
+    VR      vr[32];         // Vector registers
 }
 ATTRIBUTE_PACKED; typedef struct TF02277 TF02277;
 CASSERT(sizeof(TF02277) % 8 == 0, hscutl_h);

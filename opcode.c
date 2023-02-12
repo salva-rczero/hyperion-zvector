@@ -595,90 +595,98 @@ DISABLE_GCC_UNUSED_FUNCTION_WARNING;
 #endif
 
 #if !defined( FEATURE_058_MISC_INSTR_EXT_FACILITY_2 )
- UNDEF_INST( branch_indirect_on_condition )
- UNDEF_INST( add_long_halfword )
- UNDEF_INST( subtract_long_halfword )
- UNDEF_INST( multiply_long_register )
- UNDEF_INST( multiply_long )
- UNDEF_INST( multiply_long_halfword )
- UNDEF_INST( multiply_single_register_cc )
- UNDEF_INST( multiply_single_cc )
- UNDEF_INST( multiply_single_long_register_cc )
- UNDEF_INST( multiply_single_long_cc )
+ UNDEF_INST(branch_indirect_on_condition)
+     UNDEF_INST(add_long_halfword)
+     UNDEF_INST(subtract_long_halfword)
+     UNDEF_INST(multiply_long_register)
+     UNDEF_INST(multiply_long)
+     UNDEF_INST(multiply_long_halfword)
+     UNDEF_INST(multiply_single_register_cc)
+     UNDEF_INST(multiply_single_cc)
+     UNDEF_INST(multiply_single_long_register_cc)
+     UNDEF_INST(multiply_single_long_cc)
 #endif
 
 #if !defined( FEATURE_061_MISC_INSTR_EXT_FACILITY_3 )
- UNDEF_INST( and_register_with_complement )
- UNDEF_INST( and_register_long_with_complement )
- UNDEF_INST( nand_register )
- UNDEF_INST( nand_register_long )
- UNDEF_INST( not_xor_register )
- UNDEF_INST( not_xor_register_long )
- UNDEF_INST( nor_register )
- UNDEF_INST( nor_register_long )
- UNDEF_INST( or_register_with_complement )
- UNDEF_INST( or_register_long_with_complement )
- UNDEF_INST( select_register )
- UNDEF_INST( select_register_long )
- UNDEF_INST( select_fullword_high_register )
- UNDEF_INST( move_right_to_left )
+     UNDEF_INST(and_register_with_complement)
+     UNDEF_INST(and_register_long_with_complement)
+     UNDEF_INST(nand_register)
+     UNDEF_INST(nand_register_long)
+     UNDEF_INST(not_xor_register)
+     UNDEF_INST(not_xor_register_long)
+     UNDEF_INST(nor_register)
+     UNDEF_INST(nor_register_long)
+     UNDEF_INST(or_register_with_complement)
+     UNDEF_INST(or_register_long_with_complement)
+     UNDEF_INST(select_register)
+     UNDEF_INST(select_register_long)
+     UNDEF_INST(select_fullword_high_register)
+     UNDEF_INST(move_right_to_left)
 #endif
 
 #if !defined( FEATURE_066_RES_REF_BITS_MULT_FACILITY )
- UNDEF_INST( reset_reference_bits_multiple )
+     UNDEF_INST(reset_reference_bits_multiple)
 #endif
 
 #if !defined( FEATURE_067_CPU_MEAS_COUNTER_FACILITY )
- UNDEF_INST( extract_coprocessor_group_address )
- UNDEF_INST( extract_cpu_counter )
- UNDEF_INST( extract_peripheral_counter )
- UNDEF_INST( load_cpu_counter_set_controls )
- UNDEF_INST( load_peripheral_counter_set_controls )
- UNDEF_INST( query_counter_information )
- UNDEF_INST( set_cpu_counter )
- UNDEF_INST( set_peripheral_counter )
+     UNDEF_INST(extract_coprocessor_group_address)
+     UNDEF_INST(extract_cpu_counter)
+     UNDEF_INST(extract_peripheral_counter)
+     UNDEF_INST(load_cpu_counter_set_controls)
+     UNDEF_INST(load_peripheral_counter_set_controls)
+     UNDEF_INST(query_counter_information)
+     UNDEF_INST(set_cpu_counter)
+     UNDEF_INST(set_peripheral_counter)
 #endif
 
 #if !defined( FEATURE_068_CPU_MEAS_SAMPLNG_FACILITY )
- UNDEF_INST( load_sampling_controls )
- UNDEF_INST( query_sampling_information )
+     UNDEF_INST(load_sampling_controls)
+     UNDEF_INST(query_sampling_information)
 #endif
 
 #if !defined( FEATURE_073_TRANSACT_EXEC_FACILITY)
-  UNDEF_INST( transaction_begin )
-  UNDEF_INST( transaction_abort )
-  UNDEF_INST( transaction_end )
-  UNDEF_INST( nontransactional_store )
-  UNDEF_INST( extract_transaction_nesting_depth )
+     UNDEF_INST(transaction_begin)
+     UNDEF_INST(transaction_abort)
+     UNDEF_INST(transaction_end)
+     UNDEF_INST(nontransactional_store)
+     UNDEF_INST(extract_transaction_nesting_depth)
 #endif
 
 #if !defined( FEATURE_074_STORE_HYPER_INFO_FACILITY )
- UNDEF_INST( store_hypervisor_information )
+     UNDEF_INST(store_hypervisor_information)
 #endif
 
 #if !defined( FEATURE_076_MSA_EXTENSION_FACILITY_3 ) || defined( DYNINST_076_MSA_EXTENSION_FACILITY_3 )
- UNDEF_INST( perform_cryptographic_key_management_operation )
+     UNDEF_INST(perform_cryptographic_key_management_operation)
 #endif
 
 #if !defined( FEATURE_077_MSA_EXTENSION_FACILITY_4 ) || defined( DYNINST_077_MSA_EXTENSION_FACILITY_4 )
- UNDEF_INST( cipher_message_with_cipher_feedback )
- UNDEF_INST( cipher_message_with_output_feedback )
- UNDEF_INST( cipher_message_with_counter )
- UNDEF_INST( perform_cryptographic_computation )
+     UNDEF_INST(cipher_message_with_cipher_feedback)
+     UNDEF_INST(cipher_message_with_output_feedback)
+     UNDEF_INST(cipher_message_with_counter)
+     UNDEF_INST(perform_cryptographic_computation)
 #endif
 
 #if !defined( FEATURE_080_DFP_PACK_CONV_FACILITY )
- UNDEF_INST(convert_packed_to_dfp_long)
- UNDEF_INST(convert_packed_to_dfp_ext)
- UNDEF_INST(convert_dfp_long_to_packed)
- UNDEF_INST(convert_dfp_ext_to_packed)
+     UNDEF_INST(convert_packed_to_dfp_long)
+     UNDEF_INST(convert_packed_to_dfp_ext)
+     UNDEF_INST(convert_dfp_long_to_packed)
+     UNDEF_INST(convert_dfp_ext_to_packed)
 #endif
 
 #if !defined( FEATURE_129_ZVECTOR_FACILITY )
-     UNDEF_INST(vector_load)
-     UNDEF_INST(vector_store)
-     UNDEF_INST(vector_load_multiple)
-     UNDEF_INST(vector_store_multiple)
+ UNDEF_INST(load_count_to_block_boundary)
+ UNDEF_INST(vector_AND)
+ UNDEF_INST(vector_generate_byte_mask)
+ UNDEF_INST(vector_load)
+ UNDEF_INST(vector_load_element_8)
+ UNDEF_INST(vector_load_element_16)
+ UNDEF_INST(vector_load_element_32)
+ UNDEF_INST(vector_load_element_64)
+ UNDEF_INST(vector_load_multiple)
+ UNDEF_INST(vector_load_to_block_boundary)
+ UNDEF_INST(vector_store)
+ UNDEF_INST(vector_store_multiple)
 #endif
 
 #if !defined( FEATURE_145_INS_REF_BITS_MULT_FACILITY )
@@ -1471,6 +1479,7 @@ FWD_REF_IPRINT_FUNC( ASMFMT_RRR );
 FWD_REF_IPRINT_FUNC( ASMFMT_RRF_A );
 FWD_REF_IPRINT_FUNC( ASMFMT_RX );
 FWD_REF_IPRINT_FUNC( ASMFMT_RXE );
+FWD_REF_IPRINT_FUNC( ASMFMT_RXE_M3 );
 FWD_REF_IPRINT_FUNC( ASMFMT_RXY );
 FWD_REF_IPRINT_FUNC( ASMFMT_RXF );
 FWD_REF_IPRINT_FUNC( ASMFMT_RS );
@@ -1511,6 +1520,8 @@ FWD_REF_IPRINT_FUNC( ASMFMT_SSF_RSS );
 FWD_REF_IPRINT_FUNC( ASMFMT_VS );
 FWD_REF_IPRINT_FUNC( ASMFMT_VRX );
 FWD_REF_IPRINT_FUNC( ASMFMT_VRS_A );
+FWD_REF_IPRINT_FUNC( ASMFMT_VRI_A );
+FWD_REF_IPRINT_FUNC( ASMFMT_VRR_C );
 
 #endif // COMPILE_THIS_ONLY_ONCE
 
@@ -2227,6 +2238,16 @@ IPRINT_FUNC( ASMFMT_RXE );
     d2 = (inst[2] & 0x0F) << 8 | inst[3];
     IPRINT_PRINT("%d,%d(%d,%d)",r1,d2,x2,b2)
 
+IPRINT_FUNC(ASMFMT_RXE_M3);
+    int r1, x2, b2, d2, m3;
+    UNREFERENCED(regs);
+    r1 = inst[1] >> 4;
+    x2 = inst[1] & 0x0F;
+    b2 = inst[2] >> 4;
+    d2 = (inst[2] & 0x0F) << 8 | inst[3];
+    m3 = inst[4] >> 4;
+    IPRINT_PRINT("%d,%d(%d,%d),%d", r1, d2, x2, b2, m3)
+
 IPRINT_FUNC( ASMFMT_RXY );
     int r1,x2,b2,d2;
     UNREFERENCED( regs );
@@ -2593,6 +2614,25 @@ IPRINT_FUNC(ASMFMT_VRS_A);
     d2 = (inst[2] & 0x0F) << 8 | inst[3];
     m4 = inst[4] >> 4;
     IPRINT_PRINT("%d,%d,%d(%d),%d", v1, v3, d2, b2, m4)
+
+IPRINT_FUNC(ASMFMT_VRI_A);
+    int v1, i2, m3;
+    UNREFERENCED(regs);
+    v1 = ((inst[1] >> 4) & 0x0F) | ((inst[4] & 0x08) << 1);
+    i2 = inst[3] << 8 | inst[4];
+    m3 = inst[4] >> 4;
+    IPRINT_PRINT("%d,%d,%d", v1, i2, m3)
+
+IPRINT_FUNC(ASMFMT_VRR_C);
+    int v1, v2, v3, m4, m5, m6;
+    UNREFERENCED(regs);
+    v1 = ((inst[1] >> 4) & 0x0F) | ((inst[4] & 0x08) << 1);
+    v2 = (inst[1] & 0x0F) | ((inst[4] & 0x04) << 2);
+    v3 = ((inst[2] >> 4) & 0x0F) | ((inst[4] & 0x02) << 3);
+    m4 = inst[4] >> 4;
+    m5 = inst[3] & 0x0f;
+    m6 = inst[3] >> 4;
+    IPRINT_PRINT("%d,%d,%d,%d,%d,%d", v1, v2, v3, m4, m5, m6)
 
 /*----------------------------------------------------------------------------*/
 /*          'GENx___x___x900' instruction opcode jump tables                  */
@@ -4612,14 +4652,14 @@ static INSTR_FUNC gen_opcode_e6xx[256][NUM_INSTR_TAB_PTRS] =
 
 static INSTR_FUNC gen_opcode_e7xx[256][NUM_INSTR_TAB_PTRS] =
 {
-    /*E700*/ GENx___x___x___ ,
-    /*E701*/ GENx___x___x___ ,
-    /*E702*/ GENx___x___x___ ,
-    /*E703*/ GENx___x___x___ ,
+    /*E700*/ GENx370x390x900("VLEB"       , VRX  , ASMFMT_VRX      , vector_load_element_8),
+    /*E701*/ GENx370x390x900("VLEH"       , VRX  , ASMFMT_VRX      , vector_load_element_16),
+    /*E702*/ GENx370x390x900("VLEF"       , VRX  , ASMFMT_VRX      , vector_load_element_32),
+    /*E703*/ GENx370x390x900("VLEG"       , VRX  , ASMFMT_VRX      , vector_load_element_64),
     /*E704*/ GENx___x___x___ ,
     /*E705*/ GENx___x___x___ ,
     /*E706*/ GENx370x390x900("VL"        , VRX  , ASMFMT_VRX      , vector_load),
-    /*E707*/ GENx___x___x___ ,
+    /*E707*/ GENx370x390x900("VLBB"      , VRX  , ASMFMT_VRX      , vector_load_to_block_boundary),
     /*E708*/ GENx___x___x___ ,
     /*E709*/ GENx___x___x___ ,
     /*E70A*/ GENx___x___x___ ,
@@ -4651,7 +4691,7 @@ static INSTR_FUNC gen_opcode_e7xx[256][NUM_INSTR_TAB_PTRS] =
     /*E724*/ GENx___x___x___ ,
     /*E725*/ GENx___x___x___ ,
     /*E726*/ GENx___x___x___ ,
-    /*E727*/ GENx___x___x___ ,
+    /*E727*/ GENx370x390x900("LCBB"      , RXE  , ASMFMT_RXE_M3      , load_count_to_block_boundary),
     /*E728*/ GENx___x___x___ ,
     /*E729*/ GENx___x___x___ ,
     /*E72A*/ GENx___x___x___ ,
@@ -4680,7 +4720,7 @@ static INSTR_FUNC gen_opcode_e7xx[256][NUM_INSTR_TAB_PTRS] =
     /*E741*/ GENx___x___x___ ,
     /*E742*/ GENx___x___x___ ,
     /*E743*/ GENx___x___x___ ,
-    /*E744*/ GENx___x___x___ ,
+    /*E744*/ GENx370x390x900("VGBM"       , VRI_A , ASMFMT_VRI_A     , vector_generate_byte_mask),
     /*E745*/ GENx___x___x___ ,
     /*E746*/ GENx___x___x___ ,
     /*E747*/ GENx___x___x___ ,
@@ -4716,7 +4756,7 @@ static INSTR_FUNC gen_opcode_e7xx[256][NUM_INSTR_TAB_PTRS] =
     /*E765*/ GENx___x___x___ ,
     /*E766*/ GENx___x___x___ ,
     /*E767*/ GENx___x___x___ ,
-    /*E768*/ GENx___x___x___ ,
+    /*E768*/ GENx370x390x900( "VN", VRR_C, ASMFMT_VRR_C, vector_AND),
     /*E769*/ GENx___x___x___ ,
     /*E76A*/ GENx___x___x___ ,
     /*E76B*/ GENx___x___x___ ,

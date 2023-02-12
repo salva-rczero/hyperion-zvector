@@ -4130,6 +4130,9 @@ DLL_EXPORT size_t  tf_MAX_RECSIZE()
     if (max_recsize < sizeof( TF02276 ))
         max_recsize = sizeof( TF02276 );
 
+    if (max_recsize < sizeof( TF02277 ))
+        max_recsize = sizeof( TF02277 );
+
     if (max_recsize < sizeof( TF02324))
         max_recsize = sizeof( TF02324 );
 
@@ -4695,6 +4698,12 @@ DLL_EXPORT void tf_swap_rec( TFHDR* hdr, U16 msgnum )
         {
             TF02276* rec = (TF02276*) hdr;
             rec->fpc     = SWAP32( rec->fpc );
+        }
+        break;
+
+        case 2277:
+        {
+            // (nothing to swap!)
         }
         break;
 

@@ -69,6 +69,10 @@
                  struct { DW L; DW H; } D;
                  struct { FW LL; FW LH; FW HL; FW HH; } F;
                } QW;
+ typedef union {
+            	 struct { DW H; DW L; } D;
+                 BYTE B[16];
+               } VR;
 
 #endif
 

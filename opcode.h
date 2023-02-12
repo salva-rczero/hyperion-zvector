@@ -3238,9 +3238,17 @@ DEF_INST(convert_dfp_long_to_packed);
 #endif
 
 #if defined( FEATURE_129_ZVECTOR_FACILITY )
+DEF_INST(load_count_to_block_boundary);
+DEF_INST(vector_AND);
+DEF_INST(vector_generate_byte_mask);
 DEF_INST(vector_load);
-DEF_INST(vector_store);
+DEF_INST(vector_load_element_8);
+DEF_INST(vector_load_element_16);
+DEF_INST(vector_load_element_32);
+DEF_INST(vector_load_element_64);
 DEF_INST(vector_load_multiple);
+DEF_INST(vector_load_to_block_boundary);
+DEF_INST(vector_store);
 DEF_INST(vector_store_multiple);
 #endif
 

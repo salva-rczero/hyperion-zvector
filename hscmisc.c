@@ -421,14 +421,14 @@ char    buf[512];                       /* MSGBUF work buffer        */
 
         if (aaddr + ilc > regs->mainlim)
         {
-            MSGBUF( buf, "R:"F_RADR"  Addressing exception", aaddr );
+            MSGBUF( buf, "R:" F_RADR "  Addressing exception", aaddr );
             WRMSG( HHC02289, "I", buf );
             return;
         }
 
         /* Copy instruction to work area and hex print it */
         memcpy(inst, regs->mainstor + aaddr, ilc);
-        len = sprintf(buf, "%c:"F_RADR"  %2.2X%2.2X",
+        len = sprintf(buf, "%c:" F_RADR "  %2.2X%2.2X",
           stid == TEA_ST_PRIMARY ? 'P' :
           stid == TEA_ST_HOME ? 'H' :
           stid == TEA_ST_SECNDRY ? 'S' : 'R',
@@ -827,7 +827,7 @@ bool    trace2file;
 char    psw_inst_msg[160]   = {0};
 char    op1_stor_msg[128]   = {0};
 char    op2_stor_msg[128]   = {0};
-char    regs_msg_buf[4*512] = {0};
+char    regs_msg_buf[8*512] = {0};
 
     PTT_PGM( "dinst", inst, 0, pgmint );
 
@@ -1589,7 +1589,7 @@ static int display_regs64(char *hdr,U16 cpuad,U64 *r,int numcpus,char *buf,int b
         {
             len += idx_snprintf( len, buf, buflen, "%s", " " );
         }
-        len += idx_snprintf( len, buf, buflen, "%s%1.1X=%16.16"PRIX64, hdr, i, r[i] );
+        len += idx_snprintf( len, buf, buflen, "%s%1.1X=%16.16" PRIX64, hdr, i, r[i] );
     }
     len += idx_snprintf( len, buf, buflen, "%s", "\n" );
     return(len);
@@ -1832,30 +1832,22 @@ char cpustr[32] = "";
 int display_vregs (REGS* regs, char* buf, int buflen, char* hdr)
 {
     char cpustr[32] = "";
-    char vrstr[32][38] = { "" };
+    int bufl = 0;
 
     if (sysblk.cpus > 1)
         MSGBUF(cpustr, "%s%s%02X: ", hdr, PTYPSTR(regs->cpuad), regs->cpuad);
     else
         MSGBUF(cpustr, "%s", hdr);
     
-    for (int i = 0; i < 32; i++) {
-        uint8_t *x = regs->vr[i];
-        MSGBUF(vrstr[i], "VR%02d=%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X", i,
-            x[0], x[1],x[2],x[3],x[4],x[5],x[6],x[7],x[8],x[9],x[10],x[11],x[12],x[13],x[14],x[15]);
-    }
-
-    return(snprintf(buf, buflen,
-        "%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n"
-        "%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n%s%s %s\n"
-        , cpustr, vrstr[0], vrstr[1], cpustr, vrstr[2], vrstr[3], cpustr, vrstr[4], vrstr[5]
-        , cpustr, vrstr[6], vrstr[7], cpustr, vrstr[8], vrstr[9], cpustr, vrstr[10], vrstr[11]
-        , cpustr, vrstr[12], vrstr[13], cpustr, vrstr[14], vrstr[15], cpustr, vrstr[16], vrstr[17]
-        , cpustr, vrstr[18], vrstr[19], cpustr, vrstr[20], vrstr[21], cpustr, vrstr[22], vrstr[23]
-        , cpustr, vrstr[24], vrstr[25], cpustr, vrstr[26], vrstr[27], cpustr, vrstr[28], vrstr[29]
-        , cpustr, vrstr[30], vrstr[31]
-    ));
-
+	for (int i = 0; i < 32; i += 2) {
+		bufl += idx_snprintf(bufl, buf, buflen,
+			"%sVR%02d=%016" PRIx64 ".%016" PRIx64" VR%02d=%016" PRIx64 ".%016" PRIx64 "\n",
+			cpustr,
+			i, CSWAP64(regs->vr[i].D.H.D), CSWAP64(regs->vr[i].D.L.D),
+			i + 1, CSWAP64(regs->vr[i + 1].D.H.D), CSWAP64(regs->vr[i + 1].D.L.D)
+		);
+	}
+    return bufl;
 } /* end function display_vregs */
 
 /*-------------------------------------------------------------------*/
@@ -2083,7 +2075,7 @@ BYTE    c;                              /* Character work area       */
         return -1;
     }
 
-    rc = sscanf(operand, "%"SCNx64"%c%"SCNx64"%c",
+    rc = sscanf(operand, "%" SCNx64 "%c%" SCNx64 "%c",
                 &opnd1, &delim, &opnd2, &c);
 
     if (rc == 2 && delim == '=' && newval)
@@ -2232,7 +2224,7 @@ DLL_EXPORT REGS* copy_regs( REGS* regs )
 
     size = (SIE_MODE( regs ) || SIE_ACTIVE( regs )) ? 2 * sizeof( REGS )
                                                     :     sizeof( REGS );
-    if (!(newregs = malloc_aligned( size, 4096 )))
+    if (!(newregs = (REGS *) malloc_aligned( size, 4096 )))
     {
         char buf[64];
         MSGBUF( buf, "malloc(%d)", (int)size );
@@ -3106,7 +3098,7 @@ int herc_system (char* command)
   #define  SHELL_CMD_SHIM_PGM   "conspawn "
 
     int rc = (int)(strlen(SHELL_CMD_SHIM_PGM) + strlen(command) + 1);
-    char* pszNewCommandLine = malloc( rc );
+    char* pszNewCommandLine = (char *) malloc( rc );
     strlcpy( pszNewCommandLine, SHELL_CMD_SHIM_PGM, rc );
     strlcat( pszNewCommandLine, command,            rc );
     rc = w32_poor_mans_fork( pszNewCommandLine, NULL );
