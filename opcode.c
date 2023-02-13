@@ -679,13 +679,19 @@ DISABLE_GCC_UNUSED_FUNCTION_WARNING;
  UNDEF_INST(vector_AND)
  UNDEF_INST(vector_generate_byte_mask)
  UNDEF_INST(vector_load)
+ UNDEF_INST(vector_load_and_replicate);
  UNDEF_INST(vector_load_element_8)
  UNDEF_INST(vector_load_element_16)
  UNDEF_INST(vector_load_element_32)
  UNDEF_INST(vector_load_element_64)
+ UNDEF_INST(vector_load_logical_element_and_zero); 
  UNDEF_INST(vector_load_multiple)
  UNDEF_INST(vector_load_to_block_boundary)
  UNDEF_INST(vector_store)
+ UNDEF_INST(vector_store_element_8)
+ UNDEF_INST(vector_store_element_16)
+ UNDEF_INST(vector_store_element_32)
+ UNDEF_INST(vector_store_element_64)
  UNDEF_INST(vector_store_multiple)
 #endif
 
@@ -4652,18 +4658,18 @@ static INSTR_FUNC gen_opcode_e6xx[256][NUM_INSTR_TAB_PTRS] =
 
 static INSTR_FUNC gen_opcode_e7xx[256][NUM_INSTR_TAB_PTRS] =
 {
-    /*E700*/ GENx370x390x900("VLEB"       , VRX  , ASMFMT_VRX      , vector_load_element_8),
-    /*E701*/ GENx370x390x900("VLEH"       , VRX  , ASMFMT_VRX      , vector_load_element_16),
-    /*E702*/ GENx370x390x900("VLEF"       , VRX  , ASMFMT_VRX      , vector_load_element_32),
-    /*E703*/ GENx370x390x900("VLEG"       , VRX  , ASMFMT_VRX      , vector_load_element_64),
-    /*E704*/ GENx___x___x___ ,
-    /*E705*/ GENx___x___x___ ,
+    /*E700*/ GENx370x390x900("VLEB"      , VRX  , ASMFMT_VRX      , vector_load_element_8),
+    /*E701*/ GENx370x390x900("VLEH"      , VRX  , ASMFMT_VRX      , vector_load_element_16),
+    /*E702*/ GENx370x390x900("VLEG"      , VRX  , ASMFMT_VRX      , vector_load_element_64),
+    /*E703*/ GENx370x390x900("VLEF"      , VRX  , ASMFMT_VRX      , vector_load_element_32),
+    /*E704*/ GENx370x390x900("VLLEZ"     , VRX  , ASMFMT_VRX      , vector_load_logical_element_and_zero),
+    /*E705*/ GENx370x390x900("VLREP"     , VRX  , ASMFMT_VRX      , vector_load_and_replicate),
     /*E706*/ GENx370x390x900("VL"        , VRX  , ASMFMT_VRX      , vector_load),
     /*E707*/ GENx370x390x900("VLBB"      , VRX  , ASMFMT_VRX      , vector_load_to_block_boundary),
-    /*E708*/ GENx___x___x___ ,
-    /*E709*/ GENx___x___x___ ,
-    /*E70A*/ GENx___x___x___ ,
-    /*E70B*/ GENx___x___x___ ,
+    /*E708*/ GENx370x390x900("VSTEB"     , VRX  , ASMFMT_VRX      , vector_store_element_8),
+    /*E709*/ GENx370x390x900("VSTEH"     , VRX  , ASMFMT_VRX      , vector_store_element_16),
+    /*E70A*/ GENx370x390x900("VSTEG"     , VRX  , ASMFMT_VRX      , vector_store_element_64),
+    /*E70B*/ GENx370x390x900("VSTEF"     , VRX  , ASMFMT_VRX      , vector_store_element_32),
     /*E70C*/ GENx___x___x___ ,
     /*E70D*/ GENx___x___x___ ,
     /*E70E*/ GENx370x390x900("VST"       , VRX  , ASMFMT_VRX      , vector_store),

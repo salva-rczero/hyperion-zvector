@@ -51,24 +51,7 @@ DEF_INST(vector_load_element_16)
     ARCH_DEP(vfetchc) (&regs->vr[v1].B[m3*2], 1, effective_addr2, b2, regs);
 }
 /*-------------------------------------------------------------------*/
-/* E702 VLEF  - Vector Load Element (32)                       [VRX] */
-/*-------------------------------------------------------------------*/
-DEF_INST(vector_load_element_32)
-{
-    int     v1, m3, x2, b2;
-    VADR    effective_addr2;        /* Effective address         */
-
-    VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
-
-    ZVECTOR_CHECK(regs);
-    PER_ZEROADDR_XCHECK2(regs, x2, b2);
-    if (m3 > 3)                    /* M3 > 3 => Specficitcation excp */
-        ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
-
-    ARCH_DEP(vfetchc) (&regs->vr[v1].B[m3*4], 3, effective_addr2, b2, regs);
-}
-/*-------------------------------------------------------------------*/
-/* E703 VLEG  - Vector Load Element (64)                       [VRX] */
+/* E702 VLEG  - Vector Load Element (64)                       [VRX] */
 /*-------------------------------------------------------------------*/
 DEF_INST(vector_load_element_64)
 {
@@ -83,6 +66,63 @@ DEF_INST(vector_load_element_64)
         ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
 
     ARCH_DEP(vfetchc) (&regs->vr[v1].B[m3*8], 7, effective_addr2, b2, regs);
+}
+/*-------------------------------------------------------------------*/
+/* E703 VLEF  - Vector Load Element (32)                       [VRX] */
+/*-------------------------------------------------------------------*/
+DEF_INST(vector_load_element_32)
+{
+    int     v1, m3, x2, b2;
+    VADR    effective_addr2;        /* Effective address         */
+
+    VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
+
+    ZVECTOR_CHECK(regs);
+    PER_ZEROADDR_XCHECK2(regs, x2, b2);
+    if (m3 > 3)                    /* M3 > 3 => Specification excp */
+        ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
+
+    ARCH_DEP(vfetchc) (&regs->vr[v1].B[m3 * 4], 3, effective_addr2, b2, regs);
+}
+/*-------------------------------------------------------------------*/
+/* E704 VLLEZ  - Vector Load Logical Element and Zero          [VRX] */
+/*-------------------------------------------------------------------*/
+DEF_INST(vector_load_logical_element_and_zero)
+{
+	int     v1, m3, x2, b2, pos, len;
+	VADR    effective_addr2;        /* Effective address         */
+
+	VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
+
+	ZVECTOR_CHECK(regs);
+	PER_ZEROADDR_XCHECK2(regs, x2, b2);
+	if (m3 > 3 && m3 != 6) /* M3 > 3 | <> 6 => Specification excp */
+		ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
+
+	len = ((1 << m3) & 0x0f | ((1 << m3) >> 4)) - 1;
+	pos = 7 - len + ((m3 >> 2) << 3);
+	regs->vr[v1].D.H.D = 0x00;
+	regs->vr[v1].D.L.D = 0x00;
+	ARCH_DEP(vfetchc) (&regs->vr[v1].B[pos], len, effective_addr2, b2, regs);
+}
+/*-------------------------------------------------------------------*/
+/* E705 VLREP  - Vector Load and Replicate                     [VRX] */
+/*-------------------------------------------------------------------*/
+DEF_INST(vector_load_and_replicate)
+{
+    int     v1, m3, x2, b2, len;
+    VADR    effective_addr2;        /* Effective address         */
+
+    VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
+
+    ZVECTOR_CHECK(regs);
+    PER_ZEROADDR_XCHECK2(regs, x2, b2);
+    if (m3 > 3)                    /* M3 > 3 => Specification excp */
+        ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
+    len = (1 << m3);
+    ARCH_DEP(vfetchc) (&regs->vr[v1].B[0], len-1, effective_addr2, b2, regs);
+    for (int i = len; i < 16; i++)
+        regs->vr[v1].B[i] = regs->vr[v1].B[i - len];
 }
 /*-------------------------------------------------------------------*/
 /* E706 VL    - Vector Load                                    [VRX] */
@@ -123,13 +163,89 @@ DEF_INST(vector_load_to_block_boundary)
     ARCH_DEP(vfetchc) (&regs->vr[v1], length-1, effective_addr2, b2, regs);
 }
 /*-------------------------------------------------------------------*/
+/* E708 VSTEB  - Vector Store Element (8)                      [VRX] */
+/*-------------------------------------------------------------------*/
+DEF_INST(vector_store_element_8)
+{
+    int     v1, m3, x2, b2;
+    VADR    effective_addr2;        /* Effective address         */
+
+    VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
+    ZVECTOR_CHECK(regs);
+    PER_ZEROADDR_XCHECK2(regs, x2, b2);
+
+    ARCH_DEP(vstorec) (&regs->vr[v1].B[m3], 0, effective_addr2, b2, regs);
+}
+/*-------------------------------------------------------------------*/
+/* E709 VSTEH  - Vector Store Element (16)                     [VRX] */
+/*-------------------------------------------------------------------*/
+DEF_INST(vector_store_element_16)
+{
+    int     v1, m3, x2, b2;
+    VADR    effective_addr2;        /* Effective address         */
+
+    VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
+    ZVECTOR_CHECK(regs);
+    PER_ZEROADDR_XCHECK2(regs, x2, b2);
+    if (m3 > 7)                    /* M3 > 7 => Specficitcation excp */
+        ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
+
+    ARCH_DEP(vstorec) (&regs->vr[v1].B[m3*2], 1, effective_addr2, b2, regs);
+}
+/*-------------------------------------------------------------------*/
+/* E70A VSTEG  - Vector Store Element (64)                     [VRX] */
+/*-------------------------------------------------------------------*/
+DEF_INST(vector_store_element_64)
+{
+    int     v1, m3, x2, b2;
+    VADR    effective_addr2;        /* Effective address         */
+
+    VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
+    ZVECTOR_CHECK(regs);
+    PER_ZEROADDR_XCHECK2(regs, x2, b2);
+    if (m3 > 1)                    /* M3 > 1 => Specficitcation excp */
+        ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
+
+    ARCH_DEP(vstorec) (&regs->vr[v1].B[m3 * 8], 7, effective_addr2, b2, regs);
+}
+/*-------------------------------------------------------------------*/
+/* E70B VSTEF  - Vector Store Element (32)                     [VRX] */
+/*-------------------------------------------------------------------*/
+DEF_INST(vector_store_element_32)
+{
+    int     v1, m3, x2, b2;
+    VADR    effective_addr2;        /* Effective address         */
+
+    VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
+    ZVECTOR_CHECK(regs);
+    PER_ZEROADDR_XCHECK2(regs, x2, b2);
+    if (m3 > 3)                    /* M3 > 3 => Specficitcation excp */
+        ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
+
+    ARCH_DEP(vstorec) (&regs->vr[v1].B[m3 * 4], 3, effective_addr2, b2, regs);
+}
+/*-------------------------------------------------------------------*/
+/* E70E VST   - Vector Store                                   [VRX] */
+/*-------------------------------------------------------------------*/
+DEF_INST(vector_store)
+{
+    int     v1, m3, x2, b2;
+    VADR    effective_addr2;        /* Effective address         */
+
+    VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
+    ZVECTOR_CHECK(regs);
+    PER_ZEROADDR_XCHECK2(regs, x2, b2);
+
+    ARCH_DEP(vstorec) (&regs->vr[v1], sizeof(VR) - 1, effective_addr2, b2, regs);
+}
+/*-------------------------------------------------------------------*/
 /* E727 LCBB  - Load Count to Block Boundary                   [RXE] */
 /*-------------------------------------------------------------------*/
 DEF_INST(load_count_to_block_boundary)
 {
     int     r1, x2, b2, m3;
     VADR    effective_addr2;        /* Effective address         */
-        
+
     RXE_M3(inst, regs, r1, x2, b2, effective_addr2, m3);
 
     ZVECTOR_CHECK(regs);
@@ -145,20 +261,6 @@ DEF_INST(load_count_to_block_boundary)
     regs->GR_L(r1) = length;
     regs->psw.cc = (length == 16) ? 0 : 3;
 
-}
-/*-------------------------------------------------------------------*/
-/* E70E VST   - Vector Store                                   [VRX] */
-/*-------------------------------------------------------------------*/
-DEF_INST(vector_store)
-{
-    int     v1, m3, x2, b2;
-    VADR    effective_addr2;        /* Effective address         */
-
-    VRX(inst, regs, v1, x2, b2, effective_addr2, m3);
-    ZVECTOR_CHECK(regs);
-    PER_ZEROADDR_XCHECK2(regs, x2, b2);
-
-    ARCH_DEP(vstorec) (&regs->vr[v1], sizeof(VR) - 1, effective_addr2, b2, regs);
 }
 /*-------------------------------------------------------------------*/
 /* E736 VLM   - Vector Load Multiple                         [VRS_A] */

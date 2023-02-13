@@ -3242,13 +3242,19 @@ DEF_INST(load_count_to_block_boundary);
 DEF_INST(vector_AND);
 DEF_INST(vector_generate_byte_mask);
 DEF_INST(vector_load);
+DEF_INST(vector_load_and_replicate);
 DEF_INST(vector_load_element_8);
 DEF_INST(vector_load_element_16);
 DEF_INST(vector_load_element_32);
 DEF_INST(vector_load_element_64);
+DEF_INST(vector_load_logical_element_and_zero);
 DEF_INST(vector_load_multiple);
 DEF_INST(vector_load_to_block_boundary);
 DEF_INST(vector_store);
+DEF_INST(vector_store_element_8);
+DEF_INST(vector_store_element_16);
+DEF_INST(vector_store_element_32);
+DEF_INST(vector_store_element_64);
 DEF_INST(vector_store_multiple);
 #endif
 
