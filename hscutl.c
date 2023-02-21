@@ -3786,11 +3786,11 @@ DLL_EXPORT bool tf_2276( REGS* regs )
 //---------------------------------------------------------------------
 //               Vector Registers
 //---------------------------------------------------------------------
-DLL_EXPORT bool tf_2277(REGS* regs)
+DLL_EXPORT bool tf_2266(REGS* regs)
 {
-    TF02277 rec;
+    TF02266 rec;
     memcpy(rec.vr, regs->vr, sizeof(rec.vr));
-    return tf_write(regs, &rec, sizeof(TF02277), 2277);
+    return tf_write(regs, &rec, sizeof(TF02266), 2266);
 }
 
 //---------------------------------------------------------------------
@@ -4130,8 +4130,8 @@ DLL_EXPORT size_t  tf_MAX_RECSIZE()
     if (max_recsize < sizeof( TF02276 ))
         max_recsize = sizeof( TF02276 );
 
-    if (max_recsize < sizeof( TF02277 ))
-        max_recsize = sizeof( TF02277 );
+    if (max_recsize < sizeof( TF02266 ))
+        max_recsize = sizeof( TF02266 );
 
     if (max_recsize < sizeof( TF02324))
         max_recsize = sizeof( TF02324 );
@@ -4658,6 +4658,12 @@ DLL_EXPORT void tf_swap_rec( TFHDR* hdr, U16 msgnum )
         }
         break;
 
+        case 2266:
+        {
+            // (nothing to swap!)
+        }
+        break;
+
         case 2269:
         {
             TF02269* rec = (TF02269*) hdr;
@@ -4698,12 +4704,6 @@ DLL_EXPORT void tf_swap_rec( TFHDR* hdr, U16 msgnum )
         {
             TF02276* rec = (TF02276*) hdr;
             rec->fpc     = SWAP32( rec->fpc );
-        }
-        break;
-
-        case 2277:
-        {
-            // (nothing to swap!)
         }
         break;
 

@@ -194,12 +194,12 @@ struct ALLRECS
 #define  GOT_TF00845   0x00020000
 #define  GOT_TF00846   0x00010000
 
-#define  GOT_TF02269   0x00008000
-#define  GOT_TF02270   0x00004000
-#define  GOT_TF02271   0x00002000
-#define  GOT_TF02272   0x00001000
-#define  GOT_TF02276   0x00000800
-#define  GOT_TF02277   0x00000400
+#define  GOT_TF02266   0x00008000
+#define  GOT_TF02269   0x00004000
+#define  GOT_TF02270   0x00002000
+#define  GOT_TF02271   0x00001000
+#define  GOT_TF02272   0x00000800
+#define  GOT_TF02276   0x00000400
 #define  GOT_TF02324   0x00000200
 #define  GOT_TF02326   0x00000100
 
@@ -220,12 +220,12 @@ struct ALLRECS
     TF00845  tf00845;           // Block I/O External interrupt
     TF00846  tf00846;           // Service Signal External Interrupt
 
+    TF02266  tf02266;           // Vector Register
     TF02269  tf02269;           // General Registers
     TF02270  tf02270;           // Floating Point Registers
     TF02271  tf02271;           // Control Registers
     TF02272  tf02272;           // Access Registers
     TF02276  tf02276;           // Floating Point Control Register
-    TF02277  tf02277;           // Vector Register
     TF02324  tf02324;           // Instruction Trace
     TF02326  tf02326;           // Instruction Operands
 
@@ -382,12 +382,12 @@ static U32 gotmask( U16 msgnum )
     case  845: return GOT_TF00845;
     case  846: return GOT_TF00846;
 
+    case 2266: return GOT_TF02266;
     case 2269: return GOT_TF02269;
     case 2270: return GOT_TF02270;
     case 2271: return GOT_TF02271;
     case 2272: return GOT_TF02272;
     case 2276: return GOT_TF02276;
-    case 2277: return GOT_TF02277;
     case 2324: return GOT_TF02324;
     case 2326: return GOT_TF02326;
 
@@ -476,12 +476,12 @@ static size_t recsize( U16 msgnum )
     case  845: return sizeof( TF00845 );
     case  846: return sizeof( TF00846 );
 
+    case 2266: return sizeof( TF02266 );
     case 2269: return sizeof( TF02269 );
     case 2270: return sizeof( TF02270 );
     case 2271: return sizeof( TF02271 );
     case 2272: return sizeof( TF02272 );
     case 2276: return sizeof( TF02276 );
-    case 2277: return sizeof( TF02277 );
     case 2324: return sizeof( TF02324 );
     case 2326: return sizeof( TF02326 );
 
@@ -570,12 +570,12 @@ static void* all_recs_ptr( U16 cpuad, U16 msgnum )
     case  845: return &all_recs[ cpuad ].tf00845;
     case  846: return &all_recs[ cpuad ].tf00846;
 
+    case 2266: return &all_recs[ cpuad ].tf02266;
     case 2269: return &all_recs[ cpuad ].tf02269;
     case 2270: return &all_recs[ cpuad ].tf02270;
     case 2271: return &all_recs[ cpuad ].tf02271;
     case 2272: return &all_recs[ cpuad ].tf02272;
     case 2276: return &all_recs[ cpuad ].tf02276;
-    case 2277: return &all_recs[ cpuad ].tf02277;
     case 2324: return &all_recs[ cpuad ].tf02324;
     case 2326: return &all_recs[ cpuad ].tf02326;
 
@@ -1310,7 +1310,7 @@ static inline void print_fpc_reg( TF02276* rec )
 /*-------------------------------------------------------------------*/
 /*                Print Vector Registers                             */
 /*-------------------------------------------------------------------*/
-static inline void print_vr_regs(TF02277* rec)
+static inline void print_vr_regs(TF02266* rec)
 {
     char tim[64] = { 0 };     // "YYYY-MM-DD HH:MM:SS.uuuuuu"
     char pfx[64] = { 0 };     // "16:22:47.745999 HHC02269I CP00:"
@@ -1318,13 +1318,13 @@ static inline void print_vr_regs(TF02277* rec)
     int  i;                   // (work for iterating)
 
     FormatTIMEVAL(&rec->rhdr.tod, tim, sizeof(tim));
-    MSGBUF(pfx, "%s HHC02277I %s:", &tim[11], ptyp_str(rec->rhdr.cpuad));
+    MSGBUF(pfx, "%s HHC02266I %s:", &tim[11], ptyp_str(rec->rhdr.cpuad));
 
 	for (i = 0; i < 32; i += 2)
 	{
 		FLOGMSG(stdout, "%s VR%02d=%016" PRIx64 ".%016" PRIx64 " VR%02d=%016" PRIx64 ".%016" PRIx64 "\n",
-			pfx, i, CSWAP64(rec->vr[i].D.H.D), CSWAP64(rec->vr[i].D.L.D),
-			i + 1, CSWAP64(rec->vr[i + 1].D.H.D), CSWAP64(rec->vr[i + 1].D.L.D)
+			pfx, i, CSWAP64(rec->vr[i].G[0]), CSWAP64(rec->vr[i].G[1]),
+			i + 1, CSWAP64(rec->vr[i + 1].G[0]), CSWAP64(rec->vr[i + 1].G[1])
 		);
 	}
 }
@@ -1355,8 +1355,8 @@ static inline void print_all_available_regs( BYTE cpuad )
         print_fpr_regs( &all_recs[ cpuad ].tf02270 );
 
     // Vector Registers
-    if (all_recs[cpuad].gotmask & GOT_TF02277)
-        print_vr_regs(&all_recs[cpuad].tf02277);
+    if (all_recs[cpuad].gotmask & GOT_TF02266)
+        print_vr_regs(&all_recs[cpuad].tf02266);
 }
 
 /*-------------------------------------------------------------------*/
@@ -2430,7 +2430,7 @@ static void process_TF02270( TF02270* rec )
 /*-------------------------------------------------------------------*/
 /*             Process Vector Registers Record                       */
 /*-------------------------------------------------------------------*/
-static void process_TF02277(TF02277* rec)
+static void process_TF02266(TF02266* rec)
 {
     UNREFERENCED(rec);
     // Do nothing. Regs are printed by process_TF02324.
@@ -2872,12 +2872,12 @@ int main( int argc, char* argv[] )
         CASE_FOR_MSGNUM0( 845 ); // Block I/O External interrupt
         CASE_FOR_MSGNUM0( 846 ); // Service Signal External Interrupt
 
+        CASE_FOR_MSGNUM( 2266 ); // Vector Register
         CASE_FOR_MSGNUM( 2269 ); // General Registers
         CASE_FOR_MSGNUM( 2270 ); // Floating Point Registers
         CASE_FOR_MSGNUM( 2271 ); // Control Registers
         CASE_FOR_MSGNUM( 2272 ); // Access Registers
         CASE_FOR_MSGNUM( 2276 ); // Floating Point Control Register
-        CASE_FOR_MSGNUM( 2277 ); // Vector Register
         CASE_FOR_MSGNUM( 2324 ); // Instruction Trace
         CASE_FOR_MSGNUM( 2326 ); // Instruction Operands
 
