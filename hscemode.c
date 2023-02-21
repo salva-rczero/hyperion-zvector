@@ -17,6 +17,7 @@ DISABLE_GCC_UNUSED_FUNCTION_WARNING;
 #define _HENGINE_DLL_
 
 #include "hercules.h"
+#include "opcode.h"
 
 /*-------------------------------------------------------------------*/
 /*    architecture dependent 'pr_cmd' prefix command handler         */
@@ -2636,7 +2637,8 @@ int vr_cmd(int argc, char* argv[], char* cmdline)
             return 0;
         }
         if (0
-            || sscanf(argv[1], "%d%c%"SCNx64".%"SCNx64"%c", &reg_num, &equal_sign, &reg_value.D.H.D, &reg_value.D.L.D, &c) != 4
+            || sscanf(argv[1], "%d%c%"SCNx64".%"SCNx64"%c", &reg_num, &equal_sign, 
+                &reg_value.G[0], &reg_value.G[1], &c) != 4
             || reg_num < 0
             || reg_num > 31
             || '=' != equal_sign
@@ -2647,12 +2649,13 @@ int vr_cmd(int argc, char* argv[], char* cmdline)
             WRMSG(HHC02205, "E", argv[1], "");
             return 0;
         }
-        regs->vr[reg_num].D.H.D = CSWAP64(reg_value.D.H.D);
-        regs->vr[reg_num].D.L.D = CSWAP64(reg_value.D.L.D);
+        regs->vr[reg_num].G[0] = CSWAP64(reg_value.G[0]);
+        regs->vr[reg_num].G[1] = CSWAP64(reg_value.G[1]);
+        REFRESH_UPDATE_VR(reg_num);
     }
 
-    display_vregs(regs, buf, sizeof(buf), "HHC02277I ");
-    WRMSG(HHC02277, "I", "Vector registers");
+    display_vregs(regs, buf, sizeof(buf), "HHC02266I ");
+    WRMSG(HHC02266, "I", "Vector registers");
     LOGMSG("%s", buf);
 
     release_lock(&sysblk.cpulock[sysblk.pcpu]);

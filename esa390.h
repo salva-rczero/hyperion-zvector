@@ -70,7 +70,9 @@
                  struct { FW LL; FW LH; FW HL; FW HH; } F;
                } QW;
  typedef union {
-            	 struct { DW H; DW L; } D;
+                 U64 G[2];
+                 U32 F[4];
+                 U16 H[8];
                  BYTE B[16];
                } VR;
 

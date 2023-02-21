@@ -187,7 +187,9 @@ struct REGS {                           /* Processor registers       */
         U32     ar[16];                 /* Access registers          */
         U32     fpr[32];                /* FP registers              */
         U32     fpc;                    /* FP Control register       */
+#if defined( _FEATURE_129_ZVECTOR_FACILITY)
         VR      vr[32];                 /* zVector registers         */
+#endif
 
 #define GR_G(_r)     gr[(_r)].D
 #define GR_H(_r)     gr[(_r)].F.H.F       /* Fullword bits 0-31      */

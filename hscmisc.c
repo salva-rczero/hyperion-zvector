@@ -1686,9 +1686,9 @@ int display_inst_regs( bool trace2file, REGS *regs, BYTE *inst, BYTE opcode, cha
     if (opcode == 0xE7)
     {
         if (trace2file)
-            tf_2277(regs);
+            tf_2266(regs);
         else
-            len += display_vregs(regs, buf + len, buflen - len - 1, "HHC02277I ");
+            len += display_vregs(regs, buf + len, buflen - len - 1, "HHC02266I ");
     }
     
     if (len && sysblk.showregsfirst)
@@ -1840,11 +1840,13 @@ int display_vregs (REGS* regs, char* buf, int buflen, char* hdr)
         MSGBUF(cpustr, "%s", hdr);
     
 	for (int i = 0; i < 32; i += 2) {
+        REFRESH_READ_VR(i);
+        REFRESH_READ_VR(i + 1);
 		bufl += idx_snprintf(bufl, buf, buflen,
 			"%sVR%02d=%016" PRIx64 ".%016" PRIx64" VR%02d=%016" PRIx64 ".%016" PRIx64 "\n",
 			cpustr,
-			i, CSWAP64(regs->vr[i].D.H.D), CSWAP64(regs->vr[i].D.L.D),
-			i + 1, CSWAP64(regs->vr[i + 1].D.H.D), CSWAP64(regs->vr[i + 1].D.L.D)
+			i, CSWAP64(regs->vr[i].G[0]), CSWAP64(regs->vr[i].G[1]),
+			i + 1, CSWAP64(regs->vr[i + 1].G[0]), CSWAP64(regs->vr[i + 1].G[1])
 		);
 	}
     return bufl;
