@@ -1912,7 +1912,6 @@ do {                                                                  \
 
 #define MAIN_TO_ABS(_main)  ((U64)((BYTE*)(_main) - sysblk.mainstor))
 
-<<<<<<< HEAD
 /*-------------------------------------------------------------------*/
 /*              zVector Facility                                     */
 /*-------------------------------------------------------------------*/
@@ -1952,17 +1951,6 @@ do {                                                                  \
 
 #endif /*defined( FEATURE_129_ZVECTOR_FACILITY )*/
 
-/* Perform invalidation after storage key update...
- *
- * If the REF or CHANGE bit is turned off for an absolute address,
- * then we need to invalidate any cached entries for that address
- * on *ALL* CPUs.
- *
- * FIXME: Synchronization, esp. for the CHANGE bit, should be
- * tighter than what is provided here.
- */
-=======
-
 /*-------------------------------------------------------------------*/
 /*        Perform invalidation after storage key update...           */
 /*-------------------------------------------------------------------*/
@@ -1975,7 +1963,7 @@ do {                                                                  \
 /*  tighter than what is provided here.                              */
 /*                                                                   */
 /*-------------------------------------------------------------------*/
->>>>>>> upstream/develop
+
 #define STORKEY_INVALIDATE_LOCKED( _regs, _n )                          \
                                                                         \
  do                                                                     \
