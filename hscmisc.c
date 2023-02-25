@@ -421,14 +421,14 @@ char    buf[512];                       /* MSGBUF work buffer        */
 
         if (aaddr + ilc > regs->mainlim)
         {
-            MSGBUF( buf, "R:" F_RADR "  Addressing exception", aaddr );
+            MSGBUF( buf, "R:"F_RADR"  Addressing exception", aaddr );
             WRMSG( HHC02289, "I", buf );
             return;
         }
 
         /* Copy instruction to work area and hex print it */
         memcpy(inst, regs->mainstor + aaddr, ilc);
-        len = sprintf(buf, "%c:" F_RADR "  %2.2X%2.2X",
+        len = sprintf(buf, "%c:"F_RADR"  %2.2X%2.2X",
           stid == TEA_ST_PRIMARY ? 'P' :
           stid == TEA_ST_HOME ? 'H' :
           stid == TEA_ST_SECNDRY ? 'S' : 'R',
@@ -1642,7 +1642,7 @@ static int display_regs64(char *hdr,U16 cpuad,U64 *r,int numcpus,char *buf,int b
         {
             len += idx_snprintf( len, buf, buflen, "%s", " " );
         }
-        len += idx_snprintf( len, buf, buflen, "%s%1.1X=%16.16" PRIX64, hdr, i, r[i] );
+        len += idx_snprintf( len, buf, buflen, "%s%1.1X=%16.16"PRIX64, hdr, i, r[i] );
     }
     len += idx_snprintf( len, buf, buflen, "%s", "\n" );
     return(len);
@@ -1734,7 +1734,7 @@ int display_inst_regs( bool trace2file, REGS *regs, BYTE *inst, BYTE opcode, cha
         else
             len += display_fregs (regs, buf + len, buflen - len - 1, "HHC02270I ");
     }
-    
+
     /* Display vector registers if appropriate */
     if (opcode == 0xE7)
     {
@@ -1743,7 +1743,7 @@ int display_inst_regs( bool trace2file, REGS *regs, BYTE *inst, BYTE opcode, cha
         else
             len += display_vregs(regs, buf + len, buflen - len - 1, "HHC02266I ");
     }
-    
+
     if (len && sysblk.showregsfirst)
         len += idx_snprintf( len, buf, buflen, "\n" );
 
@@ -1875,7 +1875,7 @@ int display_vregs (REGS* regs, char* buf, int buflen, char* hdr)
         MSGBUF(cpustr, "%s%s%02X: ", hdr, PTYPSTR(regs->cpuad), regs->cpuad);
     else
         MSGBUF(cpustr, "%s", hdr);
-    
+
 	for (int i = 0; i < 32; i += 2) {
         REFRESH_READ_VR(i);
         REFRESH_READ_VR(i + 1);
@@ -2114,7 +2114,7 @@ BYTE    c;                              /* Character work area       */
         return -1;
     }
 
-    rc = sscanf(operand, "%" SCNx64 "%c%" SCNx64 "%c",
+    rc = sscanf(operand, "%"SCNx64"%c%"SCNx64"%c",
                 &opnd1, &delim, &opnd2, &c);
 
     if (rc == 2 && delim == '=' && newval)
