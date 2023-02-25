@@ -292,6 +292,7 @@ int ARCH_DEP( system_reset )( const int target_mode, const bool clear,
                 memset( regs->ar,  0, sizeof( regs->ar  ));
                 memset( regs->gr,  0, sizeof( regs->gr  ));
                 memset( regs->fpr, 0, sizeof( regs->fpr ));
+
 #if defined( FEATURE_129_ZVECTOR_FACILITY)
                 memset( regs->vr,  0, sizeof(regs->vr));
 #endif
