@@ -1939,7 +1939,7 @@ int     aswitch;
     else
     {
         memset(regs, 0, sizeof(REGS));
-        
+
         if (cpu_init( cpu, regs, NULL ))
             return NULL;
 

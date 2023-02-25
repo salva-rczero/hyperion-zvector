@@ -87,6 +87,7 @@
 ::                               BEGIN
 ::-----------------------------------------------------------------------------
 :BEGIN
+
   :: Initialize the variables we'll be passing back to the caller.
   :: We do this BEFORE our "setlocal" to update THEIR variable pool.
 
