@@ -701,6 +701,7 @@
     <None Include="readme\README.HQA.md" />
     <None Include="readme\README.HRAF.md" />
     <None Include="readme\README.ISSUES.md" />
+    <None Include="readme\README.MAKETAPE.md" />
     <None Include="readme\README.MINGW.md" />
     <None Include="readme\README.MSVC.md" />
     <None Include="readme\README.NETWORKING.md" />
@@ -749,6 +750,11 @@
     <None Include="tests\agf.tst" />
     <None Include="tests\awsbsf.aws" />
     <None Include="tests\awsbsf.tst" />
+    <None Include="tests\bc-ilc.asm" />
+    <None Include="tests\bc-ilc.core" />
+    <None Include="tests\bc-ilc.list" />
+    <None Include="tests\bc-ilc.tst" />
+    <None Include="tests\bc-ilc.pdf" />
     <None Include="tests\bfp-001-divtoint.asm" />
     <None Include="tests\bfp-001-divtoint.core" />
     <None Include="tests\bfp-001-divtoint.list" />
