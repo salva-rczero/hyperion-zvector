@@ -6,8 +6,11 @@ archlvl     zArch
 loadcore    "$(testpath)/zvector.core"
 t+
 runtest     1
+gpr
+vr
 cr
 fpr
+r 0000300.200
 *Compare
 r 0001000.10
 *Want 00000000 00000000 00000000 00000000

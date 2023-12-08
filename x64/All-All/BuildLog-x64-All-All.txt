@@ -1,0 +1,14 @@
+﻿  makefile.bat begun on Mon 02/27/2023 at 19:07:31.33
+  cmdline: makefile.bat ALL-ALL makefile.msvc 64 clean "C:\papa\MyGit\hyperion-zvector\" "Hercules_VS2022.vcxproj"
+  Visual Studio vs2022 detected
+  
+  **********************************************************************
+  ** Visual Studio 2022 Developer Command Prompt v17.4.4
+  ** Copyright (c) 2022 Microsoft Corporation
+  **********************************************************************
+  [vcvarsall.bat] Environment initialized for: 'x86'
+  
+  
+makefile.bat(1): error C9999: "runjobs.exe" not found
+  makefile.bat ended on Mon 02/27/2023 at 19:07:32.50, rc=1
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.MakeFile.Targets(39,5): error MSB3073: The command "makefile.bat ALL-ALL makefile.msvc 64 clean "C:\papa\MyGit\hyperion-zvector\" "Hercules_VS2022.vcxproj"" exited with code 1.
