@@ -1042,7 +1042,7 @@ static void commadpt_read_tty(COMMADPT *ca, BYTE * bfr, int len)
             }
             if  (ca->uctrans && c >= 'a' && c <= 'z')
             {
-                c = toupper( c );     /* make uppercase */
+                c = toupper( (unsigned char)c );     /* make uppercase */
             }
             /* now map the character from ASCII into proper S/370 byte format */
             if (ca->term == COMMADPT_TERM_TTY)
@@ -1474,7 +1474,7 @@ static void *commadpt_thread(void *vca)
                 if(ca->inbfr.havedata || ca->eol_flag)
                 {
                     if (ca->term == COMMADPT_TERM_2741) {
-                        usleep(10000);
+                        USLEEP(10000);
                     }
                     ca->curpending=COMMADPT_PEND_IDLE;
                     signal_condition(&ca->ipc);

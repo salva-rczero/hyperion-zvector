@@ -777,6 +777,9 @@
     <ClCompile Include="tfswap.c">
       <Filter>Source Files\Utilities\other</Filter>
     </ClCompile>
+    <ClCompile Include="txt2card.c">
+      <Filter>Source Files\Utilities\other</Filter>
+    </ClCompile>
     <ClCompile Include="timer.c">
       <Filter>Source Files\Hercules\Emulation\Source Files</Filter>
     </ClCompile>
@@ -807,8 +810,13 @@
     <ClCompile Include="xstore.c">
       <Filter>Source Files\Hercules\Emulation\Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="zvector.c">
       <Filter>Source Files\Hercules\Emulation\Source Files</Filter>
+=======
+    <ClCompile Include="dasdload2.h">
+      <Filter>Source Files\Utilities\disk</Filter>
+>>>>>>> upstream/develop
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -986,6 +994,9 @@
     <None Include="readme\README.COMMADPT.md">
       <Filter>Other Files\DOC\README</Filter>
     </None>
+    <None Include="readme\README.DAEMON.md">
+      <Filter>Other Files\DOC\README</Filter>
+    </None>
     <None Include="readme\README.DYNMOD.md">
       <Filter>Other Files\DOC\README</Filter>
     </None>
@@ -1059,6 +1070,9 @@
       <Filter>Other Files\DOC\README</Filter>
     </None>
     <None Include="readme\README.TCPNJE.md">
+      <Filter>Other Files\DOC\README</Filter>
+    </None>
+    <None Include="readme\README.TRACEFILE.md">
       <Filter>Other Files\DOC\README</Filter>
     </None>
     <None Include="readme\README.VMFPLC2.md">
@@ -1607,6 +1621,9 @@
     <None Include="util\zzsacard.bin">
       <Filter>Other Files\Utilities</Filter>
     </None>
+    <None Include="tests\3390.cckd64">
+      <Filter>Other Files\tests</Filter>
+    </None>
     <None Include="tests\awsbsf.aws">
       <Filter>Other Files\tests</Filter>
     </None>
@@ -1743,6 +1760,9 @@
       <Filter>Other Files\tests\core</Filter>
     </None>
     <None Include="tests\CUSE-02-performance.core">
+      <Filter>Other Files\tests\core</Filter>
+    </None>
+    <None Include="tests\E7Prefix.core">
       <Filter>Other Files\tests\core</Filter>
     </None>
     <None Include="tests\dfp-080-from-packed.core">
@@ -2075,6 +2095,9 @@
     <None Include="tests\CUSE-02-performance.tst">
       <Filter>Other Files\tests\scripts\tst</Filter>
     </None>
+    <None Include="tests\E7Prefix.tst">
+      <Filter>Other Files\tests\scripts\tst</Filter>
+    </None>
     <None Include="tests\dfp-080-from-packed.tst">
       <Filter>Other Files\tests\scripts\tst</Filter>
     </None>
@@ -2333,6 +2356,9 @@
     <None Include="tests\CUSE-02-performance.asm">
       <Filter>Other Files\tests\scripts\asm</Filter>
     </None>
+    <None Include="tests\E7Prefix.asm">
+      <Filter>Other Files\tests\scripts\asm</Filter>
+    </None>
     <None Include="tests\dfp-080-from-packed.asm">
       <Filter>Other Files\tests\scripts\asm</Filter>
     </None>
@@ -2553,6 +2579,12 @@
       <Filter>Other Files\tests\scripts\asm\list</Filter>
     </None>
     <None Include="tests\CUSE-02-performance.pdf">
+      <Filter>Other Files\tests\scripts\asm\list</Filter>
+    </None>
+    <None Include="tests\E7Prefix.list">
+      <Filter>Other Files\tests\scripts\asm\list</Filter>
+    </None>
+    <None Include="tests\E7Prefix.pdf">
       <Filter>Other Files\tests\scripts\asm\list</Filter>
     </None>
     <None Include="tests\dfp-080-from-packed.list">
@@ -3477,6 +3509,9 @@
     <Text Include="tests\epsw.txt">
       <Filter>Other Files\tests\scripts\txt</Filter>
     </Text>
+    <Text Include="tests\ex.txt">
+      <Filter>Other Files\tests\scripts\txt</Filter>
+    </Text>
     <Text Include="tests\exrl.txt">
       <Filter>Other Files\tests\scripts\txt</Filter>
     </Text>
@@ -3810,6 +3845,9 @@
     <Text Include="tests\printer.txt">
       <Filter>Other Files\tests\scripts\txt</Filter>
     </Text>
+    <Text Include="tests\punch.txt">
+      <Filter>Other Files\tests\scripts\txt</Filter>
+    </Text>
     <Text Include="tests\ptf.txt">
       <Filter>Other Files\tests\scripts\txt</Filter>
     </Text>
@@ -4100,6 +4138,9 @@
       <Filter>Other Files\DOC\html\images</Filter>
     </Image>
     <Image Include="readme\images\herclogo.jpg">
+      <Filter>Other Files\DOC\README\images</Filter>
+    </Image>
+    <Image Include="readme\images\httpsrvr.jpg">
       <Filter>Other Files\DOC\README\images</Filter>
     </Image>
     <Image Include="readme\images\image_header_herculeshyperionSDL.png">

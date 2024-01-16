@@ -247,7 +247,7 @@
 
   call   :tempfn                            calc_mttof_rexx    .rexx
   :: echo   PARSE ARG '"' formula '"'     >   %calc_mttof_rexx% @salva quotes error
-  echo   PARSE ARG formula             >   %calc_mttof_rexx% 
+  echo   PARSE ARG formula             >   %calc_mttof_rexx%
   echo   INTERPRET 'mttof = 'formula   >>  %calc_mttof_rexx%
   echo   SAY FORMAT(mttof,,1)          >>  %calc_mttof_rexx%
   for    /f %%i in ('rexx.exe              %calc_mttof_rexx% "%formula%"') do set mttof=%%i

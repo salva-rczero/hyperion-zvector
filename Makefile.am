@@ -251,6 +251,7 @@ bin_PROGRAMS = \
   tapesplt     \
   tfprint      \
   tfswap       \
+  txt2card     \
   vmfplc2      \
   $(HERCIFC)   \
   $(HERCLIN)
@@ -314,7 +315,7 @@ hdt3505_la_SOURCES  = cardrdr.c sockdev.c
 hdt3505_la_LDFLAGS  = $(DYNMOD_LD_FLAGS)
 hdt3505_la_LIBADD   = $(DYNMOD_LD_ADD)
 
-hdt3525_la_SOURCES  = cardpch.c
+hdt3525_la_SOURCES  = cardpch.c sockdev.c
 hdt3525_la_LDFLAGS  = $(DYNMOD_LD_FLAGS)
 hdt3525_la_LIBADD   = $(DYNMOD_LD_ADD)
 
@@ -605,11 +606,11 @@ dasdisup_SOURCES   = dasdisup.c
 dasdisup_LDADD     = $(tools_ADDLIBS)
 dasdisup_LDFLAGS   = $(tools_LD_FLAGS)
 
-dasdload_SOURCES   = dasdload.c
+dasdload_SOURCES   = dasdload.c dasdload2.h
 dasdload_LDADD     = $(tools_ADDLIBS)
 dasdload_LDFLAGS   = $(tools_LD_FLAGS)
 
-dasdload64_SOURCES = dasdload64.c
+dasdload64_SOURCES = dasdload64.c dasdload2.h
 dasdload64_LDADD   = $(tools_ADDLIBS)
 dasdload64_LDFLAGS = $(tools_LD_FLAGS)
 
@@ -738,6 +739,10 @@ tfswap_SOURCES     = tfswap.c
 tfswap_LDADD       = $(tools_ADDLIBS)
 tfswap_LDFLAGS     = $(tools_LD_FLAGS)
 
+txt2card_SOURCES   = txt2card.c
+txt2card_LDADD     = $(tools_ADDLIBS)
+txt2card_LDFLAGS   = $(tools_LD_FLAGS)
+
 #------------------------------------------------------------------------------
 # Files that are not 'built' per-se
 # Also contains some WIN32 only source files
@@ -848,6 +853,7 @@ EXTRA_DIST =                  \
   msvc.makefile.includes/REXX_RULES.msvc      \
   README.md                       \
   readme/images/herclogo.jpg      \
+  readme/images/httpsrvr.jpg      \
   readme/images/image_header_herculeshyperionSDL.png  \
   readme/README.ADDING.md         \
   readme/README.AIX.md            \
@@ -856,6 +862,7 @@ EXTRA_DIST =                  \
   readme/README.CCKD64.md         \
   readme/README.CMPSC.md          \
   readme/README.COMMADPT.md       \
+  readme/README.DAEMON.md         \
   readme/README.DYNMOD.md         \
   readme/README.ECPSVM.md         \
   readme/README.EXTPKG.md         \
@@ -882,6 +889,7 @@ EXTRA_DIST =                  \
   readme/README.TAPE.md           \
   readme/README.TCPIP.md          \
   readme/README.TCPNJE.md         \
+  readme/README.TRACEFILE.md      \
   readme/README.VMFPLC2.md        \
   readme/README.WIN64.md          \
   RELEASE.NOTES               \

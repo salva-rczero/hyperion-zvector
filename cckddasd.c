@@ -310,7 +310,7 @@ int             rc, i;                  /* Return code, Loop index   */
     while (cckd->ras)
     {
         release_lock(&cckdblk.ralock);
-        usleep(1);
+        USLEEP(1);
         obtain_lock(&cckdblk.ralock);
     }
     release_lock(&cckdblk.ralock);
@@ -6700,9 +6700,9 @@ void cckd_trace( const char* func, int line, DEVBLK* dev, char* fmt, ... )
         struct timeval  timeval;            // (microsecond accuracy)
         time_t          todsecs;            // (#of secs since epoch)
         char            todwrk[32];         // (work)
-        char            trcpfx[32];         // "hh:mm:ss.uuuuuu n:CCUU> "
+        char            trcpfx[64];         // "HHHHHHHH @ hh:mm:ss.uuuuuu n:CCUU"
 
-        /* Build TOD+CUU "hh:mm:ss.uuuuuu n:CCUU> " prefix string */
+        /* Build TID+TOD+CUU trace message prefix string */
 
         gettimeofday( &timeval, NULL );     // (microsecond accuracy)
 
@@ -6712,9 +6712,11 @@ void cckd_trace( const char* func, int line, DEVBLK* dev, char* fmt, ... )
 
         MSGBUF( trcpfx,
 
-            "%s.%6.6ld %1d:%04X ",          // "hh:mm:ss.uuuuuu n:CCUU "
+            TIDPAT" @ %s.%6.6ld %1d:%04X",  // "HHHHHHHH @ hh:mm:ss.uuuuuu n:CCUU"
+
+            hthread_self(),                 // "HHHHHHHH" (TIDPAT)
             todwrk + 11,                    // "hh:mm:ss" (%s)
-            timeval.tv_usec,                // "uuuuuu"   (%6.6ld
+            (long int)timeval.tv_usec,      // "uuuuuu"   (%6.6ld
             LCSS_DEVNUM                     // "n:CCUU"   (%1d:%04X)
         );
 
@@ -6731,7 +6733,7 @@ void cckd_trace( const char* func, int line, DEVBLK* dev, char* fmt, ... )
         if (cckdblk.itracec < cckdblk.itracen) // (less than all used?)
             cckdblk.itracec++;                 // (count entries used)
 
-        snprintf( (char*) itracep, CCKD_TRACE_SIZE, "%s%s(%d): %s",
+        snprintf( (char*) itracep, CCKD_TRACE_SIZE, "%s %s(%d): %s",
             trcpfx, func, line, trcmsg );
     }
     RELEASE_TRACE_LOCK();

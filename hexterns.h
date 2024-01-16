@@ -360,10 +360,10 @@ CCDU_DLL_IMPORT   int   cckd_chkdsk (DEVBLK *, int);
 /* Functions in module hscmisc.c */
 int herc_system (char* command);
 void do_shutdown();
-bool insttrace_all(); 
+bool insttrace_all();
 
 int display_gregs (REGS *regs, char *buf, int buflen, char *hdr);
-int display_fregs (REGS *regs, char *buf, int buflen, char *hdr);
+int display_fregs (REGS *regs, char *buf, int buflen,char *hdr);
 int display_vregs (REGS *regs, char *buf, int buflen, char *hdr);
 int display_cregs (REGS *regs, char *buf, int buflen, char *hdr);
 int display_aregs (REGS *regs, char *buf, int buflen, char *hdr);

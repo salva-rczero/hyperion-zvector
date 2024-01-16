@@ -10,6 +10,7 @@ EXTRA_DIST =                    \
      agf.listing                \
      agf.tst                    \
      alsi.txt                   \
+     3390.cckd64                \
      awsbsf.aws                 \
      awsbsf.tst                 \
      axtr.txt                   \
@@ -247,7 +248,13 @@ EXTRA_DIST =                    \
      dotest                     \
      dummy.subtst               \
      dxtr.txt                   \
+     E7Prefix.asm               \
+     E7Prefix.core              \
+     E7Prefix.list              \
+     E7Prefix.pdf               \
+     E7Prefix.tst               \
      epsw.txt                   \
+     ex.txt                     \
      exrl.txt                   \
      FAC53.asm                  \
      FAC53.core                 \
@@ -430,6 +437,7 @@ EXTRA_DIST =                    \
      pr.subtst                  \
      pr.tst                     \
      printer.txt                \
+     punch.txt                  \
      privop.asm                 \
      privop.core                \
      privop.list                \

@@ -321,6 +321,10 @@
 						>
 					</File>
 					<File
+						RelativePath=".\dasdload2.h"
+						>
+					</File>
+					<File
 						RelativePath=".\dasdload64.c"
 						>
 					</File>
@@ -402,6 +406,10 @@
 					</File>
 					<File
 						RelativePath=".\tfswap.c"
+						>
+					</File>
+					<File
+						RelativePath=".\txt2card.c"
 						>
 					</File>
 				</Filter>
@@ -2103,6 +2111,10 @@
 						>
 					</File>
 					<File
+						RelativePath=".\readme\README.DAEMON.md"
+						>
+					</File>
+					<File
 						RelativePath=".\readme\README.DYNMOD.md"
 						>
 					</File>
@@ -2207,6 +2219,10 @@
 						>
 					</File>
 					<File
+						RelativePath=".\readme\README.TRACEFILE.md"
+						>
+					</File>
+					<File
 						RelativePath=".\readme\README.VMFPLC2.md"
 						>
 					</File>
@@ -2219,6 +2235,10 @@
 						>
 						<File
 							RelativePath=".\readme\images\herclogo.jpg"
+							>
+						</File>
+						<File
+							RelativePath=".\readme\images\httpsrvr.jpg"
 							>
 						</File>
 						<File
@@ -3252,6 +3272,10 @@
 				Name="tests"
 				>
 				<File
+					RelativePath=".\tests\3390.cckd64"
+					>
+				</File>
+				<File
 					RelativePath=".\tests\awsbsf.aws"
 					>
 				</File>
@@ -3471,6 +3495,10 @@
 						>
 					</File>
 					<File
+						RelativePath=".\tests\E7Prefix.core"
+						>
+					</File>
+					<File
 						RelativePath=".\tests\FAC53.core"
 						>
 					</File>
@@ -3683,6 +3711,10 @@
 						</File>
 						<File
 							RelativePath=".\tests\epsw.txt"
+							>
+						</File>
+						<File
+							RelativePath=".\tests\ex.txt"
 							>
 						</File>
 						<File
@@ -4134,6 +4166,10 @@
 							>
 						</File>
 						<File
+							RelativePath=".\tests\punch.txt"
+							>
+						</File>
+						<File
 							RelativePath=".\tests\res40002.txt"
 							>
 						</File>
@@ -4527,6 +4563,10 @@
 						</File>
 						<File
 							RelativePath=".\tests\digest.tst"
+							>
+						</File>
+						<File
+							RelativePath=".\tests\E7Prefix.tst"
 							>
 						</File>
 						<File
@@ -4982,6 +5022,10 @@
 							>
 						</File>
 						<File
+							RelativePath=".\tests\E7Prefix.asm"
+							>
+						</File>
+						<File
 							RelativePath=".\tests\FAC53.asm"
 							>
 						</File>
@@ -5402,6 +5446,14 @@
 							</File>
 							<File
 								RelativePath=".\tests\dfp-080-to-packed.list"
+								>
+							</File>
+							<File
+								RelativePath=".\tests\E7Prefix.list"
+								>
+							</File>
+							<File
+								RelativePath=".\tests\E7Prefix.pdf"
 								>
 							</File>
 							<File

@@ -98,7 +98,7 @@ $(X)hdt3505.dll:  $(O)cardrdr.obj $(O)sockdev.obj \
     $(linkdll)
     $(MT_DLL_CMD)
 
-$(X)hdt3525.dll:  $(O)cardpch.obj \
+$(X)hdt3525.dll:  $(O)cardpch.obj $(O)sockdev.obj \
                   $(O)hengine.lib $(O)hutil.lib $(O)hsys.lib $(O)hercprod.res
     $(linkdll)
     $(MT_DLL_CMD)
@@ -166,6 +166,8 @@ $(X)dmap2hrc.exe: $(O)$(@B).obj                 $(O)hsys.lib $(O)hutil.lib $(O)h
 $(X)tfprint.exe:  $(O)$(@B).obj $(O)hengine.lib $(O)hsys.lib $(O)hutil.lib $(O)hercmisc.res
 
 $(X)tfswap.exe:   $(O)$(@B).obj                 $(O)hsys.lib $(O)hutil.lib $(O)hercmisc.res
+
+$(X)txt2card.exe: $(O)$(@B).obj                 $(O)hsys.lib $(O)hutil.lib $(O)hercmisc.res
 
 $(X)conspawn.exe: $(O)$(@B).obj                                            $(O)hercmisc.res
 

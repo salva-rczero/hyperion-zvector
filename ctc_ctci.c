@@ -1092,7 +1092,7 @@ static void*  CTCI_ReadThread( void* arg )
             // Don't use sched_yield() here; use an actual non-dispatchable
             // delay instead so as to allow another [possibly lower priority]
             // thread to 'read' (remove) some packet(s) from our frame buffer.
-            usleep( CTC_DELAY_USECS );  // (wait a bit before retrying...)
+            USLEEP( CTC_DELAY_USECS );  // (wait a bit before retrying...)
         }
     }
 
@@ -1536,7 +1536,7 @@ static int  ParseArgs( DEVBLK* pDEVBLK, PCTCBLK pCTCBLK,
 
             char * s = pCTCBLK->szTUNIfName + strlen(pCTCBLK->szTUNIfName);
 
-            while(isdigit(s[- 1])) s--;
+            while(isdigit((unsigned char)s[- 1])) s--;
             STRLCAT( pCTCBLK->szTUNCharDevName, s );
         }
 #endif

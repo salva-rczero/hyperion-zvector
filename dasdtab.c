@@ -34,13 +34,109 @@
 #include "hercules.h"
 
 /*-------------------------------------------------------------------*/
-/* CKD device definitions                                            */
+/*             CKD control unit definitions                          */
+/*-------------------------------------------------------------------*/
+/*                                                                   */
+/*           ----------------------------------                      */
+/*           3880, 3990, 2105 and higher coding                      */
+/*           ----------------------------------                      */
+/*                                                                   */
+/*                                                                   */
+/* Model coding bits (RDC byte 2):                                   */
+/*                                                                   */
+/*   11.. .... 3880 Speed Matching Buffer (LR support)               */
+/*   ..1. .... Non-Gap-Synchronous mode                              */
+/*   .... 1... Cached                                                */
+/*   .... .011 3880-3                                                */
+/*   .... .101 3880-3     Feature 3005 - 3380 AJ4/AK4 Attachment     */
+/*   .... .010 3990-1/2   Nocache/Synchronous                        */
+/*   .... .100 3990-3/6/7 Basic Operation Mode                       */
+/*   .... .001 3990-6/7   Enhanced Mode                              */
+/*                                                                   */
+/*                                                                   */
+/* Features (RDC byte 6):                                            */
+/*                                                                   */
+/*   1... .... Multiple Burst ECC (ignored, 3380 devices)            */
+/*   .1.. .... Locate Record, Read Tracks                            */
+/*   ..1. .... Reserved                                              */
+/*   ...1 .... Locate Record, Read                                   */
+/*   .... 1... Set System Characteristics is supported  (*)          */
+/*   .... .1.. Set System Characteristics               (*)          */
+/*             has been received for this Path Group    (*)          */
+/*   .... ..1. Prefix CCW supported & enabled           (*)          */
+/*   .... ...1 Reserved for VM minidisk use                          */
+/*             (testing this bit for zero is not reliable as an      */
+/*             indicator that this is not a minidisk; can fail       */
+/*             when minidisk is a fullpack minidisk)                 */
+/*                                                                   */
+/*        (*)  https://www.vm.ibm.com/pubs/cp720/RDCBK.HTML          */
+/*                                                                   */
+/*                                                                   */
+/* Levels defining byte 8 format (RDC byte 7):                       */
+/*                                                                   */
+/*   0000 0000 Not supported by Hercules, must be zero               */
+/*                                                                   */
+/*                                                                   */
+/* Added feature support (RDC byte 8):                               */
+/*                                                                   */
+/*   1... .... RAMAC: During dynamic sparing operations,             */
+/*             a defective primary track will be written             */
+/*             as defective on the secondary                         */
+/*   ...1 .... RAMAC: Data striping and compaction is                */
+/*             supported on parallel channels                        */
+/*   .00. 0000 Reserved, set to zeros                                */
+/*                                                                   */
+/*                                                                   */
+/* Subsystem Program Visible Facilities (RDC byte 9):                */
+/*                                                                   */
+/*   1... .... Cache Fast Write supported (not supported, yet!)      */
+/*             (non-retentive data)                                  */
+/*   .1.. .... Lock Facility supported    (not supported, yet!)      */
+/*   ..1. .... Record Cache supported                                */
+/*   ...1 .... Track Cache supported                                 */
+/*   .... 1... Dual Copy supported        (not supported)            */
+/*   .... .1.. DASD Fast Write supported  (not supported)            */
+/*   .... ..1. Reset Allegiance           (not supported, yet!)      */
+/*   .... ...1 24 Byte Compatibility Sense Format                    */
+/*             (set by code when 3380 on 3390 controller)            */
+/*                                                                   */
+/*                                                                   */
+/*-------------------------------------------------------------------*/
+static CKDCU ckdcutab[] = {
+/*                              func/ type                                        */
+/* name          type model code feat code features   ciws ---------  senselength */
+ {"2314",       0x2314,0x00,0x00,0x00,0x00,0x00000000,0,0,0,0,0,0,0,0,6},
+ {"2835",       0x2835,0x00,0x00,0x00,0x00,0x00000000,0,0,0,0,0,0,0,0,6},
+ {"2841",       0x2841,0x00,0x00,0x00,0x00,0x00000000,0,0,0,0,0,0,0,0,6},
+ {"3830",       0x3830,0x02,0x00,0x00,0x00,0x00000000,0,0,0,0,0,0,0,0,24},
+ {"3880",       0x3880,0x05,0x09,0x00,0x00,0x80000000,0,0,0,0,0,0,0,0,24},
+/*
+    PROGRAMMING NOTE: the 00001000 features bit (RAMAC Data striping
+    and compaction on parallel channels) is apparently needed in order
+    to allow SMS to create VSAM Extended Format Datasets (as well as
+    RDC bytes 51-53 needing to be set properly too). We set them even
+    though we do not directly support RAID since the user may provide
+    such support themselves by placing their Hercules dasd file on a
+    RAID array and it's important to be able to create VSAM Extended
+    Format datasets since doing so is common in the real world so we
+    need to "support" allowing them to do so.
+*/
+ {"3990",       0x3990,0xc2,0x10,0x00,0x00,0xd2000000,0x40fa0100,0,0,0,0,0,0,0,32},
+ {"3990-3",     0x3990,0xec,0x06,0x00,0x00,0xd2001010,0x40fa0100,0x41270004,0x423e0040,0,0,0,0,0,32},
+ {"3990-6",     0x3990,0xe9,0x15,0x48,0x15,0x52001010,0x40fa0100,0x41270004,0x423e0060,0,0,0,0,0,32},
+ {"9343",       0x9343,0xe0,0x11,0x00,0x00,0x80000000,0,0,0,0,0,0,0,0,32}
+/*"2105",       0x2105,0xe8,0x15,0x48,0x15,0x50000037,0x40fa0100,0x41270004,0x423e01a0,0x433e0008,0,0,0,0,32}, */
+} ;
+#define CKDCU_NUM (sizeof(ckdcutab)/CKDCU_SIZE)
+
+/*-------------------------------------------------------------------*/
+/*                    CKD device definitions                         */
 /*-------------------------------------------------------------------*/
 static CKDDEV ckdtab[] = {
 /* name         type model clas code prime a hd    r0    r1 har0   len sec    rps  f f1  f2   f3   f4 f5 f6  cu */
- {"2305",      0x2305,0x00,0x20,0x00,   48,0, 8,14568,14136, 432,14568, 90,0x0000,-1,202,432,  0,   0,  0,0,"2835"},
- {"2305-1",    0x2305,0x00,0x20,0x00,   48,0, 8,14568,14136, 432,14568, 90,0x0000,-1,202,432,  0,   0,  0,0,"2835"},
- {"2305-2",    0x2305,0x02,0x20,0x00,   96,0, 8,14858,14660, 198,14858, 90,0x0000,-1, 91,198,  0,   0,  0,0,"2835"},
+ {"2305",      0x2305,0x00,0x20,0x00,   48,6, 8,14568,14136, 432,14568, 90,0x0000,-1,202,432,  0,   0,  0,0,"2835"},
+ {"2305-1",    0x2305,0x00,0x20,0x00,   48,6, 8,14568,14136, 432,14568, 90,0x0000,-1,202,432,  0,   0,  0,0,"2835"},
+ {"2305-2",    0x2305,0x02,0x20,0x00,   96,12,8,14858,14660, 198,14858, 90,0x0000,-1, 91,198,  0,   0,  0,0,"2835"},
  {"2305-x",    0x2305,0x02,0x20,0x00,65535,0, 8,14858,14660, 198,14858, 90,0x0000,-1, 91,198,  0,   0,  0,0,"2835"},
 
 /* name         type model clas code prime a hd    r0    r1 har0   len sec    rps  f f1  f2   f3   f4 f5 f6  cu */
@@ -114,93 +210,7 @@ static CKDDEV ckdtab[] = {
 #define CKDDEV_NUM (sizeof(ckdtab)/CKDDEV_SIZE)
 
 /*-------------------------------------------------------------------*/
-/* CKD control unit definitions                                      */
-/*-------------------------------------------------------------------*/
-/*                                                                   */
-/*                                                                   */
-/* 3880, 3990, 2105 and higher coding                                */
-/* ----------------------------------                                */
-/*                                                                   */
-/* Model coding bits (RDC byte 2):                                   */
-/*                                                                   */
-/*   11.. .... 3880 Speed Matching Buffer (LR support)               */
-/*   ..1. .... Non-Gap-Synchronous mode                              */
-/*   .... 1... Cached                                                */
-/*   .... .011 3880-3                                                */
-/*   .... .101 3880-3     Feature 3005 - 3380 AJ4/AK4 Attachment     */
-/*   .... .010 3990-1/2   Nocache/Synchronous                        */
-/*   .... .100 3990-3/6/7 Basic Operation Mode                       */
-/*   .... .001 3990-6/7   Enhanced Mode                              */
-/*                                                                   */
-/*                                                                   */
-/* Features (RDC bytes 6-9):                                         */
-/*                                                                   */
-/*   Byte 6:                                                         */
-/*   1... .... Multiple Burst ECC (ignored, 3380 devices)            */
-/*   .1.. .... Locate Record, Read Tracks                            */
-/*   ..1. .... Reserved                                              */
-/*   ...1 .... Locate Record, Read                                   */
-/*   .... ...1 Reserved for VM minidisk use                          */
-/*             (testing this bit for zero is not reliable as an      */
-/*             indicator that this is not a minidisk; can fail       */
-/*             when minidisk is a fullpack minidisk)                 */
-/*                                                                   */
-/*   Byte 7 - Levels defining byte 8 format                          */
-/*   0000 0000 Not supported by Hercules, must be zero               */
-/*                                                                   */
-/*   Byte 8 - Added feature support                                  */
-/*   0000 0000 Not supported by Hercules, must be zero               */
-/*   1... .... RAMAC: During dynamic sparing operations,             */
-/*             a defective primary track will be written             */
-/*             as defective on the secondary                         */
-/*   ...1 .... RAMAC: Data striping and compaction is                */
-/*             supported on parallel channels                        */
-/*   .00. 0000 Reserved, set to zeros                                */
-/*                                                                   */
-/*   Byte 9 - Subsystem Program Visible Facilities                   */
-/*   1... .... Cache Fast Write supported (not supported, yet!)      */
-/*             (non-retentive data)                                  */
-/*   .1.. .... Lock Facility supported    (not supported, yet!)      */
-/*   ..1. .... Record Cache supported                                */
-/*   ...1 .... Track Cache supported                                 */
-/*   .... 1... Dual Copy supported        (not supported)            */
-/*   .... .1.. DASD Fast Write supported  (not supported)            */
-/*   .... ..1. Reset Allegiance           (not supported, yet!)      */
-/*   .... ...1 24 Byte Compatibility Sense Format                    */
-/*             (set by code when 3380 on 3390 controller)            */
-/*                                                                   */
-/*                                                                   */
-/*-------------------------------------------------------------------*/
-static CKDCU ckdcutab[] = {
-/*                              func/ type                                        */
-/* name          type model code feat code features   ciws ---------  senselength */
- {"2314",       0x2314,0x00,0x00,0x00,0x00,0x00000000,0,0,0,0,0,0,0,0,6},
- {"2835",       0x2835,0x00,0x00,0x00,0x00,0x00000000,0,0,0,0,0,0,0,0,6},
- {"2841",       0x2841,0x00,0x00,0x00,0x00,0x00000000,0,0,0,0,0,0,0,0,6},
- {"3830",       0x3830,0x02,0x00,0x00,0x00,0x00000000,0,0,0,0,0,0,0,0,24},
- {"3880",       0x3880,0x05,0x09,0x00,0x00,0x80000000,0,0,0,0,0,0,0,0,24},
- {"3990",       0x3990,0xc2,0x10,0x00,0x00,0xd0000000,0x40fa0100,0,0,0,0,0,0,0,32},
- /*
-    PROGRAMMING NOTE: the 00001000 features bit (RAMAC Data striping
-    and compaction on parallel channels) is apparently needed in order
-    to allow SMS to create VSAM Extended Format Datasets (as well as
-    RDC bytes 51-53 needing to be set properly too). We set them even
-    though we do not directly support RAID since the user may provide
-    such support themselves by placing their Hercules dasd file on a
-    RAID array and it's important to be able to create VSAM Extended
-    Format datasets since doing so is common in the real world so we
-    need to "support" allowing them to do so.
-*/
- {"3990-3",     0x3990,0xec,0x06,0x00,0x00,0xd0001010,0x40fa0100,0x41270004,0x423e0040,0,0,0,0,0,32},
- {"3990-6",     0x3990,0xe9,0x15,0x48,0x15,0x50001010,0x40fa0100,0x41270004,0x423e0060,0,0,0,0,0,32},
-
- {"9343",       0x9343,0xe0,0x11,0x00,0x00,0x80000000,0,0,0,0,0,0,0,0,32}
-/*"2105",       0x2105,0xe8,0x15,0x48,0x15,0x50000037,0x40fa0100,0x41270004,0x423e01a0,0x433e0008,0,0,0,0,32}, */
-} ;
-#define CKDCU_NUM (sizeof(ckdcutab)/CKDCU_SIZE)
-
-/*-------------------------------------------------------------------*/
-/* FBA device definitions - courtesy of Tomas Masek                  */
+/*       FBA device definitions - courtesy of Tomas Masek            */
 /*-------------------------------------------------------------------*/
 static FBADEV fbatab[] = {
 /* name          devt class type mdl  bpg bpp size   blks   cu     */
@@ -219,22 +229,26 @@ static FBADEV fbatab[] = {
  {"3370-x",     0x3370,0x21,0x05,0x04, 62,744,512,      0,0x3880},
 
 /* name          devt class type mdl  bpg bpp size   blks   cu     */
+/*"9313",       0x9313,0x21,0x08,0x00, ??,???,512, 246240,0x????}, */
+/*"9313-1,      0x9313,0x21,0x08,0x00, ??,???,512, 246240,0x????}, */
+/*"9313-14",    0x9313,0x21,0x08,0x14, ??,???,512, 246240,0x????}, */
+/* 246240=32*81*5*19 */
+ {"9313",       0x9313,0x21,0x08,0x00, 96,480,512, 246240,0x6310},
+ {"9313-1",     0x9313,0x21,0x08,0x00, 96,480,512, 246240,0x6310},
+ {"9313-x",     0x9313,0x21,0x08,0x00, 96,480,512,      0,0x6310},
+
+/* name          devt class type mdl  bpg bpp size   blks   cu     */
  {"9332",       0x9332,0x21,0x07,0x00, 73,292,512, 360036,0x6310},
+ {"9332-1",     0x9332,0x21,0x07,0x00, 73,292,512, 360036,0x6310},
+ {"9332-200",   0x9332,0x21,0x07,0x00, 73,292,512, 360036,0x6310},
  {"9332-400",   0x9332,0x21,0x07,0x00, 73,292,512, 360036,0x6310},
  {"9332-600",   0x9332,0x21,0x07,0x01, 73,292,512, 554800,0x6310},
  {"9332-x",     0x9332,0x21,0x07,0x01, 73,292,512,      0,0x6310},
 
 /* name          devt class type mdl  bpg bpp size   blks   cu     */
  {"9335",       0x9335,0x21,0x06,0x01, 71,426,512, 804714,0x6310},
+ {"9335-1",     0x9335,0x21,0x06,0x01, 71,426,512, 804714,0x6310},
  {"9335-x",     0x9335,0x21,0x06,0x01, 71,426,512,      0,0x6310},
-
-/* name          devt class type mdl  bpg bpp size   blks   cu     */
-/*"9313",       0x9313,0x21,0x08,0x00, ??,???,512, 246240,0x????}, */
-/*"9313-1,      0x9313,0x21,0x08,0x00, ??,???,512, 246240,0x????}, */
-/*"9313-14",    0x9313,0x21,0x08,0x14, ??,???,512, 246240,0x????}, */
-/* 246240=32*81*5*19 */
- {"9313",       0x9313,0x21,0x08,0x00, 96,480,512, 246240,0x6310},
- {"9313-x",     0x9313,0x21,0x08,0x00, 96,480,512,      0,0x6310},
 
 /* name          devt class type mdl  bpg bpp size   blks   cu     */
 /* 9336 Junior models 1,2,3 */
@@ -246,15 +260,17 @@ static FBADEV fbatab[] = {
 /*"9336-S2",    0x9336,0x21,0x11,0x14,???,???,512,      ?,0x6310}, */
 /*"9336-S3",    0x9336,0x21,0x11,0x18,???,???,512,      ?,0x6310}, */
  {"9336",       0x9336,0x21,0x11,0x00, 63,315,512, 920115,0x6310},
+ {"9336-1",     0x9336,0x21,0x11,0x00, 63,315,512, 920115,0x6310},
  {"9336-10",    0x9336,0x21,0x11,0x00, 63,315,512, 920115,0x6310},
  {"9336-20",    0x9336,0x21,0x11,0x10,111,777,512,1672881,0x6310},
  {"9336-25",    0x9336,0x21,0x11,0x10,111,777,512,1672881,0x6310},
  {"9336-x",     0x9336,0x21,0x11,0x10,111,777,512,      0,0x6310},
 
 /* name          devt class type mdl  bpg bpp size   blks   cu     */
- {"0671-08",    0x0671,0x21,0x12,0x08, 63,504,512, 513072,0x6310},
  {"0671",       0x0671,0x21,0x12,0x00, 63,504,512, 574560,0x6310},
+ {"0671-1",     0x0671,0x21,0x12,0x00, 63,504,512, 574560,0x6310},
  {"0671-04",    0x0671,0x21,0x12,0x04, 63,504,512, 624456,0x6310},
+ {"0671-08",    0x0671,0x21,0x12,0x08, 63,504,512, 513072,0x6310},
  {"0671-x",     0x0671,0x21,0x12,0x04, 63,504,512,      0,0x6310}
 } ;
 #define FBADEV_NUM (sizeof(fbatab)/FBADEV_SIZE)
@@ -533,7 +549,7 @@ BYTE buf[256];
                             dev->ckdtab->devt, dev->ckdtab->model);
         memcpy( &buf[18], dev->serial, 12 );
         for (i = 4; i < 30; i++)
-            buf[i] = host_to_guest( isalnum( buf[i] ) ? buf[i] : '0' );
+            buf[i] = host_to_guest( isalnum( (unsigned char)buf[i] ) ? buf[i] : '0' );
         store_hw(buf + 30, dev->devnum);        /* Uniquely tag within system */
 
         /* Bytes 32-63: NED 2  Node element descriptor for the string */

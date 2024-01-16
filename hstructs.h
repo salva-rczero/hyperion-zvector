@@ -942,6 +942,10 @@ atomic_update64( &sysblk.txf_stats[ contran ? 1 : 0 ].txf_ ## ctr, +1 )
         CHPBLK *firstchp;               /* -> First channel path     */
         LOCK    dasdcache_lock;         /* Global DASD caching lock  */
 
+        int     num_pfxs;               /* Number  command prefixes  */
+        char*   cmd_pfxs;               /* Default command prefixes  */
+        char*   used_pfxs;              /* Used    command prefixes  */
+
         /*-----------------------------------------------------------*/
         /*      I/O Management                                       */
         /*-----------------------------------------------------------*/
@@ -1077,9 +1081,10 @@ atomic_update64( &sysblk.txf_stats[ contran ? 1 : 0 ].txf_ ## ctr, +1 )
         gid_t   rgid, egid, sgid;
 #endif /*!defined(NO_SETUID)*/
 
-#if defined( OPTION_INSTRUCTION_COUNTING )
+#if defined( OPTION_INSTR_COUNT_AND_TIME )
 
         bool    icount;                 /* true = enabled, else not. */
+        struct timeval start_time;      /* OPCODE start time         */
 
 #define IMAP_FIRST      sysblk.imap01
 
@@ -1105,6 +1110,27 @@ atomic_update64( &sysblk.txf_stats[ contran ? 1 : 0 ].txf_ ## ctr, +1 )
         U64 imaped[256];
         U64 imapxx[256];
 
+        U64 imap01T[256];
+        U64 imapa4T[256];
+        U64 imapa5T[ 16];
+        U64 imapa6T[256];
+        U64 imapa7T[ 16];
+        U64 imapb2T[256];
+        U64 imapb3T[256];
+        U64 imapb9T[256];
+        U64 imapc0T[ 16];
+        U64 imapc2T[ 16];
+        U64 imapc4T[ 16];
+        U64 imapc6T[ 16];
+        U64 imapc8T[ 16];
+        U64 imape3T[256];
+        U64 imape4T[256];
+        U64 imape5T[256];
+        U64 imapebT[256];
+        U64 imapecT[256];
+        U64 imapedT[256];
+        U64 imapxxT[256];
+
 #define IMAP_SIZE \
             ( sizeof(sysblk.imap01) \
             + sizeof(sysblk.imapa4) \
@@ -1126,9 +1152,29 @@ atomic_update64( &sysblk.txf_stats[ contran ? 1 : 0 ].txf_ ## ctr, +1 )
             + sizeof(sysblk.imapeb) \
             + sizeof(sysblk.imapec) \
             + sizeof(sysblk.imaped) \
-            + sizeof(sysblk.imapxx) )
+            + sizeof(sysblk.imapxx) \
+            + sizeof(sysblk.imap01T) \
+            + sizeof(sysblk.imapa4T) \
+            + sizeof(sysblk.imapa5T) \
+            + sizeof(sysblk.imapa6T) \
+            + sizeof(sysblk.imapa7T) \
+            + sizeof(sysblk.imapb2T) \
+            + sizeof(sysblk.imapb3T) \
+            + sizeof(sysblk.imapb9T) \
+            + sizeof(sysblk.imapc0T) \
+            + sizeof(sysblk.imapc2T) /*@Z9*/ \
+            + sizeof(sysblk.imapc4T) /*208*/ \
+            + sizeof(sysblk.imapc6T) /*208*/ \
+            + sizeof(sysblk.imapc8T) \
+            + sizeof(sysblk.imape3T) \
+            + sizeof(sysblk.imape4T) \
+            + sizeof(sysblk.imape5T) \
+            + sizeof(sysblk.imapebT) \
+            + sizeof(sysblk.imapecT) \
+            + sizeof(sysblk.imapedT) \
+            + sizeof(sysblk.imapxxT) )
 
-#endif // defined( OPTION_INSTRUCTION_COUNTING )
+#endif // defined( OPTION_INSTR_COUNT_AND_TIME )
 
         char    *cnslport;              /* console port string       */
         char    *sysgport;              /* SYSG console port string  */
@@ -1466,6 +1512,7 @@ struct DEVBLK {                         /* Device configuration block*/
                 oslinux:1,              /* 1=Linux                   */
                 orbtrace:1,             /* 1=ORB trace               */
                 ccwtrace:1,             /* 1=CCW trace               */
+                ccwopstrace:1,          /* 1=trace CCW opcodes       */
                 cdwmerge:1,             /* 1=Channel will merge data
                                              chained write CCWs      */
                 debug:1,                /* 1=generic debug flag      */
@@ -1908,6 +1955,27 @@ struct DEVBLK {                         /* Device configuration block*/
 #define QTYPE_READ   1
 #define QTYPE_WRITE  2
 #define QTYPE_DATA   3
+
+// E7 Prefix CCW support...
+
+        BYTE    ckdformat;              /* Prefix CCW Format byte    */
+        BYTE    ckdvalid;               /* Prefix CCW Validity byte  */
+        BYTE    ckdauxiliary;           /* Prefix CCW auxiliary byte */
+
+// Format byte
+#define PFX_F_DE            0x00        /* Define Extent             */
+#define PFX_F_DE_LRE        0x01        /* DE+Locate Record Extended */
+#define PFX_F_DE_PSF        0x02        /* DE+Perform Subsys. Func.  */
+
+// Validity byte
+#define PFX_V_DE_VALID      0x80        /* Define Extent bytes valid */
+#define PFX_V_TS_VALID      0x40        /* DE Time Stamp field valid */
+
+// Auxiliary byte
+#define PFX_A_SMR           0x80        /* Suspend Multipath Reconn. */
+#define PFX_A_CHKALL        0x08        /* Check all DE+LRE parms    */
+
+        BYTE    ccwops[256];            /* CCW opcodes to trace      */
 
         BLOCK_TRAILER;                  /* eye-end                   */
 };

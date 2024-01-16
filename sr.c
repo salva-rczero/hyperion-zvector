@@ -46,21 +46,23 @@ DEVBLK *dev;
 
     for (dev = sysblk.firstdev; dev; dev = dev->nextdev)
     {
-        obtain_lock (&dev->lock);
-        if (dev->busy && !dev->suspended)
+        OBTAIN_DEVLOCK( dev );
         {
-            if (dev->devtype != 0x3088)
+            if (dev->busy && !dev->suspended)
             {
-                release_lock (&dev->lock);
-                return dev;
-            }
-            else
-            {
-                usleep(50000);
-                dev->busy = 0;
+                if (dev->devtype != 0x3088)
+                {
+                    RELEASE_DEVLOCK( dev );
+                    return dev;
+                }
+                else
+                {
+                    USLEEP(50000);
+                    dev->busy = 0;
+                }
             }
         }
-        release_lock (&dev->lock);
+        RELEASE_DEVLOCK( dev );
     }
     return NULL;
 }
@@ -116,21 +118,27 @@ BYTE     psw[16];
             }
         }
         RELEASE_INTLOCK(NULL);
-        usleep (1000);
+        USLEEP(1000);
         OBTAIN_INTLOCK(NULL);
     }
     RELEASE_INTLOCK(NULL);
 
     /* Wait for I/O queue to clear out */
+
     TRACE("SR: Waiting for I/O Queue to clear...\n");
-    obtain_lock (&sysblk.ioqlock);
-    while (sysblk.ioq)
+
+    OBTAIN_IOQLOCK();
     {
-        release_lock (&sysblk.ioqlock);
-        usleep (1000);
-        obtain_lock (&sysblk.ioqlock);
+        while (sysblk.ioq)
+        {
+            RELEASE_IOQLOCK();
+            {
+                USLEEP( 1000 );
+            }
+            OBTAIN_IOQLOCK();
+        }
     }
-    release_lock (&sysblk.ioqlock);
+    RELEASE_IOQLOCK();
 
     /* Wait for active I/Os to complete */
     TRACE("SR: Waiting for Active I/Os to Complete...\n");
@@ -143,7 +151,7 @@ BYTE     psw[16];
             // "SR: waiting for device %04X"
             WRMSG(HHC02002, "W", dev->devnum);
         }
-        usleep (10000);
+        USLEEP(10000);
     }
     if (dev != NULL)
     {
@@ -449,7 +457,7 @@ int      numconfdev=0;
             if (len >= 2)
             {
                 len -= 2;
-                while (len > 0 && isspace(buf[len]))
+                while (len > 0 && isspace((unsigned char)buf[len]))
                     --len;
                 buf[len+1]=0;
             }
