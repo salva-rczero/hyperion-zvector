@@ -354,7 +354,7 @@ LOGM_DLL_IMPORT int  panel_command_capture( char* cmd, char** resp, bool quiet )
 #define HHC00203 "%1d:%04X Tape file %s, type %s: invalid tapemark at offset 0x%16.16"PRIX64
 #define HHC00204 "%1d:%04X Tape file %s, type %s: error in function %s, offset 0x%16.16"PRIX64": %s"
 #define HHC00205 "%1d:%04X Tape file %s, type %s: error in function %s: %s"
-#define HHC00206 "%1d:%04X Tape file %s, type %s: not a valid @TDF file"
+#define HHC00206 "%1d:%04X Tape file %s, type %s: not a valid @TDF file: %s"
 #define HHC00207 "%1d:%04X Tape file %s, type %s: line %d: %s"
 #define HHC00208 "%1d:%04X Tape file %s, type %s: maximum tape capacity exceeded"
 #define HHC00209 "%1d:%04X Tape file %s, type %s: maximum tape capacity enforced"
@@ -2213,7 +2213,8 @@ LOGM_DLL_IMPORT int  panel_command_capture( char* cmd, char** resp, bool quiet )
 #define HHC02781 "Invalid %s parameter: %s"
 #define HHC02782 "LRECL %i and BLOCK %i exceeds maximum AWS blocksize of %i"
 #define HHC02783 "Parameter %s ignored due to NLTAPE option"
-//efine HHC02784 - HHC02799 (available)
+#define HHC02784 "Error reading from file' %s': %s"
+//efine HHC02785 - HHC02799 (available)
 
 // mt_cmd
 #define HHC02800 "%1d:%04X %s complete"

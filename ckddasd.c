@@ -3208,6 +3208,7 @@ BYTE            trk_ovfl;               /* == 1 if track ovfl write  */
                 && prevcode != 0x47 // LOCATE RECORD
                 && prevcode != 0x4B // LOCATE RECORD EXTENDED
                 && prevcode != 0xDE // READ TRACK
+                && prevcode != 0xE7 // PREFIX
                )
         )
         {
@@ -3322,6 +3323,7 @@ BYTE            trk_ovfl;               /* == 1 if track ovfl write  */
             {
                 DefineExtent( dev, code, flags, chained, count, prevcode,
                               ccwseq, iobuf, more, unitstat, residual );
+                prevcode = 0x63; // DEFINE EXTENT
             }
             else
             {
@@ -3339,10 +3341,12 @@ BYTE            trk_ovfl;               /* == 1 if track ovfl write  */
                               ccwseq, iobuf, more, unitstat, residual );
                 if (*unitstat != (CSW_CE | CSW_DE))
                     break; // (error!)
+                prevcode = 0x63; // DEFINE EXTENT
             }
 
             LocateRecordExtended( dev, code, flags, chained, count, prevcode,
                                   ccwseq, iobuf, more, unitstat, residual );
+            prevcode = 0x4B; // LOCATE RECORD EXTENDED
             break; // Done!
 
         case PFX_F_DE_PSF:
@@ -3954,6 +3958,22 @@ BYTE            trk_ovfl;               /* == 1 if track ovfl write  */
         /* Write data */
         rc = ckd_write_data (dev, iobuf, num, unitstat);
         if (rc < 0) break;
+
+        /* If lrcount=1 & r0 then erase rest of the track */
+        if (1
+            && (dev->ckdloper & CKDOPER_CODE) == CKDOPER_WRTTRK
+            && dev->ckdcurrec == 0
+            && dev->ckdlcount == 1
+        )
+        {
+            /* Write end of track marker */
+            rc = ckd_erase (dev, iobuf, count, (int*)&size, unitstat);
+            if (rc < 0) break;
+
+            /* Return normal status */
+            *unitstat = CSW_CE | CSW_DE;
+            break;
+        }
 
         /* If track overflow, keep writing */
         offset = 0;
