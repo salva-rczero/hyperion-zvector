@@ -398,7 +398,7 @@ DEF_INST(vector_load_vr_element_from_gr)
     VRS_B(inst, regs, v1, r3, b2, d2, m4);
     ZVECTOR_CHECK(regs);
     
-    if (m4 > 3 || d2 > (1 >> m4)) /* m4 > elems or M3 > 3 => Specification excp */
+    if (m4 > 3 || d2 > (1 << m4)) /* m4 > elems or M3 > 3 => Specification excp */
         ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
     
     REFRESH_READ_VR(v1);
@@ -826,7 +826,7 @@ DEF_INST(vector_generate_mask)
     VRI_B(inst, regs, v1, i2, i3, m4);
     ZVECTOR_CHECK(regs);
     U64 bitmask;
-
+    
 	switch (m4)
 	{
 	case 0:
@@ -1025,10 +1025,9 @@ DEF_INST(vector_load_vr_from_grs_disjoint)
     int     v1, r2, r3;
     VRR_F(inst, regs, v1, r2, r3);
     ZVECTOR_CHECK(regs);
-    //
-    // TODO: insert code here
-    ARCH_DEP(program_interrupt) (regs, PGM_OPERATION_EXCEPTION);
-    //
+    VR_G(v1, 0) = CSWAP64(regs->GR(r2));
+    VR_G(v1, 1) = CSWAP64(regs->GR(r3));
+    REFRESH_UPDATE_VR(v1);
 }
 /*-------------------------------------------------------------------*/
 /* E764 VSUM   - Vector Sum Across Word                      [VRR-c] */
@@ -1077,10 +1076,38 @@ DEF_INST(vector_sum_across_quadword)
     int     v1, v2, v3, m4, m5, m6;
     VRR_C(inst, regs, v1, v2, v3, m4, m5, m6);
     ZVECTOR_CHECK(regs);
-    //
+    REFRESH_READ_VR(v2);
+    REFRESH_READ_VR(v3);
     // TODO: insert code here
     ARCH_DEP(program_interrupt) (regs, PGM_OPERATION_EXCEPTION);
     //
+    switch (m4)
+    {
+    case 2:
+        VR_G(v1, 0) = 0x00;
+        VR_G(v1, 1) = CSWAP64(CSWAP32(VR_F(v2, 0))
+            + CSWAP32(VR_F(v2, 1))
+            + CSWAP32(VR_F(v2, 2))
+            + CSWAP32(VR_F(v2, 3))
+            + CSWAP32(VR_F(v3, 3)));
+        break;
+    case 3:
+        U64 high = 0x00;
+        U64 low = CSWAP64(VR_G(v2, 0));
+        U64 add = low + CSWAP64(VR_G(v2, 1));
+        if (add < low) high++;
+        low = add;
+        add = low + CSWAP64(VR_G(v3, 1));
+        if (add < low) high++;
+        VR_G(v1, 0) = CSWAP64(high);
+        VR_G(v1, 1) = CSWAP64(add);
+        break;
+    default:
+        ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
+        break;
+    }
+
+    REFRESH_UPDATE_VR(v1);
 }
 /*-------------------------------------------------------------------*/
 /* E768 VN     - Vector AND                                  [VRR-c] */
@@ -1751,10 +1778,28 @@ DEF_INST(vector_multiply_low)
     int     v1, v2, v3, m4, m5, m6;
     VRR_C(inst, regs, v1, v2, v3, m4, m5, m6);
     ZVECTOR_CHECK(regs);
-    //
-    // TODO: insert code here
-    ARCH_DEP(program_interrupt) (regs, PGM_OPERATION_EXCEPTION);
-    //
+    ZVECTOR_CHECK(regs);
+    REFRESH_READ_VR(v2);
+    REFRESH_READ_VR(v3);
+    switch (m5)
+    {
+    case 0:
+        for (int i = 0; i < 16; i++)
+            VR_B(v1, i) = (VR_B(v2, i) * VR_B(v3, i)) & 0xff;
+        break;
+    case 1:
+        for (int i = 0; i < 8; i++)
+            VR_H(v1, i) = CSWAP16((CSWAP16(VR_H(v2, i)) * CSWAP16(VR_H(v3, i))) & 0xffff);
+        break;
+    case 2:
+        for (int i = 0; i < 4; i++)
+            VR_F(v1, i) = CSWAP32((CSWAP32(VR_F(v2, i)) * CSWAP32(VR_F(v3, i))) & 0xffffffff);
+        break;
+    default:
+        ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
+        break;
+    }
+    REFRESH_UPDATE_VR(v1);
 }
 /*-------------------------------------------------------------------*/
 /* E7A3 VMH    - Vector Multiply High                        [VRR-c] */
@@ -1842,10 +1887,28 @@ DEF_INST(vector_multiply_and_add_low)
     int     v1, v2, v3, v4, m5, m6;
     VRR_D(inst, regs, v1, v2, v3, v4, m5, m6);
     ZVECTOR_CHECK(regs);
-    //
-    // TODO: insert code here
-    ARCH_DEP(program_interrupt) (regs, PGM_OPERATION_EXCEPTION);
-    //
+    REFRESH_READ_VR(v2);
+    REFRESH_READ_VR(v3);
+    REFRESH_READ_VR(v4);
+    switch (m5)
+    {
+    case 0:
+        for (int i = 0; i < 16; i++)
+            VR_B(v1, i) = (VR_B(v2, i) * VR_B(v3, i) + VR_B(v4, i)) & 0xff;
+        break;
+    case 1:
+        for (int i = 0; i < 8; i++)
+            VR_H(v1, i) = CSWAP16((CSWAP16(VR_H(v2, i)) * CSWAP16(VR_H(v3, i)) + CSWAP16(VR_H(v4, i))) & 0xffff);
+        break;
+    case 2:
+        for (int i = 0; i < 4; i++)
+            VR_F(v1, i) = CSWAP32((CSWAP32(VR_F(v2, i)) * CSWAP32(VR_F(v3, i)) + CSWAP32(VR_F(v4, i))) & 0xffffffff);
+        break;
+    default:
+        ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
+        break;
+    }
+    REFRESH_UPDATE_VR(v1);
 }
 /*-------------------------------------------------------------------*/
 /* E7AB VMAH   - Vector Multiply and Add High                [VRR-d] */
@@ -2154,10 +2217,36 @@ DEF_INST(vector_unpack_logical_high)
     int     v1, v2, m3, m4, m5;
     VRR_A(inst, regs, v1, v2, m3, m4, m5);
     ZVECTOR_CHECK(regs);
-    //
-    // TODO: insert code here
-    ARCH_DEP(program_interrupt) (regs, PGM_OPERATION_EXCEPTION);
-    //
+
+    REFRESH_READ_VR(v2);
+    switch (m3)
+    {
+    case 0:
+        VR_H(v1, 0) = 0x0000 + VR_B(v2, 0);
+        VR_H(v1, 1) = 0x0000 + VR_B(v2, 1);
+        VR_H(v1, 2) = 0x0000 + VR_B(v2, 2);
+        VR_H(v1, 3) = 0x0000 + VR_B(v2, 3);
+        VR_H(v1, 4) = 0x0000 + VR_B(v2, 4);
+        VR_H(v1, 5) = 0x0000 + VR_B(v2, 5);
+        VR_H(v1, 6) = 0x0000 + VR_B(v2, 6);
+        VR_H(v1, 7) = 0x0000 + VR_B(v2, 7);
+        break;
+    case 1:
+        VR_F(v1, 0) = 0x00000000 + VR_H(v2, 0);
+        VR_F(v1, 1) = 0x00000000 + VR_H(v2, 1);
+        VR_F(v1, 2) = 0x00000000 + VR_H(v2, 2);
+        VR_F(v1, 3) = 0x00000000 + VR_H(v2, 3);
+        break;
+    case 2:
+        VR_G(v1, 0) = 0x0000000000000000 + VR_F(v2, 0);
+        VR_G(v1, 1) = 0x0000000000000000 + VR_F(v2, 1);
+        break;
+    default:
+        ARCH_DEP(program_interrupt) (regs, PGM_SPECIFICATION_EXCEPTION);
+        break;
+    }
+    REFRESH_UPDATE_VR(v1);
+    
 }
 /*-------------------------------------------------------------------*/
 /* E7D6 VUPL   - Vector Unpack Low                           [VRR-a] */

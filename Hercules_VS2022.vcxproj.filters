@@ -810,13 +810,11 @@
     <ClCompile Include="xstore.c">
       <Filter>Source Files\Hercules\Emulation\Source Files</Filter>
     </ClCompile>
-<<<<<<< HEAD
     <ClCompile Include="zvector.c">
       <Filter>Source Files\Hercules\Emulation\Source Files</Filter>
-=======
+    </ClCompile>
     <ClCompile Include="dasdload2.h">
       <Filter>Source Files\Utilities\disk</Filter>
->>>>>>> upstream/develop
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
