@@ -2176,7 +2176,7 @@
                                                                     \
     U32 _rxb = (temp >> 0) & 0xf;                                   \
     (_v1) = ((temp >> 28) & 0xf) | ((_rxb & 0x8) << 1);             \
-    (_r3) = (temp >> 24) & 0xf;                                    \
+    (_r3) = (temp >> 24) & 0xf;                                     \
     (_b2) = (temp >> 20) & 0xf;                                     \
     (_effective_addr2) = (temp >>  8) & 0xfff;                      \
     (_m4) = (temp >>  4) & 0xf;                                     \
@@ -2208,7 +2208,7 @@
                                                                     \
     U32 _rxb = (temp >> 0) & 0xf;                                   \
     (_r1) = (temp >> 28) & 0xf;                                     \
-    (_v3) = ((temp >> 24) & 0xf) | ((_rxb & 0x8) << 1);             \
+    (_v3) = ((temp >> 24) & 0xf) | ((_rxb & 0x4) << 2);             \
     (_b2) = (temp >> 20) & 0xf;                                     \
     (_effective_addr2) = (temp >>  8) & 0xfff;                      \
     (_m4) = (temp >>  4) & 0xf;                                     \

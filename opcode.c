@@ -2740,7 +2740,7 @@ IPRINT_FUNC(ASMFMT_VRI_A);
     int v1, i2, m3;
     UNREFERENCED(regs);
     v1 = ((inst[1] >> 4) & 0x0F) | ((inst[4] & 0x08) << 1);
-    i2 = inst[3] << 8 | inst[4];
+    i2 = inst[2] << 8 | inst[3];
     m3 = inst[4] >> 4;
     IPRINT_PRINT("%d,%d,%d", v1, i2, m3)
 
@@ -2757,7 +2757,7 @@ IPRINT_FUNC(ASMFMT_VRI_C);
     int v1, i2, v3, m4;
     UNREFERENCED(regs);
     v1 = ((inst[1] >> 4) & 0x0F) | ((inst[4] & 0x08) << 1);
-    i2 = inst[3] << 8 | inst[4];
+    i2 = inst[2] << 8 | inst[3];
     v3 = ((inst[1] >> 0) & 0x0F) | ((inst[4] & 0x04) << 2);
     m4 = inst[4] >> 4;
     IPRINT_PRINT("%d,%d,%d,%d", v1, v3, i2, m4)

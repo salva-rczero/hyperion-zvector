@@ -2133,13 +2133,22 @@ do {                                                                  \
 #if defined( _FEATURE_129_ZVECTOR_FACILITY )
 
     /* Program check if vector instructions is executed when         */
-    /* TXF constraint mode or VOP control is zero                   */
+    /* TXF constraint mode or VOP control is zero                    */
+    /* TXF_INSTR_CHECK(_regs); */
+    /* Program check if vector instructions is executed when         */
+    /* TXF constraint mode or VOP control is zero                    */
+
 #define ZVECTOR_CHECK(_regs) \
-        TXF_FLOAT_INSTR_CHECK(regs); \
+        if (0 && inst[5] != (U8) 0x3E && inst[5] != (U8) 0x36) \
+            ARCH_DEP(display_inst) (_regs, inst); \
+        TXF_FLOAT_INSTR_CHECK(_regs); \
         if( !((_regs)->CR(0) & CR0_VOP) ) { \
             (_regs)->dxc = DXC_VECTOR_INSTRUCTION; \
             (_regs)->program_interrupt( (_regs), PGM_DATA_EXCEPTION); \
         }
+#define ZVECTOR_END(_regs) \
+        if (0 && inst[5] != (U8) 0x3E && inst[5] != (U8) 0x36) \
+            ARCH_DEP(display_inst) (_regs, inst); 
 /*-------------------------------------------------------------------*/
 /* As the internal memory for the FPR and VR registers overlap,      */
 /* for the first 64 bits of the first 16 VR registers.               */
