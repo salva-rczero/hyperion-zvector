@@ -486,7 +486,7 @@ LOGM_DLL_IMPORT int  panel_command_capture( char* cmd, char** resp, bool quiet )
 #define HHC00387 "%1d:%04X CCKD%s image %s is SEVERELY fragmented!"
 #define HHC00388 "%1d:%04X CCKD%s image %s is moderately fragmented"
 #define HHC00389 "%1d:%04X CCKD%s image %s is slightly fragmented"
-//efine HHC00390 (available)
+#define HHC00390 "%1d:%04X CCKD file: device has no shadow files"
 //efine HHC00391 (available)
 //efine HHC00392 (available)
 //efine HHC00393 (available)
@@ -542,7 +542,7 @@ LOGM_DLL_IMPORT int  panel_command_capture( char* cmd, char** resp, bool quiet )
 #define HHC00440 "Thread "TIDPAT" %1d:%04X CKD file %s: updating cyl %d head %d record %d kl %d dl %d"
 #define HHC00441 "Thread "TIDPAT" %1d:%04X CKD file %s: updating cyl %d head %d record %d dl %d"
 #define HHC00442 "Thread "TIDPAT" %1d:%04X CKD file %s: set file mask %02X"
-//efine HHC00443 (available)
+#define HHC00443 "%1d:%04X CKD file: 'fakewrite' invalid without 'readonly'"
 //efine HHC00444 (available)
 #define HHC00445 "%1d:%04X CKD file %s: updating cyl %d head %d"
 #define HHC00446 "%1d:%04X CKD file %s: write track error: stat %2.2X"
@@ -683,7 +683,8 @@ LOGM_DLL_IMPORT int  panel_command_capture( char* cmd, char** resp, bool quiet )
 #define HHC00742 "Shared: OPTION_SHARED_DEVICES not defined"
 #define HHC00743 "Shared:  %s" // (trace message)
 #define HHC00744 "Shared: Server already active"
-//efine HHC00745 - HHC00799 (available)
+#define HHC00745 "%1d:%04X Shared: CKD file: 'fakewrite' invalid without 'readonly'"
+//efine HHC00746 - HHC00799 (available)
 
 // reserve 008xx for processor related messages
 #define HHC00800 "Processor %s%02X: loaded wait state PSW %s"
@@ -2294,7 +2295,7 @@ LOGM_DLL_IMPORT int  panel_command_capture( char* cmd, char** resp, bool quiet )
 #define HHC03002 "Missing input-file specification"
 #define HHC03003 "Extraneous parameter: %s"
 #define HHC03004 "Unsupported dasd image file format"
-#define HHC03005 "Device type %4.4X not found in dasd table"
+#define HHC03005 "Device type '%2.2X' not found in dasd table"
 #define HHC03006 "%s error: %s"
 #define HHC03007 "File size:      (%s bytes)"
 #define HHC03008 "Compressed device header inconsistency(s) found! code: %4.4X"
