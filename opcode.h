@@ -378,6 +378,9 @@ OPCD_DLL_IMPORT int iprint_router_func( int arch_mode, BYTE inst[], char mnemoni
             case 0xE5:                                              \
                 sysblk.imape5T[(_inst)[1]]+=elapsed_usecs;          \
                 break;                                              \
+            case 0xE7:                                              \
+                sysblk.imape7T[(_inst)[5]]+=elapsed_usecs;          \
+                break;                                              \
             case 0xEB:                                              \
                 sysblk.imapebT[(_inst)[5]]+=elapsed_usecs;          \
                 break;                                              \
