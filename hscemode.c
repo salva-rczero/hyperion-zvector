@@ -2914,6 +2914,7 @@ int icount_cmd(int argc, char* argv[], char* cmdline)
             }
         }
     }
+    /* end for() */
 
     /* (sort...) */
     qsort(icount, i, sizeof(ICOUNT_INSTR), icount_cmd_sort);
@@ -2972,6 +2973,7 @@ int icount_cmd(int argc, char* argv[], char* cmdline)
         bufl += PRINT_INST(regs->arch_mode, fakeinst, buf + bufl);
         WRMSG(HHC02292, "I", buf);
     }
+    /* end for() */
 
     return 0;
 }
